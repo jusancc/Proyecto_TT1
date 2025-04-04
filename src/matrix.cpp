@@ -1,4 +1,4 @@
-#include "..\include\matrix.h"
+#include "..\include\matrix.hpp"
 
 Matrix::Matrix(const int n_row, const int n_column) {
     if (n_row <= 0 || n_column <= 0) {
@@ -83,4 +83,25 @@ Matrix& zeros(const int n_row, const int n_column) {
 	}
 	
 	return (*m_aux);
+}
+
+Matrix& Matrix::operator * (Matrix &m) {
+	if (this->n_column != m.n_row) {
+		cout << "Matrix sub: error in n_row/n_column\n";
+        exit(EXIT_FAILURE);
+	}
+	
+	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
+	
+    for(int i = 1; i <= this->n_row; i++) {
+        for(int j = 1; j <= this->n_column; j++) {
+			double sum = 0;
+			for(int k = 1; k <= this->n_column; k++) {
+                sum += (*this)(i,k) * m(k,j);
+            }
+            (*m_aux)(i,j) = sum;
+		}
+	}
+	
+	return *m_aux;
 }

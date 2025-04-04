@@ -9,17 +9,27 @@
 using namespace std;
 
 class Matrix {
+private:	
+	double **data;
 public:
     int n_row, n_column;
-	double **data;
 
     // Parameterized constructor
+	Matrix(const int v_size);
     Matrix(const int n_row, const int n_column);
 	
 	// Member operators
+	double& operator () (const int n);
 	double& operator () (const int row, const int column);
 	Matrix& operator + (Matrix &m);
+	Matrix& operator + (double s);
 	Matrix& operator - (Matrix &m);
+	Matrix& operator - (double s);
+	Matrix& operator * (Matrix &m);
+	Matrix& operator * (double s);
+	Matrix& operator / (Matrix &m);
+	Matrix& operator / (double s);
+	Matrix& operator = (Matrix &m);
 	
 	// Non-member operators
 	friend ostream& operator << (ostream &o, Matrix &m);
