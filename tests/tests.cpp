@@ -1,4 +1,4 @@
-#include "..\include\matrix.h"
+#include "..\include\matrix.hpp"
 #include <cstdio>
 #include <cmath>
 
@@ -48,6 +48,27 @@ int m_sum_01() {
     return 0;
 }
 
+int m_sum_02() {
+	int f = 3;
+    int c = 4;
+	
+	Matrix A(f, c);
+	A(1,1) = 0; A(1,2) =  2; A(1,3) = 8; A(1,4) = 0;
+	A(2,1) = 1; A(2,2) = -1; A(2,3) = 0; A(2,4) = 0;
+	A(3,1) = 0; A(3,2) =  1; A(3,3) = 0; A(3,4) = 5;
+	
+	Matrix B(f, c);
+	B(1,1) = 10; B(1,2) =  12; B(1,3) = 18; B(1,4) = 10;
+	B(2,1) = 11; B(2,2) = 9; B(2,3) = 10; B(2,4) = 10;
+	B(3,1) = 10; B(3,2) = 11; B(3,3) = 10; B(3,4) = 15;
+
+	Matrix R = A + 10;
+    
+    _assert(m_equals(B, R, 1e-10));
+    
+    return 0;
+}
+
 int m_sub_01() {
     int f = 3;
     int c = 4;
@@ -74,6 +95,27 @@ int m_sub_01() {
     return 0;
 }
 
+int m_sub_02() {
+	int f = 3;
+    int c = 4;
+	
+	Matrix A(f, c);
+	A(1,1) = 0; A(1,2) =  2; A(1,3) = 8; A(1,4) = 0;
+	A(2,1) = 1; A(2,2) = -1; A(2,3) = 0; A(2,4) = 0;
+	A(3,1) = 0; A(3,2) =  1; A(3,3) = 0; A(3,4) = 5;
+	
+	Matrix B(f, c);
+	B(1,1) = -10; B(1,2) =  -8; B(1,3) = -2; B(1,4) = -10;
+	B(2,1) = -9; B(2,2) = -11; B(2,3) = -10; B(2,4) = -10;
+	B(3,1) = -10; B(3,2) = -9; B(3,3) = -10; B(3,4) = -5;
+
+	Matrix R = A - 10;
+    
+    _assert(m_equals(B, R, 1e-10));
+    
+    return 0;
+}
+
 int m_zeros_01() {
     int f = 3;
     int c = 4;
@@ -93,8 +135,11 @@ int m_zeros_01() {
 int all_tests()
 {
     _verify(m_sum_01);
+	_verify(m_sum_02);
     _verify(m_sub_01);
+	_verify(m_sub_02);
     _verify(m_zeros_01);
+	
 
     return 0;
 }

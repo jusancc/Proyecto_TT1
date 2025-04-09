@@ -31,6 +31,10 @@ public:
 	Matrix& operator / (double s);
 	Matrix& operator = (Matrix &m);
 	
+	double& norm();
+	double& dot();
+	double& v_cross(Matrix &v, Matrix &w);
+	
 	// Non-member operators
 	friend ostream& operator << (ostream &o, Matrix &m);
 };
@@ -40,5 +44,8 @@ ostream& operator << (ostream &o, Matrix &m);
 
 // Methods
 Matrix& zeros(const int n_row, const int n_column);
+Matrix& zeros(const int n);
+Matrix& eye(const int n);
+Matrix& transpose(Matrix &m);
 
 #endif
