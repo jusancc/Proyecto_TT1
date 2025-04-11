@@ -35,6 +35,15 @@ public:
 	double& dot();
 	double& v_cross(Matrix &v, Matrix &w);
 	
+	Matrix& extract_row(int row);
+	Matrix& extract_column(int column);
+	
+	void assign_row(int row, Matrix &v);
+	void assign_column(int column, Matrix &v);
+	
+	Matrix& union_vector(Matrix &v1, Matrix &v2);
+	Matrix& extract_vector(int from, int to);
+	
 	// Non-member operators
 	friend ostream& operator << (ostream &o, Matrix &m);
 };
