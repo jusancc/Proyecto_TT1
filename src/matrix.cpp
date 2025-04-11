@@ -161,7 +161,21 @@ Matrix& Matrix::operator * (Matrix &m) {
 }
 
 Matrix& Matrix::operator / (Matrix &m){
+    // Verificar que las dimensiones sean compatibles
+    if (this->n_column != m.n_row || m.n_row != m.n_column) {
+        cout << "Matrix division: Incompatible dimensions or divisor is not square\n";
+        exit(EXIT_FAILURE);
+    }
 
+    // Calcular la inversa de m
+    Matrix& inv_m = m.inv();
+
+    // Multiplicar (*this) por inv_m (A * B^{-1})
+    Matrix *result = new Matrix(this->n_row, m.n_column);
+    *result = (*this) * inv_m;
+
+    
+    return *result;
 }
 
 Matrix& Matrix::operator = (Matrix &m){
@@ -278,7 +292,7 @@ Matrix& Matrix::operator / (double s){
     return *m_aux;
 }
 
-double& Matrix::norm(){
+double Matrix::norm(){
     double r = 0.0;
     for (int i = 1; i <= this->n_row; i++) {
         for (int j = 1; j <= this->n_column; j++) {
@@ -288,7 +302,7 @@ double& Matrix::norm(){
     return sqrt(r);
 }
 
-double& Matrix::dot(){
+double& Matrix::dot(Matrix &m){
 	if (this->n_row != m.n_row || this->n_column != m.n_column) {
         cout << "Matrix dot: error in dimensions\n";
         exit(EXIT_FAILURE);
@@ -302,7 +316,7 @@ double& Matrix::dot(){
     return r;
 }
 
-double& Matrix::v_cross(Matrix &v, Matrix &w){
+Matrix& Matrix::v_cross(Matrix &v, Matrix &w){
 	if (v.n_row != 3 || v.n_column != 1 || w.n_row != 3 || w.n_column != 1) {
         cout << "v_cross: vectors must be 3x1\n";
         exit(EXIT_FAILURE);
@@ -435,4 +449,68 @@ Matrix& Matrix::extract_vector(int from, int to) {
     }
     
     return *result;
+}
+
+Matrix& Matrix::inv() {
+    // Verificar que la matriz sea cuadrada
+    if (this->n_row != this->n_column) {
+        cout << "Matrix inverse: Matrix must be square\n";
+        exit(EXIT_FAILURE);
+    }
+
+    int n = this->n_row;
+    Matrix *inv = new Matrix(n, n); // Matriz inversa (a calcular)
+    Matrix temp(*this);             // Copia de la matriz original
+
+    // Inicializar inv como matriz identidad
+    
+    *inv = eye(n);
+
+    // Eliminación Gauss-Jordan con pivoteo parcial
+    for (int col = 1; col <= n; col++) {
+        // Pivoteo parcial: buscar el máximo en la columna actual
+        int max_row = col;
+        double max_val = abs(temp(col, col));
+
+        for (int row = col + 1; row <= n; row++) {
+            if (abs(temp(row, col)) > max_val) {
+                max_val = abs(temp(row, col));
+                max_row = row;
+            }
+        }
+
+        // Si el pivote es cero, la matriz es singular
+        if (max_val < 1e-10) {
+            cout << "Matrix inverse: Matrix is singular (non-invertible)\n";
+            exit(EXIT_FAILURE);
+        }
+
+        // Intercambiar filas si es necesario
+        if (max_row != col) {
+            for (int j = 1; j <= n; j++) {
+                std::swap(temp(col, j), temp(max_row, j));
+                std::swap((*inv)(col, j), (*inv)(max_row, j));
+            }
+        }
+
+        // Normalizar la fila del pivote
+        double pivot = temp(col, col);
+        for (int j = 1; j <= n; j++) {
+            temp(col, j) /= pivot;
+            (*inv)(col, j) /= pivot;
+        }
+
+        // Eliminación hacia adelante y atrás
+        for (int row = 1; row <= n; row++) {
+            if (row != col) {
+                double factor = temp(row, col);
+                for (int j = 1; j <= n; j++) {
+                    temp(row, j) -= factor * temp(col, j);
+                    (*inv)(row, j) -= factor * (*inv)(col, j);
+                }
+            }
+        }
+    }
+
+    return *inv;
 }

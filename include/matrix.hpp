@@ -31,9 +31,9 @@ public:
 	Matrix& operator / (double s);
 	Matrix& operator = (Matrix &m);
 	
-	double& norm();
-	double& dot();
-	double& v_cross(Matrix &v, Matrix &w);
+	double norm();
+	double& dot(Matrix &m);
+	Matrix& v_cross(Matrix &v, Matrix &w);
 	
 	Matrix& extract_row(int row);
 	Matrix& extract_column(int column);
@@ -43,6 +43,8 @@ public:
 	
 	Matrix& union_vector(Matrix &v1, Matrix &v2);
 	Matrix& extract_vector(int from, int to);
+
+	Matrix& inv();
 	
 	// Non-member operators
 	friend ostream& operator << (ostream &o, Matrix &m);
