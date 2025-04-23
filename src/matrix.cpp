@@ -1,5 +1,11 @@
 #include "..\include\matrix.hpp"
 
+Matrix::Matrix(){
+	this -> n_row = 0;
+    this -> n_column = 0;
+    this -> data = nullptr;
+}
+
 Matrix::Matrix(const int v_size){
 	if (v_size <= 0) {
         cout << "Matrix create: error in v_size\n";
@@ -302,17 +308,16 @@ double Matrix::norm(){
     return sqrt(r);
 }
 
-double& Matrix::dot(Matrix &m){
+double Matrix::dot(Matrix &m){
 	if (this->n_row != m.n_row || this->n_column != m.n_column) {
         cout << "Matrix dot: error in dimensions\n";
         exit(EXIT_FAILURE);
     }
     double r = 0.0;
-    for (int i = 1; i <= this->n_row; i++) {
-        for (int j = 1; j <= this->n_column; j++) {
-            r += (*this)(i, j) * m(i, j);
-        }
+    for (int j = 1; j <= this->n_column; j++) {
+        r += (*this)(1, j) * m(1, j);
     }
+    
     return r;
 }
 

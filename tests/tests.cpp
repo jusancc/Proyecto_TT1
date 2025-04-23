@@ -291,6 +291,23 @@ int m_zeros_square_01() {
     return 0;
 }
 
+int m_inverse_02() {
+    Matrix C(3, 3);
+    C(1,1)=1; C(1,2)=2; C(1,3)=3;
+    C(2,1)=0; C(2,2)=1; C(2,3)=4;
+    C(3,1)=5; C(3,2)=6; C(3,3)=0;
+
+
+    Matrix invC = C.inv();
+
+    Matrix I(3,3);
+    I(1,1)=-24; I(1,2)=18; I(1,3)=5;
+    I(2,1)=20; I(2,2)=-15; I(2,3)=-4;
+    I(3,1)=-5; I(3,2)=4; I(3,3)=1;
+    _assert(m_equals(invC, I, 1e-10));
+    return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -314,6 +331,7 @@ int all_tests()
     _verify(m_dot_01);
     _verify(m_v_cross_01);
     _verify(m_zeros_square_01);
+    _verify(m_inverse_02);
 
     return 0;
 }

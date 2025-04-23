@@ -15,6 +15,7 @@ public:
     int n_row, n_column;
 
     // Parameterized constructor
+	Matrix();
 	Matrix(const int v_size);
     Matrix(const int n_row, const int n_column);
 	
@@ -32,7 +33,7 @@ public:
 	Matrix& operator = (Matrix &m);
 	
 	double norm();
-	double& dot(Matrix &m);
+	double dot(Matrix &m);
 	Matrix& v_cross(Matrix &v, Matrix &w);
 	
 	Matrix& extract_row(int row);
