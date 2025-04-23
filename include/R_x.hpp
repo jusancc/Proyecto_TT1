@@ -1,9 +1,8 @@
-#ifndef _R_X
-#define _R_X
+#ifndef _R_X_
+#define _R_X_
 
-#include "matrix.hpp"
+#include "Matrix.hpp"
 
-Matrix& R_x(double angle);
-
+Matrix R_x(double alpha);
 
 #endif
