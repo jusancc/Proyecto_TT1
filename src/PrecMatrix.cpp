@@ -12,6 +12,6 @@ Matrix& PrecMatrix(double Mjd_1, double Mjd_2){
     Matrix ry = R_y(theta);
     Matrix rz2 = R_z(-zeta);
 
-    Matrix PrecMat = rz1*ry*rz2;
+    Matrix &PrecMat = rz1*ry*rz2;
     return PrecMat;
 }

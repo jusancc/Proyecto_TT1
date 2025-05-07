@@ -2,7 +2,6 @@
 
 Matrix& NutMatrix(double Mjd_TT){
     double eps, dpsi, deps;
-    Matrix NutMat;
 
     eps = MeanObliquity(Mjd_TT);
     tie(dpsi,deps) = NutAngles(Mjd_TT);
@@ -11,6 +10,6 @@ Matrix& NutMatrix(double Mjd_TT){
     Matrix rz = R_z(-dpsi);
     Matrix rx2 = R_x(+eps);
 
-    NutMat = rx1 * rz * rx2;
+    Matrix &NutMat = rx1 * rz * rx2;
     return NutMat;
 }

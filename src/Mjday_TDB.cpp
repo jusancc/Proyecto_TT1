@@ -1,7 +1,7 @@
 #include "../include/Mjday_TDB.hpp"
 
 double Mjday_TDB(double Mjd_TT){
-    double T_TT, Mjd_TT;
+    double T_TT;
 
     T_TT = (Mjd_TT - 51544.5)/36525;
     Mjd_TT = Mjd_TT + ( 0.001658*sin(628.3076*T_TT + 6.2401)

@@ -3,7 +3,7 @@
 Matrix& LTC(double lon, double lat){
     Matrix Ry = R_y(-lat);
     Matrix Rz = R_z(lon);
-    Matrix M = Ry * Rz;
+    Matrix &M = Ry * Rz;
 
     Matrix& row1 = M.extract_row(1);
     Matrix& row2 = M.extract_row(2);

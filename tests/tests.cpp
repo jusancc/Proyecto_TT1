@@ -1,4 +1,10 @@
 #include "..\include\matrix.hpp"
+#include "..\include\AccelPointMass.hpp"
+#include "..\include\Cheb3D.hpp"
+#include "..\include\EccAnom.hpp"
+#include "..\include\Frac.hpp"
+#include "..\include\MeanObliquity.hpp"
+#include "..\include\Mjday.hpp"
 #include <cstdio>
 #include <cmath>
 
@@ -256,7 +262,7 @@ int m_dot_01() {
     B(2, 1) = 7; B(2, 2) = 8;
 
     double dot = A.dot(B);
-    double expected = 1*5 + 2*6 + 3*7 + 4*8;  // 70
+    double expected = 1*5 + 2*6 + 3*7 + 4*8;
     _assert(fabs(dot - expected) < 1e-10);
     return 0;
 }
@@ -308,6 +314,59 @@ int m_inverse_02() {
     return 0;
 }
 
+int m_accel_point_mass_01(){
+    Matrix A(1,3);
+    A(1,1)=1;A(1,2)=2;A(1,3)=3;
+    Matrix B(1,3);
+    B(1,1)=4;B(1,2)=5;B(1,3)=6;
+    int GM = 5;
+
+    Matrix C = AccelPointMass(A,B,GM);
+
+    Matrix result(1,3);
+    result(1,1)=0.0773165667868213;result(1,2)=0.0699165293543773;result(1,3)=0.0625164919219332;
+
+    _assert(m_equals(result,C,1e-10));
+    return 0;
+}
+
+int m_cheb_3d_01(){
+    Matrix Cx(1,3);
+    Cx(1,1)=1;Cx(1,2)=2;Cx(1,3)=3;
+    Matrix Cy(1,3);
+    Cy(1,1)=4;Cy(1,2)=5;Cy(1,3)=6;
+    Matrix Cz(1,3);
+    Cz(1,1)=7;Cz(1,2)=8;Cz(1,3)=9;
+
+    Matrix A = Cheb3D(5,3,0,10,Cx,Cy,Cz);
+    cout << A << endl;
+    Matrix result(1,3);
+    result(1,1)=-2;result(1,2)=-2;result(1,3)=-2;
+
+    _assert(m_equals(A,result,1e-10));
+    return 0;
+}
+
+int m_ecc_anom_01(){
+    _assert(m_equals(2.9504, EccAnom(2,5),1e-10));
+    return 0;
+}
+
+int m_frac_01(){
+    _assert(fabs(0.7-Frac(10.7))<1e-10);
+    return 0;
+}
+
+int m_mean_obliquity_(){
+    _assert(fabs(0.4090928042-MeanObliquity(51544.5))<1e-10);
+    return 0;
+}
+
+int m_mjday_01(){
+    _assert(fabs(51544.0 - Mjday(2000, 1, 1, 0, 0, 0)) < 1e-10);
+    return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -333,6 +392,12 @@ int all_tests()
     _verify(m_zeros_square_01);
     _verify(m_inverse_02);
 
+    
+    _verify(m_accel_point_mass_01);
+    _verify(m_cheb_3d_01);
+    _verify(m_ecc_anom_01);
+    _verify(m_frac_01);
+    _verify(m_mjday_01);
     return 0;
 }
 

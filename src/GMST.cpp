@@ -10,7 +10,7 @@ double gmst(double Mjd_UT1){
     double T = (Mjd_UT1 - MJD_J2000)/36525;
 
     double gmst = 24110.54841 + 8640184.812866*T_0 + 1.002737909350795*UT1 + (0.093104-6.2e-6*T)*T*T;
-    double gmstime = 2*M_PI*Frac(gmst/Secs);
+    double gmstime = 2*SAT_Const::pi*Frac(gmst/Secs);
 
     return gmstime;
 }

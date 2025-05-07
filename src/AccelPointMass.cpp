@@ -1,8 +1,8 @@
 #include "../include/AccelPointMass.hpp"
 
 Matrix AccelPointMass(Matrix &r, Matrix &s, double GM){
-    if (r.n_row != 3 || r.n_column != 1 || s.n_row != 3 || s.n_column != 1) {
-        std::cout << "AccelPointMass: Los vectores r y s deben ser de tamaño 3x1\n";
+    if (r.n_row != 1 || r.n_column != 3 || s.n_row != 1 || s.n_column != 3) {
+        std::cout << "AccelPointMass: Los vectores r y s deben ser de tamaño 1,3\n";
         exit(EXIT_FAILURE);
     }
 

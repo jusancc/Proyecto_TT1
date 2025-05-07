@@ -10,10 +10,10 @@ Matrix& Position(double lon, double lat, double h){
 
     double N = R_equ / sqrt(1.0-e2*SinLat*SinLat);
 
-    Matrix r(1,3);
+    Matrix &r = zeros(1,3);
     r(1,1) = (N+h)*CosLat*cos(lon);
-    r(2,1) = (N+h)*CosLat*sin(lon);
-    r(3,1) = ((1.0-e2)*N+h)*SinLat;
+    r(1,2) = (N+h)*CosLat*sin(lon);
+    r(1,3) = ((1.0-e2)*N+h)*SinLat;
 
     return r;
 }

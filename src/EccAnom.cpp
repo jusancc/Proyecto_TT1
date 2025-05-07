@@ -5,13 +5,13 @@ double EccAnom(double M, double e){
     int i = 1;
     double E, f;
     const double epsilon = 1e2 * std::numeric_limits<double>::epsilon();
-    M = fmod(M, 2.0*M_PI);
+    M = fmod(M, 2.0*SAT_Const::pi);
 
     if (e < 0.8)
     {
        E = M; 
     } else{
-        E = M_PI;
+        E = SAT_Const::pi;
     }
 
     f = E - e*sin(E) - M;

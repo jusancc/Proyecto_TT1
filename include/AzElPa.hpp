@@ -2,6 +2,7 @@
 #define _AZ_EL_PA_
 
 #include "matrix.hpp"
+#include "SAT_Const.hpp"
 #include <iostream>
 #include <tuple>
 #include <cmath>

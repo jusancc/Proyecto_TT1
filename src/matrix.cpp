@@ -51,16 +51,12 @@ Matrix::Matrix(const int n_row, const int n_column) {
 }
 
 double& Matrix::operator () (const int n) {
-    int total_size = this->n_row * this->n_column;
-    if (n <= 0 || n > total_size) {
-        cout << "Matrix get: error in index n\n";
+    if (n <= 0 || n > this->n_row*this->n_column) {
+		cout << "Matrix: error in row/column\n";
         exit(EXIT_FAILURE);
-    }
-    
-    int row = (n - 1) / this->n_column + 1;
-    int column = (n - 1) % this->n_column + 1;
-    
-    return this->data[row - 1][column - 1];
+	}
+	
+	return this->data[(n - 1)/this->n_column][(n - 1)%this->n_column];
 }
 
 double& Matrix::operator () (const int row, const int column) {
@@ -313,11 +309,13 @@ double Matrix::dot(Matrix &m){
         cout << "Matrix dot: error in dimensions\n";
         exit(EXIT_FAILURE);
     }
-    double r = 0.0;
-    for (int j = 1; j <= this->n_column; j++) {
-        r += (*this)(1, j) * m(1, j);
-    }
     
+    double r = 0.0;
+    for (int i = 1; i <= this->n_row; i++) {
+        for (int j = 1; j <= this->n_column; j++) {
+            r += (*this)(i, j) * m(i, j);
+        }
+    }
     return r;
 }
 

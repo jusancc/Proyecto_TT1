@@ -1,7 +1,7 @@
 #include "../include/AzElPa.hpp"
 
 tuple<double,double,Matrix&,Matrix&> AzElPa(Matrix &s){
-    double pi2 = 2.0*M_PI;
+    double pi2 = SAT_Const::pi2;
     double rho = sqrt(s(1,1)*s(1,1)+s(2,1)*s(2,1));
 
     double Az = atan2(s(1,1),s(2,1));

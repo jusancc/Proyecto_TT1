@@ -5,6 +5,6 @@
 #include <iostream>
 using namespace std;
 
-Matrix Cheb3D(double t, int N, double Ta, double Tb, double Cx[], double Cy[], double Cz[]);
+Matrix& Cheb3D(double t, int N, double Ta, double Tb, Matrix Cx, Matrix Cy, Matrix Cz);
 
 #endif 
