@@ -17,6 +17,12 @@
 #include "..\include\Legendre.hpp"
 #include "..\include\NutAngles.hpp"
 #include "..\include\TimeUpdate.hpp"
+#include "..\include\EqnEquinox.hpp"
+#include "..\include\LTC.hpp"
+#include "..\include\NutMatrix.hpp"
+#include "..\include\PoleMatrix.hpp"
+#include "..\include\PrecMatrix.hpp"
+#include "..\include\GMST.hpp"
 #include <cstdio>
 #include <cmath>
 
@@ -573,6 +579,68 @@ int m_timeupdate_01(){
     return 0;
 }
 
+int m_eqnEquinox_01(){
+    _assert(fabs(2.49335221515174e-05 - EqnEquinox(2))<1e-10);
+    return 0;
+}
+
+int m_ltc_01(){
+    Matrix A(3,3);
+    A(1,1)=-0.909297426825682;A(1,2)=-0.416146836547142;A(1,3)=0;
+    A(2,1)=0.058726644927621;A(2,2)=-0.128320060202457;A(2,3)=-0.989992496600445;
+    A(3,1)=0.411982245665683;A(3,2)=-0.900197629735517;A(3,3)=0.141120008059867;
+
+    Matrix res(3,3);
+    res = LTC(2,3);
+
+    _assert(m_equals(A,res,1e-10));
+    return 0;
+}
+
+int m_nutMatrix_01(){
+    Matrix A(3,3);
+    A(1,1)=0.999999999630629;A(1,2)=-2.49335221484475e-05;A(1,3)=-1.08194921374918e-05;
+    A(2,1)=2.49330981433634e-05;A(2,2)=0.999999998921346;A(2,3)=-3.91873660592346e-05;
+    A(3,1)=1.08204692048809e-05;A(3,2)=3.91870962813123e-05;A(3,3)=0.999999999173645;
+
+    Matrix res(3,3);
+    res = NutMatrix(2);
+
+    _assert(m_equals(A,res,1e-10));
+    return 0;
+}
+
+int m_poleMatrix_01(){
+    Matrix A(3,3);
+    A(1,1)=-0.416146836547142;A(1,2)=0.128320060202457;A(1,3)=-0.900197629735517;
+    A(2,1)=0;A(2,2)=-0.989992496600445;A(2,3)=-0.141120008059867;
+    A(3,1)=-0.909297426825682;A(3,2)=-0.058726644927621;A(3,3)=0.411982245665683;
+
+    Matrix res(3,3);
+    res = PoleMatrix(2,3);
+
+    _assert(m_equals(A,res,1e-10));
+    return 0;
+}
+
+int m_precMatrix_01(){
+    Matrix A(3,3);
+    A(1,1)=0.999999999999778;A(1,2)=-6.11707327974946e-07;A(1,3)=-2.66201482252295e-07;
+    A(2,1)=6.11707327974946e-07;A(2,2)=0.999999999999813;A(2,3)=-8.14186990889656e-14;
+    A(3,1)=2.66201482252295e-07;A(3,2)=-8.1418698322574e-14;A(3,3)=0.999999999999965;
+
+    Matrix res(3,3);
+    res = PrecMatrix(2,3);
+
+    _assert(m_equals(A,res,1e-10));
+    return 0;
+}
+
+int m_gmst_01(){
+    _assert(fabs(1.00761373073367-gmst(2))<1e-10);
+    return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -616,6 +684,12 @@ int all_tests()
     _verify(m_legendre_01);
     _verify(m_nutangles_01);
     _verify(m_timeupdate_01);
+    _verify(m_eqnEquinox_01);
+    _verify(m_ltc_01);
+    _verify(m_nutMatrix_01);
+    _verify(m_poleMatrix_01);
+    _verify(m_precMatrix_01);
+    _verify(m_gmst_01);
     return 0;
 }
 

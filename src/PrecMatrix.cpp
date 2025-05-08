@@ -8,9 +8,9 @@ Matrix& PrecMatrix(double Mjd_1, double Mjd_2){
     double z = zeta + ( (0.79280+0.000411*T)+0.000205*dT)*dT*dT/SAT_Const::Arcs;
     double theta = ( (2004.3109-(0.85330+0.000217*T)*T)-((0.42665+0.000217*T)+0.041833*dT)*dT )*dT/SAT_Const::Arcs;
 
-    Matrix rz1 = R_z(-z);
-    Matrix ry = R_y(theta);
-    Matrix rz2 = R_z(-zeta);
+    Matrix &rz1 = R_z(-z);
+    Matrix &ry = R_y(theta);
+    Matrix &rz2 = R_z(-zeta);
 
     Matrix &PrecMat = rz1*ry*rz2;
     return PrecMat;
