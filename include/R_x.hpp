@@ -3,6 +3,6 @@
 
 #include "Matrix.hpp"
 
-Matrix R_x(double alpha);
+Matrix& R_x(double alpha);
 
 #endif

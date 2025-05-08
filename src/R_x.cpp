@@ -12,9 +12,9 @@
 //-------------------------------------------------------------
 
 
-Matrix R_x(double alpha)
+Matrix& R_x(double alpha)
 {
-    Matrix rotmat(3,3);
+    Matrix &rotmat = zeros(3,3);
     double C, S;
     
     C = cos(alpha);

@@ -130,7 +130,7 @@ tuple<double, double> NutAngles(double Mjd_TT)
     double deps = 0;
     double arg;
 
-    for (int i = 1; i < N_coeff; i++)
+    for (int i = 0; i < N_coeff; i++)
     {
         arg = (C[i][0] * l + C[i][1] * lp + C[i][2] * F + C[i][3] * D + C[i][4] * Om) / SAT_Const::Arcs;
         dpsi += (C[i][5] + C[i][6] * T) * sin(arg);

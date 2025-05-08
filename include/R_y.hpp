@@ -5,6 +5,6 @@
 #include <cmath>
 
 
-Matrix R_y(double angle);
+Matrix& R_y(double angle);
 
 #endif

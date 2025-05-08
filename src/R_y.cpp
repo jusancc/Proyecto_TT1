@@ -1,7 +1,7 @@
 #include "../include/R_y.hpp"
 
-Matrix R_y(double angle){
-    Matrix rotmat(3,3);
+Matrix& R_y(double angle){
+    Matrix &rotmat = zeros(3,3);
     double C,S;
 
     C = cos(angle);
