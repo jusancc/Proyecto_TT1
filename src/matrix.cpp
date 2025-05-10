@@ -391,7 +391,7 @@ void Matrix::assign_column(int column, Matrix &v) {
     }
 }
 
-Matrix& Matrix::union_vector(Matrix &v1, Matrix &v2) {
+Matrix& union_vector(Matrix &v1, Matrix &v2) {
     bool is_row_vector = (v1.n_row == 1 && v2.n_row == 1);
     bool is_column_vector = (v1.n_column == 1 && v2.n_column == 1);
     

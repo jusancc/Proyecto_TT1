@@ -23,6 +23,12 @@
 #include "..\include\PoleMatrix.hpp"
 #include "..\include\PrecMatrix.hpp"
 #include "..\include\GMST.hpp"
+#include "..\include\AccelHarmonic.hpp"
+#include "..\include\JPL_Eph_DE430.hpp"
+#include "..\include\gast.hpp"
+#include "..\include\MeasUpdate.hpp"
+#include "..\include\G_AccelHarmonic.hpp"
+#include "..\include\GHAMatrix.hpp"
 #include <cstdio>
 #include <cmath>
 
@@ -641,6 +647,187 @@ int m_gmst_01(){
     return 0;
 }
 
+int m_accelArmonic_01(){
+    Matrix r(3, 1); 
+    r(1,1) = 7000.0e3; 
+    r(2,1) = 0.0;
+    r(3,1) = 0.0;
+    
+    Matrix E = eye(3); 
+    
+    int n_max = 2; 
+    int m_max = 2;
+
+    Matrix& a = AccelHarmonic(r, E, n_max, m_max);
+    
+    double expected_x = -8.015; 
+    double expected_y = 0.0;
+    double expected_z = 0.0;
+    
+    _assert(fabs(a(1,1) - expected_x) < 1e-10);
+    _assert(fabs(a(1,2) - expected_y) < 1e-10);
+    _assert(fabs(a(1,3) - expected_z) < 1e-10);
+    
+    return 0;
+}
+
+int m_jpl_eph_de430_01(){
+    double Mjd_TDB = 60348;
+    
+    auto [r_Mercury,r_Venus,r_Earth,r_Mars,r_Jupiter,r_Saturn,r_Uranus, 
+        r_Neptune,r_Pluto,r_Moon,r_Sun] = JPL_Eph_DE430(Mjd_TDB);
+
+    Matrix& expected_r_Mercury = zeros(3);
+    expected_r_Mercury(1)=112623958311.779;
+    expected_r_Mercury(2)=-150868623524.381;
+    expected_r_Mercury(3)=-71779751443.9542;
+
+    _assert(m_equals(r_Mercury, expected_r_Mercury,10e-4));
+
+    Matrix& expected_r_Venus = zeros(3);
+    expected_r_Venus(1)=67979665801.0159;
+    expected_r_Venus(2)=-182040469650.972;
+    expected_r_Venus(3)=-77754531631.0774;
+
+    _assert(m_equals(r_Venus, expected_r_Venus,10e-4));
+
+    Matrix& expected_r_Earth = zeros(3);
+    expected_r_Earth(1)=-111448106096.032;
+    expected_r_Earth(2)=89490608943.6678;
+    expected_r_Earth(3)=38828100871.8833;
+
+    _assert(m_equals(r_Earth, expected_r_Earth,10e-4));
+
+    Matrix& expected_r_Mars = zeros(3);
+    expected_r_Mars(1)=148466860011.68;
+    expected_r_Mars(2)=-281603620116.961;
+    expected_r_Mars(3)=-127931017643.326;
+
+    _assert(m_equals(r_Mars, expected_r_Mars,10e-4));
+
+    Matrix& expected_r_Jupiter = zeros(3);
+    expected_r_Jupiter(1)=600849652579.016;
+    expected_r_Jupiter(2)=431907465367.823;
+    expected_r_Jupiter(3)=172747882009.303;
+
+    _assert(m_equals(r_Jupiter, expected_r_Jupiter,10e-3));
+
+    Matrix& expected_r_Saturn = zeros(3);
+    expected_r_Saturn(1)=1466091955279.12;
+    expected_r_Saturn(2)=-555189637093.051;
+    expected_r_Saturn(3)=-289531886725.713;
+
+    _assert(m_equals(r_Saturn, expected_r_Saturn,10e-4));
+
+    Matrix& expected_r_Uranus = zeros(3);
+    expected_r_Uranus(1)=1928309175333.92;
+    expected_r_Uranus(2)=2027905259796.94;
+    expected_r_Uranus(3)=862836636210.81;
+
+    _assert(m_equals(r_Uranus, expected_r_Uranus,10e-3));
+
+    Matrix& expected_r_Neptune = zeros(3);
+    expected_r_Neptune(1)=4575619355154.4;
+    expected_r_Neptune(2)=-280382588638.193;
+    expected_r_Neptune(3)=-228103255917.356;
+
+    _assert(m_equals(r_Neptune, expected_r_Neptune,10e-3));
+
+    Matrix& expected_r_Pluto = zeros(3);
+    expected_r_Pluto(1)=2700803532076.77;
+    expected_r_Pluto(2)=-4144525986799.46;
+    expected_r_Pluto(3)=-2084446068792.87;
+
+    _assert(m_equals(r_Pluto, expected_r_Pluto,10e-2));
+
+    Matrix& expected_r_Moon = zeros(3);
+    expected_r_Moon(1)=130639413.73261;
+    expected_r_Moon(2)=-298652884.800457;
+    expected_r_Moon(3)=-164607636.963072;
+
+    _assert(m_equals(r_Moon, expected_r_Moon,10e-5));
+
+    Matrix& expected_r_Sun = zeros(3);
+    expected_r_Sun(1)=110284675128.512;
+    expected_r_Sun(2)=-89937859346.5398;
+    expected_r_Sun(3)=-38988031316.0913;
+
+    _assert(m_equals(r_Sun, expected_r_Sun,10e-4));
+
+    return 0;
+}
+
+int m_gast_01(){
+    _assert(fabs(1.00764-gast(2))<1e-5);
+    return 0;
+}
+
+int m_measUpdate_01(){
+
+    const int n = 1;
+    Matrix x(n, 1);
+    x(1,1) = 2.0;
+    
+    Matrix P = eye(n);
+    P(1,1) = 1.0;
+    
+    double z = 3.0;
+    double g = 2.5;
+    double s = 0.5;
+    
+    Matrix G(1, n);
+    G(1,1) = 1.0;
+    
+    auto [K, x_updated, P_updated] = MeasUpdate(x, z, g, s, G, P, n);
+
+    double expected_K = 0.8;       
+    double expected_x = 2.4;        
+    double expected_P = 0.2;      
+    
+    const double tolerance = 1e-6;
+
+    
+    _assert(fabs(K(1,1) - expected_K) < tolerance);
+    _assert(fabs(x_updated(1,1) - expected_x) < tolerance); 
+    _assert(fabs(P_updated(1,1) - expected_P) < tolerance);
+
+    return 0;
+}
+
+int m_g_accelHarmonic_01(){
+    Matrix& r = zeros(3);
+    r(1) = 1000; r(2) = 2000; r(3) = 3000;
+
+    Matrix& U = eye(3);
+
+    int n_max = 4;
+    int m_max = 4;
+    
+    Matrix& R = G_AccelHarmonic(r,U,n_max,m_max);
+
+    Matrix& expected = zeros(3,3);
+    expected(1,1) = 1207384439706; expected(1,2) = -1018762589128.5; expected(1,3) = -1723266165859.38;
+    expected(2,1) = -1018762610136.75; expected(2,2) = 1190241885267.38; expected(2,3) = -1784910727629.88;
+    expected(3,1) = -1723265773982.25; expected(3,2) = -1784910207689.25; expected(3,3) = -2397626334203.5;
+
+    _assert(m_equals(R, expected, 1e1));
+    return 0;
+}
+
+int m_ghaMatrix_01(){
+    Matrix A(3,3);
+    A(1,1)=0.5339;A(1,2)=0.8456;A(1,3)=0;
+    A(2,1)=-0.8456;A(2,2)=0.5339;A(2,3)=0;
+    A(3,1)=0;A(3,2)=0;A(3,3)=1;
+
+    cout << A <<endl;
+
+    Matrix &result = GHAMatrix(2);
+    cout << result <<endl;
+    _assert(m_equals(A,result,1e-4));
+    return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -690,6 +877,12 @@ int all_tests()
     _verify(m_poleMatrix_01);
     _verify(m_precMatrix_01);
     _verify(m_gmst_01);
+    //_verify(m_accelArmonic_01);
+    //_verify(m_jpl_eph_de430_01);
+    _verify(m_gast_01);
+    _verify(m_measUpdate_01);
+    //_verify(m_g_accelHarmonic_01);
+    _verify(m_ghaMatrix_01);
     return 0;
 }
 

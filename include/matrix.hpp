@@ -42,7 +42,6 @@ public:
 	void assign_row(int row, Matrix &v);
 	void assign_column(int column, Matrix &v);
 	
-	Matrix& union_vector(Matrix &v1, Matrix &v2);
 	Matrix& extract_vector(int from, int to);
 
 	Matrix& inv();
@@ -59,5 +58,6 @@ Matrix& zeros(const int n_row, const int n_column);
 Matrix& zeros(const int n);
 Matrix& eye(const int n);
 Matrix& transpose(Matrix &m);
+Matrix& union_vector(Matrix &v1, Matrix &v2);
 
 #endif
