@@ -29,6 +29,7 @@
 #include "..\include\MeasUpdate.hpp"
 #include "..\include\G_AccelHarmonic.hpp"
 #include "..\include\GHAMatrix.hpp"
+#include "..\include\Accel.hpp"
 #include <cstdio>
 #include <cmath>
 
@@ -826,6 +827,10 @@ int m_ghaMatrix_01(){
     cout << result <<endl;
     _assert(m_equals(A,result,1e-4));
     return 0;
+}
+
+int m_accel_01(){
+    
 }
 
 int all_tests()
