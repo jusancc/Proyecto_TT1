@@ -649,10 +649,10 @@ int m_gmst_01(){
 }
 
 int m_accelArmonic_01(){
-    Matrix r(3, 1); 
+    Matrix r(1, 3); 
     r(1,1) = 7000.0e3; 
-    r(2,1) = 0.0;
-    r(3,1) = 0.0;
+    r(1,2) = 0.0;
+    r(1,3) = 0.0;
     
     Matrix E = eye(3); 
     
@@ -661,16 +661,19 @@ int m_accelArmonic_01(){
 
     Matrix& a = AccelHarmonic(r, E, n_max, m_max);
     
-    double expected_x = -8.015; 
-    double expected_y = 0.0;
-    double expected_z = 0.0;
+    double expected_x = -8.14576607065686; 
+    double expected_y = -3.66267894892037e-05;
+    double expected_z = -5.84508413583961e-09;
     
-    _assert(fabs(a(1,1) - expected_x) < 1e-10);
-    _assert(fabs(a(1,2) - expected_y) < 1e-10);
-    _assert(fabs(a(1,3) - expected_z) < 1e-10);
+    const double tolerance = 1e-12;  // tolerancia ajustada
+    
+    _assert(fabs(a(1,1) - expected_x) < tolerance);
+    _assert(fabs(a(2,1) - expected_y) < tolerance);
+    _assert(fabs(a(3,1) - expected_z) < tolerance);
     
     return 0;
 }
+
 
 int m_jpl_eph_de430_01(){
     double Mjd_TDB = 60348;
@@ -830,7 +833,7 @@ int m_ghaMatrix_01(){
 }
 
 int m_accel_01(){
-    
+    return 0;
 }
 
 int all_tests()
@@ -882,7 +885,7 @@ int all_tests()
     _verify(m_poleMatrix_01);
     _verify(m_precMatrix_01);
     _verify(m_gmst_01);
-    //_verify(m_accelArmonic_01);
+    _verify(m_accelArmonic_01);
     //_verify(m_jpl_eph_de430_01);
     _verify(m_gast_01);
     _verify(m_measUpdate_01);
@@ -894,6 +897,11 @@ int all_tests()
 
 int main()
 {
+    eop19620101(21413);
+    GGM03S(181);
+    DE430Coeff(2285,1020);
+    initializeAuxParam();
+
     int result = all_tests();
 
     if (result == 0)

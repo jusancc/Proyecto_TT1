@@ -142,25 +142,26 @@ Matrix& zeros(const int n){
 }
 
 Matrix& Matrix::operator * (Matrix &m) {
-	if (this->n_column != m.n_row) {
-		cout << "Matrix sub: error in n_row/n_column\n";
+    if (this->n_column != m.n_row) {
+        cout << "Matrix product: error in n_row*m_column\n";
         exit(EXIT_FAILURE);
-	}
-	
-	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
-	
+    }
+
+    Matrix *m_aux = new Matrix(this->n_row, m.n_column);
+
     for(int i = 1; i <= this->n_row; i++) {
-        for(int j = 1; j <= this->n_column; j++) {
-			double sum = 0;
-			for(int k = 1; k <= this->n_column; k++) {
-                sum += (*this)(i,k) * m(k,j);
+        for(int j = 1; j <= m.n_column; j++) {
+            double sum = 0;
+            for(int k = 1; k <= this->n_column; k++) {
+                sum += (*this)(i, k) * m(k, j);
             }
-            (*m_aux)(i,j) = sum;
-		}
-	}
-	
-	return *m_aux;
+            (*m_aux)(i, j) = sum;
+        }
+    }
+
+    return *m_aux;
 }
+
 
 Matrix& Matrix::operator / (Matrix &m){
     // Verificar que las dimensiones sean compatibles

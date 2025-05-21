@@ -1,37 +1,43 @@
 #include "..\include\global.hpp"
 
-
-/*extern*/ Matrix eopdata;
+Matrix eopdata;
 
 void eop19620101(int c){
-	eopdata = zeros(13, c);
+    eopdata = zeros(13, c);
+    FILE *fid = fopen("../data/eop19620101.txt","r");
+    if(fid == NULL){
+        printf("Fail open eop19620101.txt file\n");
+        exit(EXIT_FAILURE);
+    }
 
-	FILE *fid = fopen("../data/eop19620101.txt", "r");
-	if(fid == NULL){
-		printf("Fail open o file\neop19620101");
-		exit(EXIT_FAILURE);
-	}
+    for(int j=1; j<=c; j++){
+        fscanf(fid,"%lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf",&(eopdata(1,j)),&(eopdata(2,j)),
+        &(eopdata(3,j)),&(eopdata(4,j)),&(eopdata(5,j)),&(eopdata(6,j)),&(eopdata(7,j)),&(eopdata(8,j)),
+        &(eopdata(9,j)),&(eopdata(10,j)),&(eopdata(11,j)),&(eopdata(12,j)),&(eopdata(13,j)));
+    }
 
-	for (int j=1; j<=c; j++){
-		fscanf(fid, "%lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf",&(eopdata(1,j)),&(eopdata(2,j)),&(eopdata(3,j)),
-		&(eopdata(4,j)),&(eopdata(5,j)),&(eopdata(6,j)),&(eopdata(7,j)),&(eopdata(8,j)),&(eopdata(9,j)),&(eopdata(10,j)),
-		&(eopdata(11,j)),&(eopdata(12,j)),&(eopdata(13,j)));
-	}
-	
+    fclose(fid);
 }
 
-Matrix Cnm, Snm;
-void GGM03S(int c){
-	Cnm = zeros(181, 181);
-	Snm = zeros(181, 181);
-	double aux;
+Matrix Cnm;
+Matrix Snm;
+void GGM03S(int n){    
+    Cnm = zeros(n,n);
+    Snm = zeros(n,n);
+    FILE *fid = fopen("../data/GGM03S.txt","r");
+    if(fid == NULL){
+        printf("Fail open GGM03S.txt file\n");
+        exit(EXIT_FAILURE);
+    }
 
-	FILE *fid = fopen("../data/GGm03S.txt", "r");
-	for (int i=0;i<180;i++){
-		for (int j=0;j<i;j++){
-			fscanf(fid, "%lf %lf %lf %lf %lf %lf", &aux, &aux, Cnm(i+1,j+1), Snm(i+1,j+1), &aux, &aux);
-		}
-	}
+    double aux;
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            fscanf(fid,"%lf %lf %lf %lf %lf %lf",&aux,&aux,&(Cnm(i,j)),&(Snm(i,j)),&aux,&aux);
+        }
+    }
+
+    fclose(fid);
 }
 
 Matrix PC;
@@ -54,12 +60,12 @@ void DE430Coeff(int f, int c){
 }
 
 Param AuxParam;
-void iniciarAuxParam(){
-	AuxParam.Mjd_UTC = 49746.1163541665;
-	AuxParam.Mjd_TT = 49746.1170623147;
-	AuxParam.n = 20;
-	AuxParam.m = 20;
-	AuxParam.sun = 1;
-	AuxParam.moon = 1;
-	AuxParam.planets = 1;
+void initializeAuxParam(){
+    AuxParam.Mjd_UTC = 49746.1163541665;
+    AuxParam.Mjd_TT = 49746.1170623147;
+    AuxParam.n = 20;
+    AuxParam.m = 20;
+    AuxParam.sun = 1;
+    AuxParam.moon = 1;
+    AuxParam.planets = 1;
 }

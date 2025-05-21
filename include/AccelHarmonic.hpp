@@ -7,6 +7,6 @@
 #include "SAT_Const.hpp"
 #include "global.hpp"
 
-Matrix& AccelHarmonic(Matrix &r, Matrix &E, double n_max, double m_max);
+Matrix& AccelHarmonic(Matrix &r, Matrix &E, int n_max, int m_max);
 
 #endif 

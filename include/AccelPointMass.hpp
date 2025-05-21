@@ -5,6 +5,6 @@
 #include <cmath>
 using namespace std;
 
-Matrix AccelPointMass(Matrix &r, Matrix &s, double GM);
+Matrix& AccelPointMass(Matrix &r, Matrix &s, double GM);
 
 #endif 
