@@ -8,7 +8,7 @@ Matrix& AccelHarmonic(Matrix &r, Matrix &E, int n_max, int m_max) {
     double r_ref = 6378.1363e3;
     double gm = 398600.4415e9;
 
-    Matrix &r_bf = E * transpose(r); 
+    Matrix &r_bf = E * r;
 
     double d = transpose(r_bf).norm();
 

@@ -30,6 +30,7 @@
 #include "..\include\G_AccelHarmonic.hpp"
 #include "..\include\GHAMatrix.hpp"
 #include "..\include\Accel.hpp"
+#include "..\include\VarEqn.hpp"
 #include <cstdio>
 #include <cmath>
 
@@ -649,10 +650,10 @@ int m_gmst_01(){
 }
 
 int m_accelArmonic_01(){
-    Matrix r(1, 3); 
+    Matrix r(3, 1); 
     r(1,1) = 7000.0e3; 
-    r(1,2) = 0.0;
-    r(1,3) = 0.0;
+    r(2,1) = 0.0;
+    r(3,1) = 0.0;
     
     Matrix E = eye(3); 
     
@@ -799,8 +800,10 @@ int m_measUpdate_01(){
 }
 
 int m_g_accelHarmonic_01(){
-    Matrix& r = zeros(3);
-    r(1) = 1000; r(2) = 2000; r(3) = 3000;
+    Matrix& r = zeros(3, 1); 
+    r(1,1) = 1000;
+    r(2,1) = 2000;
+    r(3,1) = 3000;
 
     Matrix& U = eye(3);
 
@@ -814,6 +817,8 @@ int m_g_accelHarmonic_01(){
     expected(2,1) = -1018762610136.75; expected(2,2) = 1190241885267.38; expected(2,3) = -1784910727629.88;
     expected(3,1) = -1723265773982.25; expected(3,2) = -1784910207689.25; expected(3,3) = -2397626334203.5;
 
+    cout << expected <<endl;
+    cout << R <<endl;
     _assert(m_equals(R, expected, 1e1));
     return 0;
 }
@@ -833,8 +838,130 @@ int m_ghaMatrix_01(){
 }
 
 int m_accel_01(){
+    double x = 123456;
+    Matrix& Y = zeros(6);
+    Y(1) = 1000000;
+    Y(2) = 2000000;
+    Y(3) = 3000000;
+    Y(4) = 4000000;
+    Y(5) = 5000000;
+    Y(6) = 6000000;
+    
+    Matrix& R = accel(x,Y);
+
+    Matrix& expected = zeros(6);
+    expected(1) = 4000000;
+    expected(2) = 5000000;
+    expected(3) = 6000000;
+    expected(4) = -5.70209501208335;
+    expected(5) = -17.9604015906774;
+    expected(6) = -32.0686615657293;
+
+    _assert(m_equals(R, expected, 1e-8));
     return 0;
 }
+
+int m_varEqn_01(){
+    double x = 0;
+    Matrix& yPhi = zeros(42);
+    yPhi(1) =       5542555.93722861;
+    yPhi(2) =        3213514.8673492;
+    yPhi(3) =       3990892.97587685;
+    yPhi(4) =       5394.06842166351;
+    yPhi(5) =      -2365.21337882342;
+    yPhi(6) =      -7061.84554200295;
+    yPhi(7) =                      1;
+    yPhi(8) =                      0;
+    yPhi(9) =                      0;
+    yPhi(10) =                      0;
+    yPhi(11) =                      0;
+    yPhi(12) =                      0;
+    yPhi(13) =                      0;
+    yPhi(14) =                      1;
+    yPhi(15) =                      0;
+    yPhi(16) =                      0;
+    yPhi(17) =                      0;
+    yPhi(18) =                      0;
+    yPhi(19) =                      0;
+    yPhi(20) =                      0;
+    yPhi(21) =                      1;
+    yPhi(22) =                      0;
+    yPhi(23) =                      0;
+    yPhi(24) =                      0;
+    yPhi(25) =                      0;
+    yPhi(26) =                      0;
+    yPhi(27) =                      0;
+    yPhi(28) =                      1;
+    yPhi(29) =                      0;
+    yPhi(30) =                      0;
+    yPhi(31) =                      0;
+    yPhi(32) =                      0;
+    yPhi(33) =                      0;
+    yPhi(34) =                      0;
+    yPhi(35) =                      1;
+    yPhi(36) =                      0;
+    yPhi(37) =                      0;
+    yPhi(38) =                      0;
+    yPhi(39) =                      0;
+    yPhi(40) =                      0;
+    yPhi(41) =                      0;
+    yPhi(42) =                      1;
+
+    AuxParam.Mjd_TT = 49746.1108586111;
+    Matrix& R = varEqn(x, yPhi);
+
+    Matrix& expected = zeros(42);
+    expected(1) =      5394.06842166351;
+    expected(2) =      -2365.21337882342;
+    expected(3) =      -7061.84554200295;
+    expected(4) =      -5.1348367854085;
+    expected(5) =      -2.97717622353621;
+    expected(6) =      -3.70591776714204;
+    expected(7) =                      0;
+    expected(8) =                      0;
+    expected(9) =                      0;
+    expected(10) =   5.70032035795975e-07;
+    expected(11) =   8.67651593239316e-07;
+    expected(12) =   1.08169354007259e-06;
+    expected(13) =                      0;
+    expected(14) =                      0;
+    expected(15) =                      0;
+    expected(16) =   8.67651590574781e-07;
+    expected(17) =  -4.23359106882515e-07;
+    expected(18) =   6.27183702306411e-07;
+    expected(19) =                      0;
+    expected(20) =                      0;
+    expected(21) =                      0;
+    expected(22) =   1.08169353651988e-06;
+    expected(23) =   6.27183704082768e-07;
+    expected(24) =  -1.46672928913461e-07;
+    expected(25) =                      1;
+    expected(26) =                      0;
+    expected(27) =                      0;
+    expected(28) =                      0;
+    expected(29) =                      0;
+    expected(30) =                      0;
+    expected(31) =                      0;
+    expected(32) =                      1;
+    expected(33) =                      0;
+    expected(34) =                      0;
+    expected(35) =                      0;
+    expected(36) =                      0;
+    expected(37) =                      0;
+    expected(38) =                      0;
+    expected(39) =                      1;
+    expected(40) =                      0;
+    expected(41) =                      0;
+    expected(42) =                      0;
+
+    cout << "R:" << R << endl;
+    cout << "Expected:" << expected << endl;
+
+    _assert(m_equals(R, expected, 1e-8));
+    return 0;
+}
+
+
 
 int all_tests()
 {
@@ -889,8 +1016,10 @@ int all_tests()
     //_verify(m_jpl_eph_de430_01);
     _verify(m_gast_01);
     _verify(m_measUpdate_01);
-    //_verify(m_g_accelHarmonic_01);
+    _verify(m_g_accelHarmonic_01);
     _verify(m_ghaMatrix_01);
+    //_verify(m_accel_01);
+    _verify(m_varEqn_01);
     return 0;
 }
 
