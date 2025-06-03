@@ -31,6 +31,8 @@
 #include "..\include\GHAMatrix.hpp"
 #include "..\include\Accel.hpp"
 #include "..\include\VarEqn.hpp"
+#include "..\include\Geodetic.hpp"
+#include "..\include\angl.hpp"
 #include <cstdio>
 #include <cmath>
 
@@ -340,6 +342,18 @@ int m_inverse_02() {
     return 0;
 }
 
+int m_union_01(){
+    Matrix &A = zeros(1,3);
+    A(1,1) = 1; A(1,2) = 2; A(1,3) = 3;
+
+    Matrix &B = zeros(1,3);
+    B(1,1) = 4; B(1,2) = 5; B(1,3) = 6;
+
+    Matrix &C = union_vector(A,B);
+
+    return 0;
+}
+
 int m_accel_point_mass_01(){
     Matrix A(1,3);
     A(1,1)=1;A(1,2)=2;A(1,3)=3;
@@ -365,7 +379,6 @@ int m_cheb_3d_01(){
     Cz(1,1)=7;Cz(1,2)=8;Cz(1,3)=9;
 
     Matrix A = Cheb3D(5,3,0,10,Cx,Cy,Cz);
-    cout << A << endl;
     Matrix result(1,3);
     result(1,1)=-2;result(1,2)=-2;result(1,3)=-2;
 
@@ -682,82 +695,83 @@ int m_jpl_eph_de430_01(){
     auto [r_Mercury,r_Venus,r_Earth,r_Mars,r_Jupiter,r_Saturn,r_Uranus, 
         r_Neptune,r_Pluto,r_Moon,r_Sun] = JPL_Eph_DE430(Mjd_TDB);
 
-    Matrix& expected_r_Mercury = zeros(3);
-    expected_r_Mercury(1)=112623958311.779;
-    expected_r_Mercury(2)=-150868623524.381;
-    expected_r_Mercury(3)=-71779751443.9542;
+    Matrix& expected_r_Mercury = zeros(1,3);
+    expected_r_Mercury(1,1)=112623958311.779;
+    expected_r_Mercury(1,2)=-150868623524.381;
+    expected_r_Mercury(1,3)=-71779751443.9542;
 
-    _assert(m_equals(r_Mercury, expected_r_Mercury,10e-4));
 
-    Matrix& expected_r_Venus = zeros(3);
-    expected_r_Venus(1)=67979665801.0159;
-    expected_r_Venus(2)=-182040469650.972;
-    expected_r_Venus(3)=-77754531631.0774;
+    _assert(m_equals(r_Mercury, expected_r_Mercury,1e4));
 
-    _assert(m_equals(r_Venus, expected_r_Venus,10e-4));
+    Matrix& expected_r_Venus = zeros(1,3);
+    expected_r_Venus(1,1)=67979665801.0159;
+    expected_r_Venus(1,2)=-182040469650.972;
+    expected_r_Venus(1,3)=-77754531631.0774;
 
-    Matrix& expected_r_Earth = zeros(3);
-    expected_r_Earth(1)=-111448106096.032;
-    expected_r_Earth(2)=89490608943.6678;
-    expected_r_Earth(3)=38828100871.8833;
+    _assert(m_equals(r_Venus, expected_r_Venus,1e4));
 
-    _assert(m_equals(r_Earth, expected_r_Earth,10e-4));
+    Matrix& expected_r_Earth = zeros(1,3);
+    expected_r_Earth(1,1)=-111448106096.032;
+    expected_r_Earth(1,2)=89490608943.6678;
+    expected_r_Earth(1,3)=38828100871.8833;
 
-    Matrix& expected_r_Mars = zeros(3);
-    expected_r_Mars(1)=148466860011.68;
-    expected_r_Mars(2)=-281603620116.961;
-    expected_r_Mars(3)=-127931017643.326;
+    _assert(m_equals(r_Earth, expected_r_Earth,1e4));
 
-    _assert(m_equals(r_Mars, expected_r_Mars,10e-4));
+    Matrix& expected_r_Mars = zeros(1,3);
+    expected_r_Mars(1,1)=148466860011.68;
+    expected_r_Mars(1,2)=-281603620116.961;
+    expected_r_Mars(1,3)=-127931017643.326;
 
-    Matrix& expected_r_Jupiter = zeros(3);
-    expected_r_Jupiter(1)=600849652579.016;
-    expected_r_Jupiter(2)=431907465367.823;
-    expected_r_Jupiter(3)=172747882009.303;
+    _assert(m_equals(r_Mars, expected_r_Mars,1e4));
 
-    _assert(m_equals(r_Jupiter, expected_r_Jupiter,10e-3));
+    Matrix& expected_r_Jupiter = zeros(1,3);
+    expected_r_Jupiter(1,1)=600849652579.016;
+    expected_r_Jupiter(1,2)=431907465367.823;
+    expected_r_Jupiter(1,3)=172747882009.303;
 
-    Matrix& expected_r_Saturn = zeros(3);
-    expected_r_Saturn(1)=1466091955279.12;
-    expected_r_Saturn(2)=-555189637093.051;
-    expected_r_Saturn(3)=-289531886725.713;
+    _assert(m_equals(r_Jupiter, expected_r_Jupiter,1e3));
 
-    _assert(m_equals(r_Saturn, expected_r_Saturn,10e-4));
+    Matrix& expected_r_Saturn = zeros(1,3);
+    expected_r_Saturn(1,1)=1466091955279.12;
+    expected_r_Saturn(1,2)=-555189637093.051;
+    expected_r_Saturn(1,3)=-289531886725.713;
 
-    Matrix& expected_r_Uranus = zeros(3);
-    expected_r_Uranus(1)=1928309175333.92;
-    expected_r_Uranus(2)=2027905259796.94;
-    expected_r_Uranus(3)=862836636210.81;
+    _assert(m_equals(r_Saturn, expected_r_Saturn,1e4));
 
-    _assert(m_equals(r_Uranus, expected_r_Uranus,10e-3));
+    Matrix& expected_r_Uranus = zeros(1,3);
+    expected_r_Uranus(1,1)=1928309175333.92;
+    expected_r_Uranus(1,2)=2027905259796.94;
+    expected_r_Uranus(1,3)=862836636210.81;
 
-    Matrix& expected_r_Neptune = zeros(3);
-    expected_r_Neptune(1)=4575619355154.4;
-    expected_r_Neptune(2)=-280382588638.193;
-    expected_r_Neptune(3)=-228103255917.356;
+    _assert(m_equals(r_Uranus, expected_r_Uranus,1e3));
 
-    _assert(m_equals(r_Neptune, expected_r_Neptune,10e-3));
+    Matrix& expected_r_Neptune = zeros(1,3);
+    expected_r_Neptune(1,1)=4575619355154.4;
+    expected_r_Neptune(1,2)=-280382588638.193;
+    expected_r_Neptune(1,3)=-228103255917.356;
 
-    Matrix& expected_r_Pluto = zeros(3);
-    expected_r_Pluto(1)=2700803532076.77;
-    expected_r_Pluto(2)=-4144525986799.46;
-    expected_r_Pluto(3)=-2084446068792.87;
+    _assert(m_equals(r_Neptune, expected_r_Neptune,1e3));
 
-    _assert(m_equals(r_Pluto, expected_r_Pluto,10e-2));
+    Matrix& expected_r_Pluto = zeros(1,3);
+    expected_r_Pluto(1,1)=2700803532076.77;
+    expected_r_Pluto(1,2)=-4144525986799.46;
+    expected_r_Pluto(1,3)=-2084446068792.87;
 
-    Matrix& expected_r_Moon = zeros(3);
-    expected_r_Moon(1)=130639413.73261;
-    expected_r_Moon(2)=-298652884.800457;
-    expected_r_Moon(3)=-164607636.963072;
+    _assert(m_equals(r_Pluto, expected_r_Pluto,1e2));
 
-    _assert(m_equals(r_Moon, expected_r_Moon,10e-5));
+    Matrix& expected_r_Moon = zeros(1,3);
+    expected_r_Moon(1,1)=130639413.73261;
+    expected_r_Moon(1,2)=-298652884.800457;
+    expected_r_Moon(1,3)=-164607636.963072;
 
-    Matrix& expected_r_Sun = zeros(3);
-    expected_r_Sun(1)=110284675128.512;
-    expected_r_Sun(2)=-89937859346.5398;
-    expected_r_Sun(3)=-38988031316.0913;
+    _assert(m_equals(r_Moon, expected_r_Moon,1e5));
 
-    _assert(m_equals(r_Sun, expected_r_Sun,10e-4));
+    Matrix& expected_r_Sun = zeros(1,3);
+    expected_r_Sun(1,1)=110284675128.512;
+    expected_r_Sun(1,2)=-89937859346.5398;
+    expected_r_Sun(1,3)=-38988031316.0913;
+
+    _assert(m_equals(r_Sun, expected_r_Sun,1e4));
 
     return 0;
 }
@@ -817,8 +831,6 @@ int m_g_accelHarmonic_01(){
     expected(2,1) = -1018762610136.75; expected(2,2) = 1190241885267.38; expected(2,3) = -1784910727629.88;
     expected(3,1) = -1723265773982.25; expected(3,2) = -1784910207689.25; expected(3,3) = -2397626334203.5;
 
-    cout << expected <<endl;
-    cout << R <<endl;
     _assert(m_equals(R, expected, 1e1));
     return 0;
 }
@@ -829,10 +841,7 @@ int m_ghaMatrix_01(){
     A(2,1)=-0.8456;A(2,2)=0.5339;A(2,3)=0;
     A(3,1)=0;A(3,2)=0;A(3,3)=1;
 
-    cout << A <<endl;
-
     Matrix &result = GHAMatrix(2);
-    cout << result <<endl;
     _assert(m_equals(A,result,1e-4));
     return 0;
 }
@@ -857,111 +866,140 @@ int m_accel_01(){
     expected(5) = -17.9604015906774;
     expected(6) = -32.0686615657293;
 
+    cout << "R: " << R << endl;
+    cout << "expected: " << expected << endl;
+
     _assert(m_equals(R, expected, 1e-8));
     return 0;
 }
 
 int m_varEqn_01(){
     double x = 0;
-    Matrix& yPhi = zeros(42);
-    yPhi(1) =       5542555.93722861;
-    yPhi(2) =        3213514.8673492;
-    yPhi(3) =       3990892.97587685;
-    yPhi(4) =       5394.06842166351;
-    yPhi(5) =      -2365.21337882342;
-    yPhi(6) =      -7061.84554200295;
-    yPhi(7) =                      1;
-    yPhi(8) =                      0;
-    yPhi(9) =                      0;
-    yPhi(10) =                      0;
-    yPhi(11) =                      0;
-    yPhi(12) =                      0;
-    yPhi(13) =                      0;
-    yPhi(14) =                      1;
-    yPhi(15) =                      0;
-    yPhi(16) =                      0;
-    yPhi(17) =                      0;
-    yPhi(18) =                      0;
-    yPhi(19) =                      0;
-    yPhi(20) =                      0;
-    yPhi(21) =                      1;
-    yPhi(22) =                      0;
-    yPhi(23) =                      0;
-    yPhi(24) =                      0;
-    yPhi(25) =                      0;
-    yPhi(26) =                      0;
-    yPhi(27) =                      0;
-    yPhi(28) =                      1;
-    yPhi(29) =                      0;
-    yPhi(30) =                      0;
-    yPhi(31) =                      0;
-    yPhi(32) =                      0;
-    yPhi(33) =                      0;
-    yPhi(34) =                      0;
-    yPhi(35) =                      1;
-    yPhi(36) =                      0;
-    yPhi(37) =                      0;
-    yPhi(38) =                      0;
-    yPhi(39) =                      0;
-    yPhi(40) =                      0;
-    yPhi(41) =                      0;
-    yPhi(42) =                      1;
+    Matrix& yPhi = zeros(42,1);
+    yPhi(1,1) =       5542555.93722861;
+    yPhi(2,1) =        3213514.8673492;
+    yPhi(3,1) =       3990892.97587685;
+    yPhi(4,1) =       5394.06842166351;
+    yPhi(5,1) =      -2365.21337882342;
+    yPhi(6,1) =      -7061.84554200295;
+    yPhi(7,1) =                      1;
+    yPhi(8,1) =                      0;
+    yPhi(9,1) =                      0;
+    yPhi(10,1) =                      0;
+    yPhi(11,1) =                      0;
+    yPhi(12,1) =                      0;
+    yPhi(13,1) =                      0;
+    yPhi(14,1) =                      1;
+    yPhi(15,1) =                      0;
+    yPhi(16,1) =                      0;
+    yPhi(17,1) =                      0;
+    yPhi(18,1) =                      0;
+    yPhi(19,1) =                      0;
+    yPhi(20,1) =                      0;
+    yPhi(21,1) =                      1;
+    yPhi(22,1) =                      0;
+    yPhi(23,1) =                      0;
+    yPhi(24,1) =                      0;
+    yPhi(25,1) =                      0;
+    yPhi(26,1) =                      0;
+    yPhi(27,1) =                      0;
+    yPhi(28,1) =                      1;
+    yPhi(29,1) =                      0;
+    yPhi(30,1) =                      0;
+    yPhi(31,1) =                      0;
+    yPhi(32,1) =                      0;
+    yPhi(33,1) =                      0;
+    yPhi(34,1) =                      0;
+    yPhi(35,1) =                      1;
+    yPhi(36,1) =                      0;
+    yPhi(37,1) =                      0;
+    yPhi(38,1) =                      0;
+    yPhi(39,1) =                      0;
+    yPhi(40,1) =                      0;
+    yPhi(41,1) =                      0;
+    yPhi(42,1) =                      1;
 
     AuxParam.Mjd_TT = 49746.1108586111;
     Matrix& R = varEqn(x, yPhi);
 
-    Matrix& expected = zeros(42);
-    expected(1) =      5394.06842166351;
-    expected(2) =      -2365.21337882342;
-    expected(3) =      -7061.84554200295;
-    expected(4) =      -5.1348367854085;
-    expected(5) =      -2.97717622353621;
-    expected(6) =      -3.70591776714204;
-    expected(7) =                      0;
-    expected(8) =                      0;
-    expected(9) =                      0;
-    expected(10) =   5.70032035795975e-07;
-    expected(11) =   8.67651593239316e-07;
-    expected(12) =   1.08169354007259e-06;
-    expected(13) =                      0;
-    expected(14) =                      0;
-    expected(15) =                      0;
-    expected(16) =   8.67651590574781e-07;
-    expected(17) =  -4.23359106882515e-07;
-    expected(18) =   6.27183702306411e-07;
-    expected(19) =                      0;
-    expected(20) =                      0;
-    expected(21) =                      0;
-    expected(22) =   1.08169353651988e-06;
-    expected(23) =   6.27183704082768e-07;
-    expected(24) =  -1.46672928913461e-07;
-    expected(25) =                      1;
-    expected(26) =                      0;
-    expected(27) =                      0;
-    expected(28) =                      0;
-    expected(29) =                      0;
-    expected(30) =                      0;
-    expected(31) =                      0;
-    expected(32) =                      1;
-    expected(33) =                      0;
-    expected(34) =                      0;
-    expected(35) =                      0;
-    expected(36) =                      0;
-    expected(37) =                      0;
-    expected(38) =                      0;
-    expected(39) =                      1;
-    expected(40) =                      0;
-    expected(41) =                      0;
-    expected(42) =                      0;
-
-    cout << "R:" << R << endl;
-    cout << "Expected:" << expected << endl;
+    Matrix& expected = zeros(42,1);
+    expected(1,1) =      5394.06842166351;
+    expected(2,1) =      -2365.21337882342;
+    expected(3,1) =      -7061.84554200295;
+    expected(4,1) =      -5.1348367854085;
+    expected(5,1) =      -2.97717622353621;
+    expected(6,1) =      -3.70591776714204;
+    expected(7,1) =                      0;
+    expected(8,1) =                      0;
+    expected(9,1) =                      0;
+    expected(10,1) =   5.70032035795975e-07;
+    expected(11,1) =   8.67651593239316e-07;
+    expected(12,1) =   1.08169354007259e-06;
+    expected(13,1) =                      0;
+    expected(14,1) =                      0;
+    expected(15,1) =                      0;
+    expected(16,1) =   8.67651590574781e-07;
+    expected(17,1) =  -4.23359106882515e-07;
+    expected(18,1) =   6.27183702306411e-07;
+    expected(19,1) =                      0;
+    expected(20,1) =                      0;
+    expected(21,1) =                      0;
+    expected(22,1) =   1.08169353651988e-06;
+    expected(23,1) =   6.27183704082768e-07;
+    expected(24,1) =  -1.46672928913461e-07;
+    expected(25,1) =                      1;
+    expected(26,1) =                      0;
+    expected(27,1) =                      0;
+    expected(28,1) =                      0;
+    expected(29,1) =                      0;
+    expected(30,1) =                      0;
+    expected(31,1) =                      0;
+    expected(32,1) =                      1;
+    expected(33,1) =                      0;
+    expected(34,1) =                      0;
+    expected(35,1) =                      0;
+    expected(36,1) =                      0;
+    expected(37,1) =                      0;
+    expected(38,1) =                      0;
+    expected(39,1) =                      1;
+    expected(40,1) =                      0;
+    expected(41,1) =                      0;
+    expected(42,1) =                      0;
 
     _assert(m_equals(R, expected, 1e-8));
     return 0;
 }
 
+int m_geodetic_01(){
+    Matrix &A = zeros(1,3);
+    A(1,1) = 1; A(1,2) = 2; A(1,3) = 3;
 
+    auto[lon, lat, h] = Geodetic(A);
+
+    double expected_lon = 1.1071;
+    double expected_lat = 1.5707;
+    double expected_h = -6.3567e+06;
+
+    _assert(fabs(expected_lon - lon) < 1e-4);
+    _assert(fabs(expected_lat - lat) < 1e-4);
+    _assert(fabs(expected_h - h) < 1e+2);
+
+    return 0;
+}
+
+int m_angl_01(){
+    Matrix &A = zeros(1,3);
+    A(1,1) = 1; A(1,2) = 2; A(1,3) = 3;
+
+    Matrix &B = zeros(1,3);
+    B(1,1) = 4; B(1,2) = 5; B(1,3) = 6;
+
+    double res = angl(A,B);
+
+    _assert(fabs(res-0.2257) < 1e-4);
+
+    return 0;
+}
 
 int all_tests()
 {
@@ -987,6 +1025,7 @@ int all_tests()
     _verify(m_v_cross_01);
     _verify(m_zeros_square_01);
     _verify(m_inverse_02);
+    _verify(m_union_01);
 
     
     _verify(m_accel_point_mass_01);
@@ -1019,7 +1058,11 @@ int all_tests()
     _verify(m_g_accelHarmonic_01);
     _verify(m_ghaMatrix_01);
     //_verify(m_accel_01);
-    //_verify(m_varEqn_01);
+    _verify(m_varEqn_01);
+
+
+    _verify(m_geodetic_01);
+    _verify(m_angl_01);
     return 0;
 }
 

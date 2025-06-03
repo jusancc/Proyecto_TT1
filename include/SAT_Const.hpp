@@ -1,6 +1,9 @@
 #ifndef _SAT_CONST_
 #define _SAT_CONST_
 
+#include <cmath>
+#include <iostream>
+
 class SAT_Const {
 public:
     // Mathematical constants
@@ -9,6 +12,7 @@ public:
     static const double Rad;
     static const double Deg;
     static const double Arcs;
+    static const double eps;
 
     // General
     static const double MJD_J2000;

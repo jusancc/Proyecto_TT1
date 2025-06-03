@@ -40,18 +40,8 @@ tuple<Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matr
     Matrix& Cy = PCtemp.extract_vector(temp(1,2), temp(1,3)-1);
     Matrix& Cz = PCtemp.extract_vector(temp(1,3), temp(1,4)-1);
 
-    cout << "union_vector Cx_Earth dims: " << Cx_Earth.n_row << "x" << Cx_Earth.n_column 
-         << " , Cx dims: " << Cx.n_row << "x" << Cx.n_column << endl;
     Cx_Earth = union_vector(Cx_Earth, Cx);
-
-    
-
-    cout << "union_vector Cy_Earth dims: " << Cy_Earth.n_row << "x" << Cy_Earth.n_column 
-         << " , Cy dims: " << Cy.n_row << "x" << Cy.n_column << endl;
     Cy_Earth = union_vector(Cy_Earth, Cy);
-
-    cout << "union_vector Cz_Earth dims: " << Cz_Earth.n_row << "x" << Cz_Earth.n_column 
-         << " , Cz dims: " << Cz.n_row << "x" << Cz.n_column << endl;
     Cz_Earth = union_vector(Cz_Earth, Cz);
 
     int j;
@@ -64,10 +54,10 @@ tuple<Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matr
         Mjd0 = t1 + 16 * j;
     }
 
-    Matrix &r_Earth = transpose(Cheb3D(Mjd_TDB, 13, Mjd0, Mjd0+16, 
+    Matrix &r_Earth = Cheb3D(Mjd_TDB, 13, Mjd0, Mjd0+16, 
                              Cx_Earth.extract_vector(13*j+1, 13*j+13),
                              Cy_Earth.extract_vector(13*j+1, 13*j+13),
-                             Cz_Earth.extract_vector(13*j+1, 13*j+13))) * 1e3;
+                             Cz_Earth.extract_vector(13*j+1, 13*j+13)) * 1e3;
 
     // Moon
     temp = _temp(441, 13, 480);
@@ -80,16 +70,8 @@ tuple<Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matr
         Cy = PCtemp.extract_vector(temp(1,2), temp(1,3)-1);
         Cz = PCtemp.extract_vector(temp(1,3), temp(1,4)-1);
 
-        cout << "union_vector Cx_Moon dims: " << Cx_Moon.n_row << "x" << Cx_Moon.n_column 
-             << " , Cx dims: " << Cx.n_row << "x" << Cx.n_column << endl;
         Cx_Moon = union_vector(Cx_Moon, Cx);
-
-        cout << "union_vector Cy_Moon dims: " << Cy_Moon.n_row << "x" << Cy_Moon.n_column 
-             << " , Cy dims: " << Cy.n_row << "x" << Cy.n_column << endl;
         Cy_Moon = union_vector(Cy_Moon, Cy);
-
-        cout << "union_vector Cz_Moon dims: " << Cz_Moon.n_row << "x" << Cz_Moon.n_column 
-             << " , Cz dims: " << Cz.n_row << "x" << Cz.n_column << endl;
         Cz_Moon = union_vector(Cz_Moon, Cz);
     }
     if (0 <= dt && dt <= 4) {
@@ -118,10 +100,10 @@ tuple<Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matr
         Mjd0 = t1 + 4 * j;
     }
 
-    Matrix &r_Moon = transpose(Cheb3D(Mjd_TDB, 13, Mjd0, Mjd0+4,
+    Matrix &r_Moon = Cheb3D(Mjd_TDB, 13, Mjd0, Mjd0+4,
                             Cx_Moon.extract_vector(13*j+1, 13*j+13),
                             Cy_Moon.extract_vector(13*j+1, 13*j+13),
-                            Cz_Moon.extract_vector(13*j+1, 13*j+13))) * 1e3;
+                            Cz_Moon.extract_vector(13*j+1, 13*j+13)) * 1e3;
 
     // Sun
     temp = _temp(753, 11, 786);
@@ -144,10 +126,10 @@ tuple<Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matr
         Mjd0 = t1 + 16 * j;
     }
 
-    Matrix &r_Sun = transpose(Cheb3D(Mjd_TDB, 11, Mjd0, Mjd0+16,
+    Matrix &r_Sun = Cheb3D(Mjd_TDB, 11, Mjd0, Mjd0+16,
                            Cx_Sun.extract_vector(11*j+1, 11*j+11),
                            Cy_Sun.extract_vector(11*j+1, 11*j+11),
-                           Cz_Sun.extract_vector(11*j+1, 11*j+11))) * 1e3;
+                           Cz_Sun.extract_vector(11*j+1, 11*j+11)) * 1e3;
 
     // Mercury
     temp = _temp(3, 14, 45);
@@ -178,10 +160,10 @@ tuple<Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matr
         Mjd0 = t1 + 8 * j;
     }
 
-    Matrix &r_Mercury = transpose(Cheb3D(Mjd_TDB, 14, Mjd0, Mjd0+8,
+    Matrix &r_Mercury = Cheb3D(Mjd_TDB, 14, Mjd0, Mjd0+8,
                                 Cx_Mercury.extract_vector(14*j+1, 14*j+14),
                                 Cy_Mercury.extract_vector(14*j+1, 14*j+14),
-                                Cz_Mercury.extract_vector(14*j+1, 14*j+14))) * 1e3;
+                                Cz_Mercury.extract_vector(14*j+1, 14*j+14)) * 1e3;
 
     // Venus
     temp = _temp(171, 10, 201);
@@ -204,10 +186,10 @@ tuple<Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matr
         Mjd0 = t1 + 16 * j;
     }
 
-    Matrix &r_Venus = transpose(Cheb3D(Mjd_TDB, 10, Mjd0, Mjd0+16,
+    Matrix &r_Venus = Cheb3D(Mjd_TDB, 10, Mjd0, Mjd0+16,
                               Cx_Venus.extract_vector(10*j+1, 10*j+10),
                               Cy_Venus.extract_vector(10*j+1, 10*j+10),
-                              Cz_Venus.extract_vector(10*j+1, 10*j+10))) * 1e3;
+                              Cz_Venus.extract_vector(10*j+1, 10*j+10)) * 1e3;
 
     // Mars
     temp = _temp(309, 11, 342);
@@ -216,10 +198,10 @@ tuple<Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matr
     Matrix& Cz_Mars = PCtemp.extract_vector(temp(1,3), temp(1,4)-1);
     j = 0;
     Mjd0 = t1;
-    Matrix &r_Mars = transpose(Cheb3D(Mjd_TDB, 11, Mjd0, Mjd0+32,
+    Matrix &r_Mars = Cheb3D(Mjd_TDB, 11, Mjd0, Mjd0+32,
                             Cx_Mars.extract_vector(11*j+1, 11*j+11),
                             Cy_Mars.extract_vector(11*j+1, 11*j+11),
-                            Cz_Mars.extract_vector(11*j+1, 11*j+11))) * 1e3;
+                            Cz_Mars.extract_vector(11*j+1, 11*j+11)) * 1e3;
 
     // Jupiter
     temp = _temp(342, 8, 366);
@@ -228,10 +210,10 @@ tuple<Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matr
     Matrix& Cz_Jupiter = PCtemp.extract_vector(temp(1,3), temp(1,4)-1);
     j = 0;
     Mjd0 = t1;
-    Matrix &r_Jupiter = transpose(Cheb3D(Mjd_TDB, 8, Mjd0, Mjd0+32,
+    Matrix &r_Jupiter = Cheb3D(Mjd_TDB, 8, Mjd0, Mjd0+32,
                                Cx_Jupiter.extract_vector(8*j+1, 8*j+8),
                                Cy_Jupiter.extract_vector(8*j+1, 8*j+8),
-                               Cz_Jupiter.extract_vector(8*j+1, 8*j+8))) * 1e3;
+                               Cz_Jupiter.extract_vector(8*j+1, 8*j+8)) * 1e3;
 
     // Saturn
     temp = _temp(366, 7, 387);
@@ -240,10 +222,10 @@ tuple<Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matr
     Matrix& Cz_Saturn = PCtemp.extract_vector(temp(1,3), temp(1,4)-1);
     j = 0;
     Mjd0 = t1;
-    Matrix &r_Saturn = transpose(Cheb3D(Mjd_TDB, 7, Mjd0, Mjd0+32,
+    Matrix &r_Saturn = Cheb3D(Mjd_TDB, 7, Mjd0, Mjd0+32,
                               Cx_Saturn.extract_vector(7*j+1, 7*j+7),
                               Cy_Saturn.extract_vector(7*j+1, 7*j+7),
-                              Cz_Saturn.extract_vector(7*j+1, 7*j+7))) * 1e3;
+                              Cz_Saturn.extract_vector(7*j+1, 7*j+7)) * 1e3;
 
     // Uranus
     temp = _temp(387, 6, 405);
@@ -252,10 +234,10 @@ tuple<Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matr
     Matrix& Cz_Uranus = PCtemp.extract_vector(temp(1,3), temp(1,4)-1);
     j = 0;
     Mjd0 = t1;
-    Matrix &r_Uranus = transpose(Cheb3D(Mjd_TDB, 6, Mjd0, Mjd0+32,
+    Matrix &r_Uranus = Cheb3D(Mjd_TDB, 6, Mjd0, Mjd0+32,
                               Cx_Uranus.extract_vector(6*j+1, 6*j+6),
                               Cy_Uranus.extract_vector(6*j+1, 6*j+6),
-                              Cz_Uranus.extract_vector(6*j+1, 6*j+6))) * 1e3;
+                              Cz_Uranus.extract_vector(6*j+1, 6*j+6)) * 1e3;
 
     // Neptune
     temp = _temp(405, 6, 423);
@@ -264,10 +246,10 @@ tuple<Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matr
     Matrix& Cz_Neptune = PCtemp.extract_vector(temp(1,3), temp(1,4)-1);
     j = 0;
     Mjd0 = t1;
-    Matrix &r_Neptune = transpose(Cheb3D(Mjd_TDB, 6, Mjd0, Mjd0+32,
+    Matrix &r_Neptune = Cheb3D(Mjd_TDB, 6, Mjd0, Mjd0+32,
                                 Cx_Neptune.extract_vector(6*j+1, 6*j+6),
                                 Cy_Neptune.extract_vector(6*j+1, 6*j+6),
-                                Cz_Neptune.extract_vector(6*j+1, 6*j+6))) * 1e3;
+                                Cz_Neptune.extract_vector(6*j+1, 6*j+6)) * 1e3;
 
     // Pluto
     temp = _temp(423, 6, 441);
@@ -276,10 +258,10 @@ tuple<Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matr
     Matrix& Cz_Pluto = PCtemp.extract_vector(temp(1,3), temp(1,4)-1);
     j = 0;
     Mjd0 = t1;
-    Matrix &r_Pluto = transpose(Cheb3D(Mjd_TDB, 6, Mjd0, Mjd0+32,
+    Matrix &r_Pluto = Cheb3D(Mjd_TDB, 6, Mjd0, Mjd0+32,
                              Cx_Pluto.extract_vector(6*j+1, 6*j+6),
                              Cy_Pluto.extract_vector(6*j+1, 6*j+6),
-                             Cz_Pluto.extract_vector(6*j+1, 6*j+6))) * 1e3;
+                             Cz_Pluto.extract_vector(6*j+1, 6*j+6)) * 1e3;
 
     // Ajuste posiciones respecto a Tierra
     const double EMRAT = 81.30056907419062;

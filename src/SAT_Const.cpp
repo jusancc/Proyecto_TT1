@@ -6,6 +6,7 @@ const double SAT_Const::pi2      = 2 * SAT_Const::pi;
 const double SAT_Const::Rad      = SAT_Const::pi / 180;
 const double SAT_Const::Deg      = 180 / SAT_Const::pi;
 const double SAT_Const::Arcs     = 3600 * 180 / SAT_Const::pi;
+const double SAT_Const::eps      = std::numeric_limits<double>::epsilon();
 
 // General constants
 const double SAT_Const::MJD_J2000 = 51544.5;

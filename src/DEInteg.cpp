@@ -1,11 +1,11 @@
 
 #include "..\include\DEInteg.hpp"
-/*
+
 Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double relerr, double abserr, int n_eqn, Matrix& y){
     y = transpose(y);
-    // maxnum = 500;
-    double twou  = 2*eps;
-    double fouru = 4*eps;
+
+    double twou  = 2*SAT_Const::eps;
+    double fouru = 4*SAT_Const::eps;
 
     struct {
         int DE_INIT =  1;      // Restart integration
@@ -49,7 +49,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
     // Return, if output time equals input time
 
     if (t==tout)    // No integration
-        return y.transpose();
+        return transpose(y);
 
     // Test for improper parameters
 
@@ -62,7 +62,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
         ( (State_ != DE_STATE.DE_INIT) &&       
         (t != told)) ){
         State_ = DE_STATE.DE_INVPARAM;              // Set error code
-        return y.transpose();                                     // Exit
+        return transpose(y);                                     // Exit
     }
 
     // On each call set interval of integration and counter for
@@ -141,8 +141,8 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
             // the derivative of the solution ypout      
             for (int j=1;j<=ki;j++){
                 int i = ki+1-j;
-                yout  = yout  + (phi.extract_column(i+1).transpose()*g(i+1));
-                ypout = ypout + (phi.extract_column(i+1).transpose()*rho(i+1));
+                yout  = yout  + (transpose(phi.extract_column(i+1))*g(i+1));
+                ypout = ypout + (transpose(phi.extract_column(i+1))*rho(i+1));
             }
             yout = y + (yout*hi);
             y    = yout;
@@ -150,20 +150,20 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
             t         = tout;             // Set independent variable
             told      = t;                // Store independent variable
             OldPermit = PermitTOUT;
-            return y.transpose();                       // Normal exit
+            return transpose(y);                       // Normal exit
         } 
         
         // If cannot go past output point and sufficiently close,
         // extrapolate and return
         if ( !PermitTOUT && ( fabs(tout-x) < fouru*fabs(x) ) ){
             h = tout - x;
-            yp = func(x,yy.transpose());          // Compute derivative yp(x)
+            yp = func(x,transpose(yy));          // Compute derivative yp(x)
             y = yy + (yp*h);                // Extrapolate vector from x to tout
             State_    = DE_STATE.DE_DONE; // Set return code
             t         = tout;             // Set independent variable
             told      = t;                // Store independent variable
             OldPermit = PermitTOUT;
-            return y.transpose();                       // Normal exit
+            return transpose(y);                       // Normal exit
         }
         
         // Test for too much work
@@ -200,7 +200,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
         if (fabs(h) < fouru*fabs(x)){
             h = sign_(fouru*fabs(x),h);
             crash = true;
-            return y.transpose();           // Exit 
+            return transpose(y);           // Exit 
         }
 
         double p5eps  = 0.5*epsilon;
@@ -223,7 +223,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
         if (p5eps<round){
             epsilon = 2.0*round*(1.0+fouru);
             crash = true;
-            return y.transpose();
+            return transpose(y);
         }
 
         //Inicialización de variables
@@ -232,7 +232,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
 
         if (start){
             // Initialize. Compute appropriate step size for first step. 
-            yp = func(x,y.transpose());
+            yp = func(x,transpose(y));
             double sum = 0.0;
             for (int l=1;l<=n_eqn;l++){
                 phi(l,2) = yp(l);
@@ -416,7 +416,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
             double xold = x;
             x = x + h;
             absh = fabs(h);
-            yp = func(x,p.transpose());
+            yp = func(x,transpose(p));
         
             // Estimate errors at orders k, k-1, k-2 
             double erkm2 = 0.0;
@@ -520,7 +520,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
                     crash = true;
                     h = sign_(fouru*fabs(x), h);
                     epsilon = epsilon*2.0;
-                    return y.transpose();                 // Exit 
+                    return transpose(y);                 // Exit 
                 }
             
                 //
@@ -559,7 +559,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
                 phi(l,16) = (y(l) - p(l)) - rho_;
             }
         }
-        yp = func(x,y.transpose());
+        yp = func(x,transpose(y));
 
         // Update differences for next step 
         for (int l=1;l<=n_eqn;l++){
@@ -648,7 +648,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
             t         = x;
             told      = t;
             OldPermit = true;
-            return y.transpose();                       // Weak failure exit
+            return transpose(y);                       // Weak failure exit
         }
         
         nostep = nostep+1;  // Count total number of steps
@@ -681,7 +681,6 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
     //   
     // end
 
-    return y.transpose();
+    return transpose(y);
 
 }
-*/

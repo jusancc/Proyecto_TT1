@@ -393,49 +393,25 @@ void Matrix::assign_column(int column, Matrix &v) {
 }
 
 Matrix& union_vector(Matrix &v1, Matrix &v2) {
-    bool is_row_vector = (v1.n_row == 1 && v2.n_row == 1);
-    bool is_column_vector = (v1.n_column == 1 && v2.n_column == 1);
-    
-    if (!is_row_vector && !is_column_vector) {
-        cout << "union_vector: inputs must be row or column vectors\n";
-        exit(EXIT_FAILURE);
-    }
-    
-    if (is_row_vector) {
-        if (v1.n_column != v2.n_column) {
-            cout << "union_vector: row vectors must have equal columns\n";
-            exit(EXIT_FAILURE);
-        }
-        
-        Matrix *result = new Matrix(2, v1.n_column);
-        
-        for (int j = 1; j <= v1.n_column; j++) {
-            (*result)(1, j) = v1(1, j);
-        }
-        
-        for (int j = 1; j <= v2.n_column; j++) {
-            (*result)(2, j) = v2(1, j);
-        }
-        
-        return *result;
-    } else {
-        if (v1.n_row != v2.n_row) {
-            cout << "union_vector: column vectors must have equal rows\n";
-            exit(EXIT_FAILURE);
-        }
-        
-        Matrix *result = new Matrix(v1.n_row, 2);
-        
-        for (int i = 1; i <= v1.n_row; i++) {
-            (*result)(i, 1) = v1(i, 1);
-        }
-        
-        for (int i = 1; i <= v2.n_row; i++) {
-            (*result)(i, 2) = v2(i, 1);
-        }
-        
-        return *result;
-    }
+    if (v1.n_row != 1 || v2.n_row != 1){
+		cout << "Matrix union_vector: error in n_row\n";
+		exit(EXIT_FAILURE);
+	}
+
+	int tamano = v1.n_column + v2.n_column;
+	Matrix *m_aux = new Matrix(1, tamano);
+
+	int aux = 1;
+	for (int i = 1; i <= v1.n_column; i++){
+		(*m_aux)(1, aux) = (v1)(1, i);
+		aux++;
+	}
+	for (int i = 1; i <= v2.n_column; i++){
+		(*m_aux)(1, aux) = v2(1, i);
+		aux++;
+	}
+
+	return *m_aux;
 }
 
 Matrix& Matrix::extract_vector(int from, int to) {
