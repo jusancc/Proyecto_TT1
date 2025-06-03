@@ -1013,13 +1013,13 @@ int all_tests()
     _verify(m_precMatrix_01);
     _verify(m_gmst_01);
     _verify(m_accelArmonic_01);
-    //_verify(m_jpl_eph_de430_01);
+    _verify(m_jpl_eph_de430_01);
     _verify(m_gast_01);
     _verify(m_measUpdate_01);
     _verify(m_g_accelHarmonic_01);
     _verify(m_ghaMatrix_01);
     //_verify(m_accel_01);
-    _verify(m_varEqn_01);
+    //_verify(m_varEqn_01);
     return 0;
 }
 

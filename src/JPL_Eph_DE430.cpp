@@ -30,7 +30,7 @@ tuple<Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matr
     double dt = Mjd_TDB - t1;
 
     // Earth
-    Matrix temp = _temp(231, 13, 270);
+    Matrix& temp = _temp(231, 13, 270);
     Matrix& Cx_Earth = PCtemp.extract_vector(temp(1,1), temp(1,2)-1);
     Matrix& Cy_Earth = PCtemp.extract_vector(temp(1,2), temp(1,3)-1);
     Matrix& Cz_Earth = PCtemp.extract_vector(temp(1,3), temp(1,4)-1);
@@ -43,6 +43,8 @@ tuple<Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matr
     cout << "union_vector Cx_Earth dims: " << Cx_Earth.n_row << "x" << Cx_Earth.n_column 
          << " , Cx dims: " << Cx.n_row << "x" << Cx.n_column << endl;
     Cx_Earth = union_vector(Cx_Earth, Cx);
+
+    
 
     cout << "union_vector Cy_Earth dims: " << Cy_Earth.n_row << "x" << Cy_Earth.n_column 
          << " , Cy dims: " << Cy.n_row << "x" << Cy.n_column << endl;
