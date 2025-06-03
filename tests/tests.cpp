@@ -858,16 +858,13 @@ int m_accel_01(){
     
     Matrix& R = accel(x,Y);
 
-    Matrix& expected = zeros(6);
-    expected(1) = 4000000;
-    expected(2) = 5000000;
-    expected(3) = 6000000;
-    expected(4) = -5.70209501208335;
-    expected(5) = -17.9604015906774;
-    expected(6) = -32.0686615657293;
-
-    cout << "R: " << R << endl;
-    cout << "expected: " << expected << endl;
+    Matrix& expected = zeros(1,6);
+    expected(1,1) = 4000000;
+    expected(1,2) = 5000000;
+    expected(1,3) = 6000000;
+    expected(1,4) = -5.70209501208335;
+    expected(1,5) = -17.9604015906774;
+    expected(1,6) = -32.0686615657293;
 
     _assert(m_equals(R, expected, 1e-8));
     return 0;
@@ -1057,7 +1054,7 @@ int all_tests()
     _verify(m_measUpdate_01);
     _verify(m_g_accelHarmonic_01);
     _verify(m_ghaMatrix_01);
-    //_verify(m_accel_01);
+    _verify(m_accel_01);
     _verify(m_varEqn_01);
 
 

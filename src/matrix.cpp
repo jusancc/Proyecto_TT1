@@ -70,7 +70,7 @@ double& Matrix::operator () (const int row, const int column) {
 
 Matrix& Matrix::operator + (Matrix &m) {
 	if (this->n_row != m.n_row || this->n_column != m.n_column) {
-		cout << "Matrix sum: error in n_row/n_column\n";
+		cout << "Matrix sum: error in n_row+n_column\n";
         exit(EXIT_FAILURE);
 	}
 	

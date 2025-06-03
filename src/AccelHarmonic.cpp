@@ -10,6 +10,7 @@ Matrix& AccelHarmonic(Matrix &r, Matrix &E, int n_max, int m_max) {
 
     Matrix &r_bf = E * r;
 
+
     double d = transpose(r_bf).norm();
 
     double latgc = asin(r_bf(3, 1) / d);
@@ -60,7 +61,9 @@ Matrix& AccelHarmonic(Matrix &r, Matrix &E, int n_max, int m_max) {
     a_bf(2, 1) = ay;
     a_bf(3, 1) = az;
 
+
     Matrix &a = transpose(E) * a_bf;
+
 
     return a;
 }
