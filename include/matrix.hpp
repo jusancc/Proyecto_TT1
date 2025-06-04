@@ -34,7 +34,6 @@ public:
 	
 	double norm();
 	double dot(Matrix &m);
-	Matrix& v_cross(Matrix &v, Matrix &w);
 	
 	Matrix& extract_row(int row);
 	Matrix& extract_column(int column);
@@ -59,5 +58,6 @@ Matrix& zeros(const int n);
 Matrix& eye(const int n);
 Matrix& transpose(Matrix &m);
 Matrix& union_vector(Matrix &v1, Matrix &v2);
+Matrix& v_cross(Matrix &v, Matrix &w);
 
 #endif

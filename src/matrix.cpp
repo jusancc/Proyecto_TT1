@@ -320,7 +320,7 @@ double Matrix::dot(Matrix &m){
     return r;
 }
 
-Matrix& Matrix::v_cross(Matrix &v, Matrix &w){
+Matrix& v_cross(Matrix &v, Matrix &w){
 	if (v.n_row != 3 || v.n_column != 1 || w.n_row != 3 || w.n_column != 1) {
         cout << "v_cross: vectors must be 3x1\n";
         exit(EXIT_FAILURE);

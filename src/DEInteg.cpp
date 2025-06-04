@@ -182,7 +182,7 @@ Matrix &DEInteg(Matrix &func(double, Matrix &), double &t, double tout, double &
         if (~PermitTOUT && (abs(tout - x) < fouru * abs(x)))
         {
             h = tout - x;
-            yp = func(x, yy);
+            yp = transpose(func(x, transpose(yy)));
             y = yy + yp * h;
             State_ = DE_STATE.DE_DONE;
             t = tout;
@@ -232,7 +232,7 @@ Matrix &DEInteg(Matrix &func(double, Matrix &), double &t, double tout, double &
         if (start)
         {
 
-            yp = func(x, y);
+            yp = transpose(func(x, transpose(y)));
             double sum = 0.0;
             for (int l = 1; l < n_eqn; l++)
             {
@@ -419,7 +419,7 @@ Matrix &DEInteg(Matrix &func(double, Matrix &), double &t, double tout, double &
             double xold = x;
             x = x + h;
             double absh = abs(h);
-            yp = func(x, p);
+            yp = transpose(func(x, transpose(p)));
 
             double erkm2 = 0.0;
             double erkm1 = 0.0;
@@ -549,7 +549,7 @@ Matrix &DEInteg(Matrix &func(double, Matrix &), double &t, double tout, double &
             }
         }
 
-        yp = func(x, y);
+        yp = transpose(func(x, transpose(y)));
 
         for (int l = 1; l < n_eqn; l++)
         {
