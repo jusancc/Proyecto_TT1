@@ -33,6 +33,7 @@
 #include "..\include\VarEqn.hpp"
 #include "..\include\Geodetic.hpp"
 #include "..\include\angl.hpp"
+#include "..\include\DEInteg.hpp"
 #include <cstdio>
 #include <cmath>
 
@@ -998,6 +999,36 @@ int m_angl_01(){
     return 0;
 }
 
+int test_deinteg_01() {
+    double t = 0.0;
+    double tout = -134.999991953373;
+    double relerr = 1e-13;
+    double abserr = 1e-6;
+    int n_eqn = 6;
+    Matrix& y = zeros(6);
+    y(1) = 6221397.62857869;
+    y(2) = 2867713.77965738;
+    y(3) = 3006155.98509949;
+    y(4) = 4645.04725161806;
+    y(5) = -2752.21591588204;
+    y(6) = -7507.99940987031;
+    
+    Matrix& R = DEInteg(accel, t, tout, relerr, abserr, n_eqn, y);
+
+    Matrix& expected = zeros(6);
+    expected(1) = 5542555.89427451;
+    expected(2) = 3213514.83814162;
+    expected(3) = 3990892.92789074;
+    expected(4) = 5394.06894044389;
+    expected(5) = -2365.21290574021;
+    expected(6) = -7061.8448137347;
+
+    _assert(m_equals(R, expected, 1e-5));
+    return 0;
+}
+
+
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -1056,6 +1087,9 @@ int all_tests()
     _verify(m_ghaMatrix_01);
     _verify(m_accel_01);
     _verify(m_varEqn_01);
+
+
+    _verify(test_deinteg_01);
 
 
     _verify(m_geodetic_01);
