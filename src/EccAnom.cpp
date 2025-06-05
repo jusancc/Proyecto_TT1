@@ -57,7 +57,7 @@ double EccAnom(double M, double e){
     E = E - f / (1.0 - e * cos(E));
 
     // Iteración hasta convergencia
-    while (abs(f) > 1e2 * epsilon) {
+    while (fabs(f) > 1e2 * epsilon) {
         f = E - e * sin(E) - M;
         E = E - f / (1.0 - e * cos(E));
         i++;

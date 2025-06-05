@@ -41,6 +41,6 @@
  * @param y Vector de estado (modificado al final con la solución).
  * @return Referencia a un `Matrix` con el estado en `tout`.
  */
-Matrix &DEInteg(Matrix& func(double, Matrix&), double &t, double tout, double &relerr, double &abserr, int n_eqn, Matrix &y);
+Matrix &DEInteg(Matrix& func(double, Matrix&), double t, double tout, double relerr, double abserr, int n_eqn, Matrix &y);
 
 #endif  // _DEINTEG_

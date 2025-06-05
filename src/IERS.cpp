@@ -106,17 +106,17 @@ IERS(Matrix &eop, double Mjd_UTC, char interp) {
             exit(EXIT_FAILURE);
         }
 
-        eop = eop.extract_column(i);
+        Matrix col = eop.extract_column(i);
 
-        x_pole   = eop(5)  / SAT_Const::Arcs;
-        y_pole   = eop(6)  / SAT_Const::Arcs;
-        UT1_UTC  = eop(7);
-        LOD      = eop(8);
-        dpsi     = eop(9)  / SAT_Const::Arcs;
-        deps     = eop(10) / SAT_Const::Arcs;
-        dx_pole  = eop(11) / SAT_Const::Arcs;
-        dy_pole  = eop(12) / SAT_Const::Arcs;
-        TAI_UTC  = eop(13);
+        x_pole   = col(5)  / SAT_Const::Arcs;
+        y_pole   = col(6)  / SAT_Const::Arcs;
+        UT1_UTC  = col(7);
+        LOD      = col(8);
+        dpsi     = col(9)  / SAT_Const::Arcs;
+        deps     = col(10) / SAT_Const::Arcs;
+        dx_pole  = col(11) / SAT_Const::Arcs;
+        dy_pole  = col(12) / SAT_Const::Arcs;
+        TAI_UTC  = col(13);
     }
 
     return tie(x_pole, y_pole, UT1_UTC, LOD, dpsi, deps, dx_pole, dy_pole, TAI_UTC);

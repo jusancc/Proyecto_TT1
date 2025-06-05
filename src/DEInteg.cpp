@@ -50,11 +50,10 @@
  */
 //------------------------------------------------------------------------------
 
-
-
-Matrix &DEInteg(Matrix &func(double, Matrix &), double &t, double tout, double &relerr, double &abserr, int n_eqn, Matrix &y)
+Matrix &DEInteg(Matrix &func(double, Matrix &), double t, double tout, double relerr, double abserr, int n_eqn, Matrix &y)
 {
-    cout << "abab" << endl;
+    y = transpose(y);
+
     double twou = 2 * SAT_Const::eps;
     double fouru = 4 * SAT_Const::eps;
 
@@ -70,7 +69,7 @@ Matrix &DEInteg(Matrix &func(double, Matrix &), double &t, double tout, double &
 
     int State_ = DE_STATE.DE_INIT;
     bool PermitTOUT = true;
-    int told = 0;
+    double told = 0;
 
     Matrix &two = zeros(14);
 
@@ -119,14 +118,14 @@ Matrix &DEInteg(Matrix &func(double, Matrix &), double &t, double tout, double &
     Matrix &beta = zeros(13, 1);
     Matrix &v = zeros(13, 1);
     Matrix &psi_ = zeros(13, 1);
-cout << "abab2" << endl;
+
     if (t == tout)
     {
-        cout << "abab3" << endl;
-        return transpose(y);
+        y = transpose(y);
+        return y;
     }
 
-    double epsilon = max(relerr, abserr);
+    double epsilon = fmax(relerr, abserr);
 
     if ((relerr < 0.0) ||
         (abserr < 0.0) ||
@@ -136,75 +135,117 @@ cout << "abab2" << endl;
          (t != told)))
     {
         State_ = DE_STATE.DE_INVPARAM;
-        return transpose(y);
+        y = transpose(y);
+        return y;
     }
-cout << "abab4" << endl;
     double del = tout - t;
-    double absdel = abs(del);
+    double absdel = fabs(del);
 
     double tend = t + 100.0 * del;
-    if (~PermitTOUT)
+    if (!PermitTOUT)
     {
         tend = tout;
     }
-cout << "abab5" << endl;
-    int kold = 0;
-    double nostep = 0;
-    double kle4 = 0;
+
+    int nostep = 0;
+    int kle4 = 0;
     bool stiff = false;
     double releps = relerr / epsilon;
     double abseps = abserr / epsilon;
 
-    bool nornd = false;
-    bool phase1 = false;
-    int knew = 0;
-    int km1 = 0;
-    double erkp1, erk;
-    int ns = 0;
-    double hold;
-
-    bool OldPermit = false;
+    bool OldPermit = PermitTOUT;
     double delsgn = 0.0;
+    bool start = false;
     double x = 0.0;
     double h;
-    bool start = false;
 
-    if ((State_ == DE_STATE.DE_INIT) || (~OldPermit) || (delsgn * del <= 0.0))
+    if ((State_ == DE_STATE.DE_INIT) || (!OldPermit) || (delsgn * del <= 0.0))
     {
         start = true;
         x = t;
         yy = y;
         delsgn = sign_(1.0, del);
-        h = sign_(max(fouru * abs(x), abs(tout - x)), tout - x);
+        h = sign_(fmax(fouru * fabs(x), fabs(tout - x)), tout - x);
     }
 
-    int k=0;
+    double hi;
+    double ki;
+    int kold = 0;
+    double temp1;
+    double term;
+    double psijm1;
+    double gamma;
+    double eta;
+    int aux;
+    bool crash;
+    double p5eps;
+    int ifail;
+    double round;
+    double absh;
+    double hnew;
+    double sum;
+    double hold;
+    double knew;
+    int k;
+    bool phase1;
+    bool nornd;
+    int kp1;
+    int kp2;
+    int km1;
+    int km2;
+    int ns;
+    int nsp1;
+    int realns;
+    int im1;
+    double temp2;
+    int reali;
+    double temp4;
+    int nsm2;
+    int limit1;
+    double temp5;
+    double temp3;
+    int nsp2;
+    int limit2;
+    double temp6;
+    int ip1;
+    double tau;
+    double xold;
+    double erkm2;
+    double erkm1;
+    double erk;
+    double err;
+    bool success;
+    double rho_;
+    double erkp1;
+    double r;
     while (true)
     {
-        cout << "abab6" << endl;
-        double temp1;
-
         if (fabs(x - t) >= absdel)
         {
+
             Matrix &yout = zeros(n_eqn, 1);
             Matrix &ypout = zeros(n_eqn, 1);
+
             g(2) = 1.0;
             rho(2) = 1.0;
-            double hi = tout - x;
-            int ki = kold + 1;
-            // Initialize w[*] for computing g[*]
+
+            hi = tout - x;
+            ki = kold + 1;
+
             for (int i = 1; i <= ki; i++)
             {
                 temp1 = i;
                 w(i + 1) = 1.0 / temp1;
             }
-            // Compute g[*]
-            double term = 0.0;
+
+            term = 0.0;
+
             for (int j = 2; j <= ki; j++)
             {
-                double psijm1 = psi_(j);
-                double gamma = (hi + term) / psijm1;
-                double eta = hi / psijm1;
+                psijm1 = psi_(j);
+                gamma = (hi + term) / psijm1;
+                eta = hi / psijm1;
+
                 for (int i = 1; i <= ki + 1 - j; i++)
                 {
                     w(i + 1) = gamma * w(i + 1) - eta * w(i + 2);
@@ -213,25 +254,27 @@ cout << "abab5" << endl;
                 rho(j + 1) = gamma * rho(j);
                 term = psijm1;
             }
-
             // Interpolate for the solution yout and for
             // the derivative of the solution ypout
             for (int j = 1; j <= ki; j++)
             {
                 int i = ki + 1 - j;
-                yout = yout + (transpose(phi.extract_column(i + 1)) * g(i + 1));
-                ypout = ypout + (transpose(phi.extract_column(i + 1)) * rho(i + 1));
+
+                yout = yout + transpose(transpose(phi.extract_column(i + 1)) * g(i + 1));
+                ypout = ypout + transpose(transpose(phi.extract_column(i + 1)) * rho(i + 1));
             }
+
             yout = y + (yout * hi);
             y = yout;
             State_ = DE_STATE.DE_DONE; // Set return code
             t = tout;                  // Set independent variable
             told = t;                  // Store independent variable
             OldPermit = PermitTOUT;
-            return transpose(y); // Normal exit
+            y = transpose(y);
+            return y;
         }
 
-        if (~PermitTOUT && (abs(tout - x) < fouru * abs(x)))
+        if (!PermitTOUT && (fabs(tout - x) < fouru * fabs(x)))
         {
             h = tout - x;
             yp = transpose(func(x, transpose(yy)));
@@ -240,50 +283,51 @@ cout << "abab5" << endl;
             t = tout;
             told = t;
             OldPermit = PermitTOUT;
-            return transpose(y);
+            y = transpose(y);
+            return y;
         }
 
-        h = sign_(min(abs(h), abs(tend - x)), h);
-        for (int l = 1; l < n_eqn; l++)
+        h = sign_(fmin(fabs(h), fabs(tend - x)), h);
+        for (int l = 1; l <= n_eqn; l++)
         {
-            wt(l) = releps * abs(yy(l)) + abseps;
+            wt(l) = releps * fabs(yy(l)) + abseps;
         }
 
         bool crash;
 
-        if (abs(h) < fouru * abs(x))
+        if (fabs(h) < fouru * fabs(x))
         {
-            h = sign_(fouru * abs(x), h);
+            h = sign_(fouru * fabs(x), h);
             crash = true;
-            return transpose(y);
+            y = transpose(y);
+            return y;
         }
 
-        double p5eps = 0.5 * epsilon;
+        p5eps = 0.5 * epsilon;
         crash = false;
         g(2) = 1.0;
         g(3) = 0.5;
         sig(2) = 1.0;
 
-        int ifail = 0;
+        ifail = 0;
 
         double round = 0.0;
-        for (int l = 1; l < n_eqn; l++)
+        for (int l = 1; l <= n_eqn; l++)
         {
             round = round + (y(l) * y(l)) / (wt(l) * wt(l));
         }
-
         round = twou * sqrt(round);
         if (p5eps < round)
         {
             epsilon = 2.0 * round * (1.0 + fouru);
             crash = true;
-            return transpose(y);
+            y = transpose(y);
+            return y;
         }
         double absh;
 
         if (start)
         {
-
             yp = transpose(func(x, transpose(y)));
             double sum = 0.0;
             for (int l = 1; l < n_eqn; l++)
@@ -294,41 +338,32 @@ cout << "abab5" << endl;
             }
 
             sum = sqrt(sum);
-            absh = abs(h);
+            absh = fabs(h);
             if (epsilon < 16.0 * sum * h * h)
             {
                 absh = 0.25 * sqrt(epsilon / sum);
             }
 
-            h = sign_(max(absh, fouru * abs(x)), h);
-            double hold = 0.0;
-            double hnew = 0.0;
+            h = sign_(fmax(absh, fouru * fabs(x)), h);
+            hold = 0.0;
+            hnew = 0.0;
             k = 1;
             kold = 0;
             start = false;
-            bool phase1 = true;
-            bool nornd = true;
+            phase1 = true;
+            nornd = true;
             if (p5eps <= 100.0 * round)
             {
                 nornd = false;
-                for (int l = 1; l < n_eqn; l++)
+                for (int l = 1; l <= n_eqn; l++)
                 {
                     phi(l, 16) = 0.0;
                 }
             }
         }
 
-        double km1;
-        double km2;
-        int kp1 = 0;
-        int kp2 = 0;
-        double erkm1 = 0.0;
-        double erk = 0.0;
-
-        double temp2, temp3, temp4, temp5, temp6;
         while (true)
         {
-
             kp1 = k + 1;
             kp2 = k + 2;
             km1 = k - 1;
@@ -344,31 +379,30 @@ cout << "abab5" << endl;
                 ns = ns + 1;
             }
 
-            double nsp1 = ns + 1;
+            nsp1 = ns + 1;
 
             if (k >= ns)
             {
 
                 beta(ns + 1) = 1.0;
-                int realns = ns;
+                realns = ns;
                 alpha(ns + 1) = 1.0 / realns;
                 temp1 = h * realns;
                 sig(nsp1 + 1) = 1.0;
                 if (k >= nsp1)
                 {
-                    for (int i = nsp1; i < k; i++)
+                    for (int i = nsp1; i <= k; i++)
                     {
-                        int im1 = i - 1;
-                        double temp2 = psi_(im1 + 1);
+                        im1 = i - 1;
+                        temp2 = psi_(im1 + 1);
                         psi_(im1 + 1) = temp1;
                         beta(i + 1) = beta(im1 + 1) * psi_(im1 + 1) / temp2;
                         temp1 = temp2 + h;
                         alpha(i + 1) = h / temp1;
-                        int reali = i;
+                        reali = i;
                         sig(i + 2) = reali * alpha(i + 1) * sig(i + 1);
                     }
                 }
-
                 psi_(k + 1) = temp1;
 
                 int i;
@@ -379,340 +413,335 @@ cout << "abab5" << endl;
                         temp4 = k * kp1;
                         v(k + 1) = 1.0 / temp4;
                         int nsm2 = ns - 2;
-                        for (int j = 1; j < nsm2; j++)
+                        for (int j = 1; j <= nsm2; j++)
                         {
                             i = k - j;
                             v(i + 1) = v(i + 1) - alpha(j + 2) * v(i + 2);
                         }
                     }
 
-                    double limit1 = kp1 - ns;
+                    limit1 = kp1 - ns;
                     temp5 = alpha(ns + 1);
-                    for (int iq = 1; iq < limit1; iq++)
+                    for (int iq = 1; iq <= limit1; iq++)
                     {
                         v(iq + 1) = v(iq + 1) - temp5 * v(iq + 2);
                         w(iq + 1) = v(iq + 1);
                     }
-
                     g(nsp1 + 1) = w(2);
                 }
                 else
                 {
-                    for (int iq = 1; iq < k; iq++)
+                    for (int iq = 1; iq <= k; iq++)
                     {
                         temp3 = iq * (iq + 1);
                         v(iq + 1) = 1.0 / temp3;
                         w(iq + 1) = v(iq + 1);
                     }
-                }
-
-                int nsp2 = ns + 2;
-                if (kp1 >= nsp2)
-                {
-                    for (int i = nsp2; i < kp1; i++)
+                    nsp2 = ns + 2;
+                    if (kp1 >= nsp2)
                     {
-                        double limit2 = kp2 - i;
-                        temp6 = alpha(i);
-                        for (int iq = 1; iq < limit2; iq++)
+                        for (int i = nsp2; i <= kp1; i++)
                         {
-                            w(iq + 1) = w(iq + 1) - temp6 * w(iq + 2);
+                            limit2 = kp2 - i;
+                            temp6 = alpha(i);
+                            for (int iq = 1; iq <= limit2; iq++)
+                            {
+                                w(iq + 1) = w(iq + 1) - temp6 * w(iq + 2);
+                            }
+
+                            g(i + 1) = w(2);
                         }
-
-                        g(i + 1) = w(2);
                     }
                 }
-            }
-
-            if (k >= nsp1)
-            {
-                for (int i = nsp1; i < k; i++)
+                if (k >= nsp1)
                 {
-                    temp1 = beta(i + 1);
-                    for (int l = 1; l < n_eqn; l++)
+                    for (int i = nsp1; i <= k; i++)
                     {
-                        phi(l, i + 1) = temp1 * phi(l, i + 1);
+                        temp1 = beta(i + 1);
+                        for (int l = 1; l <= n_eqn; l++)
+                        {
+                            phi(l, i + 1) = temp1 * phi(l, i + 1);
+                        }
                     }
                 }
-            }
-
-            for (int l = 1; l < n_eqn; l++)
-            {
-                phi(l, kp2 + 1) = phi(l, kp1 + 1);
-                phi(l, kp1 + 1) = 0.0;
-                p(l) = 0.0;
-            }
-
-            for (int j = 1; j < k; j++)
-            {
-                int i = kp1 - j;
-                int ip1 = i + 1;
-                double temp2 = g(i + 1);
-                for (int l = 1; l < n_eqn; l++)
+                for (int l = 1; l <= n_eqn; l++)
                 {
-                    p(l) = p(l) + temp2 * phi(l, i + 1);
-                    phi(l, i + 1) = phi(l, i + 1) + phi(l, ip1 + 1);
+                    phi(l, kp2 + 1) = phi(l, kp1 + 1);
+                    phi(l, kp1 + 1) = 0.0;
+                    p(l) = 0.0;
                 }
-            }
-
-            if (nornd)
-            {
-                p = y + p * h;
-            }
-            else
-            {
-                for (int l = 1; l < n_eqn; l++)
+                for (int j = 1; j <= k; j++)
                 {
-                    double tau = h * p(l) - phi(l, 16);
-                    p(l) = y(l) + tau;
-                    phi(l, 17) = (p(l) - y(l)) - tau;
+                    int i = kp1 - j;
+                    int ip1 = i + 1;
+                    temp2 = g(i + 1);
+                    for (int l = 1; l <= n_eqn; l++)
+                    {
+                        p(l) = p(l) + temp2 * phi(l, i + 1);
+                        phi(l, i + 1) = phi(l, i + 1) + phi(l, ip1 + 1);
+                    }
                 }
-            }
+                if (nornd)
+                {
+                    p = y + (p * h);
+                }
+                else
+                {
+                    for (int l = 1; l <= n_eqn; l++)
+                    {
+                        tau = h * p(l) - phi(l, 16);
+                        p(l) = y(l) + tau;
+                        phi(l, 17) = (p(l) - y(l)) - tau;
+                    }
+                }
+                xold = x;
+                x = x + h;
+                absh = fabs(h);
+                yp = transpose(func(x, transpose(p)));
 
-            double xold = x;
-            x = x + h;
-            double absh = abs(h);
-            yp = transpose(func(x, transpose(p)));
+                erkm2 = 0.0;
+                erkm1 = 0.0;
+                erk = 0.0;
+                for (int l = 1; l <= n_eqn; l++)
+                {
+                    temp3 = 1.0 / wt(l);
+                    temp4 = yp(l) - phi(l, 1 + 1);
+                    if (km2 > 0)
+                    {
+                        erkm2 = erkm2 + ((phi(l, km1 + 1) + temp4) * temp3) * ((phi(l, km1 + 1) + temp4) * temp3);
+                    }
 
-            double erkm2 = 0.0;
-            double erkm1 = 0.0;
-            double erk = 0.0;
+                    if (km2 >= 0)
+                    {
+                        erkm1 = erkm1 + ((phi(l, k + 1) + temp4) * temp3) * ((phi(l, k + 1) + temp4) * temp3);
+                    }
 
-            for (int l = 1; l < n_eqn; l++)
-            {
-                temp3 = 1.0 / wt(l);
-                temp4 = yp(l) - phi(l, 1 + 1);
+                    erk = erk + (temp4 * temp3) * (temp4 * temp3);
+                }
                 if (km2 > 0)
                 {
-                    erkm2 = erkm2 + ((phi(l, km1 + 1) + temp4) * temp3) * ((phi(l, km1 + 1) + temp4) * temp3);
+                    erkm2 = absh * sig(km1 + 1) * gstr(km2 + 1) * sqrt(erkm2);
                 }
 
                 if (km2 >= 0)
                 {
-                    erkm1 = erkm1 + ((phi(l, k + 1) + temp4) * temp3) * ((phi(l, k + 1) + temp4) * temp3);
+                    erkm1 = absh * sig(k + 1) * gstr(km1 + 1) * sqrt(erkm1);
                 }
 
-                erk = erk + (temp4 * temp3) * (temp4 * temp3);
-            }
-
-            if (km2 > 0)
-            {
-                erkm2 = absh * sig(km1 + 1) * gstr(km2 + 1) * sqrt(erkm2);
-            }
-
-            if (km2 >= 0)
-            {
-                erkm1 = absh * sig(k + 1) * gstr(km1 + 1) * sqrt(erkm1);
-            }
-
-            temp5 = absh * sqrt(erk);
-            double err = temp5 * (g(k + 1) - g(kp1 + 1));
-            erk = temp5 * sig(kp1 + 1) * gstr(k + 1);
-            knew = k;
-
-            if (km2 > 0)
-            {
-                if (max(erkm1, erkm2) <= erk)
+                temp5 = absh * sqrt(erk);
+                err = temp5 * (g(k + 1) - g(kp1 + 1));
+                erk = temp5 * sig(kp1 + 1) * gstr(k + 1);
+                knew = k;
+                if (km2 > 0)
                 {
-                    knew = km1;
-                }
-            }
-
-            if (km2 == 0)
-            {
-                if (erkm1 <= 0.5 * erk)
-                {
-                    knew = km1;
-                }
-            }
-
-            bool success = (err <= epsilon);
-
-            if (~success)
-
-                phase1 = false;
-            x = xold;
-            for (int i = 1; i < k; i++)
-            {
-                temp1 = 1.0 / beta(i + 1);
-                int ip1 = i + 1;
-                for (int l = 1; l < n_eqn; l++)
-                {
-                    phi(l, i + 1) = temp1 * (phi(l, i + 1) - phi(l, ip1 + 1));
-                }
-            }
-
-            if (k >= 2)
-            {
-                for (int i = 2; i < k; i++)
-                {
-                    psi_(i) = psi_(i + 1) - h;
-                }
-            }
-
-            ifail = ifail + 1;
-            temp2 = 0.5;
-            if (ifail > 3)
-            {
-                if (p5eps < 0.25 * erk)
-                {
-                    temp2 = sqrt(p5eps / erk);
-                }
-            }
-
-            if (ifail >= 3)
-            {
-                knew = 1;
-            }
-
-            h = temp2 * h;
-            k = knew;
-            if (abs(h) < fouru * abs(x))
-            {
-                crash = true;
-                h = sign_(fouru * abs(x), h);
-                epsilon = epsilon * 2.0;
-                return transpose(y);
-            }
-
-            if (success)
-            {
-                break;
-            }
-        }
-
-        kold = k;
-        hold = h;
-
-        temp1 = h * g(kp1 + 1);
-        if (nornd)
-        {
-            for (int l = 1; l < n_eqn; l++)
-            {
-                y(l) = p(l) + temp1 * (yp(l) - phi(l, 2));
-            }
-        }
-        else
-        {
-            for (int l = 1; l <= n_eqn; l++)
-            {
-                double rho_ = temp1 * (yp(l) - phi(l, 2)) - phi(l, 17);
-                y(l) = p(l) + rho_;
-                phi(l, 16) = (y(l) - p(l)) - rho_;
-            }
-        }
-
-        yp = transpose(func(x, transpose(y)));
-
-        for (int l = 1; l < n_eqn; l++)
-        {
-            phi(l, kp1 + 1) = yp(l) - phi(l, 2);
-            phi(l, kp2 + 1) = phi(l, kp1 + 1) - phi(l, kp2 + 1);
-        }
-
-        for (int i = 1; i < k; i++)
-        {
-            for (int l = 1; l < n_eqn; l++)
-            {
-                phi(l, i + 1) = phi(l, i + 1) + phi(l, kp1 + 1);
-            }
-        }
-
-        erkp1 = 0.0;
-        if ((knew == km1) || (k == 12))
-        {
-            phase1 = false;
-        }
-
-        if (phase1)
-        {
-            k = kp1;
-            erk = erkp1;
-        }
-        else
-        {
-            if (knew == km1)
-            {
-                k = km1;
-                erk = erkm1;
-            }
-            else
-            {
-                if (kp1 <= ns)
-                    for (int l = 1; l < n_eqn; l++)
+                    if (fmax(erkm1, erkm2) <= erk)
                     {
-                        erkp1 = erkp1 + (phi(l, kp2 + 1) / wt(l)) * (phi(l, kp2 + 1) / wt(l));
+                        knew = km1;
                     }
+                }
 
-                erkp1 = absh * gstr(kp1 + 1) * sqrt(erkp1);
-
-                if (k > 1)
+                if (km2 == 0)
                 {
-                    if (erkm1 <= min(erk, erkp1))
+                    if (erkm1 <= 0.5 * erk)
                     {
-                        k = km1;
-                        erk = erkm1;
+                        knew = km1;
                     }
-                    else
+                }
+
+                success = (err <= epsilon);
+
+                if (!success)
+                {
+
+                    phase1 = false;
+                    x = xold;
+                    for (int i = 1; i <= k; i++)
                     {
-                        if ((erkp1 < erk) && (k != 12))
+                        temp1 = 1.0 / beta(i + 1);
+                        ip1 = i + 1;
+                        for (int l = 1; l <= n_eqn; l++)
                         {
-                            k = kp1;
-                            erk = erkp1;
+                            phi(l, i + 1) = temp1 * (phi(l, i + 1) - phi(l, ip1 + 1));
                         }
                     }
+
+                    if (k >= 2)
+                    {
+                        for (int i = 2; i <= k; i++)
+                        {
+                            psi_(i) = psi_(i + 1) - h;
+                        }
+                    }
+
+                    ifail = ifail + 1;
+                    temp2 = 0.5;
+                    if (ifail > 3)
+                    {
+                        if (p5eps < 0.25 * erk)
+                        {
+                            temp2 = sqrt(p5eps / erk);
+                        }
+                    }
+
+                    if (ifail >= 3)
+                    {
+                        knew = 1;
+                    }
+
+                    h = temp2 * h;
+                    k = knew;
+                    if (fabs(h) < fouru * fabs(x))
+                    {
+                        crash = true;
+                        h = sign_(fouru * fabs(x), h);
+                        epsilon = epsilon * 2.0;
+                        y = transpose(y);
+                        return y;
+                    }
                 }
-                else if (erkp1 < 0.5 * erk)
+                if (success)
                 {
-                    k = kp1;
-                    erk = erkp1;
+                    break;
                 }
             }
-        }
-        double hnew;
-        if (phase1 || (p5eps >= erk * two(k + 2)))
-        {
-            hnew = 2.0 * h;
-        }
-        else
-        {
-            if (p5eps < erk)
+
+            kold = k;
+            hold = h;
+
+            temp1 = h * g(kp1 + 1);
+            if (nornd)
             {
-                temp2 = k + 1;
-                double r = p5eps / pow(erk, 1.0 / temp2);
-                hnew = absh * max(0.5, min(0.9, r));
-                hnew = sign_(max(hnew, fouru * abs(x)), h);
+                for (int l = 1; l <= n_eqn; l++)
+                {
+                    y(l) = p(l) + temp1 * (yp(l) - phi(l, 2));
+                }
             }
             else
             {
-                hnew = h;
+                for (int l = 1; l <= n_eqn; l++)
+                {
+                    rho_ = temp1 * (yp(l) - phi(l, 2)) - phi(l, 17);
+                    y(l) = p(l) + rho_;
+                    phi(l, 16) = (y(l) - p(l)) - rho_;
+                }
+            }
+
+            yp = transpose(func(x, transpose(y)));
+
+            for (int l = 1; l <= n_eqn; l++)
+            {
+                phi(l, kp1 + 1) = yp(l) - phi(l, 2);
+                phi(l, kp2 + 1) = phi(l, kp1 + 1) - phi(l, kp2 + 1);
+            }
+
+            for (int i = 1; i <= k; i++)
+            {
+                for (int l = 1; l <= n_eqn; l++)
+                {
+                    phi(l, i + 1) = phi(l, i + 1) + phi(l, kp1 + 1);
+                }
+            }
+
+            erkp1 = 0.0;
+            if ((knew == km1) || (k == 12))
+            {
+                phase1 = false;
+            }
+
+            if (phase1)
+            {
+                k = kp1;
+                erk = erkp1;
+            }
+            else
+            {
+                if (knew == km1)
+                {
+                    k = km1;
+                    erk = erkm1;
+                }
+                else
+                {
+                    if (kp1 <= ns)
+                        for (int l = 1; l <= n_eqn; l++)
+                        {
+                            erkp1 = erkp1 + (phi(l, kp2 + 1) / wt(l)) * (phi(l, kp2 + 1) / wt(l));
+                        }
+
+                    erkp1 = absh * gstr(kp1 + 1) * sqrt(erkp1);
+
+                    if (k > 1)
+                    {
+                        if (erkm1 <= fmin(erk, erkp1))
+                        {
+                            k = km1;
+                            erk = erkm1;
+                        }
+                        else
+                        {
+                            if ((erkp1 < erk) && (k != 12))
+                            {
+                                k = kp1;
+                                erk = erkp1;
+                            }
+                        }
+                    }
+                    else if (erkp1 < 0.5 * erk)
+                    {
+                        k = kp1;
+                        erk = erkp1;
+                    }
+                }
+            }
+            double hnew;
+            if (phase1 || (p5eps >= erk * two(k + 2)))
+            {
+                hnew = 2.0 * h;
+            }
+            else
+            {
+                if (p5eps < erk)
+                {
+                    temp2 = k + 1;
+                    r = p5eps / pow(erk, 1.0 / temp2);
+                    hnew = absh * fmax(0.5, fmin(0.9, r));
+                    hnew = sign_(fmax(hnew, fouru * fabs(x)), h);
+                }
+                else
+                {
+                    hnew = h;
+                }
+            }
+
+            h = hnew;
+
+            if (crash)
+            {
+                State_ = DE_STATE.DE_BADACC;
+                relerr = epsilon * releps;
+                abserr = epsilon * abseps;
+                y = yy;
+                t = x;
+                told = t;
+                OldPermit = true;
+                y = transpose(y);
+                return y;
+            }
+
+            nostep = nostep + 1;
+
+            kle4 = kle4 + 1;
+            if (kold > 4)
+            {
+                kle4 = 0;
+            }
+
+            if (kle4 >= 50)
+            {
+                stiff = true;
             }
         }
-
-        h = hnew;
-
-        if (crash)
-        {
-            State_ = DE_STATE.DE_BADACC;
-            relerr = epsilon * releps;
-            abserr = epsilon * abseps;
-            y = yy;
-            t = x;
-            told = t;
-            OldPermit = true;
-            return transpose(y);
-        }
-
-        nostep = nostep + 1;
-
-        kle4 = kle4 + 1;
-        if (kold > 4)
-        {
-            kle4 = 0;
-        }
-
-        if (kle4 >= 50)
-        {
-            stiff = true;
-        }
+        y = transpose(y);
+        return y;
     }
 }

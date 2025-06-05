@@ -577,11 +577,11 @@ Matrix& Matrix::inv() {
     for (int col = 1; col <= n; col++) {
         // Pivoteo parcial: buscar el máximo en la columna actual
         int max_row = col;
-        double max_val = abs(temp(col, col));
+        double max_val = fabs(temp(col, col));
 
         for (int row = col + 1; row <= n; row++) {
-            if (abs(temp(row, col)) > max_val) {
-                max_val = abs(temp(row, col));
+            if (fabs(temp(row, col)) > max_val) {
+                max_val = fabs(temp(row, col));
                 max_row = row;
             }
         }
