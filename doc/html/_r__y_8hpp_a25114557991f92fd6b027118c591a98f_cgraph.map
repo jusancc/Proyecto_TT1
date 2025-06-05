@@ -1,0 +1,5 @@
+<map id="R_y" name="R_y">
+<area shape="rect" id="Node000001" title="Devuelve la matriz de rotación sobre el eje Y." alt="" coords="5,5,51,32"/>
+<area shape="rect" id="Node000002" href="$matrix_8cpp.html#a56d60ea1f08402246a7cfd477d69a618" title="Genera una matriz de ceros." alt="" coords="99,5,152,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,16,83,16,83,21,51,21"/>
+</map>

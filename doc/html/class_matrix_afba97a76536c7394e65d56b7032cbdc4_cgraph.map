@@ -1,0 +1,8 @@
+<map id="Matrix::inv" name="Matrix::inv">
+<area shape="rect" id="Node000001" title="Inversa de matriz (solo cuadradas)" alt="" coords="5,31,88,57"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="22,31,18,22,21,12,31,6,47,4,64,7,73,13,70,18,62,12,46,9,32,11,25,16,23,22,27,29"/>
+<area shape="rect" id="Node000002" href="$matrix_8cpp.html#a6d5ff1bcc8ce1f0309a47210e1231c6c" title="Genera una matriz identidad." alt="" coords="165,5,208,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,34,150,22,151,28,89,39"/>
+<area shape="rect" id="Node000003" href="$class_matrix.html#a2dba13c45127354c9f75ef576f49269b" title="Constructor por defecto." alt="" coords="136,56,237,83"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="89,49,121,55,120,60,88,54"/>
+</map>

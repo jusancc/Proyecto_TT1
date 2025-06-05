@@ -1,0 +1,9 @@
+<map id="Matrix::dot" name="Matrix::dot">
+<area shape="rect" id="Node000001" title="Producto escalar." alt="" coords="128,56,211,83"/>
+<area shape="rect" id="Node000002" href="$angl_8cpp.html#af206beb61be4f584306f6fefed44eb90" title="&lt; Clase Matrix personalizada para operaciones vectoriales" alt="" coords="20,5,65,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,52,65,30,67,25,121,47"/>
+<area shape="rect" id="Node000003" href="$_az_el_pa_8cpp.html#ae89a6c135135b96ec7057c45dced4159" title="Calcula el azimut, la elevación y los vectores base (topocéntricos) locales." alt="" coords="10,56,75,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="112,72,76,72,76,67,112,67"/>
+<area shape="rect" id="Node000004" href="$elements_8cpp.html#a5dd6d5680c9b5aafae7e21082e0ab75a" title="Calcula los elementos orbitales keplerianos a partir del vector de estado." alt="" coords="5,107,80,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="121,91,79,109,77,104,119,86"/>
+</map>

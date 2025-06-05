@@ -1,0 +1,15 @@
+<map id="src/GMST.cpp" name="src/GMST.cpp">
+<area shape="rect" id="Node000001" title="Implementación de la función que calcula el Tiempo Sidéreo Medio de Greenwich." alt="" coords="23,5,128,32"/>
+<area shape="rect" id="Node000002" href="$_g_m_s_t_8hpp.html" title="Declaración de la función que calcula el Tiempo Sidéreo Medio de Greenwich (GMST)." alt="" coords="5,80,146,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,33,78,64,73,64,73,33"/>
+<area shape="rect" id="Node000003" href="$_s_a_t___const_8hpp.html" title="Definición de constantes astronómicas, físicas y matemáticas usadas en simulaciones orbitales." alt="" coords="136,155,250,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="97,105,161,144,158,149,95,109"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="47,229,104,256"/>
+<area shape="poly" id="edge7_Node000002_Node000004" title=" " alt="" coords="63,109,45,130,30,155,28,172,33,188,53,217,48,220,28,190,23,172,25,154,40,127,59,106"/>
+<area shape="rect" id="Node000006" href="$_frac_8hpp.html" title="Declaración de la función que extrae la parte fraccionaria de un número real." alt="" coords="39,155,112,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="78,107,78,139,73,139,73,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="174,184,110,223,107,219,171,180"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="157,229,228,256"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="196,182,196,214,190,214,190,182"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="78,182,78,214,73,214,73,182"/>
+</map>

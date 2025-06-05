@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_cheb3_d_8cpp" kind="file" language="C++">
+    <compoundname>Cheb3D.cpp</compoundname>
+    <includes refid="_cheb3_d_8hpp" local="yes">../include/Cheb3D.hpp</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>../include/Cheb3D.hpp</label>
+        <link refid="_cheb3_d_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>matrix.hpp</label>
+        <link refid="matrix_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/Cheb3D.cpp</label>
+        <link refid="_cheb3_d_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>cmath</label>
+      </node>
+      <node id="4">
+        <label>cstdio</label>
+      </node>
+      <node id="5">
+        <label>cstdlib</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_cheb3_d_8cpp_1a7921d95c36d12377ffe5db715d964162" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; Cheb3D</definition>
+        <argsstring>(double t, int N, double Ta, double Tb, Matrix Cx, Matrix Cy, Matrix Cz)</argsstring>
+        <name>Cheb3D</name>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Ta</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Tb</declname>
+        </param>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref></type>
+          <declname>Cx</declname>
+        </param>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref></type>
+          <declname>Cy</declname>
+        </param>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref></type>
+          <declname>Cz</declname>
+        </param>
+        <briefdescription>
+<para>Evalúa una serie de interpolación de Chebyshev en 3D. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Esta función calcula la posición 3D en el tiempo <computeroutput>t</computeroutput> mediante una serie de Chebyshev de segundo orden. Usa el método de Clenshaw para evaluar los polinomios y aplica coeficientes para las tres componentes espaciales (X, Y, Z).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tiempo de evaluación. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número de coeficientes (orden del polinomio + 1). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Ta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inicio del intervalo de interpolación. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Tb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fin del intervalo de interpolación. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Cx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coeficientes Chebyshev para la coordenada X. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Cy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coeficientes Chebyshev para la coordenada Y. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Cz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coeficientes Chebyshev para la coordenada Z. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Referencia a un vector (1x3) con la posición interpolada [x, y, z]. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Cheb3D.cpp" line="40" column="8" bodyfile="src/Cheb3D.cpp" bodystart="40" bodyend="72"/>
+        <references refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" compoundref="matrix_8cpp" startline="179" endline="189">zeros</references>
+        <referencedby refid="_j_p_l___eph___d_e430_8hpp_1a5e6fedfbbbe0ca32aa62a9016e7d3293" compoundref="_j_p_l___eph___d_e430_8cpp" startline="58" endline="328">JPL_Eph_DE430</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Implementación de la función que evalúa una serie de Chebyshev en 3D. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//$Header$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Cheb3D</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GMAT:<sp/>General<sp/>Mission<sp/>Analysis<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>**Legal**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Juan<sp/>Sánchez<sp/>de<sp/>Corta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_cheb3_d_8hpp" kindref="compound">../include/Cheb3D.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Matrix&amp;<sp/>Cheb3D(double<sp/>t,<sp/>int<sp/>N,<sp/>double<sp/>Ta,<sp/>double<sp/>Tb,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Matrix<sp/>Cx,<sp/>Matrix<sp/>Cy,<sp/>Matrix<sp/>Cz)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="_cheb3_d_8hpp_1a7921d95c36d12377ffe5db715d964162" refkind="member"><highlight class="normal"><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/><ref refid="_cheb3_d_8cpp_1a7921d95c36d12377ffe5db715d964162" kindref="member">Cheb3D</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Ta,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Tb,<sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>Cx,<sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>Cy,<sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>Cz){</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(t<sp/>&lt;<sp/>Ta<sp/>||<sp/>Tb<sp/>&lt;<sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Time<sp/>out<sp/>of<sp/>range<sp/>in<sp/>Cheb3D&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tau<sp/>=<sp/>(2<sp/>*<sp/>t<sp/>-<sp/>Ta<sp/>-<sp/>Tb)<sp/>/<sp/>(Tb<sp/>-<sp/>Ta);<sp/><sp/></highlight><highlight class="comment">//<sp/>Transformación<sp/>a<sp/>[-1,<sp/>1]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>f1<sp/>=<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(1,<sp/>3);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>término<sp/>T(i)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>f2<sp/>=<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(1,<sp/>3);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>término<sp/>T(i-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>old_f1<sp/>=<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(1,<sp/>3);<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>buffer<sp/>temporal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Algoritmo<sp/>de<sp/>Clenshaw<sp/>inverso</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>N;<sp/>i<sp/>&gt;=<sp/>2;<sp/>i--)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>old_f1<sp/>=<sp/>f1;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f1<sp/>=<sp/>f1<sp/>*<sp/>2<sp/>*<sp/>tau<sp/>-<sp/>f2;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f1(1,1)<sp/>+=<sp/>Cx(1,<sp/>i);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f1(1,2)<sp/>+=<sp/>Cy(1,<sp/>i);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f1(1,3)<sp/>+=<sp/>Cz(1,<sp/>i);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f2<sp/>=<sp/>old_f1;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;ChebApp<sp/>=<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(1,<sp/>3);<sp/><sp/></highlight><highlight class="comment">//<sp/>Resultado<sp/>final</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>ChebApp<sp/>=<sp/>f1<sp/>*<sp/>tau<sp/>-<sp/>f2;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>ChebApp(1,1)<sp/>+=<sp/>Cx(1,<sp/>1);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>ChebApp(1,2)<sp/>+=<sp/>Cy(1,<sp/>1);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>ChebApp(1,3)<sp/>+=<sp/>Cz(1,<sp/>1);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ChebApp;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Cheb3D.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,14 +1,44 @@
+//$Header$
+//------------------------------------------------------------------------------
+//                                elements
+//------------------------------------------------------------------------------
+// GMAT: General Mission Analysis Tool
+//
+// **Legal**
+//
+// Author: Juan Sánchez de Corta
+//
+/**
+ * @file elements.cpp
+ * @brief Implementación de la función que calcula elementos orbitales keplerianos
+ *        a partir del vector de estado (posición y velocidad).
+ */
+//------------------------------------------------------------------------------
+
 #include "../include/elements.hpp"
 
+//------------------------------------------------------------------------------
+//  elements(Matrix& y)
+//------------------------------------------------------------------------------
 /**
  * @brief Calcula los elementos orbitales keplerianos a partir del vector de estado.
  * 
+ * Esta función toma como entrada un vector de estado compuesto por posición y
+ * velocidad y devuelve una tupla con los elementos keplerianos: semilatus rectum,
+ * semi-eje mayor, excentricidad, inclinación, longitud del nodo ascendente,
+ * argumento del periastro y anomalía media.
+ *
  * @param y Vector de estado (6x1): posición (x,y,z) y velocidad (vx,vy,vz)
  * @return tuple<double, double, double, double, double, double, double> con:
- *         p (semilatus rectum), a (semi-eje mayor), e (excentricidad),
- *         i (inclinación), Omega (longitud nodo ascendente), 
- *         omega (argumento del periastro), M (anomalía media)
+ *         - p: semilatus rectum
+ *         - a: semi-eje mayor
+ *         - e: excentricidad
+ *         - i: inclinación
+ *         - Omega: longitud del nodo ascendente
+ *         - omega: argumento del periastro
+ *         - M: anomalía media
  */
+//------------------------------------------------------------------------------
 tuple<double, double, double, double, double, double, double> elements(Matrix& y) {
     const double pi2 = 2.0 * SAT_Const::pi;
 

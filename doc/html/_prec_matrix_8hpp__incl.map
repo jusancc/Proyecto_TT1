@@ -1,0 +1,25 @@
+<map id="include/PrecMatrix.hpp" name="include/PrecMatrix.hpp">
+<area shape="rect" id="Node000001" title="Declaración de la función que calcula la matriz de precesión entre dos fechas." alt="" coords="100,5,254,32"/>
+<area shape="rect" id="Node000002" href="$matrix_8hpp.html" title="Declaración de la clase Matrix y sus operaciones auxiliares." alt="" coords="145,155,228,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,33,169,66,169,106,178,139,173,140,164,107,164,66,171,32"/>
+<area shape="rect" id="Node000007" href="$_r__y_8hpp.html" title="Declaración de la función R_y que genera una matriz de rotación sobre el eje Y." alt="" coords="178,80,248,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="186,31,202,65,198,67,181,34"/>
+<area shape="rect" id="Node000008" href="$_r__z_8hpp_source.html" title=" " alt="" coords="271,80,342,107"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="201,30,272,70,269,74,198,35"/>
+<area shape="rect" id="Node000009" href="$_s_a_t___const_8hpp.html" title="Definición de constantes astronómicas, físicas y matemáticas usadas en simulaciones orbitales." alt="" coords="8,155,122,181"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="170,34,86,144,82,141,165,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="101,229,157,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="178,184,150,219,146,215,174,180"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="181,229,240,256"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="193,181,204,214,199,215,188,183"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="264,229,322,256"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="206,180,263,218,260,222,203,184"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,229,77,256"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="162,184,81,224,79,220,160,179"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="211,108,199,141,194,139,206,106"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="222,106,281,214,277,217,217,108"/>
+<area shape="poly" id="edge10_Node000008_Node000002" title=" " alt="" coords="287,109,222,149,219,144,284,105"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="308,107,298,214,293,214,303,107"/>
+<area shape="poly" id="edge13_Node000009_Node000005" title=" " alt="" coords="106,179,250,225,249,230,104,184"/>
+<area shape="poly" id="edge14_Node000009_Node000006" title=" " alt="" coords="63,183,52,215,47,214,58,181"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="IERS" name="IERS">
+<area shape="rect" id="Node000001" title="Recupera los parámetros EOP del IERS para una fecha UTC dada." alt="" coords="116,31,169,57"/>
+<area shape="rect" id="Node000002" href="$_accel_8cpp.html#a052008f916a6d5da1ba6d8b23e13d933" title="&lt; Efemérides JPL DE430" alt="" coords="10,5,63,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,37,62,27,64,22,101,32"/>
+<area shape="rect" id="Node000003" href="$_var_eqn_8cpp.html#ac635346ab8c33fade0f3287e9d9b8866" title="Calcula la derivada del vector extendido y matriz de variación (ecuaciones variacionales)." alt="" coords="5,56,68,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="101,56,69,64,68,59,100,51"/>
+</map>

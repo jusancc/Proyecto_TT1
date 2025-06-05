@@ -1,0 +1,29 @@
+<map id="include/AccelHarmonic.hpp" name="include/AccelHarmonic.hpp">
+<area shape="rect" id="Node000001" title="Declaración de la función que calcula la aceleración debida al campo gravitacional terrestre modelado..." alt="" coords="130,5,310,32"/>
+<area shape="rect" id="Node000002" href="$matrix_8hpp.html" title="Declaración de la clase Matrix y sus operaciones auxiliares." alt="" coords="50,155,132,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,35,123,53,106,66,93,81,87,95,85,110,86,139,81,140,79,109,82,93,89,79,103,62,120,48,159,30"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="192,229,249,256"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="223,33,223,214,218,214,218,33"/>
+<area shape="rect" id="Node000007" href="$_legendre_8hpp.html" title="Prototipo de la función que calcula los polinomios de Legendre y sus derivadas." alt="" coords="257,80,356,107"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="237,30,282,68,279,72,234,35"/>
+<area shape="rect" id="Node000009" href="$_s_a_t___const_8hpp.html" title="Definición de constantes astronómicas, físicas y matemáticas usadas en simulaciones orbitales." alt="" coords="382,155,496,181"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="269,30,319,49,370,78,402,108,426,140,422,144,398,112,367,82,317,54,267,35"/>
+<area shape="rect" id="Node000010" href="$global_8hpp.html" title="Declaración de variables y funciones globales usadas en dinámica orbital." alt="" coords="103,80,183,107"/>
+<area shape="poly" id="edge15_Node000001_Node000010" title=" " alt="" coords="209,34,169,71,165,67,205,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,229,62,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="83,184,55,219,51,215,79,180"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="85,229,144,256"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="98,181,108,214,103,215,92,183"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="115,180,186,219,183,224,112,184"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="403,229,474,256"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="133,175,389,228,388,233,132,181"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="270,110,144,152,142,147,268,105"/>
+<area shape="poly" id="edge11_Node000007_Node000005" title=" " alt="" coords="302,109,237,217,233,215,297,106"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="357,91,396,95,438,105,478,124,496,137,510,153,516,172,509,191,494,208,476,223,472,219,490,204,505,188,511,172,506,156,492,141,475,128,437,110,395,101,357,97"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="309,155,358,181"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="314,106,326,139,321,141,309,108"/>
+<area shape="poly" id="edge13_Node000009_Node000005" title=" " alt="" coords="402,184,265,230,263,224,400,179"/>
+<area shape="poly" id="edge14_Node000009_Node000006" title=" " alt="" coords="442,182,442,214,436,214,436,182"/>
+<area shape="poly" id="edge16_Node000010_Node000002" title=" " alt="" coords="136,109,111,144,106,141,132,106"/>
+<area shape="poly" id="edge17_Node000010_Node000005" title=" " alt="" coords="152,106,209,214,204,217,147,108"/>
+</map>

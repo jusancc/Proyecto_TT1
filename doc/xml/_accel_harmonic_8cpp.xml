@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_accel_harmonic_8cpp" kind="file" language="C++">
+    <compoundname>AccelHarmonic.cpp</compoundname>
+    <includes refid="_accel_harmonic_8hpp" local="yes">../include/AccelHarmonic.hpp</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>../include/AccelHarmonic.hpp</label>
+        <link refid="_accel_harmonic_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Legendre.hpp</label>
+        <link refid="_legendre_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SAT_Const.hpp</label>
+        <link refid="_s_a_t___const_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>global.hpp</label>
+        <link refid="global_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>matrix.hpp</label>
+        <link refid="matrix_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/AccelHarmonic.cpp</label>
+        <link refid="_accel_harmonic_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>cmath</label>
+      </node>
+      <node id="4">
+        <label>cstdio</label>
+      </node>
+      <node id="5">
+        <label>cstdlib</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="9">
+        <label>tuple</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_accel_harmonic_8cpp_1a97ea72b6a1426f18c34d295e50b8fc4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; AccelHarmonic</definition>
+        <argsstring>(Matrix &amp;r, Matrix &amp;E, int n_max, int m_max)</argsstring>
+        <name>AccelHarmonic</name>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_max</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>m_max</declname>
+        </param>
+        <briefdescription>
+<para>Calcula la aceleración debido a los armónicos esféricos del campo terrestre. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt; Parámetros globales y auxiliares</para>
+<para>Esta función transforma la posición del satélite al sistema de referencia del cuerpo, computa los potenciales asociados a los armónicos esféricos de orden y grado dados, y deriva la aceleración resultante en el sistema inercial.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector de posición (3x1) del satélite en coordenadas cartesianas [km]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matriz de transformación (de inercial a cuerpo fijo). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Orden máximo del desarrollo armónico. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Grado máximo del desarrollo armónico. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Referencia a una matriz (3x1) con la aceleración resultante [km/s²]. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AccelHarmonic.cpp" line="37" column="8" bodyfile="src/AccelHarmonic.cpp" bodystart="37" bodyend="96"/>
+        <references refid="global_8hpp_1aae4f5247dbe2733ec80f005dfbb2c3ed" compoundref="global_8cpp" startline="55">Cnm</references>
+        <references refid="_legendre_8hpp_1a55ce532de3c95506384990ae714dd99d" compoundref="_legendre_8cpp" startline="36" endline="84">Legendre</references>
+        <references refid="class_matrix_1aa30b90656f5063a7eac84a8cc5607318" compoundref="matrix_8cpp" startline="398" endline="406">Matrix::norm</references>
+        <references refid="global_8hpp_1a19b1b61df2d43fbf34bc708611f8d589" compoundref="global_8cpp" startline="56">Snm</references>
+        <references refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" compoundref="matrix_8cpp" startline="314" endline="324">transpose</references>
+        <referencedby refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" compoundref="_accel_8cpp" startline="39" endline="94">accel</referencedby>
+        <referencedby refid="_g___accel_harmonic_8hpp_1a13bfb59270182548cee5eba7c52b2957" compoundref="_g___accel_harmonic_8cpp" startline="41" endline="60">G_AccelHarmonic</referencedby>
+        <referencedby refid="_var_eqn_8hpp_1ac635346ab8c33fade0f3287e9d9b8866" compoundref="_var_eqn_8cpp" startline="38" endline="100">varEqn</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Implementación de la función que calcula la aceleración gravitacional perturbativa debida a los armónicos esféricos del campo gravitacional terrestre. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//$Header$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AccelHarmonic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GMAT:<sp/>General<sp/>Mission<sp/>Analysis<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>**Legal**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Juan<sp/>Sánchez<sp/>de<sp/>Corta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_accel_harmonic_8hpp" kindref="compound">../include/AccelHarmonic.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Matrix&amp;<sp/>AccelHarmonic(Matrix<sp/>&amp;r,<sp/>Matrix<sp/>&amp;E,<sp/>int<sp/>n_max,<sp/>int<sp/>m_max)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="_accel_harmonic_8hpp_1a97ea72b6a1426f18c34d295e50b8fc4b" refkind="member"><highlight class="normal"><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/><ref refid="_accel_harmonic_8cpp_1a97ea72b6a1426f18c34d295e50b8fc4b" kindref="member">AccelHarmonic</ref>(<ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;r,<sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;E,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_max,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_max)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r_ref<sp/>=<sp/>6378.1363e3;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>radio<sp/>de<sp/>referencia<sp/>en<sp/>metros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gm<sp/>=<sp/>398600.4415e9;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>constante<sp/>gravitacional<sp/>de<sp/>la<sp/>Tierra<sp/>[m³/s²]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;r_bf<sp/>=<sp/>E<sp/>*<sp/>r;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>posición<sp/>en<sp/>sistema<sp/>del<sp/>cuerpo<sp/>fijo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d<sp/>=<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(r_bf).<ref refid="class_matrix_1aa30b90656f5063a7eac84a8cc5607318" kindref="member">norm</ref>();<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>distancia<sp/>radial</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>latgc<sp/>=<sp/>asin(r_bf(3,<sp/>1)<sp/>/<sp/>d);<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>latitud<sp/>geocéntrica</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lon<sp/>=<sp/>atan2(r_bf(2,<sp/>1),<sp/>r_bf(1,<sp/>1));<sp/></highlight><highlight class="comment">//<sp/>longitud</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cálculo<sp/>de<sp/>funciones<sp/>de<sp/>Legendre<sp/>y<sp/>derivadas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>[pnm,<sp/>dpnm]<sp/>=<sp/><ref refid="_legendre_8hpp_1a55ce532de3c95506384990ae714dd99d" kindref="member">Legendre</ref>(n_max,<sp/>m_max,<sp/>latgc);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Inicialización<sp/>de<sp/>derivadas<sp/>del<sp/>potencial</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dUdr<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dUdlatgc<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dUdlon<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Bucle<sp/>sobre<sp/>orden<sp/>y<sp/>grado</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>0;<sp/>n<sp/>&lt;=<sp/>n_max;<sp/>n++)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b1<sp/>=<sp/>(-gm<sp/>/<sp/>(d<sp/>*<sp/>d))<sp/>*<sp/>pow(r_ref<sp/>/<sp/>d,<sp/>n)<sp/>*<sp/>(n<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b2<sp/>=<sp/>(gm<sp/>/<sp/>d)<sp/>*<sp/>pow(r_ref<sp/>/<sp/>d,<sp/>n);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b3<sp/>=<sp/>(gm<sp/>/<sp/>d)<sp/>*<sp/>pow(r_ref<sp/>/<sp/>d,<sp/>n);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>q1<sp/>=<sp/>0.0,<sp/>q2<sp/>=<sp/>0.0,<sp/>q3<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m<sp/>=<sp/>0;<sp/>m<sp/>&lt;=<sp/>m_max;<sp/>m++)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cos_ml<sp/>=<sp/>cos(m<sp/>*<sp/>lon);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sin_ml<sp/>=<sp/>sin(m<sp/>*<sp/>lon);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>term1<sp/>=<sp/>pnm(n<sp/>+<sp/>1,<sp/>m<sp/>+<sp/>1)<sp/>*<sp/>(<ref refid="global_8hpp_1aae4f5247dbe2733ec80f005dfbb2c3ed" kindref="member">Cnm</ref>(n<sp/>+<sp/>1,<sp/>m<sp/>+<sp/>1)<sp/>*<sp/>cos_ml<sp/>+<sp/><ref refid="global_8hpp_1a19b1b61df2d43fbf34bc708611f8d589" kindref="member">Snm</ref>(n<sp/>+<sp/>1,<sp/>m<sp/>+<sp/>1)<sp/>*<sp/>sin_ml);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>term2<sp/>=<sp/>dpnm(n<sp/>+<sp/>1,<sp/>m<sp/>+<sp/>1)<sp/>*<sp/>(<ref refid="global_8hpp_1aae4f5247dbe2733ec80f005dfbb2c3ed" kindref="member">Cnm</ref>(n<sp/>+<sp/>1,<sp/>m<sp/>+<sp/>1)<sp/>*<sp/>cos_ml<sp/>+<sp/><ref refid="global_8hpp_1a19b1b61df2d43fbf34bc708611f8d589" kindref="member">Snm</ref>(n<sp/>+<sp/>1,<sp/>m<sp/>+<sp/>1)<sp/>*<sp/>sin_ml);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>term3<sp/>=<sp/>m<sp/>*<sp/>pnm(n<sp/>+<sp/>1,<sp/>m<sp/>+<sp/>1)<sp/>*<sp/>(<ref refid="global_8hpp_1a19b1b61df2d43fbf34bc708611f8d589" kindref="member">Snm</ref>(n<sp/>+<sp/>1,<sp/>m<sp/>+<sp/>1)<sp/>*<sp/>cos_ml<sp/>-<sp/><ref refid="global_8hpp_1aae4f5247dbe2733ec80f005dfbb2c3ed" kindref="member">Cnm</ref>(n<sp/>+<sp/>1,<sp/>m<sp/>+<sp/>1)<sp/>*<sp/>sin_ml);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>q1<sp/>+=<sp/>term1;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>q2<sp/>+=<sp/>term2;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>q3<sp/>+=<sp/>term3;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dUdr<sp/>+=<sp/>q1<sp/>*<sp/>b1;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dUdlatgc<sp/>+=<sp/>q2<sp/>*<sp/>b2;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dUdlon<sp/>+=<sp/>q3<sp/>*<sp/>b3;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Componentes<sp/>en<sp/>el<sp/>sistema<sp/>del<sp/>cuerpo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r2xy<sp/>=<sp/>pow(r_bf(1,<sp/>1),<sp/>2)<sp/>+<sp/>pow(r_bf(2,<sp/>1),<sp/>2);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ax<sp/>=<sp/>(1.0<sp/>/<sp/>d<sp/>*<sp/>dUdr<sp/>-<sp/>r_bf(3,<sp/>1)<sp/>/<sp/>(d<sp/>*<sp/>d<sp/>*<sp/>sqrt(r2xy))<sp/>*<sp/>dUdlatgc)<sp/>*<sp/>r_bf(1,<sp/>1)<sp/>-<sp/>(1.0<sp/>/<sp/>r2xy<sp/>*<sp/>dUdlon)<sp/>*<sp/>r_bf(2,<sp/>1);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ay<sp/>=<sp/>(1.0<sp/>/<sp/>d<sp/>*<sp/>dUdr<sp/>-<sp/>r_bf(3,<sp/>1)<sp/>/<sp/>(d<sp/>*<sp/>d<sp/>*<sp/>sqrt(r2xy))<sp/>*<sp/>dUdlatgc)<sp/>*<sp/>r_bf(2,<sp/>1)<sp/>+<sp/>(1.0<sp/>/<sp/>r2xy<sp/>*<sp/>dUdlon)<sp/>*<sp/>r_bf(1,<sp/>1);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>az<sp/>=<sp/>1.0<sp/>/<sp/>d<sp/>*<sp/>dUdr<sp/>*<sp/>r_bf(3,<sp/>1)<sp/>+<sp/>sqrt(r2xy)<sp/>/<sp/>(d<sp/>*<sp/>d)<sp/>*<sp/>dUdlatgc;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Vector<sp/>de<sp/>aceleración<sp/>en<sp/>sistema<sp/>del<sp/>cuerpo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>a_bf(3,<sp/>1);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>a_bf(1,<sp/>1)<sp/>=<sp/>ax;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>a_bf(2,<sp/>1)<sp/>=<sp/>ay;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>a_bf(3,<sp/>1)<sp/>=<sp/>az;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Transformar<sp/>de<sp/>vuelta<sp/>al<sp/>sistema<sp/>inercial</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;a<sp/>=<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(E)<sp/>*<sp/>a_bf;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/AccelHarmonic.cpp"/>
+  </compounddef>
+</doxygen>

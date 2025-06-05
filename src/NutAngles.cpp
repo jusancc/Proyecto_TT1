@@ -1,5 +1,40 @@
+//$Header$
+//------------------------------------------------------------------------------
+//                                 NutAngles
+//------------------------------------------------------------------------------
+// GMAT: General Mission Analysis Tool
+//
+// **Legal**
+//
+// Author: Juan Sánchez de Corta
+//
+/**
+ * @file NutAngles.cpp
+ * @brief Implementación de la función que calcula los ángulos de nutación.
+ *
+ * Esta rutina calcula los ángulos de nutación en longitud (`dpsi`) y en
+ * oblicuidad (`deps`) para una fecha dada en Tiempo Terrestre (MJD_TT),
+ * utilizando la teoría de nutación de la IAU. Esta información es esencial
+ * para realizar transformaciones precisas entre sistemas de referencia
+ * geocéntricos e inerciales.
+ */
+//------------------------------------------------------------------------------
+
+
 #include "../include/NutAngles.hpp"
 
+/**
+ * @brief Calcula los ángulos de nutación (dpsi, deps) en función del MJD_TT.
+ *
+ * La nutación es una oscilación periódica en la orientación del eje de rotación
+ * de la Tierra. Esta función utiliza una expansión armónica de los términos
+ * de nutación para obtener las correcciones angulares en longitud y oblicuidad.
+ *
+ * @param Mjd_TT Tiempo Terrestre en formato Modified Julian Date.
+ * @return Una tupla (dpsi, deps) con las componentes de nutación en radianes:
+ *         - `dpsi`: Nutación en longitud.
+ *         - `deps`: Nutación en oblicuidad.
+ */
 tuple<double, double> NutAngles(double Mjd_TT)
 {
     double T = (Mjd_TT - SAT_Const::MJD_J2000) / 36525;

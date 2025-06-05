@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_prec_matrix_8hpp" kind="file" language="C++">
+    <compoundname>PrecMatrix.hpp</compoundname>
+    <includes refid="matrix_8hpp" local="yes">matrix.hpp</includes>
+    <includes refid="_r__y_8hpp" local="yes">R_y.hpp</includes>
+    <includes refid="_r__z_8hpp" local="yes">R_z.hpp</includes>
+    <includes refid="_s_a_t___const_8hpp" local="yes">SAT_Const.hpp</includes>
+    <includedby refid="_accel_8hpp" local="yes">include/Accel.hpp</includedby>
+    <includedby refid="_var_eqn_8hpp" local="yes">include/VarEqn.hpp</includedby>
+    <includedby refid="_prec_matrix_8cpp" local="yes">src/PrecMatrix.cpp</includedby>
+    <includedby refid="tests_8cpp" local="yes">tests/tests.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/PrecMatrix.hpp</label>
+        <link refid="_prec_matrix_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>R_y.hpp</label>
+        <link refid="_r__y_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>R_z.hpp</label>
+        <link refid="_r__z_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SAT_Const.hpp</label>
+        <link refid="_s_a_t___const_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>matrix.hpp</label>
+        <link refid="matrix_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cmath</label>
+      </node>
+      <node id="3">
+        <label>cstdio</label>
+      </node>
+      <node id="4">
+        <label>cstdlib</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/Accel.hpp</label>
+        <link refid="_accel_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/PrecMatrix.hpp</label>
+        <link refid="_prec_matrix_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/VarEqn.hpp</label>
+        <link refid="_var_eqn_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/Accel.cpp</label>
+        <link refid="_accel_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/PrecMatrix.cpp</label>
+        <link refid="_prec_matrix_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/VarEqn.cpp</label>
+        <link refid="_var_eqn_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_prec_matrix_8hpp_1a95bbb47a6bcd9ecaf7b5bc46f88dc7d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; PrecMatrix</definition>
+        <argsstring>(double Mjd_1, double Mjd_2)</argsstring>
+        <name>PrecMatrix</name>
+        <param>
+          <type>double</type>
+          <declname>Mjd_1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Mjd_2</declname>
+        </param>
+        <briefdescription>
+<para>Calcula la matriz de precesión entre dos fechas dadas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>La precesión es una rotación lenta del eje de la Tierra que afecta a las coordenadas astronómicas a lo largo del tiempo. Esta función construye la matriz de transformación que lleva coordenadas referidas a la época Mjd_1 a la época Mjd_2.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Mjd_1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fecha inicial en tiempo juliano modificado. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Mjd_2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fecha final en tiempo juliano modificado. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Matriz de rotación 3x3 que representa la precesión entre ambas fechas.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Mjd_1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fecha inicial en Tiempo Juliano Modificado (MJD). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Mjd_2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fecha final en Tiempo Juliano Modificado (MJD). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Matriz de rotación 3x3 que representa la transformación debida a la precesión.</para>
+</simplesect>
+La matriz se calcula como Rz(-z) * Ry(theta) * Rz(-zeta), donde los ángulos se obtienen de las expresiones del modelo IAU 1976. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/PrecMatrix.hpp" line="39" column="8" bodyfile="src/PrecMatrix.cpp" bodystart="33" bodyend="55" declfile="include/PrecMatrix.hpp" declline="39" declcolumn="8"/>
+        <references refid="class_s_a_t___const_1a7c2f8d8faddb10fda901e41c30d8f010" compoundref="_s_a_t___const_8hpp" startline="39">SAT_Const::Arcs</references>
+        <references refid="class_s_a_t___const_1ab7ba8d3bdb9b06b52877b1e6c24b3d37" compoundref="_s_a_t___const_8hpp" startline="45">SAT_Const::MJD_J2000</references>
+        <references refid="_r__y_8hpp_1a25114557991f92fd6b027118c591a98f" compoundref="_r__y_8cpp" startline="29" endline="39">R_y</references>
+        <referencedby refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" compoundref="_accel_8cpp" startline="39" endline="94">accel</referencedby>
+        <referencedby refid="_var_eqn_8hpp_1ac635346ab8c33fade0f3287e9d9b8866" compoundref="_var_eqn_8cpp" startline="38" endline="100">varEqn</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Declaración de la función que calcula la matriz de precesión entre dos fechas. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Esta función genera la matriz de rotación debida a la precesión de la Tierra entre dos épocas dadas en tiempo juliano modificado (MJD), según el modelo IAU 1976. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//$Header$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PrecMatrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GMAT:<sp/>General<sp/>Mission<sp/>Analysis<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>**Legal**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Juan<sp/>Sánchez<sp/>de<sp/>Corta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_PREC_MATRIX_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PREC_MATRIX_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="matrix_8hpp" kindref="compound">matrix.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_r__y_8hpp" kindref="compound">R_y.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;R_z.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_s_a_t___const_8hpp" kindref="compound">SAT_Const.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/><ref refid="_prec_matrix_8hpp_1a95bbb47a6bcd9ecaf7b5bc46f88dc7d1" kindref="member">PrecMatrix</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Mjd_1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Mjd_2);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/PrecMatrix.hpp"/>
+  </compounddef>
+</doxygen>

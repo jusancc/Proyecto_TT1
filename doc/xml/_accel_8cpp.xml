@@ -1,0 +1,470 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_accel_8cpp" kind="file" language="C++">
+    <compoundname>Accel.cpp</compoundname>
+    <includes refid="_accel_8hpp" local="yes">../include/Accel.hpp</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>../include/Accel.hpp</label>
+        <link refid="_accel_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>AccelHarmonic.hpp</label>
+        <link refid="_accel_harmonic_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>AccelPointMass.hpp</label>
+        <link refid="_accel_point_mass_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>Cheb3D.hpp</label>
+        <link refid="_cheb3_d_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>EqnEquinox.hpp</label>
+        <link refid="_eqn_equinox_8hpp"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Frac.hpp</label>
+        <link refid="_frac_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>GHAMatrix.hpp</label>
+        <link refid="_g_h_a_matrix_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>GMST.hpp</label>
+        <link refid="_g_m_s_t_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>IERS.hpp</label>
+        <link refid="_i_e_r_s_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>JPL_Eph_DE430.hpp</label>
+        <link refid="_j_p_l___eph___d_e430_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>Legendre.hpp</label>
+        <link refid="_legendre_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>MeanObliquity.hpp</label>
+        <link refid="_mean_obliquity_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Mjday.hpp</label>
+        <link refid="_mjday_8hpp"/>
+      </node>
+      <node id="31">
+        <label>Mjday_TDB.hpp</label>
+        <link refid="_mjday___t_d_b_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>NutAngles.hpp</label>
+        <link refid="_nut_angles_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>NutMatrix.hpp</label>
+        <link refid="_nut_matrix_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>PoleMatrix.hpp</label>
+        <link refid="_pole_matrix_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>PrecMatrix.hpp</label>
+        <link refid="_prec_matrix_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>R_x.hpp</label>
+        <link refid="_r__x_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>R_y.hpp</label>
+        <link refid="_r__y_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>R_z.hpp</label>
+        <link refid="_r__z_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SAT_Const.hpp</label>
+        <link refid="_s_a_t___const_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Timediff.hpp</label>
+        <link refid="_timediff_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>gast.hpp</label>
+        <link refid="gast_8hpp"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>global.hpp</label>
+        <link refid="global_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>..\include\matrix.hpp</label>
+        <link refid="matrix_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/Accel.cpp</label>
+        <link refid="_accel_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cmath</label>
+      </node>
+      <node id="5">
+        <label>cstdio</label>
+      </node>
+      <node id="6">
+        <label>cstdlib</label>
+      </node>
+      <node id="20">
+        <label>iomanip</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="11">
+        <label>tuple</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_accel_8cpp_1a052008f916a6d5da1ba6d8b23e13d933" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; accel</definition>
+        <argsstring>(double x, Matrix &amp;Y)</argsstring>
+        <name>accel</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>Y</declname>
+        </param>
+        <briefdescription>
+<para>Calcula la aceleración total sobre un cuerpo a partir de su estado y tiempo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt; Efemérides JPL DE430</para>
+<para>Esta función computa las fuerzas que actúan sobre un satélite, incluyendo:<itemizedlist>
+<listitem><para>Aceleración por armónicos esféricos del campo gravitacional terrestre.</para>
+</listitem><listitem><para>Atracción gravitatoria del Sol, la Luna y planetas (opcional según configuración).</para>
+</listitem></itemizedlist>
+</para>
+<para>El sistema de referencia se transforma aplicando matrices de precesión, nutación, movimiento del polo y ángulo horario de Greenwich.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tiempo transcurrido (en segundos) desde la época de referencia (MJD_UTC). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector de estado (6x1) con posición y velocidad cartesianas [km, km/s]. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Referencia a un vector de derivadas del estado (6x1): [vx,vy,vz,ax,ay,az]. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Accel.cpp" line="39" column="8" bodyfile="src/Accel.cpp" bodystart="39" bodyend="94"/>
+        <references refid="_accel_harmonic_8hpp_1a97ea72b6a1426f18c34d295e50b8fc4b" compoundref="_accel_harmonic_8cpp" startline="37" endline="96">AccelHarmonic</references>
+        <references refid="_accel_point_mass_8hpp_1a72b636f377c135454d41655c935c0eb3" compoundref="_accel_point_mass_8cpp" startline="37" endline="58">AccelPointMass</references>
+        <references refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" compoundref="global_8cpp" startline="119">AuxParam</references>
+        <references refid="global_8hpp_1a16817456f74489dad2c22ee5b145a1c4" compoundref="global_8cpp" startline="20">eopdata</references>
+        <references refid="class_matrix_1a837260f6358853bd4012a86107df466f" compoundref="matrix_8cpp" startline="541" endline="556">Matrix::extract_vector</references>
+        <references refid="_g_h_a_matrix_8hpp_1a49218ae38846c1175342d13a65d41f4d" compoundref="_g_h_a_matrix_8cpp" startline="34" endline="36">GHAMatrix</references>
+        <references refid="class_s_a_t___const_1a6080247fc6db7327ec51d6ddea91cc68" compoundref="_s_a_t___const_8hpp" startline="68">SAT_Const::GM_Jupiter</references>
+        <references refid="class_s_a_t___const_1a722cc664533818278459dcdf14765970" compoundref="_s_a_t___const_8hpp" startline="67">SAT_Const::GM_Mars</references>
+        <references refid="class_s_a_t___const_1ae4b07e964995d768c891f2e54204e788" compoundref="_s_a_t___const_8hpp" startline="65">SAT_Const::GM_Mercury</references>
+        <references refid="class_s_a_t___const_1aeb5c26a48ab670ef46de848a8a14da68" compoundref="_s_a_t___const_8hpp" startline="64">SAT_Const::GM_Moon</references>
+        <references refid="class_s_a_t___const_1adb10f75e70cb3513eadf7aeef2c0e58c" compoundref="_s_a_t___const_8hpp" startline="71">SAT_Const::GM_Neptune</references>
+        <references refid="class_s_a_t___const_1a9108d8a0b68e98dfaad65d2d28ca84b5" compoundref="_s_a_t___const_8hpp" startline="72">SAT_Const::GM_Pluto</references>
+        <references refid="class_s_a_t___const_1a9e96aee2b02c6387fbc0f525f4cb5d5c" compoundref="_s_a_t___const_8hpp" startline="69">SAT_Const::GM_Saturn</references>
+        <references refid="class_s_a_t___const_1aa2cf8c2fc4b178a2ddbc47ec94b756e8" compoundref="_s_a_t___const_8hpp" startline="63">SAT_Const::GM_Sun</references>
+        <references refid="class_s_a_t___const_1a6d53fbd66032be649f31df560d8893c4" compoundref="_s_a_t___const_8hpp" startline="70">SAT_Const::GM_Uranus</references>
+        <references refid="class_s_a_t___const_1a72e68505611ebd6ee5c30f8614f25b11" compoundref="_s_a_t___const_8hpp" startline="66">SAT_Const::GM_Venus</references>
+        <references refid="_i_e_r_s_8hpp_1a1613bc89717d0e37aef2c79cc1ecb646" compoundref="_i_e_r_s_8cpp" startline="50" endline="123">IERS</references>
+        <references refid="_j_p_l___eph___d_e430_8hpp_1a5e6fedfbbbe0ca32aa62a9016e7d3293" compoundref="_j_p_l___eph___d_e430_8cpp" startline="58" endline="328">JPL_Eph_DE430</references>
+        <references refid="class_s_a_t___const_1ab7ba8d3bdb9b06b52877b1e6c24b3d37" compoundref="_s_a_t___const_8hpp" startline="45">SAT_Const::MJD_J2000</references>
+        <references refid="_mjday___t_d_b_8hpp_1a2512825285329f54df7d9f0be4966336" compoundref="_mjday___t_d_b_8cpp" startline="31" endline="45">Mjday_TDB</references>
+        <references refid="_nut_matrix_8hpp_1ac7fb7e48f2d2d4fd63ac42e17e44ff23" compoundref="_nut_matrix_8cpp" startline="35" endline="53">NutMatrix</references>
+        <references refid="_pole_matrix_8hpp_1aa20f72601d5ff91f277b999d15b7d6c9" compoundref="_pole_matrix_8cpp" startline="33" endline="38">PoleMatrix</references>
+        <references refid="_prec_matrix_8hpp_1a95bbb47a6bcd9ecaf7b5bc46f88dc7d1" compoundref="_prec_matrix_8cpp" startline="33" endline="55">PrecMatrix</references>
+        <references refid="_timediff_8hpp_1a0772112289293a570d2edb0667dbb3a9" compoundref="_timediff_8cpp" startline="34" endline="47">timediff</references>
+        <references refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" compoundref="matrix_8cpp" startline="314" endline="324">transpose</references>
+        <references refid="matrix_8hpp_1ab7c29bd668becd2c3be14876cb2ca51a" compoundref="matrix_8cpp" startline="516" endline="536">union_vector</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Implementación de la función que calcula la aceleración total que actúa sobre un satélite, considerando perturbaciones armónicas y gravitatorias de cuerpos celestes usando efemérides JPL DE430. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//$Header$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>accel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GMAT:<sp/>General<sp/>Mission<sp/>Analysis<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>**Legal**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Juan<sp/>Sánchez<sp/>de<sp/>Corta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_accel_8hpp" kindref="compound">../include/Accel.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Matrix&amp;<sp/>accel(double<sp/>x,<sp/>Matrix<sp/>&amp;Y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" refkind="member"><highlight class="normal"><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/><ref refid="_accel_8cpp_1a052008f916a6d5da1ba6d8b23e13d933" kindref="member">accel</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;Y){</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Obtener<sp/>parámetros<sp/>de<sp/>interpolación<sp/>IERS<sp/>para<sp/>la<sp/>época<sp/>actual</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>[x_pole,<sp/>y_pole,<sp/>UT1_UTC,<sp/>LOD,<sp/>dpsi,<sp/>deps,<sp/>dx_pole,<sp/>dy_pole,<sp/>TAI_UTC]<sp/>=</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_i_e_r_s_8hpp_1a1613bc89717d0e37aef2c79cc1ecb646" kindref="member">IERS</ref>(<ref refid="global_8hpp_1a16817456f74489dad2c22ee5b145a1c4" kindref="member">eopdata</ref>,<sp/><ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.Mjd_UTC<sp/>+<sp/>x<sp/>/<sp/>86400,<sp/></highlight><highlight class="charliteral">&apos;l&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Diferencias<sp/>entre<sp/>escalas<sp/>de<sp/>tiempo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>[UT1_TAI,<sp/>UTC_GPS,<sp/>UT1_GPS,<sp/>TT_UTC,<sp/>GPS_UTC]<sp/>=<sp/><ref refid="_timediff_8hpp_1a0772112289293a570d2edb0667dbb3a9" kindref="member">timediff</ref>(UT1_UTC,<sp/>TAI_UTC);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Mjd_UT1<sp/>=<sp/><ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.Mjd_UTC<sp/>+<sp/>(x<sp/>/<sp/>86400)<sp/>+<sp/>UT1_UTC<sp/>/<sp/>86400;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Mjd_TT<sp/>=<sp/><ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.Mjd_UTC<sp/>+<sp/>(x<sp/>/<sp/>86400)<sp/>+<sp/>TT_UTC<sp/>/<sp/>86400;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Matrices<sp/>de<sp/>transformación:<sp/>precesión,<sp/>nutación,<sp/>polo,<sp/>ángulo<sp/>horario</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;P<sp/>=<sp/><ref refid="_prec_matrix_8hpp_1a95bbb47a6bcd9ecaf7b5bc46f88dc7d1" kindref="member">PrecMatrix</ref>(<ref refid="class_s_a_t___const_1ab7ba8d3bdb9b06b52877b1e6c24b3d37" kindref="member">SAT_Const::MJD_J2000</ref>,<sp/>Mjd_TT);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;N<sp/>=<sp/><ref refid="_nut_matrix_8hpp_1ac7fb7e48f2d2d4fd63ac42e17e44ff23" kindref="member">NutMatrix</ref>(Mjd_TT);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;T<sp/>=<sp/>N<sp/>*<sp/>P;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;Pole<sp/>=<sp/><ref refid="_pole_matrix_8hpp_1aa20f72601d5ff91f277b999d15b7d6c9" kindref="member">PoleMatrix</ref>(x_pole,<sp/>y_pole);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;GHA<sp/>=<sp/><ref refid="_g_h_a_matrix_8hpp_1a49218ae38846c1175342d13a65d41f4d" kindref="member">GHAMatrix</ref>(Mjd_UT1);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;EG<sp/>=<sp/>Pole<sp/>*<sp/>GHA;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;E<sp/>=<sp/>EG<sp/>*<sp/>T;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cálculo<sp/>de<sp/>efemérides<sp/>JPL<sp/>para<sp/>cuerpos<sp/>del<sp/>sistema<sp/>solar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>MJD_TDB<sp/>=<sp/><ref refid="_mjday___t_d_b_8hpp_1a2512825285329f54df7d9f0be4966336" kindref="member">Mjday_TDB</ref>(Mjd_TT);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>[r_Mercury,<sp/>r_Venus,<sp/>r_Earth,<sp/>r_Mars,<sp/>r_Jupiter,<sp/>r_Saturn,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r_Uranus,<sp/>r_Neptune,<sp/>r_Pluto,<sp/>r_Moon,<sp/>r_Sun]<sp/>=<sp/><ref refid="_j_p_l___eph___d_e430_8hpp_1a5e6fedfbbbe0ca32aa62a9016e7d3293" kindref="member">JPL_Eph_DE430</ref>(MJD_TDB);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;pos<sp/>=<sp/>Y.<ref refid="class_matrix_1a837260f6358853bd4012a86107df466f" kindref="member">extract_vector</ref>(1,<sp/>3);<sp/><sp/></highlight><highlight class="comment">//<sp/>Vector<sp/>posición</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Aceleración<sp/>por<sp/>armónicos<sp/>esféricos</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;a<sp/>=<sp/><ref refid="_accel_harmonic_8hpp_1a97ea72b6a1426f18c34d295e50b8fc4b" kindref="member">AccelHarmonic</ref>(<ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(pos),<sp/>E,<sp/><ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.n,<sp/><ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.m);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Aceleración<sp/>por<sp/>atracción<sp/>de<sp/>cuerpos<sp/>puntuales<sp/>(opcional)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.sun)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>a<sp/>+<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(<ref refid="_accel_point_mass_8hpp_1a72b636f377c135454d41655c935c0eb3" kindref="member">AccelPointMass</ref>(pos,<sp/>r_Sun,<sp/><ref refid="class_s_a_t___const_1aa2cf8c2fc4b178a2ddbc47ec94b756e8" kindref="member">SAT_Const::GM_Sun</ref>));</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.moon)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>a<sp/>+<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(<ref refid="_accel_point_mass_8hpp_1a72b636f377c135454d41655c935c0eb3" kindref="member">AccelPointMass</ref>(pos,<sp/>r_Moon,<sp/><ref refid="class_s_a_t___const_1aeb5c26a48ab670ef46de848a8a14da68" kindref="member">SAT_Const::GM_Moon</ref>));</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.planets)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>a<sp/>+<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(<ref refid="_accel_point_mass_8hpp_1a72b636f377c135454d41655c935c0eb3" kindref="member">AccelPointMass</ref>(pos,<sp/>r_Mercury,<sp/><ref refid="class_s_a_t___const_1ae4b07e964995d768c891f2e54204e788" kindref="member">SAT_Const::GM_Mercury</ref>));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>a<sp/>+<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(<ref refid="_accel_point_mass_8hpp_1a72b636f377c135454d41655c935c0eb3" kindref="member">AccelPointMass</ref>(pos,<sp/>r_Venus,<sp/><ref refid="class_s_a_t___const_1a72e68505611ebd6ee5c30f8614f25b11" kindref="member">SAT_Const::GM_Venus</ref>));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>a<sp/>+<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(<ref refid="_accel_point_mass_8hpp_1a72b636f377c135454d41655c935c0eb3" kindref="member">AccelPointMass</ref>(pos,<sp/>r_Mars,<sp/><ref refid="class_s_a_t___const_1a722cc664533818278459dcdf14765970" kindref="member">SAT_Const::GM_Mars</ref>));</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>a<sp/>+<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(<ref refid="_accel_point_mass_8hpp_1a72b636f377c135454d41655c935c0eb3" kindref="member">AccelPointMass</ref>(pos,<sp/>r_Jupiter,<sp/><ref refid="class_s_a_t___const_1a6080247fc6db7327ec51d6ddea91cc68" kindref="member">SAT_Const::GM_Jupiter</ref>));</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>a<sp/>+<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(<ref refid="_accel_point_mass_8hpp_1a72b636f377c135454d41655c935c0eb3" kindref="member">AccelPointMass</ref>(pos,<sp/>r_Saturn,<sp/><ref refid="class_s_a_t___const_1a9e96aee2b02c6387fbc0f525f4cb5d5c" kindref="member">SAT_Const::GM_Saturn</ref>));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>a<sp/>+<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(<ref refid="_accel_point_mass_8hpp_1a72b636f377c135454d41655c935c0eb3" kindref="member">AccelPointMass</ref>(pos,<sp/>r_Uranus,<sp/><ref refid="class_s_a_t___const_1a6d53fbd66032be649f31df560d8893c4" kindref="member">SAT_Const::GM_Uranus</ref>));</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>a<sp/>+<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(<ref refid="_accel_point_mass_8hpp_1a72b636f377c135454d41655c935c0eb3" kindref="member">AccelPointMass</ref>(pos,<sp/>r_Neptune,<sp/><ref refid="class_s_a_t___const_1adb10f75e70cb3513eadf7aeef2c0e58c" kindref="member">SAT_Const::GM_Neptune</ref>));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>a<sp/>+<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(<ref refid="_accel_point_mass_8hpp_1a72b636f377c135454d41655c935c0eb3" kindref="member">AccelPointMass</ref>(pos,<sp/>r_Pluto,<sp/><ref refid="class_s_a_t___const_1a9108d8a0b68e98dfaad65d2d28ca84b5" kindref="member">SAT_Const::GM_Pluto</ref>));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;vel<sp/>=<sp/>Y.<ref refid="class_matrix_1a837260f6358853bd4012a86107df466f" kindref="member">extract_vector</ref>(4,<sp/>6);<sp/></highlight><highlight class="comment">//<sp/>Vector<sp/>velocidad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Concatenar<sp/>velocidad<sp/>y<sp/>aceleración<sp/>como<sp/>derivadas<sp/>del<sp/>estado</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;dY<sp/>=<sp/><ref refid="matrix_8hpp_1ab7c29bd668becd2c3be14876cb2ca51a" kindref="member">union_vector</ref>(vel,<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(a));</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dY;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Accel.cpp"/>
+  </compounddef>
+</doxygen>

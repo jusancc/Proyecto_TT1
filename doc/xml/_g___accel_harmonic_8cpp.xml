@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_g___accel_harmonic_8cpp" kind="file" language="C++">
+    <compoundname>G_AccelHarmonic.cpp</compoundname>
+    <includes refid="_g___accel_harmonic_8hpp" local="yes">../include/G_AccelHarmonic.hpp</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>AccelHarmonic.hpp</label>
+        <link refid="_accel_harmonic_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/G_AccelHarmonic.hpp</label>
+        <link refid="_g___accel_harmonic_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Legendre.hpp</label>
+        <link refid="_legendre_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>SAT_Const.hpp</label>
+        <link refid="_s_a_t___const_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>global.hpp</label>
+        <link refid="global_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>matrix.hpp</label>
+        <link refid="matrix_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/G_AccelHarmonic.cpp</label>
+        <link refid="_g___accel_harmonic_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>cmath</label>
+      </node>
+      <node id="4">
+        <label>cstdio</label>
+      </node>
+      <node id="5">
+        <label>cstdlib</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="10">
+        <label>tuple</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_g___accel_harmonic_8cpp_1a13bfb59270182548cee5eba7c52b2957" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; G_AccelHarmonic</definition>
+        <argsstring>(Matrix &amp;r, Matrix &amp;U, double n_max, double m_max)</argsstring>
+        <name>G_AccelHarmonic</name>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>U</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>n_max</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>m_max</declname>
+        </param>
+        <briefdescription>
+<para>Calcula numéricamente el gradiente de la aceleración armónica ∂a/∂r. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt; Aceleración por armónicos esféricos</para>
+<para>Esta función evalúa la derivada parcial de la aceleración producida por el campo gravitacional armónico respecto a la posición usando diferencias finitas centradas. Se perturba cada componente de <computeroutput>r</computeroutput> una cantidad <computeroutput>d/2</computeroutput> y se calcula la diferencia entre aceleraciones.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector de posición (3x1). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>U</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matriz de transformación (3x3) del sistema inercial al cuerpo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Orden máximo del modelo armónico. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Grado máximo del modelo armónico. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Referencia a una matriz (3x3) con el gradiente ∂a/∂r.</para>
+</simplesect>
+<simplesect kind="note"><para>Esta aproximación es numérica y puede ser costosa para modelos grandes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/G_AccelHarmonic.cpp" line="41" column="8" bodyfile="src/G_AccelHarmonic.cpp" bodystart="41" bodyend="60"/>
+        <references refid="_accel_harmonic_8hpp_1a97ea72b6a1426f18c34d295e50b8fc4b" compoundref="_accel_harmonic_8cpp" startline="37" endline="96">AccelHarmonic</references>
+        <references refid="class_matrix_1a82f842045feaabec73cb00d8002a38d0" compoundref="matrix_8cpp" startline="498" endline="511">Matrix::assign_column</references>
+        <references refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" compoundref="matrix_8cpp" startline="179" endline="189">zeros</references>
+        <referencedby refid="_var_eqn_8hpp_1ac635346ab8c33fade0f3287e9d9b8866" compoundref="_var_eqn_8cpp" startline="38" endline="100">varEqn</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Implementación de la función que calcula el gradiente de la aceleración armónica respecto a la posición. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//$Header$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>G_AccelHarmonic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GMAT:<sp/>General<sp/>Mission<sp/>Analysis<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>**Legal**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Juan<sp/>Sánchez<sp/>de<sp/>Corta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_g___accel_harmonic_8hpp" kindref="compound">../include/G_AccelHarmonic.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Matrix&amp;<sp/>G_AccelHarmonic(Matrix<sp/>&amp;r,<sp/>Matrix<sp/>&amp;U,<sp/>double<sp/>n_max,<sp/>double<sp/>m_max)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="_g___accel_harmonic_8hpp_1a13bfb59270182548cee5eba7c52b2957" refkind="member"><highlight class="normal"><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/><ref refid="_g___accel_harmonic_8cpp_1a13bfb59270182548cee5eba7c52b2957" kindref="member">G_AccelHarmonic</ref>(<ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;r,<sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;U,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>n_max,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m_max){</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d<sp/>=<sp/>1.0;<sp/><sp/></highlight><highlight class="comment">//<sp/>Paso<sp/>para<sp/>diferencias<sp/>finitas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;G<sp/>=<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(3,<sp/>3);<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Matriz<sp/>resultante<sp/>del<sp/>gradiente</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;dr<sp/>=<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(3,<sp/>1);<sp/><sp/></highlight><highlight class="comment">//<sp/>Vector<sp/>de<sp/>perturbación</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/>3;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dr<sp/>=<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(3,<sp/>1);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dr(i)<sp/>=<sp/>d;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;a_plus<sp/>=<sp/><ref refid="_accel_harmonic_8hpp_1a97ea72b6a1426f18c34d295e50b8fc4b" kindref="member">AccelHarmonic</ref>(r<sp/>+<sp/>dr<sp/>/<sp/>2,<sp/>U,<sp/>n_max,<sp/>m_max);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;a_minus<sp/>=<sp/><ref refid="_accel_harmonic_8hpp_1a97ea72b6a1426f18c34d295e50b8fc4b" kindref="member">AccelHarmonic</ref>(r<sp/>-<sp/>dr<sp/>/<sp/>2,<sp/>U,<sp/>n_max,<sp/>m_max);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;da<sp/>=<sp/>a_plus<sp/>-<sp/>a_minus;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>G.<ref refid="class_matrix_1a82f842045feaabec73cb00d8002a38d0" kindref="member">assign_column</ref>(i,<sp/>da<sp/>/<sp/>d);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>G;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/G_AccelHarmonic.cpp"/>
+  </compounddef>
+</doxygen>

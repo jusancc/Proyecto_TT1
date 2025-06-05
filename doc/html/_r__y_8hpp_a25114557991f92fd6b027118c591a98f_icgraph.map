@@ -1,0 +1,15 @@
+<map id="R_y" name="R_y">
+<area shape="rect" id="Node000001" title="Devuelve la matriz de rotación sobre el eje Y." alt="" coords="248,56,293,83"/>
+<area shape="rect" id="Node000002" href="$_l_t_c_8cpp.html#a27b89059a0c4bc52a9192df16ead3359" title="&lt; Clase de matrices personalizada" alt="" coords="135,5,180,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,55,180,31,182,26,235,51"/>
+<area shape="rect" id="Node000003" href="$_pole_matrix_8cpp.html#aa20f72601d5ff91f277b999d15b7d6c9" title="Calcula la matriz de rotación por efecto del movimiento polar." alt="" coords="116,107,200,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="235,88,190,109,188,104,233,83"/>
+<area shape="rect" id="Node000006" href="$_prec_matrix_8cpp.html#a95bbb47a6bcd9ecaf7b5bc46f88dc7d1" title="Calcula la matriz de precesión entre dos fechas dadas." alt="" coords="116,56,200,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="232,72,201,72,201,67,232,67"/>
+<area shape="rect" id="Node000004" href="$_accel_8cpp.html#a052008f916a6d5da1ba6d8b23e13d933" title="&lt; Efemérides JPL DE430" alt="" coords="10,56,63,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="109,103,62,83,64,78,111,98"/>
+<area shape="rect" id="Node000005" href="$_var_eqn_8cpp.html#ac635346ab8c33fade0f3287e9d9b8866" title="Calcula la derivada del vector extendido y matriz de variación (ecuaciones variacionales)." alt="" coords="5,107,68,133"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="101,123,68,123,68,117,101,117"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="101,72,63,72,63,67,101,67"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="111,91,69,109,67,105,109,87"/>
+</map>

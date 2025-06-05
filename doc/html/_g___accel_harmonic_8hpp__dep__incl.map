@@ -1,0 +1,9 @@
+<map id="include/G_AccelHarmonic.hpp" name="include/G_AccelHarmonic.hpp">
+<area shape="rect" id="Node000001" title="Declaración de la función que calcula el gradiente de la aceleración producida por el campo gravitaci..." alt="" coords="61,5,259,32"/>
+<area shape="rect" id="Node000002" href="$_var_eqn_8hpp.html" title="Prototipo de la función de ecuaciones variacionales para propagación orbital." alt="" coords="5,80,139,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,44,89,82,85,78,131,40"/>
+<area shape="rect" id="Node000004" href="$_g___accel_harmonic_8cpp.html" title="Implementación de la función que calcula el gradiente de la aceleración armónica respecto a la posici..." alt="" coords="162,80,336,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="189,40,236,78,232,82,186,44"/>
+<area shape="rect" id="Node000003" href="$_var_eqn_8cpp.html" title="Implementación de la función de ecuaciones variacionales para propagación orbital con perturbaciones ..." alt="" coords="17,155,127,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="75,122,75,154,69,154,69,122"/>
+</map>

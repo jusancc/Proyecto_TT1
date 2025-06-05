@@ -1,0 +1,531 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_s_a_t___const" kind="class" language="C++" prot="public">
+    <compoundname>SAT_Const</compoundname>
+    <includes refid="_s_a_t___const_8hpp" local="no">SAT_Const.hpp</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_s_a_t___const_1a7322cb29af30ac8df9f46c9dde418381" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::pi</definition>
+        <argsstring></argsstring>
+        <name>pi</name>
+        <qualifiedname>SAT_Const::pi</qualifiedname>
+        <initializer>= 3.14159265358979324</initializer>
+        <briefdescription>
+<para>π (3.1415...) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>π </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="35" column="25" bodyfile="include/SAT_Const.hpp" bodystart="35" bodyend="-1"/>
+        <referencedby refid="_ecc_anom_8hpp_1a2ad531000471d74f459467a747a79aff" compoundref="_ecc_anom_8cpp" startline="40" endline="71">EccAnom</referencedby>
+        <referencedby refid="elements_8hpp_1a5dd6d5680c9b5aafae7e21082e0ab75a" compoundref="elements_8cpp" startline="42" endline="80">elements</referencedby>
+        <referencedby refid="gast_8hpp_1a4eb2d09c87615520077aec1005b8e0ad" compoundref="gast_8cpp" startline="32" endline="34">gast</referencedby>
+        <referencedby refid="_g_m_s_t_8hpp_1a22a9ee5ea799a7511f4b5b1939c9de76" compoundref="_g_m_s_t_8cpp" startline="32" endline="51">gmst</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a89e036b4f6b1dd503242c44cd398d9b1" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::pi2</definition>
+        <argsstring></argsstring>
+        <name>pi2</name>
+        <qualifiedname>SAT_Const::pi2</qualifiedname>
+        <initializer>= 2 * <ref refid="class_s_a_t___const_1a7322cb29af30ac8df9f46c9dde418381" kindref="member">SAT_Const::pi</ref></initializer>
+        <briefdescription>
+<para>2π </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="36" column="25" bodyfile="include/SAT_Const.hpp" bodystart="36" bodyend="-1"/>
+        <referencedby refid="_az_el_pa_8hpp_1ae89a6c135135b96ec7057c45dced4159" compoundref="_az_el_pa_8cpp" startline="40" endline="68">AzElPa</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a8cd545a117a0d02fba3e18c843a8e112" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::Rad</definition>
+        <argsstring></argsstring>
+        <name>Rad</name>
+        <qualifiedname>SAT_Const::Rad</qualifiedname>
+        <initializer>= <ref refid="class_s_a_t___const_1a7322cb29af30ac8df9f46c9dde418381" kindref="member">SAT_Const::pi</ref> / 180</initializer>
+        <briefdescription>
+<para>Conversión de grados a radianes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>grados → radianes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="37" column="25" bodyfile="include/SAT_Const.hpp" bodystart="37" bodyend="-1"/>
+        <referencedby refid="_mean_obliquity_8hpp_1a11f057ac4e8a0c5a7958f77379e30d40" compoundref="_mean_obliquity_8cpp" startline="31" endline="44">MeanObliquity</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a46f0def10d9eb7d0493a8fbf586f4116" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::Deg</definition>
+        <argsstring></argsstring>
+        <name>Deg</name>
+        <qualifiedname>SAT_Const::Deg</qualifiedname>
+        <initializer>= 180 / <ref refid="class_s_a_t___const_1a7322cb29af30ac8df9f46c9dde418381" kindref="member">SAT_Const::pi</ref></initializer>
+        <briefdescription>
+<para>Conversión de radianes a grados. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>radianes → grados </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="38" column="25" bodyfile="include/SAT_Const.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a7c2f8d8faddb10fda901e41c30d8f010" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::Arcs</definition>
+        <argsstring></argsstring>
+        <name>Arcs</name>
+        <qualifiedname>SAT_Const::Arcs</qualifiedname>
+        <initializer>= 3600 * 180 / <ref refid="class_s_a_t___const_1a7322cb29af30ac8df9f46c9dde418381" kindref="member">SAT_Const::pi</ref></initializer>
+        <briefdescription>
+<para>Conversión de segundos de arco a radianes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>segundos de arco → radianes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="39" column="25" bodyfile="include/SAT_Const.hpp" bodystart="39" bodyend="-1"/>
+        <referencedby refid="_i_e_r_s_8hpp_1a1613bc89717d0e37aef2c79cc1ecb646" compoundref="_i_e_r_s_8cpp" startline="50" endline="123">IERS</referencedby>
+        <referencedby refid="_nut_angles_8hpp_1a8028f5f2ac1a0a2126d8edf6a5ed80c6" compoundref="_nut_angles_8cpp" startline="38" endline="179">NutAngles</referencedby>
+        <referencedby refid="_prec_matrix_8hpp_1a95bbb47a6bcd9ecaf7b5bc46f88dc7d1" compoundref="_prec_matrix_8cpp" startline="33" endline="55">PrecMatrix</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a8e29051f337676262ad402b0c60ff808" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::eps</definition>
+        <argsstring></argsstring>
+        <name>eps</name>
+        <qualifiedname>SAT_Const::eps</qualifiedname>
+        <initializer>= std::numeric_limits&lt;double&gt;::epsilon()</initializer>
+        <briefdescription>
+<para>Tolerancia numérica. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>tolerancia numérica </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="40" column="25" bodyfile="include/SAT_Const.hpp" bodystart="40" bodyend="-1"/>
+        <referencedby refid="_d_e_integ_8hpp_1ab72ed115eb278b92a2923e5699a54413" compoundref="_d_e_integ_8cpp" startline="55" endline="716">DEInteg</referencedby>
+        <referencedby refid="_geodetic_8hpp_1aec255f50cde59091b28367216d934f98" compoundref="_geodetic_8cpp" startline="39" endline="84">Geodetic</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1ab7ba8d3bdb9b06b52877b1e6c24b3d37" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::MJD_J2000</definition>
+        <argsstring></argsstring>
+        <name>MJD_J2000</name>
+        <qualifiedname>SAT_Const::MJD_J2000</qualifiedname>
+        <initializer>= 51544.5</initializer>
+        <briefdescription>
+<para>Fecha juliana modificada del 1 de enero de 2000. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Fecha juliana modificada (J2000.0) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="45" column="25" bodyfile="include/SAT_Const.hpp" bodystart="45" bodyend="-1"/>
+        <referencedby refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" compoundref="_accel_8cpp" startline="39" endline="94">accel</referencedby>
+        <referencedby refid="_mean_obliquity_8hpp_1a11f057ac4e8a0c5a7958f77379e30d40" compoundref="_mean_obliquity_8cpp" startline="31" endline="44">MeanObliquity</referencedby>
+        <referencedby refid="_nut_angles_8hpp_1a8028f5f2ac1a0a2126d8edf6a5ed80c6" compoundref="_nut_angles_8cpp" startline="38" endline="179">NutAngles</referencedby>
+        <referencedby refid="_prec_matrix_8hpp_1a95bbb47a6bcd9ecaf7b5bc46f88dc7d1" compoundref="_prec_matrix_8cpp" startline="33" endline="55">PrecMatrix</referencedby>
+        <referencedby refid="_var_eqn_8hpp_1ac635346ab8c33fade0f3287e9d9b8866" compoundref="_var_eqn_8cpp" startline="38" endline="100">varEqn</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1ac4762d2517541975d0d8b3ec769159ae" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::T_B1950</definition>
+        <argsstring></argsstring>
+        <name>T_B1950</name>
+        <qualifiedname>SAT_Const::T_B1950</qualifiedname>
+        <initializer>= -0.500002108</initializer>
+        <briefdescription>
+<para>Tiempo Besseliano 1950. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="46" column="25" bodyfile="include/SAT_Const.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a345960ccb16807824cb455f1ffacbf3e" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::c_light</definition>
+        <argsstring></argsstring>
+        <name>c_light</name>
+        <qualifiedname>SAT_Const::c_light</qualifiedname>
+        <initializer>= 299792458.0</initializer>
+        <briefdescription>
+<para>Velocidad de la luz [km/s]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Velocidad de la luz [m/s]. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="47" column="25" bodyfile="include/SAT_Const.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a30755b97cd70f618bfeca6abe7f45b08" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::AU</definition>
+        <argsstring></argsstring>
+        <name>AU</name>
+        <qualifiedname>SAT_Const::AU</qualifiedname>
+        <initializer>= 149597870700.0</initializer>
+        <briefdescription>
+<para>Unidad astronómica [km]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Unidad astronómica [m]. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="48" column="25" bodyfile="include/SAT_Const.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a8520a4aca82e0459f65ed4bb55c5d97f" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::R_Earth</definition>
+        <argsstring></argsstring>
+        <name>R_Earth</name>
+        <qualifiedname>SAT_Const::R_Earth</qualifiedname>
+        <initializer>= 6378.1363e3</initializer>
+        <briefdescription>
+<para>Radio medio de la Tierra [km]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Radio medio terrestre [m]. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="53" column="25" bodyfile="include/SAT_Const.hpp" bodystart="53" bodyend="-1"/>
+        <referencedby refid="_geodetic_8hpp_1aec255f50cde59091b28367216d934f98" compoundref="_geodetic_8cpp" startline="39" endline="84">Geodetic</referencedby>
+        <referencedby refid="_position_8hpp_1ad3ff3004edb305ae3aed0230373b848e" compoundref="_position_8cpp" startline="31" endline="47">Position</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a695e88747bb620787c6e9f8d952ccd17" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::f_Earth</definition>
+        <argsstring></argsstring>
+        <name>f_Earth</name>
+        <qualifiedname>SAT_Const::f_Earth</qualifiedname>
+        <initializer>= 1.0 / 298.257223563</initializer>
+        <briefdescription>
+<para>Aplanamiento de la Tierra. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="54" column="25" bodyfile="include/SAT_Const.hpp" bodystart="54" bodyend="-1"/>
+        <referencedby refid="_geodetic_8hpp_1aec255f50cde59091b28367216d934f98" compoundref="_geodetic_8cpp" startline="39" endline="84">Geodetic</referencedby>
+        <referencedby refid="_position_8hpp_1ad3ff3004edb305ae3aed0230373b848e" compoundref="_position_8cpp" startline="31" endline="47">Position</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a7bed1960da63500f83498fefef9ff315" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::R_Sun</definition>
+        <argsstring></argsstring>
+        <name>R_Sun</name>
+        <qualifiedname>SAT_Const::R_Sun</qualifiedname>
+        <initializer>= 696000e3</initializer>
+        <briefdescription>
+<para>Radio del Sol [km]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Radio del Sol [m]. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="55" column="25" bodyfile="include/SAT_Const.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a9ec80315ce97ed4a4c2b90ada9c49d0e" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::R_Moon</definition>
+        <argsstring></argsstring>
+        <name>R_Moon</name>
+        <qualifiedname>SAT_Const::R_Moon</qualifiedname>
+        <initializer>= 1738e3</initializer>
+        <briefdescription>
+<para>Radio de la Luna [km]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Radio de la Luna [m]. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="56" column="25" bodyfile="include/SAT_Const.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a34bed0ab80bb7cd372419a346b139678" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::omega_Earth</definition>
+        <argsstring></argsstring>
+        <name>omega_Earth</name>
+        <qualifiedname>SAT_Const::omega_Earth</qualifiedname>
+        <initializer>= 15.04106717866910 / 3600 * <ref refid="class_s_a_t___const_1a8cd545a117a0d02fba3e18c843a8e112" kindref="member">SAT_Const::Rad</ref></initializer>
+        <briefdescription>
+<para>Velocidad angular de rotación de la Tierra [rad/s]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Velocidad angular de la Tierra [rad/s]. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="57" column="25" bodyfile="include/SAT_Const.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1aa561286ef1a10f479fee20edb32faa16" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::GM_Earth</definition>
+        <argsstring></argsstring>
+        <name>GM_Earth</name>
+        <qualifiedname>SAT_Const::GM_Earth</qualifiedname>
+        <initializer>= 398600.435436e9</initializer>
+        <briefdescription>
+<para>Tierra. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>GM de la Tierra. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="62" column="25" bodyfile="include/SAT_Const.hpp" bodystart="62" bodyend="-1"/>
+        <referencedby refid="elements_8hpp_1a5dd6d5680c9b5aafae7e21082e0ab75a" compoundref="elements_8cpp" startline="42" endline="80">elements</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1aa2cf8c2fc4b178a2ddbc47ec94b756e8" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::GM_Sun</definition>
+        <argsstring></argsstring>
+        <name>GM_Sun</name>
+        <qualifiedname>SAT_Const::GM_Sun</qualifiedname>
+        <initializer>= 132712440041.939400e9</initializer>
+        <briefdescription>
+<para>Sol. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>GM del Sol. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="63" column="25" bodyfile="include/SAT_Const.hpp" bodystart="63" bodyend="-1"/>
+        <referencedby refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" compoundref="_accel_8cpp" startline="39" endline="94">accel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1aeb5c26a48ab670ef46de848a8a14da68" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::GM_Moon</definition>
+        <argsstring></argsstring>
+        <name>GM_Moon</name>
+        <qualifiedname>SAT_Const::GM_Moon</qualifiedname>
+        <initializer>= <ref refid="class_s_a_t___const_1aa561286ef1a10f479fee20edb32faa16" kindref="member">SAT_Const::GM_Earth</ref> / 81.30056907419062</initializer>
+        <briefdescription>
+<para>Luna. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>GM de la Luna. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="64" column="25" bodyfile="include/SAT_Const.hpp" bodystart="64" bodyend="-1"/>
+        <referencedby refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" compoundref="_accel_8cpp" startline="39" endline="94">accel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1ae4b07e964995d768c891f2e54204e788" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::GM_Mercury</definition>
+        <argsstring></argsstring>
+        <name>GM_Mercury</name>
+        <qualifiedname>SAT_Const::GM_Mercury</qualifiedname>
+        <initializer>= 22031.780000e9</initializer>
+        <briefdescription>
+<para>Mercurio. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>GM de Mercurio. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="65" column="25" bodyfile="include/SAT_Const.hpp" bodystart="65" bodyend="-1"/>
+        <referencedby refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" compoundref="_accel_8cpp" startline="39" endline="94">accel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a72e68505611ebd6ee5c30f8614f25b11" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::GM_Venus</definition>
+        <argsstring></argsstring>
+        <name>GM_Venus</name>
+        <qualifiedname>SAT_Const::GM_Venus</qualifiedname>
+        <initializer>= 324858.592000e9</initializer>
+        <briefdescription>
+<para>Venus. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>GM de Venus. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="66" column="25" bodyfile="include/SAT_Const.hpp" bodystart="66" bodyend="-1"/>
+        <referencedby refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" compoundref="_accel_8cpp" startline="39" endline="94">accel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a722cc664533818278459dcdf14765970" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::GM_Mars</definition>
+        <argsstring></argsstring>
+        <name>GM_Mars</name>
+        <qualifiedname>SAT_Const::GM_Mars</qualifiedname>
+        <initializer>= 42828.375214e9</initializer>
+        <briefdescription>
+<para>Marte. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>GM de Marte. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="67" column="25" bodyfile="include/SAT_Const.hpp" bodystart="67" bodyend="-1"/>
+        <referencedby refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" compoundref="_accel_8cpp" startline="39" endline="94">accel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a6080247fc6db7327ec51d6ddea91cc68" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::GM_Jupiter</definition>
+        <argsstring></argsstring>
+        <name>GM_Jupiter</name>
+        <qualifiedname>SAT_Const::GM_Jupiter</qualifiedname>
+        <initializer>= 126712764.800000e9</initializer>
+        <briefdescription>
+<para>Júpiter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>GM de Júpiter. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="68" column="25" bodyfile="include/SAT_Const.hpp" bodystart="68" bodyend="-1"/>
+        <referencedby refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" compoundref="_accel_8cpp" startline="39" endline="94">accel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a9e96aee2b02c6387fbc0f525f4cb5d5c" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::GM_Saturn</definition>
+        <argsstring></argsstring>
+        <name>GM_Saturn</name>
+        <qualifiedname>SAT_Const::GM_Saturn</qualifiedname>
+        <initializer>= 37940585.200000e9</initializer>
+        <briefdescription>
+<para>Saturno. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>GM de Saturno. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="69" column="25" bodyfile="include/SAT_Const.hpp" bodystart="69" bodyend="-1"/>
+        <referencedby refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" compoundref="_accel_8cpp" startline="39" endline="94">accel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a6d53fbd66032be649f31df560d8893c4" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::GM_Uranus</definition>
+        <argsstring></argsstring>
+        <name>GM_Uranus</name>
+        <qualifiedname>SAT_Const::GM_Uranus</qualifiedname>
+        <initializer>= 5794548.600000e9</initializer>
+        <briefdescription>
+<para>Urano. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>GM de Urano. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="70" column="25" bodyfile="include/SAT_Const.hpp" bodystart="70" bodyend="-1"/>
+        <referencedby refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" compoundref="_accel_8cpp" startline="39" endline="94">accel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1adb10f75e70cb3513eadf7aeef2c0e58c" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::GM_Neptune</definition>
+        <argsstring></argsstring>
+        <name>GM_Neptune</name>
+        <qualifiedname>SAT_Const::GM_Neptune</qualifiedname>
+        <initializer>= 6836527.100580e9</initializer>
+        <briefdescription>
+<para>Neptuno. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>GM de Neptuno. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="71" column="25" bodyfile="include/SAT_Const.hpp" bodystart="71" bodyend="-1"/>
+        <referencedby refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" compoundref="_accel_8cpp" startline="39" endline="94">accel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a9108d8a0b68e98dfaad65d2d28ca84b5" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::GM_Pluto</definition>
+        <argsstring></argsstring>
+        <name>GM_Pluto</name>
+        <qualifiedname>SAT_Const::GM_Pluto</qualifiedname>
+        <initializer>= 977.0000000000009e9</initializer>
+        <briefdescription>
+<para>Plutón. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>GM de Plutón. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="72" column="25" bodyfile="include/SAT_Const.hpp" bodystart="72" bodyend="-1"/>
+        <referencedby refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" compoundref="_accel_8cpp" startline="39" endline="94">accel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_a_t___const_1a3bbc5b26ba9eddf1f55cf24a5c04638c" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double SAT_Const::P_Sol</definition>
+        <argsstring></argsstring>
+        <name>P_Sol</name>
+        <qualifiedname>SAT_Const::P_Sol</qualifiedname>
+        <initializer>= 1367 / <ref refid="class_s_a_t___const_1a345960ccb16807824cb455f1ffacbf3e" kindref="member">SAT_Const::c_light</ref></initializer>
+        <briefdescription>
+<para>Presión de radiación solar a 1 UA [N/m^2]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Presión de radiación solar a 1 UA [N/m²]. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/SAT_Const.hpp" line="77" column="25" bodyfile="include/SAT_Const.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Clase estática que agrupa constantes fundamentales astronómicas y físicas. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/SAT_Const.hpp" line="30" column="1" bodyfile="include/SAT_Const.hpp" bodystart="30" bodyend="78"/>
+    <listofallmembers>
+      <member refid="class_s_a_t___const_1a7c2f8d8faddb10fda901e41c30d8f010" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>Arcs</name></member>
+      <member refid="class_s_a_t___const_1a30755b97cd70f618bfeca6abe7f45b08" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>AU</name></member>
+      <member refid="class_s_a_t___const_1a345960ccb16807824cb455f1ffacbf3e" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>c_light</name></member>
+      <member refid="class_s_a_t___const_1a46f0def10d9eb7d0493a8fbf586f4116" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>Deg</name></member>
+      <member refid="class_s_a_t___const_1a8e29051f337676262ad402b0c60ff808" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>eps</name></member>
+      <member refid="class_s_a_t___const_1a695e88747bb620787c6e9f8d952ccd17" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>f_Earth</name></member>
+      <member refid="class_s_a_t___const_1aa561286ef1a10f479fee20edb32faa16" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>GM_Earth</name></member>
+      <member refid="class_s_a_t___const_1a6080247fc6db7327ec51d6ddea91cc68" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>GM_Jupiter</name></member>
+      <member refid="class_s_a_t___const_1a722cc664533818278459dcdf14765970" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>GM_Mars</name></member>
+      <member refid="class_s_a_t___const_1ae4b07e964995d768c891f2e54204e788" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>GM_Mercury</name></member>
+      <member refid="class_s_a_t___const_1aeb5c26a48ab670ef46de848a8a14da68" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>GM_Moon</name></member>
+      <member refid="class_s_a_t___const_1adb10f75e70cb3513eadf7aeef2c0e58c" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>GM_Neptune</name></member>
+      <member refid="class_s_a_t___const_1a9108d8a0b68e98dfaad65d2d28ca84b5" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>GM_Pluto</name></member>
+      <member refid="class_s_a_t___const_1a9e96aee2b02c6387fbc0f525f4cb5d5c" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>GM_Saturn</name></member>
+      <member refid="class_s_a_t___const_1aa2cf8c2fc4b178a2ddbc47ec94b756e8" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>GM_Sun</name></member>
+      <member refid="class_s_a_t___const_1a6d53fbd66032be649f31df560d8893c4" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>GM_Uranus</name></member>
+      <member refid="class_s_a_t___const_1a72e68505611ebd6ee5c30f8614f25b11" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>GM_Venus</name></member>
+      <member refid="class_s_a_t___const_1ab7ba8d3bdb9b06b52877b1e6c24b3d37" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>MJD_J2000</name></member>
+      <member refid="class_s_a_t___const_1a34bed0ab80bb7cd372419a346b139678" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>omega_Earth</name></member>
+      <member refid="class_s_a_t___const_1a3bbc5b26ba9eddf1f55cf24a5c04638c" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>P_Sol</name></member>
+      <member refid="class_s_a_t___const_1a7322cb29af30ac8df9f46c9dde418381" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>pi</name></member>
+      <member refid="class_s_a_t___const_1a89e036b4f6b1dd503242c44cd398d9b1" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>pi2</name></member>
+      <member refid="class_s_a_t___const_1a8520a4aca82e0459f65ed4bb55c5d97f" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>R_Earth</name></member>
+      <member refid="class_s_a_t___const_1a9ec80315ce97ed4a4c2b90ada9c49d0e" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>R_Moon</name></member>
+      <member refid="class_s_a_t___const_1a7bed1960da63500f83498fefef9ff315" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>R_Sun</name></member>
+      <member refid="class_s_a_t___const_1a8cd545a117a0d02fba3e18c843a8e112" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>Rad</name></member>
+      <member refid="class_s_a_t___const_1ac4762d2517541975d0d8b3ec769159ae" prot="public" virt="non-virtual"><scope>SAT_Const</scope><name>T_B1950</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

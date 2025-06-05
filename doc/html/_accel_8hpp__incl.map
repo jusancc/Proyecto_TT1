@@ -1,0 +1,121 @@
+<map id="include/Accel.hpp" name="include/Accel.hpp">
+<area shape="rect" id="Node000001" title="Declaración de la función que calcula la aceleración total sobre un cuerpo celeste,..." alt="" coords="888,5,1012,32"/>
+<area shape="rect" id="Node000002" href="$global_8hpp.html" title="Declaración de variables y funciones globales usadas en dinámica orbital." alt="" coords="974,304,1054,331"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1013,27,1098,47,1134,62,1157,78,1171,108,1172,139,1162,170,1144,201,1121,229,1095,255,1046,297,1042,292,1091,251,1117,226,1139,198,1157,168,1167,138,1166,109,1153,82,1132,66,1097,53,1012,32"/>
+<area shape="rect" id="Node000003" href="$matrix_8hpp.html" title="Declaración de la clase Matrix y sus operaciones auxiliares." alt="" coords="576,379,716,405"/>
+<area shape="poly" id="edge11_Node000001_Node000003" title=" " alt="" coords="887,23,722,30,621,38,520,51,427,69,351,94,321,110,299,127,285,146,280,167,280,244,285,273,296,294,315,311,342,328,395,355,451,372,508,383,561,388,560,393,508,388,450,377,393,360,339,333,312,315,292,297,279,275,275,244,275,166,280,144,295,123,318,105,349,89,426,64,520,45,621,33,721,24,887,18"/>
+<area shape="rect" id="Node000008" href="$_s_a_t___const_8hpp.html" title="Definición de constantes astronómicas, físicas y matemáticas usadas en simulaciones orbitales." alt="" coords="1238,379,1352,405"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="962,31,1043,125,1160,254,1273,366,1269,370,1156,258,1039,128,958,34"/>
+<area shape="rect" id="Node000009" href="$_i_e_r_s_8hpp.html" title="Declaración de la función que interpola parámetros EOP del IERS." alt="" coords="1079,304,1157,331"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="959,31,1106,289,1101,292,955,34"/>
+<area shape="rect" id="Node000011" href="$_timediff_8hpp.html" title="Prototipo de la función timediff, que calcula diferencias entre escalas temporales." alt="" coords="1890,304,1983,331"/>
+<area shape="poly" id="edge17_Node000001_Node000011" title=" " alt="" coords="1013,23,1131,38,1288,63,1463,100,1552,124,1637,152,1716,185,1791,224,1907,293,1904,297,1789,228,1714,190,1636,157,1550,129,1462,106,1287,68,1130,43,1012,29"/>
+<area shape="rect" id="Node000012" href="$_prec_matrix_8hpp.html" title="Declaración de la función que calcula la matriz de precesión entre dos fechas." alt="" coords="510,229,619,256"/>
+<area shape="poly" id="edge20_Node000001_Node000012" title=" " alt="" coords="888,30,808,48,766,63,726,82,682,114,642,150,584,219,580,215,638,147,678,109,723,78,764,58,806,43,887,25"/>
+<area shape="rect" id="Node000015" href="$_nut_matrix_8hpp.html" title="Declaración de la función que calcula la matriz de nutación." alt="" coords="644,229,747,256"/>
+<area shape="poly" id="edge29_Node000001_Node000015" title=" " alt="" coords="888,27,853,33,817,43,782,59,752,82,729,112,713,148,704,183,700,214,694,213,699,182,708,146,724,110,748,78,779,55,815,38,852,28,887,21"/>
+<area shape="rect" id="Node000020" href="$_pole_matrix_8hpp.html" title="Declaración de la función que calcula la matriz de transformación por movimiento polar." alt="" coords="321,229,429,256"/>
+<area shape="poly" id="edge44_Node000001_Node000020" title=" " alt="" coords="888,27,798,39,686,63,626,80,567,101,509,126,455,157,421,186,394,218,390,215,417,183,452,152,507,121,565,96,625,74,685,57,797,34,887,22"/>
+<area shape="rect" id="Node000021" href="$_g_h_a_matrix_8hpp.html" title="Declaración de la función que genera la matriz de rotación para aplicar el Ángulo Horario de Greenwic..." alt="" coords="762,80,874,107"/>
+<area shape="poly" id="edge48_Node000001_Node000021" title=" " alt="" coords="928,35,855,75,853,70,926,30"/>
+<area shape="rect" id="Node000026" href="$_mjday_8hpp.html" title="Declaración de la función que calcula el Modified Julian Date (MJD) a partir de una fecha y hora del ..." alt="" coords="1063,80,1143,107"/>
+<area shape="poly" id="edge65_Node000001_Node000026" title=" " alt="" coords="978,30,1064,70,1061,75,975,35"/>
+<area shape="rect" id="Node000027" href="$_accel_harmonic_8hpp.html" title="Declaración de la función que calcula la aceleración debida al campo gravitacional terrestre modelado..." alt="" coords="1170,229,1306,256"/>
+<area shape="poly" id="edge66_Node000001_Node000027" title=" " alt="" coords="1013,25,1121,45,1169,60,1201,78,1223,110,1235,146,1241,182,1242,213,1237,214,1236,183,1230,147,1218,112,1197,82,1167,65,1120,50,1012,30"/>
+<area shape="rect" id="Node000029" href="$_accel_point_mass_8hpp.html" title="Declaración de la función que calcula la aceleración gravitacional debida a un cuerpo puntual como el..." alt="" coords="99,304,240,331"/>
+<area shape="poly" id="edge76_Node000001_Node000029" title=" " alt="" coords="887,24,728,30,532,41,356,58,294,70,261,82,238,103,220,128,194,185,180,243,174,289,169,289,175,242,189,184,215,126,234,100,258,78,293,64,355,53,531,36,728,25,887,19"/>
+<area shape="rect" id="Node000030" href="$_mjday___t_d_b_8hpp.html" title="Declaración de la función que convierte de MJD_TT a MJD_TDB." alt="" coords="2034,155,2149,181"/>
+<area shape="poly" id="edge79_Node000001_Node000030" title=" " alt="" coords="1012,16,1159,17,1362,24,1594,43,1713,58,1829,77,1890,92,1949,110,2048,146,2046,151,1947,115,1888,97,1828,83,1712,63,1594,48,1361,29,1159,22,1012,22"/>
+<area shape="rect" id="Node000031" href="$_j_p_l___eph___d_e430_8hpp.html" title="Declaración de la función que evalúa posiciones planetarias usando coeficientes Chebyshev de las efem..." alt="" coords="822,229,968,256"/>
+<area shape="poly" id="edge81_Node000001_Node000031" title=" " alt="" coords="949,33,904,215,899,214,944,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="974,329,726,378,724,373,973,324"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="1598,453,1656,480"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="1040,329,1122,366,1228,403,1326,425,1425,442,1583,459,1583,465,1424,447,1325,431,1226,408,1120,371,1038,334"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="576,453,633,480"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="641,407,621,441,617,439,636,405"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="656,453,716,480"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="655,405,674,438,669,441,650,407"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="716,398,774,403,1247,438,1583,460,1583,465,1247,443,774,408,715,403"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="1260,453,1331,480"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="716,398,1244,457,1244,462,716,404"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="1353,403,1584,453,1583,458,1352,408"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="1298,406,1298,438,1292,438,1292,406"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="1079,331,1066,333,887,362,731,383,730,378,887,357,1065,328,1078,326"/>
+<area shape="poly" id="edge15_Node000009_Node000007" title=" " alt="" coords="1135,329,1270,441,1267,445,1131,333"/>
+<area shape="poly" id="edge13_Node000009_Node000008" title=" " alt="" coords="1150,329,1251,370,1249,375,1148,334"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="1665,379,1714,405"/>
+<area shape="poly" id="edge16_Node000009_Node000010" title=" " alt="" coords="1158,321,1650,383,1650,388,1157,326"/>
+<area shape="poly" id="edge18_Node000011_Node000007" title=" " alt="" coords="1919,333,1853,371,1810,391,1765,408,1650,436,1534,453,1428,463,1347,467,1346,462,1428,458,1533,448,1649,431,1764,403,1808,386,1850,366,1916,329"/>
+<area shape="poly" id="edge19_Node000011_Node000010" title=" " alt="" coords="1894,334,1730,382,1729,376,1893,329"/>
+<area shape="poly" id="edge21_Node000012_Node000003" title=" " alt="" coords="569,256,577,290,592,329,622,366,618,370,588,332,571,292,564,257"/>
+<area shape="poly" id="edge28_Node000012_Node000008" title=" " alt="" coords="620,252,861,301,962,328,1101,356,1224,377,1223,382,1100,361,961,333,860,307,619,257"/>
+<area shape="rect" id="Node000013" href="$_r__y_8hpp.html" title="Declaración de la función R_y que genera una matriz de rotación sobre el eje Y." alt="" coords="366,304,435,331"/>
+<area shape="poly" id="edge22_Node000012_Node000013" title=" " alt="" coords="537,259,444,300,442,295,535,254"/>
+<area shape="rect" id="Node000014" href="$_r__z_8hpp_source.html" title=" " alt="" coords="611,304,681,331"/>
+<area shape="poly" id="edge25_Node000012_Node000014" title=" " alt="" coords="580,255,622,292,619,296,577,259"/>
+<area shape="poly" id="edge23_Node000013_Node000003" title=" " alt="" coords="436,326,589,371,587,376,435,332"/>
+<area shape="poly" id="edge24_Node000013_Node000006" title=" " alt="" coords="420,329,482,367,523,387,565,403,717,416,1020,434,1583,461,1583,466,1019,439,717,422,564,408,520,392,479,372,417,334"/>
+<area shape="poly" id="edge26_Node000014_Node000003" title=" " alt="" coords="648,331,648,363,643,363,643,331"/>
+<area shape="poly" id="edge27_Node000014_Node000006" title=" " alt="" coords="682,323,879,359,1145,403,1393,436,1584,458,1583,463,1392,441,1144,408,878,364,681,328"/>
+<area shape="poly" id="edge43_Node000015_Node000003" title=" " alt="" coords="660,259,627,278,613,290,602,305,598,321,601,336,622,366,618,369,597,339,592,321,597,303,609,287,624,273,657,254"/>
+<area shape="poly" id="edge42_Node000015_Node000014" title=" " alt="" coords="689,258,665,293,661,290,684,255"/>
+<area shape="rect" id="Node000016" href="$_mean_obliquity_8hpp.html" title="Declaración de la función MeanObliquity." alt="" coords="1332,304,1461,331"/>
+<area shape="poly" id="edge30_Node000015_Node000016" title=" " alt="" coords="747,247,810,253,1317,305,1316,311,810,259,747,252"/>
+<area shape="rect" id="Node000017" href="$_nut_angles_8hpp.html" title="Declaración de la función que calcula los ángulos de nutación." alt="" coords="1535,304,1642,331"/>
+<area shape="poly" id="edge33_Node000015_Node000017" title=" " alt="" coords="747,247,810,253,1141,277,1473,301,1519,306,1519,311,1472,307,1141,283,810,259,747,252"/>
+<area shape="rect" id="Node000018" href="$_r__x_8hpp_source.html" title=" " alt="" coords="5,304,76,331"/>
+<area shape="poly" id="edge38_Node000015_Node000018" title=" " alt="" coords="643,257,632,259,481,274,362,280,243,287,91,306,91,301,242,281,362,274,481,269,631,253,642,252"/>
+<area shape="poly" id="edge32_Node000016_Node000006" title=" " alt="" coords="1418,329,1596,443,1594,447,1415,333"/>
+<area shape="poly" id="edge31_Node000016_Node000008" title=" " alt="" coords="1380,333,1327,371,1324,367,1377,329"/>
+<area shape="poly" id="edge36_Node000017_Node000006" title=" " alt="" coords="1594,330,1623,438,1617,439,1589,332"/>
+<area shape="poly" id="edge35_Node000017_Node000007" title=" " alt="" coords="1580,333,1545,370,1521,390,1495,408,1458,426,1419,440,1347,459,1346,454,1417,435,1456,421,1493,403,1518,386,1541,366,1576,329"/>
+<area shape="poly" id="edge34_Node000017_Node000008" title=" " alt="" coords="1538,334,1362,377,1361,372,1536,329"/>
+<area shape="poly" id="edge37_Node000017_Node000010" title=" " alt="" coords="1608,329,1661,367,1658,371,1605,333"/>
+<area shape="poly" id="edge41_Node000018_Node000003" title=" " alt="" coords="77,326,88,328,216,348,345,364,561,383,560,388,345,369,215,353,87,333,76,331"/>
+<area shape="poly" id="edge39_Node000018_Node000007" title=" " alt="" coords="43,331,47,368,55,388,67,403,85,409,121,416,238,427,588,445,971,456,1244,462,1244,467,971,461,588,450,238,432,120,421,84,415,64,408,50,390,42,369,37,331"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="78,379,144,405"/>
+<area shape="poly" id="edge40_Node000018_Node000019" title=" " alt="" coords="55,329,90,366,87,369,51,333"/>
+<area shape="poly" id="edge47_Node000020_Node000003" title=" " alt="" coords="368,258,351,293,349,312,356,329,368,340,387,349,439,364,500,375,561,382,561,388,499,380,438,370,385,354,366,344,352,332,344,313,346,292,364,256"/>
+<area shape="poly" id="edge45_Node000020_Node000013" title=" " alt="" coords="382,256,394,288,389,290,377,257"/>
+<area shape="poly" id="edge46_Node000020_Node000018" title=" " alt="" coords="321,257,91,306,90,301,320,252"/>
+<area shape="poly" id="edge49_Node000021_Node000003" title=" " alt="" coords="763,102,698,114,625,138,589,154,555,175,525,201,500,231,492,251,493,271,502,290,518,309,560,343,606,369,603,374,557,347,514,313,498,293,488,272,487,250,496,228,521,197,552,171,586,150,623,133,697,109,762,97"/>
+<area shape="poly" id="edge50_Node000021_Node000014" title=" " alt="" coords="819,108,804,176,787,219,761,258,731,283,697,302,694,297,728,279,757,254,782,216,799,175,814,107"/>
+<area shape="rect" id="Node000022" href="$gast_8hpp.html" title="Declaración de la función que calcula el ángulo sidéreo aparente de Greenwich (GAST)." alt="" coords="1553,155,1624,181"/>
+<area shape="poly" id="edge51_Node000021_Node000022" title=" " alt="" coords="874,97,1538,159,1537,165,874,103"/>
+<area shape="poly" id="edge64_Node000022_Node000006" title=" " alt="" coords="1625,169,1751,181,1921,205,2005,223,2081,245,2143,271,2166,286,2183,302,2193,320,2200,347,2198,377,2192,392,2181,407,2154,421,2103,432,1959,449,1799,461,1671,466,1671,461,1798,455,1959,444,2103,427,2152,416,2177,403,2187,390,2193,376,2194,347,2188,322,2178,306,2162,290,2140,276,2080,250,2004,228,1920,211,1751,186,1624,174"/>
+<area shape="poly" id="edge63_Node000022_Node000008" title=" " alt="" coords="1553,180,1501,196,1439,221,1376,257,1348,280,1323,306,1307,334,1300,364,1295,362,1302,332,1318,302,1344,276,1373,253,1437,216,1500,191,1552,175"/>
+<area shape="rect" id="Node000023" href="$_g_m_s_t_8hpp.html" title="Declaración de la función que calcula el Tiempo Sidéreo Medio de Greenwich (GMST)." alt="" coords="2058,304,2141,331"/>
+<area shape="poly" id="edge52_Node000022_Node000023" title=" " alt="" coords="1626,177,2043,297,2042,302,1624,182"/>
+<area shape="rect" id="Node000025" href="$_eqn_equinox_8hpp.html" title="Declaración de la función que calcula la ecuación de los equinoccios." alt="" coords="1530,229,1647,256"/>
+<area shape="poly" id="edge57_Node000022_Node000025" title=" " alt="" coords="1591,182,1591,214,1586,214,1586,182"/>
+<area shape="poly" id="edge56_Node000023_Node000006" title=" " alt="" coords="2091,333,2054,371,2029,391,2000,408,1957,425,1912,439,1821,457,1738,466,1671,469,1671,463,1737,461,1821,452,1911,434,1956,420,1998,403,2026,387,2050,367,2087,329"/>
+<area shape="poly" id="edge53_Node000023_Node000008" title=" " alt="" coords="2057,326,1995,333,1643,366,1368,388,1367,383,1643,360,1995,328,2057,321"/>
+<area shape="rect" id="Node000024" href="$_frac_8hpp.html" title="Declaración de la función que extrae la parte fraccionaria de un número real." alt="" coords="2068,379,2141,405"/>
+<area shape="poly" id="edge54_Node000023_Node000024" title=" " alt="" coords="2103,331,2105,363,2100,363,2097,331"/>
+<area shape="poly" id="edge55_Node000024_Node000006" title=" " alt="" coords="2069,404,2050,408,1839,441,1672,463,1671,457,1838,436,2049,403,2068,399"/>
+<area shape="poly" id="edge60_Node000025_Node000006" title=" " alt="" coords="1647,246,1853,267,1947,283,1979,292,1997,302,2011,323,2016,342,2013,359,2003,375,1987,389,1966,402,1914,423,1851,439,1785,451,1672,465,1671,459,1784,446,1850,434,1912,418,1964,397,1984,385,1999,372,2008,357,2011,342,2006,325,1993,306,1977,297,1946,288,1852,272,1647,251"/>
+<area shape="poly" id="edge62_Node000025_Node000007" title=" " alt="" coords="1573,259,1325,446,1322,442,1570,254"/>
+<area shape="poly" id="edge61_Node000025_Node000010" title=" " alt="" coords="1635,254,1671,273,1687,286,1700,303,1706,318,1708,334,1703,365,1697,364,1702,334,1701,319,1696,305,1683,290,1668,277,1632,259"/>
+<area shape="poly" id="edge59_Node000025_Node000016" title=" " alt="" coords="1556,259,1445,301,1443,296,1554,254"/>
+<area shape="poly" id="edge58_Node000025_Node000017" title=" " alt="" coords="1591,257,1591,288,1586,288,1586,257"/>
+<area shape="poly" id="edge75_Node000027_Node000002" title=" " alt="" coords="1200,259,1068,301,1067,296,1198,254"/>
+<area shape="poly" id="edge67_Node000027_Node000003" title=" " alt="" coords="1176,259,962,307,706,377,704,371,961,301,1175,254"/>
+<area shape="poly" id="edge68_Node000027_Node000006" title=" " alt="" coords="1306,245,1803,271,2044,287,2121,295,2154,302,2172,328,2178,354,2172,381,2154,407,2129,420,2081,431,1946,449,1793,460,1672,466,1671,461,1793,455,1945,443,2080,426,2127,415,2151,403,2167,379,2173,354,2167,330,2151,306,2120,300,2043,293,1802,276,1306,250"/>
+<area shape="poly" id="edge74_Node000027_Node000008" title=" " alt="" coords="1245,256,1287,363,1282,365,1240,257"/>
+<area shape="rect" id="Node000028" href="$_legendre_8hpp.html" title="Prototipo de la función que calcula los polinomios de Legendre y sus derivadas." alt="" coords="1767,304,1866,331"/>
+<area shape="poly" id="edge69_Node000027_Node000028" title=" " alt="" coords="1306,250,1752,305,1751,311,1306,255"/>
+<area shape="poly" id="edge70_Node000028_Node000003" title=" " alt="" coords="1767,325,1654,333,731,389,731,383,1654,328,1766,320"/>
+<area shape="poly" id="edge73_Node000028_Node000006" title=" " alt="" coords="1816,332,1801,368,1789,389,1773,407,1749,425,1723,439,1672,458,1670,453,1721,434,1747,421,1769,403,1784,386,1796,366,1811,330"/>
+<area shape="poly" id="edge71_Node000028_Node000007" title=" " alt="" coords="1810,333,1777,371,1754,391,1728,408,1697,419,1654,430,1550,446,1347,465,1346,460,1549,441,1653,424,1695,414,1726,403,1751,387,1774,367,1806,330"/>
+<area shape="poly" id="edge72_Node000028_Node000010" title=" " alt="" coords="1796,334,1726,373,1724,368,1793,329"/>
+<area shape="poly" id="edge77_Node000029_Node000003" title=" " alt="" coords="241,327,561,375,561,380,241,332"/>
+<area shape="poly" id="edge78_Node000029_Node000006" title=" " alt="" coords="207,329,334,367,413,387,494,403,659,414,983,431,1583,461,1583,466,983,437,658,419,493,408,412,392,332,372,206,334"/>
+<area shape="poly" id="edge80_Node000030_Node000006" title=" " alt="" coords="2108,180,2151,220,2199,279,2217,312,2226,345,2224,377,2218,393,2208,407,2179,422,2126,433,1974,451,1805,461,1672,467,1672,461,1805,456,1974,445,2125,428,2177,417,2204,403,2214,390,2219,376,2221,346,2212,314,2194,282,2147,224,2104,183"/>
+<area shape="poly" id="edge83_Node000031_Node000002" title=" " alt="" coords="917,254,982,293,979,298,914,259"/>
+<area shape="poly" id="edge84_Node000031_Node000003" title=" " alt="" coords="853,259,799,279,745,306,703,337,669,370,665,366,699,333,742,302,797,274,851,254"/>
+<area shape="poly" id="edge82_Node000031_Node000010" title=" " alt="" coords="969,245,1371,269,1562,286,1625,294,1655,302,1668,315,1678,330,1689,362,1684,364,1673,332,1664,318,1653,306,1624,299,1561,291,1370,275,969,250"/>
+<area shape="rect" id="Node000032" href="$_cheb3_d_8hpp.html" title="Declaración de la función que evalúa una serie de interpolación de Chebyshev en tres dimensiones." alt="" coords="755,304,849,331"/>
+<area shape="poly" id="edge85_Node000031_Node000032" title=" " alt="" coords="881,259,831,297,828,292,877,254"/>
+<area shape="poly" id="edge86_Node000032_Node000003" title=" " alt="" coords="776,334,688,374,686,369,774,329"/>
+<area shape="poly" id="edge87_Node000032_Node000007" title=" " alt="" coords="832,329,920,364,1031,403,1145,433,1245,453,1244,459,1144,438,1029,408,918,369,830,334"/>
+</map>

@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_var_eqn_8hpp" kind="file" language="C++">
+    <compoundname>VarEqn.hpp</compoundname>
+    <includes refid="matrix_8hpp" local="yes">matrix.hpp</includes>
+    <includes refid="_i_e_r_s_8hpp" local="yes">IERS.hpp</includes>
+    <includes refid="global_8hpp" local="yes">global.hpp</includes>
+    <includes refid="_s_a_t___const_8hpp" local="yes">SAT_Const.hpp</includes>
+    <includes refid="_timediff_8hpp" local="yes">Timediff.hpp</includes>
+    <includes refid="_prec_matrix_8hpp" local="yes">PrecMatrix.hpp</includes>
+    <includes refid="_nut_matrix_8hpp" local="yes">NutMatrix.hpp</includes>
+    <includes refid="_pole_matrix_8hpp" local="yes">PoleMatrix.hpp</includes>
+    <includes refid="_g_h_a_matrix_8hpp" local="yes">GHAMatrix.hpp</includes>
+    <includes refid="_accel_harmonic_8hpp" local="yes">AccelHarmonic.hpp</includes>
+    <includes refid="_g___accel_harmonic_8hpp" local="yes">G_AccelHarmonic.hpp</includes>
+    <includedby refid="_var_eqn_8cpp" local="yes">src/VarEqn.cpp</includedby>
+    <includedby refid="_e_k_f___g_e_o_s3_8cpp" local="yes">tests/EKF_GEOS3.cpp</includedby>
+    <includedby refid="tests_8cpp" local="yes">tests/tests.cpp</includedby>
+    <incdepgraph>
+      <node id="26">
+        <label>AccelHarmonic.hpp</label>
+        <link refid="_accel_harmonic_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>EqnEquinox.hpp</label>
+        <link refid="_eqn_equinox_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>Frac.hpp</label>
+        <link refid="_frac_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>GHAMatrix.hpp</label>
+        <link refid="_g_h_a_matrix_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>GMST.hpp</label>
+        <link refid="_g_m_s_t_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>G_AccelHarmonic.hpp</label>
+        <link refid="_g___accel_harmonic_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>IERS.hpp</label>
+        <link refid="_i_e_r_s_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Legendre.hpp</label>
+        <link refid="_legendre_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>MeanObliquity.hpp</label>
+        <link refid="_mean_obliquity_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>NutAngles.hpp</label>
+        <link refid="_nut_angles_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>NutMatrix.hpp</label>
+        <link refid="_nut_matrix_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>PoleMatrix.hpp</label>
+        <link refid="_pole_matrix_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>PrecMatrix.hpp</label>
+        <link refid="_prec_matrix_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>R_x.hpp</label>
+        <link refid="_r__x_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>R_y.hpp</label>
+        <link refid="_r__y_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>R_z.hpp</label>
+        <link refid="_r__z_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>SAT_Const.hpp</label>
+        <link refid="_s_a_t___const_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Timediff.hpp</label>
+        <link refid="_timediff_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/VarEqn.hpp</label>
+        <link refid="_var_eqn_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>gast.hpp</label>
+        <link refid="gast_8hpp"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>global.hpp</label>
+        <link refid="global_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>matrix.hpp</label>
+        <link refid="matrix_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cmath</label>
+      </node>
+      <node id="3">
+        <label>cstdio</label>
+      </node>
+      <node id="4">
+        <label>cstdlib</label>
+      </node>
+      <node id="19">
+        <label>iomanip</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="9">
+        <label>tuple</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/VarEqn.hpp</label>
+        <link refid="_var_eqn_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/VarEqn.cpp</label>
+        <link refid="_var_eqn_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_var_eqn_8hpp_1ac635346ab8c33fade0f3287e9d9b8866" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; varEqn</definition>
+        <argsstring>(double x, Matrix &amp;yPhi)</argsstring>
+        <name>varEqn</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>yPhi</declname>
+        </param>
+        <briefdescription>
+<para>Calcula la derivada del vector extendido y matriz de variación (ecuaciones variacionales). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tiempo (en segundos desde la época inicial Mjd_0). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yPhi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector columna de dimensión 42x1, compuesto por:<itemizedlist>
+<listitem><para>Posición (elementos 1-3)</para>
+</listitem><listitem><para>Velocidad (elementos 4-6)</para>
+</listitem><listitem><para>Matriz de variación del estado Phi (elementos 7-42, almacenada por columnas). </para>
+</listitem></itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Referencia al vector derivada de yPhi con respecto al tiempo.</para>
+</simplesect>
+Calcula la derivada del vector extendido y matriz de variación (ecuaciones variacionales).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tiempo en segundos desde la época inicial (MJD). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yPhi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector 42x1 que contiene:<itemizedlist>
+<listitem><para>posición (elementos 1-3)</para>
+</listitem><listitem><para>velocidad (elementos 4-6)</para>
+</listitem><listitem><para>matriz de variación del estado Phi (6x6), almacenada por columnas </para>
+</listitem></itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Referencia a un vector 42x1 con la derivada temporal del estado extendido. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/VarEqn.hpp" line="47" column="8" bodyfile="src/VarEqn.cpp" bodystart="38" bodyend="100" declfile="include/VarEqn.hpp" declline="47" declcolumn="8"/>
+        <references refid="_accel_harmonic_8hpp_1a97ea72b6a1426f18c34d295e50b8fc4b" compoundref="_accel_harmonic_8cpp" startline="37" endline="96">AccelHarmonic</references>
+        <references refid="class_matrix_1a82f842045feaabec73cb00d8002a38d0" compoundref="matrix_8cpp" startline="498" endline="511">Matrix::assign_column</references>
+        <references refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" compoundref="global_8cpp" startline="119">AuxParam</references>
+        <references refid="global_8hpp_1a16817456f74489dad2c22ee5b145a1c4" compoundref="global_8cpp" startline="20">eopdata</references>
+        <references refid="class_matrix_1a837260f6358853bd4012a86107df466f" compoundref="matrix_8cpp" startline="541" endline="556">Matrix::extract_vector</references>
+        <references refid="_g___accel_harmonic_8hpp_1a13bfb59270182548cee5eba7c52b2957" compoundref="_g___accel_harmonic_8cpp" startline="41" endline="60">G_AccelHarmonic</references>
+        <references refid="_g_h_a_matrix_8hpp_1a49218ae38846c1175342d13a65d41f4d" compoundref="_g_h_a_matrix_8cpp" startline="34" endline="36">GHAMatrix</references>
+        <references refid="_i_e_r_s_8hpp_1a1613bc89717d0e37aef2c79cc1ecb646" compoundref="_i_e_r_s_8cpp" startline="50" endline="123">IERS</references>
+        <references refid="class_s_a_t___const_1ab7ba8d3bdb9b06b52877b1e6c24b3d37" compoundref="_s_a_t___const_8hpp" startline="45">SAT_Const::MJD_J2000</references>
+        <references refid="_nut_matrix_8hpp_1ac7fb7e48f2d2d4fd63ac42e17e44ff23" compoundref="_nut_matrix_8cpp" startline="35" endline="53">NutMatrix</references>
+        <references refid="_pole_matrix_8hpp_1aa20f72601d5ff91f277b999d15b7d6c9" compoundref="_pole_matrix_8cpp" startline="33" endline="38">PoleMatrix</references>
+        <references refid="_prec_matrix_8hpp_1a95bbb47a6bcd9ecaf7b5bc46f88dc7d1" compoundref="_prec_matrix_8cpp" startline="33" endline="55">PrecMatrix</references>
+        <references refid="_timediff_8hpp_1a0772112289293a570d2edb0667dbb3a9" compoundref="_timediff_8cpp" startline="34" endline="47">timediff</references>
+        <references refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" compoundref="matrix_8cpp" startline="314" endline="324">transpose</references>
+        <references refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" compoundref="matrix_8cpp" startline="179" endline="189">zeros</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Prototipo de la función de ecuaciones variacionales para propagación orbital. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Esta función calcula la derivada del vector de estado extendido que incluye la posición, velocidad y matriz de variación del estado Phi (6x6). Se usa en el contexto de propagación numérica con perturbaciones gravitatorias armónicas, típicamente para aplicaciones de dinámica orbital y estimación de estado. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//$Header$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VarEqn.hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GMAT:<sp/>General<sp/>Mission<sp/>Analysis<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>**Legal**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Juan<sp/>Sánchez<sp/>de<sp/>Corta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_VAR_EQN_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_VAR_EQN_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="matrix_8hpp" kindref="compound">matrix.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_i_e_r_s_8hpp" kindref="compound">IERS.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="global_8hpp" kindref="compound">global.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_s_a_t___const_8hpp" kindref="compound">SAT_Const.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_timediff_8hpp" kindref="compound">Timediff.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_prec_matrix_8hpp" kindref="compound">PrecMatrix.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_nut_matrix_8hpp" kindref="compound">NutMatrix.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_pole_matrix_8hpp" kindref="compound">PoleMatrix.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_g_h_a_matrix_8hpp" kindref="compound">GHAMatrix.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_accel_harmonic_8hpp" kindref="compound">AccelHarmonic.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_g___accel_harmonic_8hpp" kindref="compound">G_AccelHarmonic.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/><ref refid="_var_eqn_8hpp_1ac635346ab8c33fade0f3287e9d9b8866" kindref="member">varEqn</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>&amp;yPhi);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/VarEqn.hpp"/>
+  </compounddef>
+</doxygen>

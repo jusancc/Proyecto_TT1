@@ -1,0 +1,22 @@
+<map id="src/Geodetic.cpp" name="src/Geodetic.cpp">
+<area shape="rect" id="Node000001" title="Implementación de la función que convierte coordenadas cartesianas (ECEF) en coordenadas geodésicas (..." alt="" coords="89,5,209,32"/>
+<area shape="rect" id="Node000002" href="$_geodetic_8hpp.html" title="Declaración de la función que convierte coordenadas cartesianas en coordenadas geodésicas (latitud,..." alt="" coords="71,80,227,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,33,152,64,146,64,146,33"/>
+<area shape="rect" id="Node000003" href="$_s_a_t___const_8hpp.html" title="Definición de constantes astronómicas, físicas y matemáticas usadas en simulaciones orbitales." alt="" coords="32,155,146,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="141,109,111,145,107,141,137,106"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,229,77,256"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="91,110,53,128,36,140,23,156,18,170,18,185,28,215,23,217,13,186,13,169,19,153,33,136,50,123,89,105"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="275,155,324,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="176,105,262,146,260,151,174,110"/>
+<area shape="rect" id="Node000007" href="$matrix_8hpp.html" title="Declaración de la clase Matrix y sus operaciones auxiliares." alt="" coords="169,155,252,181"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="162,105,192,141,188,145,158,109"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="100,229,158,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="98,181,117,214,112,217,94,183"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="83,183,60,218,55,215,78,180"/>
+<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="198,184,156,221,152,217,194,180"/>
+<area shape="poly" id="edge11_Node000007_Node000005" title=" " alt="" coords="182,184,86,225,84,220,180,179"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="182,229,238,256"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="213,182,213,214,208,214,208,182"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="262,229,321,256"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="226,180,268,217,265,221,223,184"/>
+</map>

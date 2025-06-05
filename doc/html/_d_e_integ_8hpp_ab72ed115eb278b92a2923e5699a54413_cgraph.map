@@ -1,0 +1,13 @@
+<map id="DEInteg" name="DEInteg">
+<area shape="rect" id="Node000001" title="&lt; Límites numéricos y precisión" alt="" coords="5,81,75,108"/>
+<area shape="rect" id="Node000002" href="$class_matrix.html#abd244116a45deda4143900e05003ef7e" title="Extrae una columna como vector columna." alt="" coords="123,5,277,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,79,121,42,136,36,138,40,124,46,62,83"/>
+<area shape="rect" id="Node000004" href="$_sign_8cpp.html#acaf6f309594b8f14ca0ec7750d41738f" title="Devuelve el valor absoluto de a con el signo de b." alt="" coords="174,56,226,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="75,87,158,73,159,78,75,92"/>
+<area shape="rect" id="Node000005" href="$matrix_8cpp.html#acbd9778b697f9ad3da64ef53b850e2c9" title="Calcula la transpuesta de una matriz." alt="" coords="161,107,239,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="75,97,146,109,145,114,75,103"/>
+<area shape="rect" id="Node000006" href="$matrix_8cpp.html#a56d60ea1f08402246a7cfd477d69a618" title="Genera una matriz de ceros." alt="" coords="173,157,226,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="62,106,124,143,159,157,157,162,121,148,59,111"/>
+<area shape="rect" id="Node000003" href="$class_matrix.html#a2dba13c45127354c9f75ef576f49269b" title="Constructor por defecto." alt="" coords="325,5,426,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="278,16,309,16,309,21,278,21"/>
+</map>

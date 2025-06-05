@@ -1,0 +1,28 @@
+var class_matrix =
+[
+    [ "Matrix", "class_matrix.html#a2dba13c45127354c9f75ef576f49269b", null ],
+    [ "Matrix", "class_matrix.html#abe71c89a7bd015e11337cf43a5c36091", null ],
+    [ "Matrix", "class_matrix.html#a025f8b6a2384b2b54d6049e49351770c", null ],
+    [ "assign_column", "class_matrix.html#a82f842045feaabec73cb00d8002a38d0", null ],
+    [ "assign_row", "class_matrix.html#a403e2a20dcfc235843aebf3599b87356", null ],
+    [ "dot", "class_matrix.html#ac5e00d2720d9e6431f8998cb52668368", null ],
+    [ "extract_column", "class_matrix.html#abd244116a45deda4143900e05003ef7e", null ],
+    [ "extract_row", "class_matrix.html#a056b9a1c08027beffe6c408c8cfdb6e1", null ],
+    [ "extract_vector", "class_matrix.html#a837260f6358853bd4012a86107df466f", null ],
+    [ "inv", "class_matrix.html#afba97a76536c7394e65d56b7032cbdc4", null ],
+    [ "norm", "class_matrix.html#aa30b90656f5063a7eac84a8cc5607318", null ],
+    [ "operator()", "class_matrix.html#a074a3b36a65989b51afbfcb5b0e6f573", null ],
+    [ "operator()", "class_matrix.html#a920e6bd524f318abe55a379190e2a25b", null ],
+    [ "operator*", "class_matrix.html#a04be68a75f92fef4175c6abf281530d8", null ],
+    [ "operator*", "class_matrix.html#ae1bc7e1fda06dab52353ac01b3196efd", null ],
+    [ "operator+", "class_matrix.html#a939695368e670812f344aaec5718c438", null ],
+    [ "operator+", "class_matrix.html#a7cc7127ce96c997c9d14f1f8874ed742", null ],
+    [ "operator-", "class_matrix.html#a7e6bdc324aee325e3a02ea82a8e17ac7", null ],
+    [ "operator-", "class_matrix.html#ac13e11282bf8fb3e88eb4e743c6dc019", null ],
+    [ "operator/", "class_matrix.html#a859f5cfddc6cd6e208f1c4ff189d258a", null ],
+    [ "operator/", "class_matrix.html#afa8805316703c98abf5fefd7788b92ef", null ],
+    [ "operator=", "class_matrix.html#ade03836bffb81664225dc544b5d5e6db", null ],
+    [ "operator<<", "class_matrix.html#a6ce0bc529fe2ee6fb2d0eb8acbdc1e92", null ],
+    [ "n_column", "class_matrix.html#a72848e6895f6a6b638410be60b25ed7a", null ],
+    [ "n_row", "class_matrix.html#a25155ffcead67af4aaab4d78256af86f", null ]
+];

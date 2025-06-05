@@ -1,0 +1,5 @@
+<map id="include/AzElPa.hpp" name="include/AzElPa.hpp">
+<area shape="rect" id="Node000001" title="Declaración de la función que calcula el azimut, la elevación y los vectores de la base local (topocé..." alt="" coords="5,5,141,32"/>
+<area shape="rect" id="Node000002" href="$_az_el_pa_8cpp.html" title="Implementación de la función que calcula el azimut, la elevación y las derivadas parciales respecto a..." alt="" coords="17,80,129,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,48,76,80,70,80,70,48"/>
+</map>

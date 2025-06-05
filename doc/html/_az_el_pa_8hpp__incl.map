@@ -1,0 +1,21 @@
+<map id="include/AzElPa.hpp" name="include/AzElPa.hpp">
+<area shape="rect" id="Node000001" title="Declaración de la función que calcula el azimut, la elevación y los vectores de la base local (topocé..." alt="" coords="220,5,356,32"/>
+<area shape="rect" id="Node000002" href="$matrix_8hpp.html" title="Declaración de la clase Matrix y sus operaciones auxiliares." alt="" coords="74,80,156,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,35,160,76,158,71,257,30"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="169,155,226,181"/>
+<area shape="poly" id="edge11_Node000001_Node000005" title=" " alt="" coords="270,35,245,55,222,81,210,111,203,140,198,139,205,109,218,79,241,51,267,30"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="252,155,324,181"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="313,31,339,51,360,79,363,99,355,118,341,134,325,148,321,144,338,130,351,115,358,98,355,81,335,54,310,35"/>
+<area shape="rect" id="Node000007" href="$_s_a_t___const_8hpp.html" title="Definición de constantes astronómicas, físicas y matemáticas usadas en simulaciones orbitales." alt="" coords="232,80,345,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="291,33,291,64,286,64,286,33"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="421,80,470,107"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="317,30,408,72,406,77,314,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,62,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="102,109,60,146,57,142,99,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="85,155,144,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="118,107,118,139,112,139,112,107"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="131,105,174,142,170,146,127,109"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="146,105,245,146,243,151,144,110"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="274,109,226,147,223,143,271,105"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="291,107,291,139,286,139,286,107"/>
+</map>

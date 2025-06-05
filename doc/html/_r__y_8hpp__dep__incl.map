@@ -1,0 +1,27 @@
+<map id="include/R_y.hpp" name="include/R_y.hpp">
+<area shape="rect" id="Node000001" title="Declaración de la función R_y que genera una matriz de rotación sobre el eje Y." alt="" coords="350,5,465,32"/>
+<area shape="rect" id="Node000002" href="$_l_t_c_8hpp.html" title="Declaración de la función que genera la matriz de transformación del sistema geodésico local." alt="" coords="48,80,164,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="340,39,160,82,158,77,339,34"/>
+<area shape="rect" id="Node000004" href="$_pole_matrix_8hpp.html" title="Declaración de la función que calcula la matriz de transformación por movimiento polar." alt="" coords="420,80,574,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="437,40,483,78,480,82,433,44"/>
+<area shape="rect" id="Node000010" href="$_prec_matrix_8hpp.html" title="Declaración de la función que calcula la matriz de precesión entre dos fechas." alt="" coords="242,80,397,107"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="382,44,336,82,333,78,379,40"/>
+<area shape="rect" id="Node000012" href="$_r__y_8cpp.html" title="Implementación de la función R_y para generar una matriz de rotación sobre el eje Y." alt="" coords="598,80,689,107"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="464,34,603,77,601,82,462,39"/>
+<area shape="rect" id="Node000003" href="$_l_t_c_8cpp.html" title="Implementación de la matriz de transformación LTC (Local Tangent Coordinate)." alt="" coords="5,155,98,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="89,121,63,156,59,153,85,118"/>
+<area shape="rect" id="Node000005" href="$_accel_8hpp.html" title="Declaración de la función que calcula la aceleración total sobre un cuerpo celeste,..." alt="" coords="435,155,559,181"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="500,122,500,154,494,154,494,122"/>
+<area shape="rect" id="Node000007" href="$_var_eqn_8hpp.html" title="Prototipo de la función de ecuaciones variacionales para propagación orbital." alt="" coords="277,155,410,181"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="457,116,372,156,369,152,455,111"/>
+<area shape="rect" id="Node000009" href="$_pole_matrix_8cpp.html" title="Implementación de la función que calcula la matriz de transformación por efecto del movimiento polar." alt="" coords="584,155,714,181"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="538,111,623,152,621,156,536,116"/>
+<area shape="rect" id="Node000006" href="$_accel_8cpp.html" title="Implementación de la función que calcula la aceleración total que actúa sobre un satélite,..." alt="" coords="446,229,548,256"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="500,197,500,229,494,229,494,197"/>
+<area shape="rect" id="Node000008" href="$_var_eqn_8cpp.html" title="Implementación de la función de ecuaciones variacionales para propagación orbital con perturbaciones ..." alt="" coords="288,229,399,256"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="346,197,346,229,341,229,341,197"/>
+<area shape="poly" id="edge10_Node000010_Node000005" title=" " alt="" coords="366,111,467,152,465,156,364,115"/>
+<area shape="poly" id="edge11_Node000010_Node000007" title=" " alt="" coords="331,121,342,153,337,155,326,123"/>
+<area shape="rect" id="Node000011" href="$_prec_matrix_8cpp.html" title="Implementación de la función que calcula la matriz de precesión." alt="" coords="122,155,253,181"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="285,117,212,156,209,152,282,112"/>
+</map>

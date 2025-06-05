@@ -1,0 +1,18 @@
+<map id="include/AccelHarmonic.hpp" name="include/AccelHarmonic.hpp">
+<area shape="rect" id="Node000001" title="Declaración de la función que calcula la aceleración debida al campo gravitacional terrestre modelado..." alt="" coords="164,5,345,32"/>
+<area shape="rect" id="Node000002" href="$_accel_8hpp.html" title="Declaración de la función que calcula la aceleración total sobre un cuerpo celeste,..." alt="" coords="14,80,138,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,41,108,82,106,77,209,36"/>
+<area shape="rect" id="Node000004" href="$_g___accel_harmonic_8hpp.html" title="Declaración de la función que calcula el gradiente de la aceleración producida por el campo gravitaci..." alt="" coords="224,80,421,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="279,42,313,78,309,81,275,45"/>
+<area shape="rect" id="Node000005" href="$_var_eqn_8hpp.html" title="Prototipo de la función de ecuaciones variacionales para propagación orbital." alt="" coords="131,155,264,181"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="236,45,214,81,204,121,200,155,195,154,199,120,210,79,231,43"/>
+<area shape="rect" id="Node000008" href="$_accel_harmonic_8cpp.html" title="Implementación de la función que calcula la aceleración gravitacional perturbativa debida a los armón..." alt="" coords="445,80,603,107"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="317,34,477,77,476,82,315,39"/>
+<area shape="rect" id="Node000003" href="$_accel_8cpp.html" title="Implementación de la función que calcula la aceleración total que actúa sobre un satélite,..." alt="" coords="5,155,107,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="71,122,62,155,57,154,66,121"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="289,117,221,156,218,152,287,112"/>
+<area shape="rect" id="Node000007" href="$_g___accel_harmonic_8cpp.html" title="Implementación de la función que calcula el gradiente de la aceleración armónica respecto a la posici..." alt="" coords="288,155,462,181"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="343,118,368,153,364,156,338,121"/>
+<area shape="rect" id="Node000006" href="$_var_eqn_8cpp.html" title="Implementación de la función de ecuaciones variacionales para propagación orbital con perturbaciones ..." alt="" coords="142,229,252,256"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="200,197,200,229,195,229,195,197"/>
+</map>

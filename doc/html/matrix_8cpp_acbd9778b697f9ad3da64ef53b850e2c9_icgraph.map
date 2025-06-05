@@ -1,0 +1,22 @@
+<map id="transpose" name="transpose">
+<area shape="rect" id="Node000001" title="Devuelve la transpuesta de una matriz." alt="" coords="449,208,528,235"/>
+<area shape="rect" id="Node000002" href="$_accel_8cpp.html#a052008f916a6d5da1ba6d8b23e13d933" title="&lt; Efemérides JPL DE430" alt="" coords="153,5,206,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="477,194,449,131,427,99,400,71,376,57,351,45,297,30,246,23,206,21,206,15,247,17,298,25,353,40,379,52,403,67,431,95,454,129,481,192"/>
+<area shape="rect" id="Node000003" href="$_accel_harmonic_8cpp.html#a97ea72b6a1426f18c34d295e50b8fc4b" title="&lt; Parámetros globales y auxiliares" alt="" coords="291,81,401,108"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="459,200,361,110,365,107,463,196"/>
+<area shape="rect" id="Node000005" href="$_var_eqn_8cpp.html#ac635346ab8c33fade0f3287e9d9b8866" title="Calcula la derivada del vector extendido y matriz de variación (ecuaciones variacionales)." alt="" coords="5,107,68,133"/>
+<area shape="poly" id="edge11_Node000001_Node000005" title=" " alt="" coords="434,208,401,199,212,156,68,128,69,123,213,151,402,193,435,202"/>
+<area shape="rect" id="Node000006" href="$_d_e_integ_8cpp.html#ab72ed115eb278b92a2923e5699a54413" title="&lt; Límites numéricos y precisión" alt="" coords="312,208,381,235"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="434,224,381,224,381,219,434,219"/>
+<area shape="rect" id="Node000007" href="$elements_8cpp.html#a5dd6d5680c9b5aafae7e21082e0ab75a" title="Calcula los elementos orbitales keplerianos a partir del vector de estado." alt="" coords="309,259,383,285"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="435,243,385,261,383,256,434,238"/>
+<area shape="rect" id="Node000008" href="$_meas_update_8cpp.html#ae12754392beb1fd53d392978b396266f" title="Actualiza el estado estimado, la matriz de covarianza y el residuo en un filtro de Kalman." alt="" coords="298,309,394,336"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="465,248,436,274,403,300,382,311,379,307,400,295,433,270,462,244"/>
+<area shape="rect" id="Node000009" href="$_time_update_8cpp.html#a2532be63504dbae7f3a2a57df6770b13" title="Actualiza la matriz de covarianza P mediante el modelo de transición de estados Phi." alt="" coords="300,360,392,387"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="476,250,447,300,426,326,403,350,385,362,382,357,400,346,422,323,442,297,472,247"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="304,76,242,46,205,31,207,26,244,42,306,72"/>
+<area shape="rect" id="Node000004" href="$_g___accel_harmonic_8cpp.html#a13bfb59270182548cee5eba7c52b2957" title="&lt; Aceleración por armónicos esféricos" alt="" coords="116,56,243,83"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="275,87,243,82,244,76,276,81"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="276,103,68,120,68,115,275,98"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="126,91,69,112,67,107,124,86"/>
+</map>

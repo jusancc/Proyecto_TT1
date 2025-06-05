@@ -1,0 +1,7 @@
+<map id="src/Mjday.cpp" name="src/Mjday.cpp">
+<area shape="rect" id="Node000001" title="Implementación de la función que calcula el Modified Julian Date (MJD) a partir de una fecha y hora d..." alt="" coords="84,5,186,32"/>
+<area shape="rect" id="Node000002" href="$_mjday_8hpp.html" title="Declaración de la función que calcula el Modified Julian Date (MJD) a partir de una fecha y hora del ..." alt="" coords="5,80,143,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,34,96,70,92,66,123,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="167,80,229,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,31,179,66,175,70,144,34"/>
+</map>

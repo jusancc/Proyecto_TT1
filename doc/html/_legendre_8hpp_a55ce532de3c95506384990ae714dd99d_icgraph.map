@@ -1,0 +1,12 @@
+<map id="Legendre" name="Legendre">
+<area shape="rect" id="Node000001" title="Calcula los polinomios de Legendre y sus derivadas." alt="" coords="449,56,524,83"/>
+<area shape="rect" id="Node000002" href="$_accel_harmonic_8cpp.html#a97ea72b6a1426f18c34d295e50b8fc4b" title="&lt; Parámetros globales y auxiliares" alt="" coords="291,56,401,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="434,72,402,72,402,67,434,67"/>
+<area shape="rect" id="Node000003" href="$_accel_8cpp.html#a052008f916a6d5da1ba6d8b23e13d933" title="&lt; Efemérides JPL DE430" alt="" coords="153,5,206,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="284,53,205,29,207,24,286,48"/>
+<area shape="rect" id="Node000004" href="$_g___accel_harmonic_8cpp.html#a13bfb59270182548cee5eba7c52b2957" title="&lt; Aceleración por armónicos esféricos" alt="" coords="116,56,243,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="275,72,243,72,243,67,275,67"/>
+<area shape="rect" id="Node000005" href="$_var_eqn_8cpp.html#ac635346ab8c33fade0f3287e9d9b8866" title="Calcula la derivada del vector extendido y matriz de variación (ecuaciones variacionales)." alt="" coords="5,81,68,108"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="285,90,243,97,148,102,68,100,68,94,148,97,243,92,284,84"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="101,86,69,92,68,87,100,81"/>
+</map>

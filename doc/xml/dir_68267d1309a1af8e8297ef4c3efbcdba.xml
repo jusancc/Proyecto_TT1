@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="_accel_8cpp">Accel.cpp</innerfile>
+    <innerfile refid="_accel_harmonic_8cpp">AccelHarmonic.cpp</innerfile>
+    <innerfile refid="_accel_point_mass_8cpp">AccelPointMass.cpp</innerfile>
+    <innerfile refid="angl_8cpp">angl.cpp</innerfile>
+    <innerfile refid="_az_el_pa_8cpp">AzElPa.cpp</innerfile>
+    <innerfile refid="_cheb3_d_8cpp">Cheb3D.cpp</innerfile>
+    <innerfile refid="_d_e_integ_8cpp">DEInteg.cpp</innerfile>
+    <innerfile refid="_ecc_anom_8cpp">EccAnom.cpp</innerfile>
+    <innerfile refid="elements_8cpp">elements.cpp</innerfile>
+    <innerfile refid="_eqn_equinox_8cpp">EqnEquinox.cpp</innerfile>
+    <innerfile refid="_frac_8cpp">Frac.cpp</innerfile>
+    <innerfile refid="_g___accel_harmonic_8cpp">G_AccelHarmonic.cpp</innerfile>
+    <innerfile refid="gast_8cpp">gast.cpp</innerfile>
+    <innerfile refid="_geodetic_8cpp">Geodetic.cpp</innerfile>
+    <innerfile refid="_g_h_a_matrix_8cpp">GHAMatrix.cpp</innerfile>
+    <innerfile refid="global_8cpp">global.cpp</innerfile>
+    <innerfile refid="_g_m_s_t_8cpp">GMST.cpp</innerfile>
+    <innerfile refid="_i_e_r_s_8cpp">IERS.cpp</innerfile>
+    <innerfile refid="_j_p_l___eph___d_e430_8cpp">JPL_Eph_DE430.cpp</innerfile>
+    <innerfile refid="_legendre_8cpp">Legendre.cpp</innerfile>
+    <innerfile refid="_l_t_c_8cpp">LTC.cpp</innerfile>
+    <innerfile refid="matrix_8cpp">matrix.cpp</innerfile>
+    <innerfile refid="_mean_obliquity_8cpp">MeanObliquity.cpp</innerfile>
+    <innerfile refid="_meas_update_8cpp">MeasUpdate.cpp</innerfile>
+    <innerfile refid="_mjday_8cpp">Mjday.cpp</innerfile>
+    <innerfile refid="_mjday___t_d_b_8cpp">Mjday_TDB.cpp</innerfile>
+    <innerfile refid="_nut_angles_8cpp">NutAngles.cpp</innerfile>
+    <innerfile refid="_nut_matrix_8cpp">NutMatrix.cpp</innerfile>
+    <innerfile refid="_pole_matrix_8cpp">PoleMatrix.cpp</innerfile>
+    <innerfile refid="_position_8cpp">Position.cpp</innerfile>
+    <innerfile refid="_prec_matrix_8cpp">PrecMatrix.cpp</innerfile>
+    <innerfile refid="_r__x_8cpp">R_x.cpp</innerfile>
+    <innerfile refid="_r__y_8cpp">R_y.cpp</innerfile>
+    <innerfile refid="_r__z_8cpp">R_z.cpp</innerfile>
+    <innerfile refid="_s_a_t___const_8cpp">SAT_Const.cpp</innerfile>
+    <innerfile refid="_sign_8cpp">Sign.cpp</innerfile>
+    <innerfile refid="_timediff_8cpp">Timediff.cpp</innerfile>
+    <innerfile refid="_time_update_8cpp">TimeUpdate.cpp</innerfile>
+    <innerfile refid="_var_eqn_8cpp">VarEqn.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

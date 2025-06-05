@@ -1,10 +1,60 @@
+//$Header$
+//------------------------------------------------------------------------------
+//                                DEInteg
+//------------------------------------------------------------------------------
+// GMAT: General Mission Analysis Tool
+//
+// **Legal**
+//
+// Author: Juan Sánchez de Corta
+//
+/**
+ * @file DEInteg.cpp
+ * @brief Implementación del integrador multistep de Shampine y Gordon.
+ *
+ * Este integrador numérico resuelve sistemas de EDOs usando pasos adaptativos
+ * y una estrategia de control de errores basada en estimaciones embebidas.
+ * La implementación gestiona casos de rigidez, control de paso y condiciones
+ * de error relativo/absoluto.
+ */
+//------------------------------------------------------------------------------
+
 #include "../include/DEInteg.hpp"
 
-using namespace std;
+//------------------------------------------------------------------------------
+//  Matrix& DEInteg(Matrix &func(double, Matrix &), double &t, double tout,
+//                  double &relerr, double &abserr, int n_eqn, Matrix &y)
+//------------------------------------------------------------------------------
+/**
+ * @brief Resuelve sistemas de EDOs utilizando un método multistep adaptativo
+ *        de Shampine y Gordon.
+ *
+ * Esta función resuelve un sistema de ecuaciones diferenciales ordinarias
+ * de la forma y' = f(t, y), utilizando control de error y paso variable.
+ * Está basado en el algoritmo de integración con predicción-corrección
+ * y control de orden. El integrador se detiene en `tout`.
+ *
+ * @param func Función del sistema EDO a integrar. Debe recibir (t, y) y devolver dy/dt.
+ * @param t Tiempo inicial (modificado al terminar la integración).
+ * @param tout Tiempo final de integración.
+ * @param relerr Tolerancia relativa de error.
+ * @param abserr Tolerancia absoluta de error.
+ * @param n_eqn Número de ecuaciones del sistema.
+ * @param y Vector de estado inicial (modificado con el valor final).
+ * @return Referencia a un `Matrix` con el estado integrado en `tout`.
+ *
+ * @note Si `t == tout`, se devuelve el estado original. En caso de errores de configuración
+ *       (tolerancias negativas, valores inválidos), se devuelve sin integración.
+ *
+ * @warning Este integrador es sensible a errores numéricos y requiere vectores columna.
+ */
+//------------------------------------------------------------------------------
+
+
 
 Matrix &DEInteg(Matrix &func(double, Matrix &), double &t, double tout, double &relerr, double &abserr, int n_eqn, Matrix &y)
 {
-
+    cout << "abab" << endl;
     double twou = 2 * SAT_Const::eps;
     double fouru = 4 * SAT_Const::eps;
 
@@ -69,9 +119,10 @@ Matrix &DEInteg(Matrix &func(double, Matrix &), double &t, double tout, double &
     Matrix &beta = zeros(13, 1);
     Matrix &v = zeros(13, 1);
     Matrix &psi_ = zeros(13, 1);
-
+cout << "abab2" << endl;
     if (t == tout)
     {
+        cout << "abab3" << endl;
         return transpose(y);
     }
 
@@ -87,7 +138,7 @@ Matrix &DEInteg(Matrix &func(double, Matrix &), double &t, double tout, double &
         State_ = DE_STATE.DE_INVPARAM;
         return transpose(y);
     }
-
+cout << "abab4" << endl;
     double del = tout - t;
     double absdel = abs(del);
 
@@ -96,7 +147,7 @@ Matrix &DEInteg(Matrix &func(double, Matrix &), double &t, double tout, double &
     {
         tend = tout;
     }
-
+cout << "abab5" << endl;
     int kold = 0;
     double nostep = 0;
     double kle4 = 0;
@@ -130,6 +181,7 @@ Matrix &DEInteg(Matrix &func(double, Matrix &), double &t, double tout, double &
     int k=0;
     while (true)
     {
+        cout << "abab6" << endl;
         double temp1;
 
         if (fabs(x - t) >= absdel)

@@ -1,0 +1,7 @@
+<map id="GHAMatrix" name="GHAMatrix">
+<area shape="rect" id="Node000001" title="Devuelve la matriz de rotación que aplica el ángulo horario de Greenwich (GHA)." alt="" coords="116,31,202,57"/>
+<area shape="rect" id="Node000002" href="$_accel_8cpp.html#a052008f916a6d5da1ba6d8b23e13d933" title="&lt; Efemérides JPL DE430" alt="" coords="10,5,63,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,34,63,27,64,21,101,29"/>
+<area shape="rect" id="Node000003" href="$_var_eqn_8cpp.html#ac635346ab8c33fade0f3287e9d9b8866" title="Calcula la derivada del vector extendido y matriz de variación (ecuaciones variacionales)." alt="" coords="5,56,68,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="101,59,69,66,67,60,100,53"/>
+</map>

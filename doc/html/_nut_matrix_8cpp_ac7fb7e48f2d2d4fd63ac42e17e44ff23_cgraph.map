@@ -1,0 +1,7 @@
+<map id="NutMatrix" name="NutMatrix">
+<area shape="rect" id="Node000001" title="Calcula la matriz de rotación de nutación para un instante dado." alt="" coords="5,31,84,57"/>
+<area shape="rect" id="Node000002" href="$_mean_obliquity_8cpp.html#a11f057ac4e8a0c5a7958f77379e30d40" title="Calcula la oblicuidad media de la eclíptica." alt="" coords="132,5,236,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,34,116,28,117,34,85,39"/>
+<area shape="rect" id="Node000003" href="$_nut_angles_8cpp.html#a8028f5f2ac1a0a2126d8edf6a5ed80c6" title="Calcula los ángulos de nutación para una fecha en Tiempo Terrestre." alt="" coords="143,56,225,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="85,49,128,57,127,62,84,54"/>
+</map>

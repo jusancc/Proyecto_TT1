@@ -1,0 +1,14 @@
+<map id="LTC" name="LTC">
+<area shape="rect" id="Node000001" title="Genera la matriz de transformación del sistema ECEF al sistema local topocéntrico." alt="" coords="5,56,51,83"/>
+<area shape="rect" id="Node000002" href="$class_matrix.html#a403e2a20dcfc235843aebf3599b87356" title="Asigna una fila." alt="" coords="100,5,231,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="50,59,112,35,114,40,52,64"/>
+<area shape="rect" id="Node000004" href="$class_matrix.html#a056b9a1c08027beffe6c408c8cfdb6e1" title="Extrae una fila como vector fila." alt="" coords="99,56,232,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="51,67,83,67,83,72,51,72"/>
+<area shape="rect" id="Node000005" href="$_r__y_8cpp.html#a25114557991f92fd6b027118c591a98f" title="Devuelve la matriz de rotación sobre el eje Y." alt="" coords="143,107,188,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="52,75,129,104,127,109,50,80"/>
+<area shape="rect" id="Node000003" href="$class_matrix.html#a2dba13c45127354c9f75ef576f49269b" title="Constructor por defecto." alt="" coords="280,31,381,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="232,26,265,31,264,37,231,31"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="232,56,264,51,265,57,233,62"/>
+<area shape="rect" id="Node000006" href="$matrix_8cpp.html#a56d60ea1f08402246a7cfd477d69a618" title="Genera una matriz de ceros." alt="" coords="304,107,357,133"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="189,117,288,117,288,123,189,123"/>
+</map>

@@ -34,6 +34,7 @@
 #include "..\include\Geodetic.hpp"
 #include "..\include\angl.hpp"
 #include "..\include\DEInteg.hpp"
+#include "..\include\elements.hpp"
 #include <cstdio>
 #include <cmath>
 
@@ -1029,14 +1030,23 @@ int test_deinteg_01() {
 
 int m_elements_01() {
     Matrix y(6, 1);
-    y(1, 1) = 6524.834;   // x [km]
-    y(2, 1) = 6862.875;   // y [km]
-    y(3, 1) = 6448.296;   // z [km]
-    y(4, 1) = 4.901327;   // vx [km/s]
-    y(5, 1) = 5.533756;   // vy [km/s]
-    y(6, 1) = -1.976341;  // vz [km/s]
+    y(1, 1) = 6524.834 * 1e3;   // x [m]
+    y(2, 1) = 6862.875 * 1e3;   // y [m]
+    y(3, 1) = 6448.296 * 1e3;   // z [m]
+    y(4, 1) = 4.901327 * 1e3;   // vx [m/s]
+    y(5, 1) = 5.533756 * 1e3;   // vy [m/s]
+    y(6, 1) = -1.976341 * 1e3;
 
     auto [p, a, e, i, Omega, omega, M] = elements(y);
+
+    std::cout << "\n[TEST] elements(y):\n";
+    std::cout << "  p      = " << p << "\n";
+    std::cout << "  a      = " << a << "\n";
+    std::cout << "  e      = " << e << "\n";
+    std::cout << "  i      = " << i << "\n";
+    std::cout << "  Omega  = " << Omega << "\n";
+    std::cout << "  omega  = " << omega << "\n";
+    std::cout << "  M      = " << M << "\n";
 
     double expected_p = 11067.79;
     double expected_a = 36127.0;
@@ -1058,6 +1068,7 @@ int m_elements_01() {
 
     return 0;
 }
+
 
 int all_tests()
 {
@@ -1119,7 +1130,7 @@ int all_tests()
     _verify(m_varEqn_01);
 
 
-    //_verify(test_deinteg_01);
+    _verify(test_deinteg_01);
 
 
     _verify(m_geodetic_01);

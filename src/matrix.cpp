@@ -1,4 +1,31 @@
+//$Header$
+//------------------------------------------------------------------------------
+//                                   Matrix
+//------------------------------------------------------------------------------
+// GMAT: General Mission Analysis Tool
+//
+// **Legal**
+//
+// Author: Juan Sánchez de Corta
+//
+/**
+ * @file matrix.cpp
+ * @brief Implementación de la clase Matrix y sus operaciones básicas.
+ *
+ * Esta clase maneja matrices dinámicas con operaciones comunes de álgebra lineal,
+ * útiles en aplicaciones científicas donde no se desea depender de librerías externas.
+ */
+//------------------------------------------------------------------------------
+
 #include "..\include\matrix.hpp"
+
+//--------------------------------------------
+// Constructores
+//--------------------------------------------
+
+/**
+ * @brief Constructor por defecto.
+ */
 
 Matrix::Matrix(){
 	this -> n_row = 0;
@@ -6,6 +33,10 @@ Matrix::Matrix(){
     this -> data = nullptr;
 }
 
+/**
+ * @brief Constructor de matriz cuadrada (v_size x v_size).
+ * @param v_size Tamaño del vector/cuadrado.
+ */
 Matrix::Matrix(const int v_size){
 	if (v_size <= 0) {
         cout << "Matrix create: error in v_size\n";
@@ -30,6 +61,11 @@ Matrix::Matrix(const int v_size){
     }
 }
 
+/**
+ * @brief Constructor con número de filas y columnas especificado.
+ * @param n_row Número de filas.
+ * @param n_column Número de columnas.
+ */
 Matrix::Matrix(const int n_row, const int n_column) {
     if (n_row <= 0 || n_column <= 0) {
 		cout << "Matrix create: error in n_row/n_column\n";
@@ -50,6 +86,15 @@ Matrix::Matrix(const int n_row, const int n_column) {
 	}
 }
 
+//--------------------------------------------
+// Accesores
+//--------------------------------------------
+
+/**
+ * @brief Accede a un elemento de la matriz usando un único índice.
+ * @param n Índice plano (por filas).
+ * @return Referencia al valor.
+ */
 double& Matrix::operator () (const int n) {
     if (n <= 0 || n > this->n_row*this->n_column) {
 		cout << "Matrix: error in row/column\n";
@@ -59,6 +104,12 @@ double& Matrix::operator () (const int n) {
 	return this->data[(n - 1)/this->n_column][(n - 1)%this->n_column];
 }
 
+/**
+ * @brief Accede a un elemento usando fila y columna.
+ * @param row Fila (1-based)
+ * @param column Columna (1-based)
+ * @return Referencia al valor.
+ */
 double& Matrix::operator () (const int row, const int column) {
 	if (row <= 0 || row > this->n_row || column <= 0 || column > this->n_column) {
 		cout << "Matrix get: error in row/column\n";
@@ -68,6 +119,13 @@ double& Matrix::operator () (const int row, const int column) {
 	return this->data[row - 1][column - 1];
 }
 
+//--------------------------------------------
+// Operaciones básicas
+//--------------------------------------------
+
+/**
+ * @brief Suma matricial.
+ */
 Matrix& Matrix::operator + (Matrix &m) {
 	if (this->n_row != m.n_row || this->n_column != m.n_column) {
 		cout << "Matrix sum: error in n_row+n_column\n";
@@ -85,6 +143,9 @@ Matrix& Matrix::operator + (Matrix &m) {
 	return *m_aux;
 }
 
+/**
+ * @brief Resta matricial.
+ */
 Matrix& Matrix::operator - (Matrix &m) {
 	if (this->n_row != m.n_row || this->n_column != m.n_column) {
 		cout << "Matrix sub: error in n_row/n_column\n";
@@ -112,6 +173,9 @@ ostream& operator << (ostream &o, Matrix &m) {
     return o;
 }
 
+/**
+ * @brief Crea una matriz de ceros.
+ */
 Matrix& zeros(const int n_row, const int n_column) {
 	Matrix *m_aux = new Matrix(n_row, n_column);
 	
@@ -124,6 +188,9 @@ Matrix& zeros(const int n_row, const int n_column) {
 	return (*m_aux);
 }
 
+/**
+ * @brief Crea una matriz cuadrada de ceros.
+ */
 Matrix& zeros(const int n){
 	if (n <= 0) {
         cout << "zeros: error in size n\n";
@@ -141,6 +208,9 @@ Matrix& zeros(const int n){
     return *m_aux;
 }
 
+/**
+ * @brief Producto matricial.
+ */
 Matrix& Matrix::operator * (Matrix &m) {
     if (this->n_column != m.n_row) {
         cout << "Matrix product: error in n_row*m_column\n";
@@ -162,7 +232,9 @@ Matrix& Matrix::operator * (Matrix &m) {
     return *m_aux;
 }
 
-
+/**
+ * @brief División matricial (multiplicación por inversa).
+ */
 Matrix& Matrix::operator / (Matrix &m){
     // Verificar que las dimensiones sean compatibles
     if (this->n_column != m.n_row || m.n_row != m.n_column) {
@@ -181,6 +253,9 @@ Matrix& Matrix::operator / (Matrix &m){
     return *result;
 }
 
+/**
+ * @brief Asignación por copia profunda.
+ */
 Matrix& Matrix::operator = (Matrix &m){
 	if (this == &m) {
         return *this;
@@ -209,6 +284,9 @@ Matrix& Matrix::operator = (Matrix &m){
     return *this;
 }
 
+/**
+ * @brief Crea una matriz identidad.
+ */
 Matrix& eye(const int n) {
     if (n <= 0) {
         cout << "eye: error in size n\n";
@@ -230,6 +308,9 @@ Matrix& eye(const int n) {
     return *m_aux;
 }
 
+/**
+ * @brief Devuelve la transpuesta de una matriz.
+ */
 Matrix& transpose(Matrix &m) {
     Matrix *m_aux = new Matrix(m.n_column, m.n_row);
     
@@ -242,6 +323,9 @@ Matrix& transpose(Matrix &m) {
     return *m_aux;
 }
 
+/**
+ * @brief Suma escalar.
+ */
 Matrix& Matrix::operator + (double s){
 	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
     
@@ -254,6 +338,9 @@ Matrix& Matrix::operator + (double s){
     return *m_aux;
 }
 
+/**
+ * @brief Resta escalar.
+ */
 Matrix& Matrix::operator - (double s){
 	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
     
@@ -266,6 +353,9 @@ Matrix& Matrix::operator - (double s){
     return *m_aux;
 }
 
+/**
+ * @brief Producto escalar por matriz.
+ */
 Matrix& Matrix::operator * (double s){
 	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
     
@@ -278,6 +368,9 @@ Matrix& Matrix::operator * (double s){
     return *m_aux;
 }
 
+/**
+ * @brief División escalar.
+ */
 Matrix& Matrix::operator / (double s){
 	if (s == 0) {
         cout << "Matrix division: division by zero detected\n";
@@ -295,6 +388,13 @@ Matrix& Matrix::operator / (double s){
     return *m_aux;
 }
 
+//--------------------------------------------
+// Métodos auxiliares
+//--------------------------------------------
+
+/**
+ * @brief Calcula la norma euclídea.
+ */
 double Matrix::norm(){
     double r = 0.0;
     for (int i = 1; i <= this->n_row; i++) {
@@ -305,6 +405,9 @@ double Matrix::norm(){
     return sqrt(r);
 }
 
+/**
+ * @brief Producto escalar (dot product).
+ */
 double Matrix::dot(Matrix &m){
 	if (this->n_row != m.n_row || this->n_column != m.n_column) {
         cout << "Matrix dot: error in dimensions\n";
@@ -320,6 +423,9 @@ double Matrix::dot(Matrix &m){
     return r;
 }
 
+/**
+ * @brief Producto vectorial entre dos vectores 3D.
+ */
 Matrix& v_cross(Matrix &v, Matrix &w){
 	if (v.n_row != 3 || v.n_column != 1 || w.n_row != 3 || w.n_column != 1) {
         cout << "v_cross: vectors must be 3x1\n";
@@ -332,6 +438,9 @@ Matrix& v_cross(Matrix &v, Matrix &w){
     return *result;
 }
 
+/**
+ * @brief Extrae una fila como matriz (1 x n).
+ */
 Matrix& Matrix::extract_row(int row) {
     if (row <= 0 || row > this->n_row) {
         cout << "extract_row: error in row index\n";
@@ -347,6 +456,9 @@ Matrix& Matrix::extract_row(int row) {
     return *result;
 }
 
+/**
+ * @brief Extrae una columna como matriz (n x 1).
+ */
 Matrix& Matrix::extract_column(int column) {
     if (column <= 0 || column > this->n_column) {
         cout << "extract_column: error in column index\n";
@@ -362,6 +474,9 @@ Matrix& Matrix::extract_column(int column) {
     return *result;
 }
 
+/**
+ * @brief Asigna valores a una fila desde un vector.
+ */
 void Matrix::assign_row(int row, Matrix &v) {
     if (row <= 0 || row > this->n_row) {
         cout << "assign_row: error in row index\n";
@@ -377,6 +492,9 @@ void Matrix::assign_row(int row, Matrix &v) {
     }
 }
 
+/**
+ * @brief Asigna valores a una columna desde un vector.
+ */
 void Matrix::assign_column(int column, Matrix &v) {
     if (column <= 0 || column > this->n_column) {
         cout << "assign_column: error in column index\n";
@@ -392,6 +510,9 @@ void Matrix::assign_column(int column, Matrix &v) {
     }
 }
 
+/**
+ * @brief Concatena dos vectores.
+ */
 Matrix& union_vector(Matrix &v1, Matrix &v2) {
     if (v1.n_row != 1 || v2.n_row != 1){
 		cout << "Matrix union_vector: error in n_row\n";
@@ -414,6 +535,9 @@ Matrix& union_vector(Matrix &v1, Matrix &v2) {
 	return *m_aux;
 }
 
+/**
+ * @brief Extrae un vector desde un valor hasta otro.
+ */
 Matrix& Matrix::extract_vector(int from, int to) {
     int total_size = this->n_row * this->n_column;
     if (from <= 0 || from > total_size || to < from || to > total_size) {
@@ -431,6 +555,9 @@ Matrix& Matrix::extract_vector(int from, int to) {
     return *result;
 }
 
+/**
+ * @brief Calcula la inversa de una matriz.
+ */
 Matrix& Matrix::inv() {
     // Verificar que la matriz sea cuadrada
     if (this->n_row != this->n_column) {

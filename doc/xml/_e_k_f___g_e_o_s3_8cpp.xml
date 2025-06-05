@@ -1,0 +1,698 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_e_k_f___g_e_o_s3_8cpp" kind="file" language="C++">
+    <compoundname>EKF_GEOS3.cpp</compoundname>
+    <includes refid="matrix_8hpp" local="yes">../include/matrix.hpp</includes>
+    <includes refid="global_8hpp" local="yes">../include/global.hpp</includes>
+    <includes refid="_s_a_t___const_8hpp" local="yes">../include/SAT_Const.hpp</includes>
+    <includes refid="_mjday_8hpp" local="yes">../include/Mjday.hpp</includes>
+    <includes refid="_position_8hpp" local="yes">../include/Position.hpp</includes>
+    <includes refid="_d_e_integ_8hpp" local="yes">../include/DEInteg.hpp</includes>
+    <includes refid="_accel_8hpp" local="yes">../include/Accel.hpp</includes>
+    <includes refid="_r__z_8hpp" local="yes">../include/R_z.hpp</includes>
+    <includes refid="_time_update_8hpp" local="yes">../include/TimeUpdate.hpp</includes>
+    <includes refid="_var_eqn_8hpp" local="yes">../include/VarEqn.hpp</includes>
+    <includes refid="_az_el_pa_8hpp" local="yes">../include/AzElPa.hpp</includes>
+    <includes refid="_meas_update_8hpp" local="yes">../include/MeasUpdate.hpp</includes>
+    <includes refid="_l_t_c_8hpp" local="yes">../include/LTC.hpp</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">cstdio</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">tuple</includes>
+    <incdepgraph>
+      <node id="15">
+        <label>../include/Accel.hpp</label>
+        <link refid="_accel_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>AccelHarmonic.hpp</label>
+        <link refid="_accel_harmonic_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>AccelPointMass.hpp</label>
+        <link refid="_accel_point_mass_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>../include/AzElPa.hpp</label>
+        <link refid="_az_el_pa_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>Cheb3D.hpp</label>
+        <link refid="_cheb3_d_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../include/DEInteg.hpp</label>
+        <link refid="_d_e_integ_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>EqnEquinox.hpp</label>
+        <link refid="_eqn_equinox_8hpp"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>Frac.hpp</label>
+        <link refid="_frac_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>GHAMatrix.hpp</label>
+        <link refid="_g_h_a_matrix_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>GMST.hpp</label>
+        <link refid="_g_m_s_t_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>G_AccelHarmonic.hpp</label>
+        <link refid="_g___accel_harmonic_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>IERS.hpp</label>
+        <link refid="_i_e_r_s_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>JPL_Eph_DE430.hpp</label>
+        <link refid="_j_p_l___eph___d_e430_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>../include/LTC.hpp</label>
+        <link refid="_l_t_c_8hpp"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>Legendre.hpp</label>
+        <link refid="_legendre_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>MeanObliquity.hpp</label>
+        <link refid="_mean_obliquity_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>../include/MeasUpdate.hpp</label>
+        <link refid="_meas_update_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>../include/Mjday.hpp</label>
+        <link refid="_mjday_8hpp"/>
+      </node>
+      <node id="35">
+        <label>Mjday_TDB.hpp</label>
+        <link refid="_mjday___t_d_b_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>NutAngles.hpp</label>
+        <link refid="_nut_angles_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>NutMatrix.hpp</label>
+        <link refid="_nut_matrix_8hpp"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>PoleMatrix.hpp</label>
+        <link refid="_pole_matrix_8hpp"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>../include/Position.hpp</label>
+        <link refid="_position_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>PrecMatrix.hpp</label>
+        <link refid="_prec_matrix_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>R_x.hpp</label>
+        <link refid="_r__x_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>R_y.hpp</label>
+        <link refid="_r__y_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>R_z.hpp</label>
+        <link refid="_r__z_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>../include/SAT_Const.hpp</label>
+        <link refid="_s_a_t___const_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Sign.hpp</label>
+        <link refid="_sign_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>../include/TimeUpdate.hpp</label>
+        <link refid="_time_update_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Timediff.hpp</label>
+        <link refid="_timediff_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>../include/VarEqn.hpp</label>
+        <link refid="_var_eqn_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>gast.hpp</label>
+        <link refid="gast_8hpp"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../include/global.hpp</label>
+        <link refid="global_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/matrix.hpp</label>
+        <link refid="matrix_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>tests/EKF_GEOS3.cpp</label>
+        <link refid="_e_k_f___g_e_o_s3_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>cfloat</label>
+      </node>
+      <node id="5">
+        <label>cmath</label>
+      </node>
+      <node id="3">
+        <label>cstdio</label>
+      </node>
+      <node id="4">
+        <label>cstdlib</label>
+      </node>
+      <node id="44">
+        <label>cstring</label>
+      </node>
+      <node id="25">
+        <label>iomanip</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="13">
+        <label>tuple</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_e_k_f___g_e_o_s3_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/EKF_GEOS3.cpp" line="38" column="5" bodyfile="tests/EKF_GEOS3.cpp" bodystart="38" bodyend="213"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>main.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Estimación<sp/>Orbital<sp/>usando<sp/>observaciones<sp/>GEOS3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Autor:<sp/>Juan<sp/>Sánchez<sp/>de<sp/>Corta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="matrix_8hpp" kindref="compound">../include/matrix.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="global_8hpp" kindref="compound">../include/global.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_s_a_t___const_8hpp" kindref="compound">../include/SAT_Const.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_mjday_8hpp" kindref="compound">../include/Mjday.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_position_8hpp" kindref="compound">../include/Position.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_d_e_integ_8hpp" kindref="compound">../include/DEInteg.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_accel_8hpp" kindref="compound">../include/Accel.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/R_z.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_time_update_8hpp" kindref="compound">../include/TimeUpdate.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_var_eqn_8hpp" kindref="compound">../include/VarEqn.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_az_el_pa_8hpp" kindref="compound">../include/AzElPa.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_meas_update_8hpp" kindref="compound">../include/MeasUpdate.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_l_t_c_8hpp" kindref="compound">../include/LTC.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdio&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tuple&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Inicialización<sp/>de<sp/>modelos<sp/>y<sp/>coeficientes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="global_8hpp_1af51b221967b797557656923d624cf0db" kindref="member">DE430Coeff</ref>(2285,<sp/>1020);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="global_8hpp_1aaaff2116e89af4f16a9d4ec2a1442db6" kindref="member">GGM03S</ref>(181);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="global_8hpp_1af1504e3e975e6f502042c7fa8b7abe60" kindref="member">eop19620101</ref>(21413);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cargar<sp/>observaciones<sp/>desde<sp/>archivo<sp/>GEOS3.txt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_obs<sp/>=<sp/>46;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/>observations<sp/>=<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(num_obs,<sp/>4);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>file<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;../data/GEOS3.txt&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!file)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>al<sp/>abrir<sp/>GEOS3.txt&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Parsear<sp/>archivo<sp/>línea<sp/>a<sp/>línea</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buffer[256],<sp/>temp[12];</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/>num_obs;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fgets(buffer,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buffer),<sp/>file);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Extraer<sp/>fecha,<sp/>azimut,<sp/>elevación<sp/>y<sp/>distancia</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(temp,<sp/>&amp;buffer[0],<sp/>4);<sp/>temp[4]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>YY<sp/>=<sp/>atof(temp);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(temp,<sp/>&amp;buffer[5],<sp/>2);<sp/>temp[2]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>MM<sp/>=<sp/>atof(temp);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(temp,<sp/>&amp;buffer[8],<sp/>2);<sp/>temp[2]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>DD<sp/>=<sp/>atof(temp);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(temp,<sp/>&amp;buffer[12],<sp/>2);<sp/>temp[2]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>hh<sp/>=<sp/>atof(temp);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(temp,<sp/>&amp;buffer[15],<sp/>2);<sp/>temp[2]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mm<sp/>=<sp/>atof(temp);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(temp,<sp/>&amp;buffer[18],<sp/>6);<sp/>temp[6]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ss<sp/>=<sp/>atof(temp);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(temp,<sp/>&amp;buffer[25],<sp/>8);<sp/>temp[8]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>az<sp/>=<sp/>atof(temp);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(temp,<sp/>&amp;buffer[35],<sp/>7);<sp/>temp[7]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>el<sp/>=<sp/>atof(temp);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(temp,<sp/>&amp;buffer[44],<sp/>10);<sp/>temp[10]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>atof(temp);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>observations(i,<sp/>1)<sp/>=<sp/><ref refid="_mjday_8hpp_1aca258c745c27696e023d8dd3fc362652" kindref="member">Mjday</ref>(YY,<sp/>MM,<sp/>DD,<sp/>hh,<sp/>mm,<sp/>ss);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>observations(i,<sp/>2)<sp/>=<sp/><ref refid="class_s_a_t___const_1a8cd545a117a0d02fba3e18c843a8e112" kindref="member">SAT_Const::Rad</ref><sp/>*<sp/>az;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>observations(i,<sp/>3)<sp/>=<sp/><ref refid="class_s_a_t___const_1a8cd545a117a0d02fba3e18c843a8e112" kindref="member">SAT_Const::Rad</ref><sp/>*<sp/>el;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>observations(i,<sp/>4)<sp/>=<sp/>1000.0<sp/>*<sp/>dist;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(file);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Errores<sp/>estándar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sig_range<sp/>=<sp/>92.5;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sig_az<sp/>=<sp/>0.0224<sp/>*<sp/><ref refid="class_s_a_t___const_1a8cd545a117a0d02fba3e18c843a8e112" kindref="member">SAT_Const::Rad</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sig_el<sp/>=<sp/>0.0139<sp/>*<sp/><ref refid="class_s_a_t___const_1a8cd545a117a0d02fba3e18c843a8e112" kindref="member">SAT_Const::Rad</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Estación<sp/>de<sp/>observación<sp/>(Wahiawa)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>latitude<sp/>=<sp/>21.5748<sp/>*<sp/><ref refid="class_s_a_t___const_1a8cd545a117a0d02fba3e18c843a8e112" kindref="member">SAT_Const::Rad</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>longitude<sp/>=<sp/>-158.2706<sp/>*<sp/><ref refid="class_s_a_t___const_1a8cd545a117a0d02fba3e18c843a8e112" kindref="member">SAT_Const::Rad</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>altitude<sp/>=<sp/>300.2;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/>Rs<sp/>=<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(<ref refid="_position_8hpp_1ad3ff3004edb305ae3aed0230373b848e" kindref="member">Position</ref>(longitude,<sp/>latitude,<sp/>altitude));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fechas<sp/>de<sp/>observación<sp/>para<sp/>determinación<sp/>inicial</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Mjd1<sp/>=<sp/>observations(1,<sp/>1);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Mjd2<sp/>=<sp/>observations(9,<sp/>1);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Mjd3<sp/>=<sp/>observations(18,<sp/>1);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Estimación<sp/>inicial<sp/>(por<sp/>ángulos)<sp/>comentada:<sp/>pendiente<sp/>de<sp/>usar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/>r2<sp/>=<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(1);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/>v2<sp/>=<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(1);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>tie(r2,<sp/>v2)<sp/>=<sp/>anglesg(...);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/>Y0_apr<sp/>=<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(<ref refid="matrix_8hpp_1ab7c29bd668becd2c3be14876cb2ca51a" kindref="member">union_vector</ref>(r2,v2));</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Mjd0<sp/>=<sp/><ref refid="_mjday_8hpp_1aca258c745c27696e023d8dd3fc362652" kindref="member">Mjday</ref>(1995,<sp/>1,<sp/>29,<sp/>2,<sp/>38,<sp/>0);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Mjd_UTC<sp/>=<sp/>observations(9,<sp/>1);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Configuración<sp/>del<sp/>modelo<sp/>de<sp/>fuerzas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.Mjd_UTC<sp/>=<sp/>Mjd_UTC;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.n<sp/>=<sp/>20;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.m<sp/>=<sp/>20;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.sun<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.moon<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.planets<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Propagación<sp/>desde<sp/>estimación<sp/>inicial<sp/>hasta<sp/>primera<sp/>observación</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_eqn<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>relerr<sp/>=<sp/>1e-13;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>abserr<sp/>=<sp/>1e-6;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/>Y<sp/>=<sp/><ref refid="_d_e_integ_8hpp_1ab72ed115eb278b92a2923e5699a54413" kindref="member">DEInteg</ref>(<ref refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" kindref="member">accel</ref>,<sp/>t,<sp/>-(Mjd_UTC<sp/>-<sp/>Mjd0)<sp/>*<sp/>86400.0,<sp/>relerr,<sp/>abserr,<sp/>n_eqn,<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(Y0_apr));</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Inicializar<sp/>matriz<sp/>de<sp/>covarianza</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref><sp/>P<sp/>=<sp/><ref refid="matrix_8hpp_1a6d5ff1bcc8ce1f0309a47210e1231c6c" kindref="member">eye</ref>(n_eqn)<sp/>*<sp/>1e3;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/>3;<sp/>i++)<sp/>P(i,<sp/>i)<sp/>=<sp/>1e8;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/>LT<sp/>=<sp/><ref refid="_l_t_c_8hpp_1a27b89059a0c4bc52a9192df16ead3359" kindref="member">LTC</ref>(longitude,<sp/>latitude);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/>yPhi<sp/>=<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(42,<sp/>1);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/>Phi<sp/>=<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(6,<sp/>6);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t_old;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/>Y_old<sp/>=<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(6,<sp/>1),<sp/>U,<sp/>r,<sp/>s,<sp/>dAds,<sp/>dEds,<sp/>dAdY,<sp/>dEdY,<sp/>dDds,<sp/>dDdY,<sp/>K;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x_pole,<sp/>y_pole,<sp/>UT1_UTC,<sp/>LOD,<sp/>dpsi,<sp/>deps,<sp/>dx_pole,<sp/>dy_pole,<sp/>TAI_UTC;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>UT1_TAI,<sp/>UTC_GPS,<sp/>UT1_GPS,<sp/>TT_UTC,<sp/>GPS_UTC,<sp/>Mjd_TT,<sp/>Mjd_UT1,<sp/>theta,<sp/>Azim,<sp/>Elev,<sp/>Dist;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Proceso<sp/>de<sp/>filtro<sp/>de<sp/>Kalman<sp/>extendido</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/>num_obs;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t_old<sp/>=<sp/>t;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Y_old<sp/>=<sp/>Y;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mjd_UTC<sp/>=<sp/>observations(i,<sp/>1);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/>(Mjd_UTC<sp/>-<sp/>Mjd0)<sp/>*<sp/>86400.0;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tie(x_pole,<sp/>y_pole,<sp/>UT1_UTC,<sp/>LOD,<sp/>dpsi,<sp/>deps,<sp/>dx_pole,<sp/>dy_pole,<sp/>TAI_UTC)<sp/>=<sp/><ref refid="_i_e_r_s_8hpp_1a1613bc89717d0e37aef2c79cc1ecb646" kindref="member">IERS</ref>(<ref refid="global_8hpp_1a16817456f74489dad2c22ee5b145a1c4" kindref="member">eopdata</ref>,<ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.Mjd_UTC,</highlight><highlight class="charliteral">&apos;l&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tie(UT1_TAI,<sp/>UTC_GPS,<sp/>UT1_GPS,<sp/>TT_UTC,<sp/>GPS_UTC)<sp/>=<sp/><ref refid="_timediff_8hpp_1a0772112289293a570d2edb0667dbb3a9" kindref="member">timediff</ref>(UT1_UTC,<sp/>TAI_UTC);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mjd_TT<sp/>=<sp/>Mjd_UTC<sp/>+<sp/>TT_UTC<sp/>/<sp/>86400.0;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mjd_UT1<sp/>=<sp/>Mjd_TT<sp/>+<sp/>(UT1_UTC<sp/>-<sp/>TT_UTC)<sp/>/<sp/>86400.0;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.Mjd_UTC<sp/>=<sp/>Mjd_UTC;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.Mjd_TT<sp/>=<sp/>Mjd_TT;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ii<sp/>=<sp/>1;<sp/>ii<sp/>&lt;=<sp/>6;<sp/>ii++)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>yPhi(ii)<sp/>=<sp/>Y_old(ii);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>1;<sp/>j<sp/>&lt;=<sp/>6;<sp/>j++)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>yPhi(6<sp/>*<sp/>j<sp/>+<sp/>ii)<sp/>=<sp/>(ii<sp/>==<sp/>j)<sp/>?<sp/>1.0<sp/>:<sp/>0.0;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>yPhi<sp/>=<sp/><ref refid="_d_e_integ_8hpp_1ab72ed115eb278b92a2923e5699a54413" kindref="member">DEInteg</ref>(<ref refid="_var_eqn_8hpp_1ac635346ab8c33fade0f3287e9d9b8866" kindref="member">varEqn</ref>,<sp/>t,<sp/>t<sp/>-<sp/>t_old,<sp/>relerr,<sp/>abserr,<sp/>42,<sp/>yPhi);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>1;<sp/>j<sp/>&lt;=<sp/>6;<sp/>j++)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Phi.<ref refid="class_matrix_1a82f842045feaabec73cb00d8002a38d0" kindref="member">assign_column</ref>(j,<sp/>yPhi.<ref refid="class_matrix_1a837260f6358853bd4012a86107df466f" kindref="member">extract_vector</ref>(6<sp/>*<sp/>j<sp/>+<sp/>1,<sp/>6<sp/>*<sp/>j<sp/>+<sp/>6));</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Y<sp/>=<sp/><ref refid="_d_e_integ_8hpp_1ab72ed115eb278b92a2923e5699a54413" kindref="member">DEInteg</ref>(<ref refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" kindref="member">accel</ref>,<sp/>t,<sp/>t<sp/>-<sp/>t_old,<sp/>relerr,<sp/>abserr,<sp/>6,<sp/>Y_old);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>theta<sp/>=<sp/><ref refid="_g_m_s_t_8hpp_1a22a9ee5ea799a7511f4b5b1939c9de76" kindref="member">gmst</ref>(Mjd_UT1);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>U<sp/>=<sp/>R_z(theta);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r<sp/>=<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(Y.<ref refid="class_matrix_1a837260f6358853bd4012a86107df466f" kindref="member">extract_vector</ref>(1,<sp/>3));</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>=<sp/>LT<sp/>*<sp/>(U<sp/>*<sp/>r<sp/>-<sp/>Rs);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Actualización<sp/>temporal<sp/>(predicción)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>P<sp/>=<sp/><ref refid="_time_update_8hpp_1a2532be63504dbae7f3a2a57df6770b13" kindref="member">TimeUpdate</ref>(P,<sp/>Phi,<sp/>0.0);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Medida:<sp/>Azimut</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tie(Azim,<sp/>Elev,<sp/>dAds,<sp/>dEds)<sp/>=<sp/><ref refid="_az_el_pa_8hpp_1ae89a6c135135b96ec7057c45dced4159" kindref="member">AzElPa</ref>(<ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(s));</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dAdY<sp/>=<sp/><ref refid="matrix_8hpp_1ab7c29bd668becd2c3be14876cb2ca51a" kindref="member">union_vector</ref>((dAds<sp/>*<sp/>LT<sp/>*<sp/>U),<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(3));</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tie(K,<sp/>Y,<sp/>P)<sp/>=<sp/><ref refid="_meas_update_8hpp_1ae12754392beb1fd53d392978b396266f" kindref="member">MeasUpdate</ref>(Y,<sp/>observations(i,<sp/>2),<sp/>Azim,<sp/>sig_az,<sp/>dAdY,<sp/>P,<sp/>6);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Medida:<sp/>Elevación</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r<sp/>=<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(Y.<ref refid="class_matrix_1a837260f6358853bd4012a86107df466f" kindref="member">extract_vector</ref>(1,<sp/>3));</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>=<sp/>LT<sp/>*<sp/>(U<sp/>*<sp/>r<sp/>-<sp/>Rs);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tie(Azim,<sp/>Elev,<sp/>dAds,<sp/>dEds)<sp/>=<sp/><ref refid="_az_el_pa_8hpp_1ae89a6c135135b96ec7057c45dced4159" kindref="member">AzElPa</ref>(<ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(s));</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dEdY<sp/>=<sp/><ref refid="matrix_8hpp_1ab7c29bd668becd2c3be14876cb2ca51a" kindref="member">union_vector</ref>((dEds<sp/>*<sp/>LT<sp/>*<sp/>U),<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(3));</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tie(K,<sp/>Y,<sp/>P)<sp/>=<sp/><ref refid="_meas_update_8hpp_1ae12754392beb1fd53d392978b396266f" kindref="member">MeasUpdate</ref>(Y,<sp/>observations(i,<sp/>3),<sp/>Elev,<sp/>sig_el,<sp/>dEdY,<sp/>P,<sp/>6);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Medida:<sp/>Distancia</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r<sp/>=<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(Y.<ref refid="class_matrix_1a837260f6358853bd4012a86107df466f" kindref="member">extract_vector</ref>(1,<sp/>3));</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>=<sp/>LT<sp/>*<sp/>(U<sp/>*<sp/>r<sp/>-<sp/>Rs);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dist<sp/>=<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(s).<ref refid="class_matrix_1aa30b90656f5063a7eac84a8cc5607318" kindref="member">norm</ref>();</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dDds<sp/>=<sp/><ref refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" kindref="member">transpose</ref>(s<sp/>/<sp/>Dist);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dDdY<sp/>=<sp/><ref refid="matrix_8hpp_1ab7c29bd668becd2c3be14876cb2ca51a" kindref="member">union_vector</ref>((dDds<sp/>*<sp/>LT<sp/>*<sp/>U),<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(3));</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tie(K,<sp/>Y,<sp/>P)<sp/>=<sp/><ref refid="_meas_update_8hpp_1ae12754392beb1fd53d392978b396266f" kindref="member">MeasUpdate</ref>(Y,<sp/>observations(i,<sp/>4),<sp/>Dist,<sp/>sig_range,<sp/>dDdY,<sp/>P,<sp/>6);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Propagación<sp/>al<sp/>instante<sp/>inicial<sp/>de<sp/>observaciones<sp/>para<sp/>comparación<sp/>con<sp/>referencia</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>tie(x_pole,<sp/>y_pole,<sp/>UT1_UTC,<sp/>LOD,<sp/>dpsi,<sp/>deps,<sp/>dx_pole,<sp/>dy_pole,<sp/>TAI_UTC)<sp/>=<sp/><ref refid="_i_e_r_s_8hpp_1a1613bc89717d0e37aef2c79cc1ecb646" kindref="member">IERS</ref>(<ref refid="global_8hpp_1a16817456f74489dad2c22ee5b145a1c4" kindref="member">eopdata</ref>,observations(46,<sp/>1),<sp/></highlight><highlight class="charliteral">&apos;l&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>tie(UT1_TAI,<sp/>UTC_GPS,<sp/>UT1_GPS,<sp/>TT_UTC,<sp/>GPS_UTC)<sp/>=<sp/><ref refid="_timediff_8hpp_1a0772112289293a570d2edb0667dbb3a9" kindref="member">timediff</ref>(UT1_UTC,<sp/>TAI_UTC);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>Mjd_TT<sp/>=<sp/>Mjd_UTC<sp/>+<sp/>TT_UTC<sp/>/<sp/>86400.0;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.Mjd_UTC<sp/>=<sp/>Mjd_UTC;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="global_8hpp_1a5706b12963234f7382e60cb7324441f9" kindref="member">AuxParam</ref>.Mjd_TT<sp/>=<sp/>Mjd_TT;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/>Y0<sp/>=<sp/><ref refid="_d_e_integ_8hpp_1ab72ed115eb278b92a2923e5699a54413" kindref="member">DEInteg</ref>(<ref refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" kindref="member">accel</ref>,<sp/>t,<sp/>-(observations(46,<sp/>1)<sp/>-<sp/>observations(1,<sp/>1))<sp/>*<sp/>86400.0,<sp/>relerr,<sp/>abserr,<sp/>6,<sp/>Y);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Estado<sp/>de<sp/>referencia</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/>Y_ref<sp/>=<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(6,<sp/>1);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>Y_ref(1)<sp/>=<sp/>5753.173e3;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>Y_ref(2)<sp/>=<sp/>2673.361e3;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>Y_ref(3)<sp/>=<sp/>3440.304e3;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>Y_ref(4)<sp/>=<sp/>4324.207;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>Y_ref(5)<sp/>=<sp/>-1924.299;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>Y_ref(6)<sp/>=<sp/>-5728.216;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Imprimir<sp/>errores<sp/>de<sp/>estimación</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\nError<sp/>of<sp/>Position<sp/>Estimation\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;dX%10.1f<sp/>[m]\n&quot;</highlight><highlight class="normal">,<sp/>Y0(1)<sp/>-<sp/>Y_ref(1));</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;dY%10.1f<sp/>[m]\n&quot;</highlight><highlight class="normal">,<sp/>Y0(2)<sp/>-<sp/>Y_ref(2));</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;dZ%10.1f<sp/>[m]\n&quot;</highlight><highlight class="normal">,<sp/>Y0(3)<sp/>-<sp/>Y_ref(3));</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\nError<sp/>of<sp/>Velocity<sp/>Estimation\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;dVx%8.1f<sp/>[m/s]\n&quot;</highlight><highlight class="normal">,<sp/>Y0(4)<sp/>-<sp/>Y_ref(4));</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;dVy%8.1f<sp/>[m/s]\n&quot;</highlight><highlight class="normal">,<sp/>Y0(5)<sp/>-<sp/>Y_ref(5));</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;dVz%8.1f<sp/>[m/s]\n&quot;</highlight><highlight class="normal">,<sp/>Y0(6)<sp/>-<sp/>Y_ref(6));</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tests/EKF_GEOS3.cpp"/>
+  </compounddef>
+</doxygen>

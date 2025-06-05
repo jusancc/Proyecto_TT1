@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_frac_8hpp" kind="file" language="C++">
+    <compoundname>Frac.hpp</compoundname>
+    <includes local="no">cmath</includes>
+    <includedby refid="_g_m_s_t_8hpp" local="yes">include/GMST.hpp</includedby>
+    <includedby refid="_frac_8cpp" local="yes">src/Frac.cpp</includedby>
+    <includedby refid="tests_8cpp" local="yes">tests/tests.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/Frac.hpp</label>
+        <link refid="_frac_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cmath</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>include/Accel.hpp</label>
+        <link refid="_accel_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/Frac.hpp</label>
+        <link refid="_frac_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/GHAMatrix.hpp</label>
+        <link refid="_g_h_a_matrix_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/GMST.hpp</label>
+        <link refid="_g_m_s_t_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>include/VarEqn.hpp</label>
+        <link refid="_var_eqn_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/gast.hpp</label>
+        <link refid="gast_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/Accel.cpp</label>
+        <link refid="_accel_8cpp"/>
+      </node>
+      <node id="12">
+        <label>src/Frac.cpp</label>
+        <link refid="_frac_8cpp"/>
+      </node>
+      <node id="9">
+        <label>src/GHAMatrix.cpp</label>
+        <link refid="_g_h_a_matrix_8cpp"/>
+      </node>
+      <node id="11">
+        <label>src/GMST.cpp</label>
+        <link refid="_g_m_s_t_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/VarEqn.cpp</label>
+        <link refid="_var_eqn_8cpp"/>
+      </node>
+      <node id="10">
+        <label>src/gast.cpp</label>
+        <link refid="gast_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_frac_8hpp_1a92f2f0f91c99cd6bec1a0e9a3b6443fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Frac</definition>
+        <argsstring>(double x)</argsstring>
+        <name>Frac</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>&lt; Función floor() </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Devuelve la parte fraccionaria de un número real.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número real. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parte fraccionaria de x (en [0, 1)).</para>
+</simplesect>
+&lt; Función floor()</para>
+<para>Calcula: Frac(x) = x - floor(x), de forma que siempre queda en el intervalo [0, 1).</para>
+<para>Útil para operaciones de normalización periódica como ángulos o fases.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número real de entrada. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parte fraccionaria de <computeroutput>x</computeroutput> (en el rango [0, 1)). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Frac.hpp" line="32" column="8" bodyfile="src/Frac.cpp" bodystart="33" bodyend="37" declfile="include/Frac.hpp" declline="32" declcolumn="8"/>
+        <referencedby refid="_g_m_s_t_8hpp_1a22a9ee5ea799a7511f4b5b1939c9de76" compoundref="_g_m_s_t_8cpp" startline="32" endline="51">gmst</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Declaración de la función que extrae la parte fraccionaria de un número real. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>La función devuelve la fracción decimal de un número real, es decir: Frac(x) = x - floor(x) útil para normalizar ángulos o ciclos periódicos. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//$Header$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Frac</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GMAT:<sp/>General<sp/>Mission<sp/>Analysis<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>**Legal**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Juan<sp/>Sánchez<sp/>de<sp/>Corta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_FRAC_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_FRAC_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="_frac_8hpp_1a92f2f0f91c99cd6bec1a0e9a3b6443fc" kindref="member">Frac</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>_FRAC_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/Frac.hpp"/>
+  </compounddef>
+</doxygen>

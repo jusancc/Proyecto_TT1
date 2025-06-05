@@ -1,0 +1,7 @@
+<map id="PrecMatrix" name="PrecMatrix">
+<area shape="rect" id="Node000001" title="Calcula la matriz de precesión entre dos fechas dadas." alt="" coords="5,5,90,32"/>
+<area shape="rect" id="Node000002" href="$_r__y_8cpp.html#a25114557991f92fd6b027118c591a98f" title="Devuelve la matriz de rotación sobre el eje Y." alt="" coords="138,5,183,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,16,122,16,122,21,90,21"/>
+<area shape="rect" id="Node000003" href="$matrix_8cpp.html#a56d60ea1f08402246a7cfd477d69a618" title="Genera una matriz de ceros." alt="" coords="231,5,284,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="184,16,215,16,215,21,184,21"/>
+</map>

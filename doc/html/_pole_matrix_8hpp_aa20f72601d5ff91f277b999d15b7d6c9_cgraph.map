@@ -1,0 +1,7 @@
+<map id="PoleMatrix" name="PoleMatrix">
+<area shape="rect" id="Node000001" title="Calcula la matriz de rotación por efecto del movimiento polar." alt="" coords="5,5,89,32"/>
+<area shape="rect" id="Node000002" href="$_r__y_8cpp.html#a25114557991f92fd6b027118c591a98f" title="Devuelve la matriz de rotación sobre el eje Y." alt="" coords="137,5,182,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,16,121,16,121,21,89,21"/>
+<area shape="rect" id="Node000003" href="$matrix_8cpp.html#a56d60ea1f08402246a7cfd477d69a618" title="Genera una matriz de ceros." alt="" coords="230,5,283,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="183,16,214,16,214,21,183,21"/>
+</map>

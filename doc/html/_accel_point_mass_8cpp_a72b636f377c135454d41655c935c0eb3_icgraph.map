@@ -1,0 +1,5 @@
+<map id="AccelPointMass" name="AccelPointMass">
+<area shape="rect" id="Node000001" title="Calcula la aceleración gravitatoria ejercida por un cuerpo puntual." alt="" coords="106,5,222,32"/>
+<area shape="rect" id="Node000002" href="$_accel_8cpp.html#a052008f916a6d5da1ba6d8b23e13d933" title="&lt; Efemérides JPL DE430" alt="" coords="5,5,58,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,21,58,21,58,16,90,16"/>
+</map>

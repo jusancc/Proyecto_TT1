@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_mjday_8cpp" kind="file" language="C++">
+    <compoundname>Mjday.cpp</compoundname>
+    <includes refid="_mjday_8hpp" local="yes">../include/Mjday.hpp</includes>
+    <includes local="no">math.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>../include/Mjday.hpp</label>
+        <link refid="_mjday_8hpp"/>
+      </node>
+      <node id="1">
+        <label>src/Mjday.cpp</label>
+        <link refid="_mjday_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_mjday_8cpp_1a65ebba8d35ce1a0e3ed379a09487d971" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Mjday</definition>
+        <argsstring>(int yr, int mon, int day, int hr, int min, double sec)</argsstring>
+        <name>Mjday</name>
+        <param>
+          <type>int</type>
+          <declname>yr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mon</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>day</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>hr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sec</declname>
+        </param>
+        <briefdescription>
+<para>Calcula el Modified Julian Date (MJD) a partir de una fecha y hora. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Utiliza una fórmula estándar basada en el algoritmo de Fliegel y Van Flandern para calcular el Julian Date, al que luego se le resta 2400000.5 para obtener el MJD. Es compatible con fechas del calendario gregoriano.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>yr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Año (ejemplo: 2025) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mes del año (1 a 12) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>day</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Día del mes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hora del día (0 a 23) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minutos (0 a 59) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Segundos (0.0 a 59.999...) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Modified Julian Date (días desde el 17 de noviembre de 1858 a las 00:00 UTC) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Mjday.cpp" line="44" column="8" bodyfile="src/Mjday.cpp" bodystart="44" bodyend="57"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Implementación de la función que calcula el Modified Julian Date (MJD) a partir de una fecha y hora del calendario gregoriano. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>El MJD se calcula a partir de la fecha y hora en formato calendario gregoriano. La fórmula utilizada transforma esta fecha en el Julian Date (JD) y después aplica el desplazamiento estándar para obtener el MJD: <verbatim>MJD = JD - 2400000.5
+</verbatim></para>
+<para>Esta función es fundamental en aplicaciones astronómicas y de dinámica orbital. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//$Header$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mjday</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GMAT:<sp/>General<sp/>Mission<sp/>Analysis<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>**Legal**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Juan<sp/>Sánchez<sp/>de<sp/>Corta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_mjday_8hpp" kindref="compound">../include/Mjday.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="_mjday_8hpp_1aca258c745c27696e023d8dd3fc362652" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="_mjday_8cpp_1a65ebba8d35ce1a0e3ed379a09487d971" kindref="member">Mjday</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>yr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mon,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>day,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sec)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>jd,<sp/>Mjd;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>jd<sp/>=<sp/>367.0<sp/>*<sp/>yr</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>floor((7<sp/>*<sp/>(yr<sp/>+<sp/>floor((mon<sp/>+<sp/>9)<sp/>/<sp/>12.0)))<sp/>*<sp/>0.25)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>floor(275<sp/>*<sp/>mon<sp/>/<sp/>9.0)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>day<sp/>+<sp/>1721013.5</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>(((sec<sp/>/<sp/>60.0)<sp/>+<sp/>min)<sp/>/<sp/>60.0<sp/>+<sp/>hr)<sp/>/<sp/>24.0;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>Mjd<sp/>=<sp/>jd<sp/>-<sp/>2400000.5;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Mjd;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Mjday.cpp"/>
+  </compounddef>
+</doxygen>

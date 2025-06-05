@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_mjday_8hpp" kind="file" language="C++">
+    <compoundname>Mjday.hpp</compoundname>
+    <includedby refid="_accel_8hpp" local="yes">include/Accel.hpp</includedby>
+    <includedby refid="_mjday_8cpp" local="yes">src/Mjday.cpp</includedby>
+    <includedby refid="_e_k_f___g_e_o_s3_8cpp" local="yes">tests/EKF_GEOS3.cpp</includedby>
+    <includedby refid="tests_8cpp" local="yes">tests/tests.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/Accel.hpp</label>
+        <link refid="_accel_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/Mjday.hpp</label>
+        <link refid="_mjday_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/Accel.cpp</label>
+        <link refid="_accel_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/Mjday.cpp</label>
+        <link refid="_mjday_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_mjday_8hpp_1aca258c745c27696e023d8dd3fc362652" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Mjday</definition>
+        <argsstring>(int yr, int mon, int day, int hr=0, int min=0, double sec=0.0)</argsstring>
+        <name>Mjday</name>
+        <param>
+          <type>int</type>
+          <declname>yr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mon</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>day</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>hr</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sec</declname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+<para>Calcula el Modified Julian Date (MJD) a partir de una fecha y hora. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>yr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Año (ej. 2025) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mes (1–12) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>day</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Día del mes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hora (opcional, por defecto 0) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minutos (opcional, por defecto 0) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Segundos (opcional, por defecto 0.0) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Número de días julianos modificados (MJD)</para>
+</simplesect>
+Utiliza una fórmula estándar basada en el algoritmo de Fliegel y Van Flandern para calcular el Julian Date, al que luego se le resta 2400000.5 para obtener el MJD. Es compatible con fechas del calendario gregoriano.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>yr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Año (ejemplo: 2025) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mes del año (1 a 12) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>day</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Día del mes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hora del día (0 a 23) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minutos (0 a 59) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Segundos (0.0 a 59.999...) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Modified Julian Date (días desde el 17 de noviembre de 1858 a las 00:00 UTC) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Mjday.hpp" line="36" column="8" bodyfile="src/Mjday.cpp" bodystart="44" bodyend="57" declfile="include/Mjday.hpp" declline="36" declcolumn="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Declaración de la función que calcula el Modified Julian Date (MJD) a partir de una fecha y hora del calendario gregoriano. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>La fecha se proporciona en formato año, mes, día, hora, minuto y segundo, y se transforma en el número correspondiente de días julianos modificados, con el día cero en 1858-11-17 a las 00:00:00 UTC. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//$Header$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mjday</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GMAT:<sp/>General<sp/>Mission<sp/>Analysis<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>**Legal**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Juan<sp/>Sánchez<sp/>de<sp/>Corta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_MJDAY_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MJDAY_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="_mjday_8hpp_1aca258c745c27696e023d8dd3fc362652" kindref="member">Mjday</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>yr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mon,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>day,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hr<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sec<sp/>=<sp/>0.0);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/Mjday.hpp"/>
+  </compounddef>
+</doxygen>

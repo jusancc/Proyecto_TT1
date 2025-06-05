@@ -1,0 +1,8 @@
+<map id="union_vector" name="union_vector">
+<area shape="rect" id="Node000001" title="Concatena dos vectores." alt="" coords="275,5,370,32"/>
+<area shape="rect" id="Node000002" href="$_accel_8cpp.html#a052008f916a6d5da1ba6d8b23e13d933" title="&lt; Efemérides JPL DE430" alt="" coords="5,5,58,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,21,58,21,58,16,259,16"/>
+<area shape="rect" id="Node000003" href="$_j_p_l___eph___d_e430_8cpp.html#a5e6fedfbbbe0ca32aa62a9016e7d3293" title="Interpola las posiciones de cuerpos del sistema solar usando efemérides DE430." alt="" coords="106,31,227,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="260,32,228,37,227,32,259,26"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="90,32,57,26,58,21,91,27"/>
+</map>

@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="gast_8cpp" kind="file" language="C++">
+    <compoundname>gast.cpp</compoundname>
+    <includes refid="gast_8hpp" local="yes">../include/gast.hpp</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>EqnEquinox.hpp</label>
+        <link refid="_eqn_equinox_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Frac.hpp</label>
+        <link refid="_frac_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>GMST.hpp</label>
+        <link refid="_g_m_s_t_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>MeanObliquity.hpp</label>
+        <link refid="_mean_obliquity_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>NutAngles.hpp</label>
+        <link refid="_nut_angles_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SAT_Const.hpp</label>
+        <link refid="_s_a_t___const_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/gast.hpp</label>
+        <link refid="gast_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/gast.cpp</label>
+        <link refid="gast_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cmath</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="10">
+        <label>tuple</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="gast_8cpp_1a4eb2d09c87615520077aec1005b8e0ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double gast</definition>
+        <argsstring>(double Mjd_UT1)</argsstring>
+        <name>gast</name>
+        <param>
+          <type>double</type>
+          <declname>Mjd_UT1</declname>
+        </param>
+        <briefdescription>
+<para>Calcula el ángulo sidéreo aparente de Greenwich (GAST). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt; Función fmod()</para>
+<para>Se obtiene sumando el ángulo sidéreo medio (GMST) con la ecuación de los equinoccios. El resultado se normaliza al intervalo [0, 2π).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Mjd_UT1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fecha en tiempo universal UT1 (Modified Julian Date). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ángulo sidéreo aparente de Greenwich (radianes). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gast.cpp" line="32" column="8" bodyfile="src/gast.cpp" bodystart="32" bodyend="34"/>
+        <references refid="_eqn_equinox_8hpp_1a1178917cf376ea4f15cea33c59028635" compoundref="_eqn_equinox_8cpp" startline="37" endline="42">EqnEquinox</references>
+        <references refid="_g_m_s_t_8hpp_1a22a9ee5ea799a7511f4b5b1939c9de76" compoundref="_g_m_s_t_8cpp" startline="32" endline="51">gmst</references>
+        <references refid="class_s_a_t___const_1a7322cb29af30ac8df9f46c9dde418381" compoundref="_s_a_t___const_8hpp" startline="35">SAT_Const::pi</references>
+        <referencedby refid="_g_h_a_matrix_8hpp_1a49218ae38846c1175342d13a65d41f4d" compoundref="_g_h_a_matrix_8cpp" startline="34" endline="36">GHAMatrix</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Implementación de la función que calcula el ángulo sidéreo aparente de Greenwich. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//$Header$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gast</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GMAT:<sp/>General<sp/>Mission<sp/>Analysis<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>**Legal**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Juan<sp/>Sánchez<sp/>de<sp/>Corta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="gast_8hpp" kindref="compound">../include/gast.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>double<sp/>gast(double<sp/>Mjd_UT1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="gast_8hpp_1a4eb2d09c87615520077aec1005b8e0ad" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="gast_8cpp_1a4eb2d09c87615520077aec1005b8e0ad" kindref="member">gast</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Mjd_UT1){</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmod(<ref refid="_g_m_s_t_8hpp_1a22a9ee5ea799a7511f4b5b1939c9de76" kindref="member">gmst</ref>(Mjd_UT1)<sp/>+<sp/><ref refid="_eqn_equinox_8hpp_1a1178917cf376ea4f15cea33c59028635" kindref="member">EqnEquinox</ref>(Mjd_UT1),<sp/>2<sp/>*<sp/><ref refid="class_s_a_t___const_1a7322cb29af30ac8df9f46c9dde418381" kindref="member">SAT_Const::pi</ref>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/gast.cpp"/>
+  </compounddef>
+</doxygen>

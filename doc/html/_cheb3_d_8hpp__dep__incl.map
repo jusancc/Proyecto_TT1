@@ -1,0 +1,13 @@
+<map id="include/Cheb3D.hpp" name="include/Cheb3D.hpp">
+<area shape="rect" id="Node000001" title="Declaración de la función que evalúa una serie de interpolación de Chebyshev en tres dimensiones." alt="" coords="171,5,310,32"/>
+<area shape="rect" id="Node000002" href="$_j_p_l___eph___d_e430_8hpp.html" title="Declaración de la función que evalúa posiciones planetarias usando coeficientes Chebyshev de las efem..." alt="" coords="57,80,248,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,44,170,82,166,78,212,40"/>
+<area shape="rect" id="Node000006" href="$_cheb3_d_8cpp.html" title="Implementación de la función que evalúa una serie de Chebyshev en 3D." alt="" coords="272,80,388,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="270,40,316,78,313,82,267,44"/>
+<area shape="rect" id="Node000003" href="$_accel_8hpp.html" title="Declaración de la función que calcula la aceleración total sobre un cuerpo celeste,..." alt="" coords="5,155,130,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="128,119,84,156,80,152,125,115"/>
+<area shape="rect" id="Node000005" href="$_j_p_l___eph___d_e430_8cpp.html" title="Interpola las posiciones de los cuerpos del sistema solar usando la efeméride DE430." alt="" coords="154,155,322,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="181,115,225,152,222,156,177,119"/>
+<area shape="rect" id="Node000004" href="$_accel_8cpp.html" title="Implementación de la función que calcula la aceleración total que actúa sobre un satélite,..." alt="" coords="17,229,118,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="70,197,70,229,65,229,65,197"/>
+</map>

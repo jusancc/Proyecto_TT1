@@ -1,0 +1,26 @@
+<map id="include/DEInteg.hpp" name="include/DEInteg.hpp">
+<area shape="rect" id="Node000001" title="Declaración de la función que implementa el integrador multistep de Shampine y Gordon para resolver s..." alt="" coords="273,5,412,32"/>
+<area shape="rect" id="Node000002" href="$matrix_8hpp.html" title="Declaración de la clase Matrix y sus operaciones auxiliares." alt="" coords="32,80,115,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,35,130,80,129,74,295,30"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="194,155,252,181"/>
+<area shape="poly" id="edge11_Node000001_Node000005" title=" " alt="" coords="328,35,302,56,277,82,255,112,238,142,233,139,251,109,273,78,299,52,324,31"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="307,155,378,181"/>
+<area shape="poly" id="edge12_Node000001_Node000006" title=" " alt="" coords="368,31,393,51,415,79,417,99,410,118,396,134,379,148,376,144,392,130,405,115,412,98,410,81,390,54,364,35"/>
+<area shape="rect" id="Node000007" href="$_s_a_t___const_8hpp.html" title="Definición de constantes astronómicas, físicas y matemáticas usadas en simulaciones orbitales." alt="" coords="286,80,400,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="346,33,346,64,340,64,340,33"/>
+<area shape="rect" id="Node000008" href="$_sign_8hpp.html" title="Declaración de la función sign_ que devuelve el valor absoluto de a con el signo de b." alt="" coords="139,80,211,107"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="315,35,219,76,217,71,313,30"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="476,80,525,107"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="371,30,462,72,460,77,369,35"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="550,80,603,107"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="385,30,536,77,534,82,383,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,62,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="69,109,50,142,45,140,64,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="85,155,144,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="83,106,103,140,98,143,78,109"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="101,105,184,145,182,150,98,110"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="116,103,293,151,292,156,114,108"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="323,109,258,149,255,144,321,105"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="346,107,346,139,340,139,340,107"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="185,106,208,140,204,143,181,109"/>
+</map>

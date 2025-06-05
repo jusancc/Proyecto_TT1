@@ -1,0 +1,17 @@
+<map id="NutAngles" name="NutAngles">
+<area shape="rect" id="Node000001" title="Calcula los ángulos de nutación (dpsi, deps) en función del MJD_TT." alt="" coords="484,31,566,57"/>
+<area shape="rect" id="Node000002" href="$_eqn_equinox_8cpp.html#a1178917cf376ea4f15cea33c59028635" title="Calcula la ecuación de los equinoccios para una fecha dada." alt="" coords="344,5,436,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="468,36,436,30,437,25,469,31"/>
+<area shape="rect" id="Node000007" href="$_nut_matrix_8cpp.html#ac7fb7e48f2d2d4fd63ac42e17e44ff23" title="&lt; Clase Matrix" alt="" coords="120,56,198,83"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="468,51,199,69,198,64,468,45"/>
+<area shape="rect" id="Node000003" href="$gast_8cpp.html#a4eb2d09c87615520077aec1005b8e0ad" title="&lt; Función fmod()" alt="" coords="250,5,296,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="329,21,297,21,297,16,329,16"/>
+<area shape="rect" id="Node000004" href="$_g_h_a_matrix_8cpp.html#a49218ae38846c1175342d13a65d41f4d" title="&lt; Cálculo del ángulo sidéreo aparente de Greenwich" alt="" coords="116,5,202,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="235,21,203,21,203,16,235,16"/>
+<area shape="rect" id="Node000005" href="$_accel_8cpp.html#a052008f916a6d5da1ba6d8b23e13d933" title="&lt; Efemérides JPL DE430" alt="" coords="10,5,63,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="100,21,63,21,63,16,100,16"/>
+<area shape="rect" id="Node000006" href="$_var_eqn_8cpp.html#ac635346ab8c33fade0f3287e9d9b8866" title="Calcula la derivada del vector extendido y matriz de variación (ecuaciones variacionales)." alt="" coords="5,56,68,83"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="112,41,69,59,67,54,110,36"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="110,52,62,32,64,27,112,47"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="104,72,68,72,68,67,104,67"/>
+</map>

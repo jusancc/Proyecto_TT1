@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_s_a_t___const_8cpp" kind="file" language="C++">
+    <compoundname>SAT_Const.cpp</compoundname>
+    <includes refid="_s_a_t___const_8hpp" local="yes">../include/SAT_Const.hpp</includes>
+    <includes local="no">limits</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>../include/SAT_Const.hpp</label>
+        <link refid="_s_a_t___const_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/SAT_Const.cpp</label>
+        <link refid="_s_a_t___const_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>limits</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Implementación de las constantes definidas en <ref refid="_s_a_t___const_8hpp" kindref="compound">SAT_Const.hpp</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Este fichero define el valor de todas las constantes físicas, astronómicas y matemáticas necesarias para la propagación orbital y transformaciones de sistemas de referencia en el proyecto. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//$Header$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SAT_Const</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GMAT:<sp/>General<sp/>Mission<sp/>Analysis<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>**Legal**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Juan<sp/>Sánchez<sp/>de<sp/>Corta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_s_a_t___const_8hpp" kindref="compound">../include/SAT_Const.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Constantes<sp/>matemáticas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a7322cb29af30ac8df9f46c9dde418381" kindref="member">SAT_Const::pi</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3.14159265358979324;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a89e036b4f6b1dd503242c44cd398d9b1" kindref="member">SAT_Const::pi2</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2<sp/>*<sp/><ref refid="class_s_a_t___const_1a7322cb29af30ac8df9f46c9dde418381" kindref="member">SAT_Const::pi</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a8cd545a117a0d02fba3e18c843a8e112" kindref="member">SAT_Const::Rad</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_s_a_t___const_1a7322cb29af30ac8df9f46c9dde418381" kindref="member">SAT_Const::pi</ref><sp/>/<sp/>180;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a46f0def10d9eb7d0493a8fbf586f4116" kindref="member">SAT_Const::Deg</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>180<sp/>/<sp/><ref refid="class_s_a_t___const_1a7322cb29af30ac8df9f46c9dde418381" kindref="member">SAT_Const::pi</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a7c2f8d8faddb10fda901e41c30d8f010" kindref="member">SAT_Const::Arcs</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>3600<sp/>*<sp/>180<sp/>/<sp/><ref refid="class_s_a_t___const_1a7322cb29af30ac8df9f46c9dde418381" kindref="member">SAT_Const::pi</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a8e29051f337676262ad402b0c60ff808" kindref="member">SAT_Const::eps</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>std::numeric_limits&lt;double&gt;::epsilon();<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Constantes<sp/>generales</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1ab7ba8d3bdb9b06b52877b1e6c24b3d37" kindref="member">SAT_Const::MJD_J2000</ref><sp/>=<sp/>51544.5;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1ac4762d2517541975d0d8b3ec769159ae" kindref="member">SAT_Const::T_B1950</ref><sp/><sp/><sp/>=<sp/>-0.500002108;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a345960ccb16807824cb455f1ffacbf3e" kindref="member">SAT_Const::c_light</ref><sp/><sp/><sp/>=<sp/>299792458.0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a30755b97cd70f618bfeca6abe7f45b08" kindref="member">SAT_Const::AU</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>149597870700.0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Parámetros<sp/>físicos</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a8520a4aca82e0459f65ed4bb55c5d97f" kindref="member">SAT_Const::R_Earth</ref><sp/><sp/><sp/>=<sp/>6378.1363e3;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a695e88747bb620787c6e9f8d952ccd17" kindref="member">SAT_Const::f_Earth</ref><sp/><sp/><sp/>=<sp/>1.0<sp/>/<sp/>298.257223563;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a7bed1960da63500f83498fefef9ff315" kindref="member">SAT_Const::R_Sun</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>696000e3;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a9ec80315ce97ed4a4c2b90ada9c49d0e" kindref="member">SAT_Const::R_Moon</ref><sp/><sp/><sp/><sp/>=<sp/>1738e3;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a34bed0ab80bb7cd372419a346b139678" kindref="member">SAT_Const::omega_Earth</ref><sp/>=<sp/>15.04106717866910<sp/>/<sp/>3600<sp/>*<sp/><ref refid="class_s_a_t___const_1a8cd545a117a0d02fba3e18c843a8e112" kindref="member">SAT_Const::Rad</ref>;<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Coeficientes<sp/>gravitacionales<sp/>[m³/s²]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1aa561286ef1a10f479fee20edb32faa16" kindref="member">SAT_Const::GM_Earth</ref><sp/><sp/><sp/><sp/>=<sp/>398600.435436e9;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1aa2cf8c2fc4b178a2ddbc47ec94b756e8" kindref="member">SAT_Const::GM_Sun</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>132712440041.939400e9;<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1aeb5c26a48ab670ef46de848a8a14da68" kindref="member">SAT_Const::GM_Moon</ref><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_s_a_t___const_1aa561286ef1a10f479fee20edb32faa16" kindref="member">SAT_Const::GM_Earth</ref><sp/>/<sp/>81.30056907419062;<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1ae4b07e964995d768c891f2e54204e788" kindref="member">SAT_Const::GM_Mercury</ref><sp/><sp/>=<sp/>22031.780000e9;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a72e68505611ebd6ee5c30f8614f25b11" kindref="member">SAT_Const::GM_Venus</ref><sp/><sp/><sp/><sp/>=<sp/>324858.592000e9;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a722cc664533818278459dcdf14765970" kindref="member">SAT_Const::GM_Mars</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>42828.375214e9;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a6080247fc6db7327ec51d6ddea91cc68" kindref="member">SAT_Const::GM_Jupiter</ref><sp/><sp/>=<sp/>126712764.800000e9;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a9e96aee2b02c6387fbc0f525f4cb5d5c" kindref="member">SAT_Const::GM_Saturn</ref><sp/><sp/><sp/>=<sp/>37940585.200000e9;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a6d53fbd66032be649f31df560d8893c4" kindref="member">SAT_Const::GM_Uranus</ref><sp/><sp/><sp/>=<sp/>5794548.600000e9;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1adb10f75e70cb3513eadf7aeef2c0e58c" kindref="member">SAT_Const::GM_Neptune</ref><sp/><sp/>=<sp/>6836527.100580e9;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a9108d8a0b68e98dfaad65d2d28ca84b5" kindref="member">SAT_Const::GM_Pluto</ref><sp/><sp/><sp/><sp/>=<sp/>977.0000000000009e9;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Radiación<sp/>solar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a3bbc5b26ba9eddf1f55cf24a5c04638c" kindref="member">SAT_Const::P_Sol</ref><sp/>=<sp/>1367<sp/>/<sp/><ref refid="class_s_a_t___const_1a345960ccb16807824cb455f1ffacbf3e" kindref="member">SAT_Const::c_light</ref>;<sp/></highlight></codeline>
+    </programlisting>
+    <location file="src/SAT_Const.cpp"/>
+  </compounddef>
+</doxygen>

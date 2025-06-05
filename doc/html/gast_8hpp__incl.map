@@ -1,0 +1,33 @@
+<map id="include/gast.hpp" name="include/gast.hpp">
+<area shape="rect" id="Node000001" title="Declaración de la función que calcula el ángulo sidéreo aparente de Greenwich (GAST)." alt="" coords="56,5,172,32"/>
+<area shape="rect" id="Node000002" href="$_g_m_s_t_8hpp.html" title="Declaración de la función que calcula el Tiempo Sidéreo Medio de Greenwich (GMST)." alt="" coords="20,155,103,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,33,74,141,69,139,107,32"/>
+<area shape="rect" id="Node000003" href="$_s_a_t___const_8hpp.html" title="Definición de constantes astronómicas, físicas y matemáticas usadas en simulaciones orbitales." alt="" coords="141,229,254,256"/>
+<area shape="poly" id="edge20_Node000001_Node000003" title=" " alt="" coords="120,32,138,96,168,180,185,214,180,217,163,182,133,98,114,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="169,304,226,331"/>
+<area shape="poly" id="edge21_Node000001_Node000004" title=" " alt="" coords="101,34,53,84,29,118,11,155,8,181,12,212,24,255,52,278,86,295,121,305,154,311,153,316,120,310,84,300,49,283,20,257,6,213,3,181,6,154,24,115,49,80,97,31"/>
+<area shape="rect" id="Node000007" href="$_eqn_equinox_8hpp.html" title="Declaración de la función que calcula la ecuación de los equinoccios." alt="" coords="330,80,447,107"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="162,30,326,73,325,78,161,35"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,180,162,219,159,224,84,184"/>
+<area shape="poly" id="edge7_Node000002_Node000004" title=" " alt="" coords="54,183,33,218,29,237,35,255,59,278,89,295,122,305,154,311,153,316,121,310,87,300,56,283,30,257,24,237,28,216,49,180"/>
+<area shape="rect" id="Node000006" href="$_frac_8hpp.html" title="Declaración de la función que extrae la parte fraccionaria de un número real." alt="" coords="44,229,117,256"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="68,181,76,213,71,215,62,183"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="200,257,200,288,195,288,195,257"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="409,304,480,331"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="242,254,395,299,393,304,240,259"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="102,254,166,293,163,298,100,259"/>
+<area shape="poly" id="edge17_Node000007_Node000004" title=" " alt="" coords="385,108,350,176,322,218,289,258,264,280,237,298,234,294,260,276,285,254,318,215,345,173,380,106"/>
+<area shape="poly" id="edge19_Node000007_Node000005" title=" " alt="" coords="436,105,472,123,488,137,501,153,509,171,511,190,504,228,487,264,467,293,463,290,482,261,499,227,506,190,504,173,497,156,485,140,469,128,434,110"/>
+<area shape="rect" id="Node000008" href="$_nut_angles_8hpp.html" title="Declaración de la función que calcula los ángulos de nutación." alt="" coords="380,155,487,181"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="399,106,420,140,416,143,394,109"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="562,229,612,256"/>
+<area shape="poly" id="edge18_Node000007_Node000009" title=" " alt="" coords="448,104,498,122,523,136,545,153,568,182,582,214,577,216,563,185,541,157,520,140,496,127,446,109"/>
+<area shape="rect" id="Node000010" href="$_mean_obliquity_8hpp.html" title="Declaración de la función MeanObliquity." alt="" coords="178,155,306,181"/>
+<area shape="poly" id="edge14_Node000007_Node000010" title=" " alt="" coords="364,110,282,150,280,145,362,105"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="393,184,254,227,253,222,392,179"/>
+<area shape="poly" id="edge12_Node000008_Node000004" title=" " alt="" coords="429,183,403,220,384,240,363,258,334,276,302,290,242,309,240,304,300,285,331,271,360,254,381,236,399,216,424,180"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="437,182,445,288,440,289,432,182"/>
+<area shape="poly" id="edge13_Node000008_Node000009" title=" " alt="" coords="462,179,550,221,547,226,459,184"/>
+<area shape="poly" id="edge15_Node000010_Node000003" title=" " alt="" coords="236,183,216,217,211,215,232,180"/>
+<area shape="poly" id="edge16_Node000010_Node000004" title=" " alt="" coords="253,180,270,215,274,236,270,257,254,279,235,297,231,293,250,276,265,255,268,236,265,216,248,183"/>
+</map>

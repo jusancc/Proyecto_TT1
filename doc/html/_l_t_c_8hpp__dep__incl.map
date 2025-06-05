@@ -1,0 +1,5 @@
+<map id="include/LTC.hpp" name="include/LTC.hpp">
+<area shape="rect" id="Node000001" title="Declaración de la función que genera la matriz de transformación del sistema geodésico local." alt="" coords="5,5,121,32"/>
+<area shape="rect" id="Node000002" href="$_l_t_c_8cpp.html" title="Implementación de la matriz de transformación LTC (Local Tangent Coordinate)." alt="" coords="17,80,109,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,48,66,80,60,80,60,48"/>
+</map>

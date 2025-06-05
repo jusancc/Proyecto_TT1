@@ -1,0 +1,15 @@
+<map id="src/angl.cpp" name="src/angl.cpp">
+<area shape="rect" id="Node000001" title="Implementación de la función que calcula el ángulo entre dos vectores." alt="" coords="110,5,202,32"/>
+<area shape="rect" id="Node000002" href="$angl_8hpp.html" title="Declaración de la función que calcula el ángulo entre dos vectores." alt="" coords="92,80,220,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,33,159,64,154,64,154,33"/>
+<area shape="rect" id="Node000003" href="$matrix_8hpp.html" title="Declaración de la clase Matrix y sus operaciones auxiliares." alt="" coords="115,155,197,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="159,107,159,139,154,139,154,107"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,229,62,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="136,184,70,223,67,219,133,180"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="85,229,144,256"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="151,183,132,217,127,215,147,181"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="169,229,226,256"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="166,181,185,215,181,217,161,183"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="250,229,321,256"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="180,180,251,219,248,224,177,184"/>
+</map>

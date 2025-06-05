@@ -1,0 +1,20 @@
+<map id="src/Position.cpp" name="src/Position.cpp">
+<area shape="rect" id="Node000001" title="Implementación de la función que convierte coordenadas geodésicas a cartesianas ECEF." alt="" coords="178,5,294,32"/>
+<area shape="rect" id="Node000002" href="$_position_8hpp.html" title="Prototipo de la función que convierte coordenadas geodésicas a posición en coordenadas cartesianas." alt="" coords="161,80,311,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="239,33,239,64,234,64,234,33"/>
+<area shape="rect" id="Node000003" href="$matrix_8hpp.html" title="Declaración de la clase Matrix y sus operaciones auxiliares." alt="" coords="74,155,156,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="216,110,151,149,148,144,214,105"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="264,229,321,256"/>
+<area shape="poly" id="edge10_Node000002_Node000006" title=" " alt="" coords="261,105,287,125,308,153,312,169,313,186,306,216,301,215,307,185,307,170,303,156,283,129,258,109"/>
+<area shape="rect" id="Node000008" href="$_s_a_t___const_8hpp.html" title="Definición de constantes astronómicas, físicas y matemáticas usadas en simulaciones orbitales." alt="" coords="180,155,293,181"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="239,107,239,139,234,139,234,107"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,229,62,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="102,184,60,221,57,217,99,180"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="85,229,144,256"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="118,182,118,214,112,214,112,182"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="147,179,251,222,249,227,145,184"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="168,229,240,256"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="132,180,179,217,175,221,129,184"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="248,180,275,215,271,219,244,184"/>
+<area shape="poly" id="edge9_Node000008_Node000007" title=" " alt="" coords="233,183,218,216,213,214,228,181"/>
+</map>

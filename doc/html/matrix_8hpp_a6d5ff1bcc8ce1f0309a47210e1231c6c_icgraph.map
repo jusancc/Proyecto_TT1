@@ -1,0 +1,10 @@
+<map id="eye" name="eye">
+<area shape="rect" id="Node000001" title="Genera una matriz identidad." alt="" coords="313,55,355,81"/>
+<area shape="rect" id="Node000002" href="$class_matrix.html#afba97a76536c7394e65d56b7032cbdc4" title="Inversa de matriz (solo cuadradas)" alt="" coords="176,29,258,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,63,258,54,259,49,298,58"/>
+<area shape="rect" id="Node000004" href="$_meas_update_8cpp.html#ae12754392beb1fd53d392978b396266f" title="Actualiza el estado estimado, la matriz de covarianza y el residuo en un filtro de Kalman." alt="" coords="170,80,265,107"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="298,78,266,86,265,80,297,73"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="236,16,230,10,217,8,206,10,200,14,198,20,201,28,196,30,193,20,195,11,204,5,217,3,232,5,240,12"/>
+<area shape="rect" id="Node000003" href="$class_matrix.html#afa8805316703c98abf5fefd7788b92ef" title="División de matrices (elemento a elemento)" alt="" coords="5,29,122,56"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="161,45,122,45,122,40,161,40"/>
+</map>

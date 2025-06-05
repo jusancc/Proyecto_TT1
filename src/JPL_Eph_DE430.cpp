@@ -1,5 +1,32 @@
+//$Header$
+//------------------------------------------------------------------------------
+//                              JPL_Eph_DE430
+//------------------------------------------------------------------------------
+// GMAT: General Mission Analysis Tool
+//
+// **Legal**
+//
+// Author: Juan Sánchez de Corta
+//
+/**
+ * @file JPL_Eph_DE430.cpp
+ * @brief Interpola las posiciones de los cuerpos del sistema solar usando la efeméride DE430.
+ *
+ * Utiliza coeficientes de Chebyshev almacenados en la tabla `PC` para calcular las posiciones
+ * de los planetas, la Luna y el Sol en un instante dado expresado en tiempo TDB.
+ * Las posiciones se devuelven en kilómetros en un sistema de referencia centrado en la Tierra.
+ */
+//------------------------------------------------------------------------------
+
 #include "../include/JPL_Eph_DE430.hpp"
 
+/**
+ * @brief Genera un vector de índices para extracción secuencial.
+ * @param a Primer índice
+ * @param b Paso
+ * @param c Último índice
+ * @return Vector con los índices generados
+ */
 Matrix &_temp(int a, int b, int c)
 {
     int len = (c - a) / b + 1;
@@ -11,6 +38,23 @@ Matrix &_temp(int a, int b, int c)
     return temp;
 }
 
+/**
+ * @brief Evalúa las posiciones de los planetas, Sol y Luna usando DE430 para un tiempo TDB.
+ *
+ * @param Mjd_TDB Tiempo dinámico baricéntrico (MJD).
+ * @return Tupla con las posiciones (en km) de:
+ *         - Mercurio
+ *         - Venus
+ *         - Tierra
+ *         - Marte
+ *         - Júpiter
+ *         - Saturno
+ *         - Urano
+ *         - Neptuno
+ *         - Plutón
+ *         - Luna
+ *         - Sol
+ */
 tuple<Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &, Matrix &> JPL_Eph_DE430(double Mjd_TDB)
 {
     double JD = Mjd_TDB + 2400000.5;

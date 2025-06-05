@@ -1,0 +1,11 @@
+<map id="EqnEquinox" name="EqnEquinox">
+<area shape="rect" id="Node000001" title="Calcula la ecuación de los equinoccios para una fecha dada." alt="" coords="344,31,436,57"/>
+<area shape="rect" id="Node000002" href="$gast_8cpp.html#a4eb2d09c87615520077aec1005b8e0ad" title="&lt; Función fmod()" alt="" coords="250,31,296,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="329,47,297,47,297,41,329,41"/>
+<area shape="rect" id="Node000003" href="$_g_h_a_matrix_8cpp.html#a49218ae38846c1175342d13a65d41f4d" title="&lt; Cálculo del ángulo sidéreo aparente de Greenwich" alt="" coords="116,31,202,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="235,47,203,47,203,41,235,41"/>
+<area shape="rect" id="Node000004" href="$_accel_8cpp.html#a052008f916a6d5da1ba6d8b23e13d933" title="&lt; Efemérides JPL DE430" alt="" coords="10,5,63,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="100,34,63,27,64,21,101,29"/>
+<area shape="rect" id="Node000005" href="$_var_eqn_8cpp.html#ac635346ab8c33fade0f3287e9d9b8866" title="Calcula la derivada del vector extendido y matriz de variación (ecuaciones variacionales)." alt="" coords="5,56,68,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="101,59,69,66,67,60,100,53"/>
+</map>

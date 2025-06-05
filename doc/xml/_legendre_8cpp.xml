@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_legendre_8cpp" kind="file" language="C++">
+    <compoundname>Legendre.cpp</compoundname>
+    <includes refid="_legendre_8hpp" local="yes">../include/Legendre.hpp</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">tuple</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>../include/Legendre.hpp</label>
+        <link refid="_legendre_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>matrix.hpp</label>
+        <link refid="matrix_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/Legendre.cpp</label>
+        <link refid="_legendre_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>cmath</label>
+      </node>
+      <node id="4">
+        <label>cstdio</label>
+      </node>
+      <node id="5">
+        <label>cstdlib</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>tuple</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_legendre_8cpp_1a55ce532de3c95506384990ae714dd99d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>tuple&lt; <ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;, <ref refid="class_matrix" kindref="compound">Matrix</ref> &amp; &gt;</type>
+        <definition>tuple&lt; Matrix &amp;, Matrix &amp; &gt; Legendre</definition>
+        <argsstring>(int n, int m, double fi)</argsstring>
+        <name>Legendre</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>fi</declname>
+        </param>
+        <briefdescription>
+<para>Calcula los polinomios de Legendre y sus derivadas con normalización de Schmidt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calcula los polinomios de Legendre y sus derivadas.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Grado máximo de la expansión. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Orden máximo de la expansión. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ángulo de latitud geocéntrica (en radianes). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Una tupla con:<itemizedlist>
+<listitem><para><computeroutput>pnm</computeroutput>: Matriz (n+1)x(m+1) con los valores de los polinomios ( P_n^m(\sin(\phi)) )</para>
+</listitem><listitem><para><computeroutput>dpnm</computeroutput>: Matriz (n+1)x(m+1) con las derivadas respecto a <computeroutput>fi</computeroutput> de los polinomios. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Legendre.cpp" line="36" column="7" bodyfile="src/Legendre.cpp" bodystart="36" bodyend="84"/>
+        <references refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" compoundref="matrix_8cpp" startline="179" endline="189">zeros</references>
+        <referencedby refid="_accel_harmonic_8hpp_1a97ea72b6a1426f18c34d295e50b8fc4b" compoundref="_accel_harmonic_8cpp" startline="37" endline="96">AccelHarmonic</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Implementación de los polinomios asociados de Legendre y sus derivadas. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Esta función calcula los polinomios asociados de Legendre (normalizados) y sus derivadas con respecto al ángulo <computeroutput>fi</computeroutput>, necesarios para el cálculo del potencial gravitacional armónico de la Tierra. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//$Header$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Legendre</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GMAT:<sp/>General<sp/>Mission<sp/>Analysis<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>**Legal**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Juan<sp/>Sánchez<sp/>de<sp/>Corta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_legendre_8hpp" kindref="compound">../include/Legendre.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tuple&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="_legendre_8hpp_1a55ce532de3c95506384990ae714dd99d" refkind="member"><highlight class="normal">tuple&lt;Matrix&amp;,<sp/>Matrix&amp;&gt;<sp/><ref refid="_legendre_8cpp_1a55ce532de3c95506384990ae714dd99d" kindref="member">Legendre</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fi)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/>pnm<sp/>=<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(n<sp/>+<sp/>1,<sp/>m<sp/>+<sp/>1);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Polinomios<sp/>de<sp/>Legendre</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_matrix" kindref="compound">Matrix</ref>&amp;<sp/>dpnm<sp/>=<sp/><ref refid="matrix_8hpp_1a56d60ea1f08402246a7cfd477d69a618" kindref="member">zeros</ref>(n<sp/>+<sp/>1,<sp/>m<sp/>+<sp/>1);<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Derivadas<sp/>de<sp/>los<sp/>polinomios</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Inicialización</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>pnm(1,<sp/>1)<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>dpnm(1,<sp/>1)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>pnm(2,<sp/>2)<sp/>=<sp/>sqrt(3)<sp/>*<sp/>cos(fi);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>dpnm(2,<sp/>2)<sp/>=<sp/>-sqrt(3)<sp/>*<sp/>sin(fi);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Componentes<sp/>diagonales</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>2;<sp/>i<sp/>&lt;=<sp/>n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pnm(i<sp/>+<sp/>1,<sp/>i<sp/>+<sp/>1)<sp/>=<sp/>sqrt((2.0<sp/>*<sp/>i<sp/>+<sp/>1)<sp/>/<sp/>(2.0<sp/>*<sp/>i))<sp/>*<sp/>cos(fi)<sp/>*<sp/>pnm(i,<sp/>i);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dpnm(i<sp/>+<sp/>1,<sp/>i<sp/>+<sp/>1)<sp/>=<sp/>sqrt((2.0<sp/>*<sp/>i<sp/>+<sp/>1)<sp/>/<sp/>(2.0<sp/>*<sp/>i))<sp/>*</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(cos(fi)<sp/>*<sp/>dpnm(i,<sp/>i)<sp/>-<sp/>sin(fi)<sp/>*<sp/>pnm(i,<sp/>i));</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Primera<sp/>fila<sp/>subdiagonal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/>n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pnm(i<sp/>+<sp/>1,<sp/>i)<sp/>=<sp/>sqrt(2.0<sp/>*<sp/>i<sp/>+<sp/>1)<sp/>*<sp/>sin(fi)<sp/>*<sp/>pnm(i,<sp/>i);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dpnm(i<sp/>+<sp/>1,<sp/>i)<sp/>=<sp/>sqrt(2.0<sp/>*<sp/>i<sp/>+<sp/>1)<sp/>*</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(cos(fi)<sp/>*<sp/>pnm(i,<sp/>i)<sp/>+<sp/>sin(fi)<sp/>*<sp/>dpnm(i,<sp/>i));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Recurrencia<sp/>general</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0,<sp/>k<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(j<sp/>&lt;=<sp/>m)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>k;<sp/>i<sp/>&lt;=<sp/>n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pnm(i<sp/>+<sp/>1,<sp/>j<sp/>+<sp/>1)<sp/>=<sp/>sqrt((2.0<sp/>*<sp/>i<sp/>+<sp/>1)<sp/>/<sp/>((i<sp/>-<sp/>j)<sp/>*<sp/>(i<sp/>+<sp/>j)))<sp/>*</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(sqrt(2.0<sp/>*<sp/>i<sp/>-<sp/>1)<sp/>*<sp/>sin(fi)<sp/>*<sp/>pnm(i,<sp/>j<sp/>+<sp/>1)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>sqrt(((i<sp/>+<sp/>j<sp/>-<sp/>1)<sp/>*<sp/>(i<sp/>-<sp/>j<sp/>-<sp/>1))<sp/>/<sp/>(2.0<sp/>*<sp/>i<sp/>-<sp/>3))<sp/>*<sp/>pnm(i<sp/>-<sp/>1,<sp/>j<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j++;<sp/>k++;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Recurrencia<sp/>de<sp/>derivadas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>j<sp/>=<sp/>0;<sp/>k<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(j<sp/>&lt;=<sp/>m)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>k;<sp/>i<sp/>&lt;=<sp/>n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dpnm(i<sp/>+<sp/>1,<sp/>j<sp/>+<sp/>1)<sp/>=<sp/>sqrt((2.0<sp/>*<sp/>i<sp/>+<sp/>1)<sp/>/<sp/>((i<sp/>-<sp/>j)<sp/>*<sp/>(i<sp/>+<sp/>j)))<sp/>*</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(sqrt(2.0<sp/>*<sp/>i<sp/>-<sp/>1)<sp/>*<sp/>sin(fi)<sp/>*<sp/>dpnm(i,<sp/>j<sp/>+<sp/>1)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>sqrt(2.0<sp/>*<sp/>i<sp/>-<sp/>1)<sp/>*<sp/>cos(fi)<sp/>*<sp/>pnm(i,<sp/>j<sp/>+<sp/>1)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>sqrt(((i<sp/>+<sp/>j<sp/>-<sp/>1)<sp/>*<sp/>(i<sp/>-<sp/>j<sp/>-<sp/>1))<sp/>/<sp/>(2.0<sp/>*<sp/>i<sp/>-<sp/>3))<sp/>*<sp/>dpnm(i<sp/>-<sp/>1,<sp/>j<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j++;<sp/>k++;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tie(pnm,<sp/>dpnm);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Legendre.cpp"/>
+  </compounddef>
+</doxygen>

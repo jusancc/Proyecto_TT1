@@ -1,0 +1,9 @@
+<map id="AzElPa" name="AzElPa">
+<area shape="rect" id="Node000001" title="Calcula los ángulos de observación y las derivadas parciales respecto a la posición." alt="" coords="5,31,71,57"/>
+<area shape="rect" id="Node000002" href="$class_matrix.html#ac5e00d2720d9e6431f8998cb52668368" title="Producto escalar." alt="" coords="119,5,202,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,35,103,28,104,33,71,40"/>
+<area shape="rect" id="Node000004" href="$matrix_8cpp.html#a56d60ea1f08402246a7cfd477d69a618" title="Genera una matriz de ceros." alt="" coords="134,56,187,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="71,48,119,58,118,63,70,53"/>
+<area shape="rect" id="Node000003" href="$class_matrix.html#a2dba13c45127354c9f75ef576f49269b" title="Constructor por defecto." alt="" coords="250,5,351,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="203,16,234,16,234,21,203,21"/>
+</map>

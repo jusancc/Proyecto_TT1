@@ -1,0 +1,9 @@
+<map id="include/Mjday.hpp" name="include/Mjday.hpp">
+<area shape="rect" id="Node000001" title="Declaración de la función que calcula el Modified Julian Date (MJD) a partir de una fecha y hora del ..." alt="" coords="73,5,198,32"/>
+<area shape="rect" id="Node000002" href="$_accel_8hpp.html" title="Declaración de la función que calcula la aceleración total sobre un cuerpo celeste,..." alt="" coords="5,80,130,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,45,81,81,77,78,111,42"/>
+<area shape="rect" id="Node000004" href="$_mjday_8cpp.html" title="Implementación de la función que calcula el Modified Julian Date (MJD) a partir de una fecha y hora d..." alt="" coords="154,80,256,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="160,41,195,78,191,81,156,45"/>
+<area shape="rect" id="Node000003" href="$_accel_8cpp.html" title="Implementación de la función que calcula la aceleración total que actúa sobre un satélite,..." alt="" coords="17,155,118,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="70,122,70,154,65,154,65,122"/>
+</map>

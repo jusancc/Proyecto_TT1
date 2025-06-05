@@ -1,0 +1,25 @@
+<map id="include/Frac.hpp" name="include/Frac.hpp">
+<area shape="rect" id="Node000001" title="Declaración de la función que extrae la parte fraccionaria de un número real." alt="" coords="372,5,489,32"/>
+<area shape="rect" id="Node000002" href="$_g_m_s_t_8hpp.html" title="Declaración de la función que calcula el Tiempo Sidéreo Medio de Greenwich (GMST)." alt="" coords="298,80,426,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="410,45,376,81,372,78,406,42"/>
+<area shape="rect" id="Node000012" href="$_frac_8cpp.html" title="Implementación de la función que devuelve la parte fraccionaria de un número real." alt="" coords="451,80,545,107"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="454,42,488,78,485,81,451,45"/>
+<area shape="rect" id="Node000003" href="$gast_8hpp.html" title="Declaración de la función que calcula el ángulo sidéreo aparente de Greenwich (GAST)." alt="" coords="237,155,354,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="342,120,309,156,305,152,338,116"/>
+<area shape="rect" id="Node000011" href="$_g_m_s_t_8cpp.html" title="Implementación de la función que calcula el Tiempo Sidéreo Medio de Greenwich." alt="" coords="378,155,483,181"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="386,116,420,152,417,156,383,120"/>
+<area shape="rect" id="Node000004" href="$_g_h_a_matrix_8hpp.html" title="Declaración de la función que genera la matriz de rotación para aplicar el Ángulo Horario de Greenwic..." alt="" coords="143,229,299,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="274,194,236,231,232,227,270,190"/>
+<area shape="rect" id="Node000010" href="$gast_8cpp.html" title="Implementación de la función que calcula el ángulo sidéreo aparente de Greenwich." alt="" coords="324,229,417,256"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="321,190,359,227,355,231,317,194"/>
+<area shape="rect" id="Node000005" href="$_accel_8hpp.html" title="Declaración de la función que calcula la aceleración total sobre un cuerpo celeste,..." alt="" coords="5,304,130,331"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="181,265,96,306,93,301,179,261"/>
+<area shape="rect" id="Node000007" href="$_var_eqn_8hpp.html" title="Prototipo de la función de ecuaciones variacionales para propagación orbital." alt="" coords="154,304,288,331"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="224,272,224,304,218,304,218,272"/>
+<area shape="rect" id="Node000009" href="$_g_h_a_matrix_8cpp.html" title="Implementación de la función que genera la matriz de rotación correspondiente al Ángulo Horario de Gr..." alt="" coords="312,304,445,331"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="263,260,352,301,349,306,261,265"/>
+<area shape="rect" id="Node000006" href="$_accel_8cpp.html" title="Implementación de la función que calcula la aceleración total que actúa sobre un satélite,..." alt="" coords="17,379,118,405"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="70,346,70,378,65,378,65,346"/>
+<area shape="rect" id="Node000008" href="$_var_eqn_8cpp.html" title="Implementación de la función de ecuaciones variacionales para propagación orbital con perturbaciones ..." alt="" coords="166,379,276,405"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="224,346,224,378,218,378,218,346"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="G_AccelHarmonic" name="G_AccelHarmonic">
+<area shape="rect" id="Node000001" title="&lt; Aceleración por armónicos esféricos" alt="" coords="5,157,133,184"/>
+<area shape="rect" id="Node000002" href="$_accel_harmonic_8cpp.html#a97ea72b6a1426f18c34d295e50b8fc4b" title="&lt; Parámetros globales y auxiliares" alt="" coords="202,81,312,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,154,207,112,209,117,105,159"/>
+<area shape="rect" id="Node000004" href="$matrix_8cpp.html#a56d60ea1f08402246a7cfd477d69a618" title="Genera una matriz de ceros." alt="" coords="530,81,584,108"/>
+<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="133,174,206,178,294,176,389,166,436,156,481,143,506,131,528,116,531,120,509,135,483,148,437,161,390,171,295,181,206,183,133,180"/>
+<area shape="rect" id="Node000007" href="$class_matrix.html#a82f842045feaabec73cb00d8002a38d0" title="Asigna una columna." alt="" coords="181,208,333,235"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="122,182,191,201,189,206,121,187"/>
+<area shape="rect" id="Node000003" href="$_legendre_8cpp.html#a55ce532de3c95506384990ae714dd99d" title="Calcula los polinomios de Legendre y sus derivadas." alt="" coords="394,5,469,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="289,78,384,36,386,41,291,83"/>
+<area shape="rect" id="Node000005" href="$class_matrix.html#aa30b90656f5063a7eac84a8cc5607318" title="Norma euclídea." alt="" coords="384,56,479,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="312,84,369,76,370,81,313,89"/>
+<area shape="rect" id="Node000006" href="$matrix_8cpp.html#acbd9778b697f9ad3da64ef53b850e2c9" title="Calcula la transpuesta de una matriz." alt="" coords="392,107,471,133"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="313,100,377,110,377,115,312,105"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="463,30,484,42,526,70,524,74,481,46,460,35"/>
+<area shape="rect" id="Node000008" href="$class_matrix.html#a2dba13c45127354c9f75ef576f49269b" title="Constructor por defecto." alt="" coords="381,208,482,235"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="333,219,366,219,366,224,333,224"/>
+</map>

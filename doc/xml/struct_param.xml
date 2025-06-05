@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="struct_param" kind="struct" language="C++" prot="public">
+    <compoundname>Param</compoundname>
+    <includes refid="global_8hpp" local="no">global.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_param_1a81f2a3568a0db4eb06cb862d5b3ba694" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Param::Mjd_UTC</definition>
+        <argsstring></argsstring>
+        <name>Mjd_UTC</name>
+        <qualifiedname>Param::Mjd_UTC</qualifiedname>
+        <briefdescription>
+<para>Fecha en tiempo universal (UTC) en MJD. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/global.hpp" line="31" column="12" bodyfile="include/global.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_param_1a47a08228c8dcbee2294688e569cb8105" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Param::Mjd_TT</definition>
+        <argsstring></argsstring>
+        <name>Mjd_TT</name>
+        <qualifiedname>Param::Mjd_TT</qualifiedname>
+        <briefdescription>
+<para>Fecha en tiempo terrestre (TT) en MJD. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/global.hpp" line="32" column="12" bodyfile="include/global.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_param_1a2b32c8efc41350ea943d743dd74c2e78" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Param::n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <qualifiedname>Param::n</qualifiedname>
+        <briefdescription>
+<para>Orden máximo del modelo armónico. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/global.hpp" line="33" column="9" bodyfile="include/global.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_param_1aa166e48d84a856e369f95cbddeeb07e1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Param::m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <qualifiedname>Param::m</qualifiedname>
+        <briefdescription>
+<para>Grado máximo del modelo armónico. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/global.hpp" line="34" column="9" bodyfile="include/global.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_param_1ae92f696fb4c978df17cecf414f6d1958" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Param::sun</definition>
+        <argsstring></argsstring>
+        <name>sun</name>
+        <qualifiedname>Param::sun</qualifiedname>
+        <briefdescription>
+<para>1 si se considera la perturbación solar </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/global.hpp" line="35" column="9" bodyfile="include/global.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_param_1a33b17123f258edd477200c4bb1f6ca1b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Param::moon</definition>
+        <argsstring></argsstring>
+        <name>moon</name>
+        <qualifiedname>Param::moon</qualifiedname>
+        <briefdescription>
+<para>1 si se considera la perturbación lunar </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/global.hpp" line="36" column="9" bodyfile="include/global.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_param_1a1e861d22a1e025f99df86d0527a83ddf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Param::planets</definition>
+        <argsstring></argsstring>
+        <name>planets</name>
+        <qualifiedname>Param::planets</qualifiedname>
+        <briefdescription>
+<para>1 si se consideran los planetas </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/global.hpp" line="37" column="9" bodyfile="include/global.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>&lt; Funciones matemáticas estándar </para>
+    </briefdescription>
+    <detaileddescription>
+<para>&lt; Clase <ref refid="class_matrix" kindref="compound">Matrix</ref> personalizada</para>
+<para>Estructura con parámetros astronómicos auxiliares. </para>
+    </detaileddescription>
+    <location file="include/global.hpp" line="30" column="1" bodyfile="include/global.hpp" bodystart="30" bodyend="38"/>
+    <listofallmembers>
+      <member refid="struct_param_1aa166e48d84a856e369f95cbddeeb07e1" prot="public" virt="non-virtual"><scope>Param</scope><name>m</name></member>
+      <member refid="struct_param_1a47a08228c8dcbee2294688e569cb8105" prot="public" virt="non-virtual"><scope>Param</scope><name>Mjd_TT</name></member>
+      <member refid="struct_param_1a81f2a3568a0db4eb06cb862d5b3ba694" prot="public" virt="non-virtual"><scope>Param</scope><name>Mjd_UTC</name></member>
+      <member refid="struct_param_1a33b17123f258edd477200c4bb1f6ca1b" prot="public" virt="non-virtual"><scope>Param</scope><name>moon</name></member>
+      <member refid="struct_param_1a2b32c8efc41350ea943d743dd74c2e78" prot="public" virt="non-virtual"><scope>Param</scope><name>n</name></member>
+      <member refid="struct_param_1a1e861d22a1e025f99df86d0527a83ddf" prot="public" virt="non-virtual"><scope>Param</scope><name>planets</name></member>
+      <member refid="struct_param_1ae92f696fb4c978df17cecf414f6d1958" prot="public" virt="non-virtual"><scope>Param</scope><name>sun</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

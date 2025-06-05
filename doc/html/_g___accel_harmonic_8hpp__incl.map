@@ -1,0 +1,32 @@
+<map id="include/G_AccelHarmonic.hpp" name="include/G_AccelHarmonic.hpp">
+<area shape="rect" id="Node000001" title="Declaración de la función que calcula el gradiente de la aceleración producida por el campo gravitaci..." alt="" coords="5,5,203,32"/>
+<area shape="rect" id="Node000002" href="$matrix_8hpp.html" title="Declaración de la clase Matrix y sus operaciones auxiliares." alt="" coords="75,229,157,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,33,104,96,107,181,112,214,107,215,101,182,98,96,100,32"/>
+<area shape="rect" id="Node000007" href="$_accel_harmonic_8hpp.html" title="Declaración de la función que calcula la aceleración debida al campo gravitacional terrestre modelado..." alt="" coords="139,80,274,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="123,30,178,68,175,73,120,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="30,304,87,331"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,258,80,293,76,290,104,255"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="110,304,170,331"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="123,256,134,288,129,290,118,257"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="217,304,274,331"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="140,254,211,294,208,298,137,259"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="386,304,457,331"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="158,251,371,301,370,307,157,256"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="174,109,143,128,129,141,118,156,111,185,112,214,107,214,106,184,114,154,125,137,140,124,172,105"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="212,106,223,154,244,288,239,289,217,155,207,108"/>
+<area shape="rect" id="Node000008" href="$_legendre_8hpp.html" title="Prototipo de la función que calcula los polinomios de Legendre y sus derivadas." alt="" coords="282,155,382,181"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="230,105,299,144,296,149,227,110"/>
+<area shape="rect" id="Node000010" href="$_s_a_t___const_8hpp.html" title="Definición de constantes astronómicas, físicas y matemáticas usadas en simulaciones orbitales." alt="" coords="459,229,573,256"/>
+<area shape="poly" id="edge14_Node000007_Node000010" title=" " alt="" coords="261,105,326,124,395,152,447,184,491,217,488,221,444,189,392,157,324,129,259,110"/>
+<area shape="rect" id="Node000011" href="$global_8hpp.html" title="Declaración de variables y funciones globales usadas en dinámica orbital." alt="" coords="128,155,208,181"/>
+<area shape="poly" id="edge17_Node000007_Node000011" title=" " alt="" coords="202,108,184,142,179,140,198,106"/>
+<area shape="poly" id="edge10_Node000008_Node000002" title=" " alt="" coords="295,184,169,226,167,221,294,179"/>
+<area shape="poly" id="edge13_Node000008_Node000005" title=" " alt="" coords="327,183,263,292,258,289,322,180"/>
+<area shape="poly" id="edge11_Node000008_Node000006" title=" " alt="" coords="351,180,376,200,398,228,412,258,420,288,415,289,407,260,394,231,372,204,348,184"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="334,229,383,256"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="339,181,351,214,346,216,334,183"/>
+<area shape="poly" id="edge15_Node000010_Node000005" title=" " alt="" coords="470,259,289,307,288,302,468,254"/>
+<area shape="poly" id="edge16_Node000010_Node000006" title=" " alt="" coords="501,259,451,297,448,292,498,254"/>
+<area shape="poly" id="edge18_Node000011_Node000002" title=" " alt="" coords="161,183,136,218,132,215,157,180"/>
+<area shape="poly" id="edge19_Node000011_Node000005" title=" " alt="" coords="177,181,234,289,229,291,172,183"/>
+</map>

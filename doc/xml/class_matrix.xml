@@ -1,0 +1,799 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_matrix" kind="class" language="C++" prot="public">
+    <compoundname>Matrix</compoundname>
+    <includes refid="matrix_8hpp" local="no">matrix.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_matrix_1a650e1452576e2c59a410eebd79331560" prot="private" static="no" mutable="no">
+        <type>double **</type>
+        <definition>double** Matrix::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>Matrix::data</qualifiedname>
+        <briefdescription>
+<para>Puntero a los datos de la matriz. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="36" column="12" bodyfile="include/matrix.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_matrix_1a25155ffcead67af4aaab4d78256af86f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Matrix::n_row</definition>
+        <argsstring></argsstring>
+        <name>n_row</name>
+        <qualifiedname>Matrix::n_row</qualifiedname>
+        <briefdescription>
+<para>Número de filas. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="39" column="9" bodyfile="include/matrix.hpp" bodystart="39" bodyend="-1"/>
+        <referencedby refid="_accel_point_mass_8hpp_1a72b636f377c135454d41655c935c0eb3" compoundref="_accel_point_mass_8cpp" startline="37" endline="58">AccelPointMass</referencedby>
+        <referencedby refid="class_matrix_1a82f842045feaabec73cb00d8002a38d0" compoundref="matrix_8cpp" startline="498" endline="511">assign_column</referencedby>
+        <referencedby refid="class_matrix_1a403e2a20dcfc235843aebf3599b87356" compoundref="matrix_8cpp" startline="480" endline="493">assign_row</referencedby>
+        <referencedby refid="class_matrix_1ac5e00d2720d9e6431f8998cb52668368" compoundref="matrix_8cpp" startline="411" endline="424">dot</referencedby>
+        <referencedby refid="class_matrix_1abd244116a45deda4143900e05003ef7e" compoundref="matrix_8cpp" startline="462" endline="475">extract_column</referencedby>
+        <referencedby refid="class_matrix_1a056b9a1c08027beffe6c408c8cfdb6e1" compoundref="matrix_8cpp" startline="444" endline="457">extract_row</referencedby>
+        <referencedby refid="class_matrix_1a837260f6358853bd4012a86107df466f" compoundref="matrix_8cpp" startline="541" endline="556">extract_vector</referencedby>
+        <referencedby refid="class_matrix_1afba97a76536c7394e65d56b7032cbdc4" compoundref="matrix_8cpp" startline="561" endline="623">inv</referencedby>
+        <referencedby refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</referencedby>
+        <referencedby refid="class_matrix_1a025f8b6a2384b2b54d6049e49351770c" compoundref="matrix_8cpp" startline="69" endline="87">Matrix</referencedby>
+        <referencedby refid="class_matrix_1abe71c89a7bd015e11337cf43a5c36091" compoundref="matrix_8cpp" startline="40" endline="62">Matrix</referencedby>
+        <referencedby refid="class_matrix_1aa30b90656f5063a7eac84a8cc5607318" compoundref="matrix_8cpp" startline="398" endline="406">norm</referencedby>
+        <referencedby refid="class_matrix_1a074a3b36a65989b51afbfcb5b0e6f573" compoundref="matrix_8cpp" startline="98" endline="105">operator()</referencedby>
+        <referencedby refid="class_matrix_1a920e6bd524f318abe55a379190e2a25b" compoundref="matrix_8cpp" startline="113" endline="120">operator()</referencedby>
+        <referencedby refid="class_matrix_1a04be68a75f92fef4175c6abf281530d8" compoundref="matrix_8cpp" startline="359" endline="369">operator*</referencedby>
+        <referencedby refid="class_matrix_1ae1bc7e1fda06dab52353ac01b3196efd" compoundref="matrix_8cpp" startline="214" endline="233">operator*</referencedby>
+        <referencedby refid="class_matrix_1a939695368e670812f344aaec5718c438" compoundref="matrix_8cpp" startline="329" endline="339">operator+</referencedby>
+        <referencedby refid="class_matrix_1a7cc7127ce96c997c9d14f1f8874ed742" compoundref="matrix_8cpp" startline="129" endline="144">operator+</referencedby>
+        <referencedby refid="class_matrix_1a7e6bdc324aee325e3a02ea82a8e17ac7" compoundref="matrix_8cpp" startline="344" endline="354">operator-</referencedby>
+        <referencedby refid="class_matrix_1ac13e11282bf8fb3e88eb4e743c6dc019" compoundref="matrix_8cpp" startline="149" endline="164">operator-</referencedby>
+        <referencedby refid="class_matrix_1a859f5cfddc6cd6e208f1c4ff189d258a" compoundref="matrix_8cpp" startline="374" endline="389">operator/</referencedby>
+        <referencedby refid="class_matrix_1afa8805316703c98abf5fefd7788b92ef" compoundref="matrix_8cpp" startline="238" endline="254">operator/</referencedby>
+        <referencedby refid="class_matrix_1a6ce0bc529fe2ee6fb2d0eb8acbdc1e92" compoundref="matrix_8cpp" startline="166" endline="174">operator&lt;&lt;</referencedby>
+        <referencedby refid="class_matrix_1ade03836bffb81664225dc544b5d5e6db" compoundref="matrix_8cpp" startline="259" endline="285">operator=</referencedby>
+        <referencedby refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" compoundref="matrix_8cpp" startline="314" endline="324">transpose</referencedby>
+        <referencedby refid="matrix_8hpp_1ab7c29bd668becd2c3be14876cb2ca51a" compoundref="matrix_8cpp" startline="516" endline="536">union_vector</referencedby>
+        <referencedby refid="matrix_8hpp_1a2159e44b4d006a55939a41c761708fb8" compoundref="matrix_8cpp" startline="429" endline="439">v_cross</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Matrix::n_column</definition>
+        <argsstring></argsstring>
+        <name>n_column</name>
+        <qualifiedname>Matrix::n_column</qualifiedname>
+        <briefdescription>
+<para>Número de columnas. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="40" column="9" bodyfile="include/matrix.hpp" bodystart="40" bodyend="-1"/>
+        <referencedby refid="_accel_point_mass_8hpp_1a72b636f377c135454d41655c935c0eb3" compoundref="_accel_point_mass_8cpp" startline="37" endline="58">AccelPointMass</referencedby>
+        <referencedby refid="class_matrix_1a82f842045feaabec73cb00d8002a38d0" compoundref="matrix_8cpp" startline="498" endline="511">assign_column</referencedby>
+        <referencedby refid="class_matrix_1a403e2a20dcfc235843aebf3599b87356" compoundref="matrix_8cpp" startline="480" endline="493">assign_row</referencedby>
+        <referencedby refid="class_matrix_1ac5e00d2720d9e6431f8998cb52668368" compoundref="matrix_8cpp" startline="411" endline="424">dot</referencedby>
+        <referencedby refid="class_matrix_1abd244116a45deda4143900e05003ef7e" compoundref="matrix_8cpp" startline="462" endline="475">extract_column</referencedby>
+        <referencedby refid="class_matrix_1a056b9a1c08027beffe6c408c8cfdb6e1" compoundref="matrix_8cpp" startline="444" endline="457">extract_row</referencedby>
+        <referencedby refid="class_matrix_1a837260f6358853bd4012a86107df466f" compoundref="matrix_8cpp" startline="541" endline="556">extract_vector</referencedby>
+        <referencedby refid="_i_e_r_s_8hpp_1a1613bc89717d0e37aef2c79cc1ecb646" compoundref="_i_e_r_s_8cpp" startline="50" endline="123">IERS</referencedby>
+        <referencedby refid="class_matrix_1afba97a76536c7394e65d56b7032cbdc4" compoundref="matrix_8cpp" startline="561" endline="623">inv</referencedby>
+        <referencedby refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</referencedby>
+        <referencedby refid="class_matrix_1a025f8b6a2384b2b54d6049e49351770c" compoundref="matrix_8cpp" startline="69" endline="87">Matrix</referencedby>
+        <referencedby refid="class_matrix_1abe71c89a7bd015e11337cf43a5c36091" compoundref="matrix_8cpp" startline="40" endline="62">Matrix</referencedby>
+        <referencedby refid="class_matrix_1aa30b90656f5063a7eac84a8cc5607318" compoundref="matrix_8cpp" startline="398" endline="406">norm</referencedby>
+        <referencedby refid="class_matrix_1a074a3b36a65989b51afbfcb5b0e6f573" compoundref="matrix_8cpp" startline="98" endline="105">operator()</referencedby>
+        <referencedby refid="class_matrix_1a920e6bd524f318abe55a379190e2a25b" compoundref="matrix_8cpp" startline="113" endline="120">operator()</referencedby>
+        <referencedby refid="class_matrix_1a04be68a75f92fef4175c6abf281530d8" compoundref="matrix_8cpp" startline="359" endline="369">operator*</referencedby>
+        <referencedby refid="class_matrix_1ae1bc7e1fda06dab52353ac01b3196efd" compoundref="matrix_8cpp" startline="214" endline="233">operator*</referencedby>
+        <referencedby refid="class_matrix_1a939695368e670812f344aaec5718c438" compoundref="matrix_8cpp" startline="329" endline="339">operator+</referencedby>
+        <referencedby refid="class_matrix_1a7cc7127ce96c997c9d14f1f8874ed742" compoundref="matrix_8cpp" startline="129" endline="144">operator+</referencedby>
+        <referencedby refid="class_matrix_1a7e6bdc324aee325e3a02ea82a8e17ac7" compoundref="matrix_8cpp" startline="344" endline="354">operator-</referencedby>
+        <referencedby refid="class_matrix_1ac13e11282bf8fb3e88eb4e743c6dc019" compoundref="matrix_8cpp" startline="149" endline="164">operator-</referencedby>
+        <referencedby refid="class_matrix_1a859f5cfddc6cd6e208f1c4ff189d258a" compoundref="matrix_8cpp" startline="374" endline="389">operator/</referencedby>
+        <referencedby refid="class_matrix_1afa8805316703c98abf5fefd7788b92ef" compoundref="matrix_8cpp" startline="238" endline="254">operator/</referencedby>
+        <referencedby refid="class_matrix_1a6ce0bc529fe2ee6fb2d0eb8acbdc1e92" compoundref="matrix_8cpp" startline="166" endline="174">operator&lt;&lt;</referencedby>
+        <referencedby refid="class_matrix_1ade03836bffb81664225dc544b5d5e6db" compoundref="matrix_8cpp" startline="259" endline="285">operator=</referencedby>
+        <referencedby refid="matrix_8hpp_1acbd9778b697f9ad3da64ef53b850e2c9" compoundref="matrix_8cpp" startline="314" endline="324">transpose</referencedby>
+        <referencedby refid="matrix_8hpp_1ab7c29bd668becd2c3be14876cb2ca51a" compoundref="matrix_8cpp" startline="516" endline="536">union_vector</referencedby>
+        <referencedby refid="matrix_8hpp_1a2159e44b4d006a55939a41c761708fb8" compoundref="matrix_8cpp" startline="429" endline="439">v_cross</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_matrix_1a2dba13c45127354c9f75ef576f49269b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Matrix::Matrix</definition>
+        <argsstring>()</argsstring>
+        <name>Matrix</name>
+        <qualifiedname>Matrix::Matrix</qualifiedname>
+        <briefdescription>
+<para>Constructor por defecto. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="43" column="5" bodyfile="src/matrix.cpp" bodystart="30" bodyend="34"/>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+        <referencedby refid="class_matrix_1a82f842045feaabec73cb00d8002a38d0" compoundref="matrix_8cpp" startline="498" endline="511">assign_column</referencedby>
+        <referencedby refid="class_matrix_1a403e2a20dcfc235843aebf3599b87356" compoundref="matrix_8cpp" startline="480" endline="493">assign_row</referencedby>
+        <referencedby refid="class_matrix_1ac5e00d2720d9e6431f8998cb52668368" compoundref="matrix_8cpp" startline="411" endline="424">dot</referencedby>
+        <referencedby refid="class_matrix_1abd244116a45deda4143900e05003ef7e" compoundref="matrix_8cpp" startline="462" endline="475">extract_column</referencedby>
+        <referencedby refid="class_matrix_1a056b9a1c08027beffe6c408c8cfdb6e1" compoundref="matrix_8cpp" startline="444" endline="457">extract_row</referencedby>
+        <referencedby refid="class_matrix_1a837260f6358853bd4012a86107df466f" compoundref="matrix_8cpp" startline="541" endline="556">extract_vector</referencedby>
+        <referencedby refid="class_matrix_1afba97a76536c7394e65d56b7032cbdc4" compoundref="matrix_8cpp" startline="561" endline="623">inv</referencedby>
+        <referencedby refid="class_matrix_1a04be68a75f92fef4175c6abf281530d8" compoundref="matrix_8cpp" startline="359" endline="369">operator*</referencedby>
+        <referencedby refid="class_matrix_1ae1bc7e1fda06dab52353ac01b3196efd" compoundref="matrix_8cpp" startline="214" endline="233">operator*</referencedby>
+        <referencedby refid="class_matrix_1a939695368e670812f344aaec5718c438" compoundref="matrix_8cpp" startline="329" endline="339">operator+</referencedby>
+        <referencedby refid="class_matrix_1a7cc7127ce96c997c9d14f1f8874ed742" compoundref="matrix_8cpp" startline="129" endline="144">operator+</referencedby>
+        <referencedby refid="class_matrix_1a7e6bdc324aee325e3a02ea82a8e17ac7" compoundref="matrix_8cpp" startline="344" endline="354">operator-</referencedby>
+        <referencedby refid="class_matrix_1ac13e11282bf8fb3e88eb4e743c6dc019" compoundref="matrix_8cpp" startline="149" endline="164">operator-</referencedby>
+        <referencedby refid="class_matrix_1a859f5cfddc6cd6e208f1c4ff189d258a" compoundref="matrix_8cpp" startline="374" endline="389">operator/</referencedby>
+        <referencedby refid="class_matrix_1afa8805316703c98abf5fefd7788b92ef" compoundref="matrix_8cpp" startline="238" endline="254">operator/</referencedby>
+        <referencedby refid="class_matrix_1a6ce0bc529fe2ee6fb2d0eb8acbdc1e92" compoundref="matrix_8cpp" startline="166" endline="174">operator&lt;&lt;</referencedby>
+        <referencedby refid="class_matrix_1ade03836bffb81664225dc544b5d5e6db" compoundref="matrix_8cpp" startline="259" endline="285">operator=</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1abe71c89a7bd015e11337cf43a5c36091" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Matrix::Matrix</definition>
+        <argsstring>(const int v_size)</argsstring>
+        <name>Matrix</name>
+        <qualifiedname>Matrix::Matrix</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>v_size</declname>
+        </param>
+        <briefdescription>
+<para>Constructor para vectores columna. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor de matriz cuadrada (v_size x v_size).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tamaño del vector/cuadrado. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="44" column="5" bodyfile="src/matrix.cpp" bodystart="40" bodyend="62"/>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1a025f8b6a2384b2b54d6049e49351770c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Matrix::Matrix</definition>
+        <argsstring>(const int n_row, const int n_column)</argsstring>
+        <name>Matrix</name>
+        <qualifiedname>Matrix::Matrix</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>n_row</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>n_column</declname>
+        </param>
+        <briefdescription>
+<para>Constructor con dimensiones. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor con número de filas y columnas especificado.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n_row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número de filas. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n_column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número de columnas. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="45" column="5" bodyfile="src/matrix.cpp" bodystart="69" bodyend="87"/>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1a074a3b36a65989b51afbfcb5b0e6f573" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double &amp;</type>
+        <definition>double &amp; Matrix::operator()</definition>
+        <argsstring>(const int n)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>Matrix::operator()</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Acceso para vectores. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Accede a un elemento de la matriz usando un único índice.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Índice plano (por filas). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Referencia al valor. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="48" column="12" bodyfile="src/matrix.cpp" bodystart="98" bodyend="105"/>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1a920e6bd524f318abe55a379190e2a25b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double &amp;</type>
+        <definition>double &amp; Matrix::operator()</definition>
+        <argsstring>(const int row, const int column)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>Matrix::operator()</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+<para>Acceso para matrices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Accede a un elemento usando fila y columna.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fila (1-based) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Columna (1-based) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Referencia al valor. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="49" column="12" bodyfile="src/matrix.cpp" bodystart="113" bodyend="120"/>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1a7cc7127ce96c997c9d14f1f8874ed742" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; Matrix::operator+</definition>
+        <argsstring>(Matrix &amp;m)</argsstring>
+        <name>operator+</name>
+        <qualifiedname>Matrix::operator+</qualifiedname>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Suma de matrices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Suma matricial. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="51" column="12" bodyfile="src/matrix.cpp" bodystart="129" bodyend="144"/>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1a939695368e670812f344aaec5718c438" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; Matrix::operator+</definition>
+        <argsstring>(double s)</argsstring>
+        <name>operator+</name>
+        <qualifiedname>Matrix::operator+</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Suma escalar. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="52" column="12" bodyfile="src/matrix.cpp" bodystart="329" bodyend="339"/>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1ac13e11282bf8fb3e88eb4e743c6dc019" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; Matrix::operator-</definition>
+        <argsstring>(Matrix &amp;m)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>Matrix::operator-</qualifiedname>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Resta de matrices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Resta matricial. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="53" column="12" bodyfile="src/matrix.cpp" bodystart="149" bodyend="164"/>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1a7e6bdc324aee325e3a02ea82a8e17ac7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; Matrix::operator-</definition>
+        <argsstring>(double s)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>Matrix::operator-</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Resta escalar. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="54" column="12" bodyfile="src/matrix.cpp" bodystart="344" bodyend="354"/>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1ae1bc7e1fda06dab52353ac01b3196efd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; Matrix::operator*</definition>
+        <argsstring>(Matrix &amp;m)</argsstring>
+        <name>operator*</name>
+        <qualifiedname>Matrix::operator*</qualifiedname>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Multiplicación de matrices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Producto matricial. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="55" column="12" bodyfile="src/matrix.cpp" bodystart="214" bodyend="233"/>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1a04be68a75f92fef4175c6abf281530d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; Matrix::operator*</definition>
+        <argsstring>(double s)</argsstring>
+        <name>operator*</name>
+        <qualifiedname>Matrix::operator*</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Multiplicación escalar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Producto escalar por matriz. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="56" column="12" bodyfile="src/matrix.cpp" bodystart="359" bodyend="369"/>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1afa8805316703c98abf5fefd7788b92ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; Matrix::operator/</definition>
+        <argsstring>(Matrix &amp;m)</argsstring>
+        <name>operator/</name>
+        <qualifiedname>Matrix::operator/</qualifiedname>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>División de matrices (elemento a elemento) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>División matricial (multiplicación por inversa). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="57" column="12" bodyfile="src/matrix.cpp" bodystart="238" bodyend="254"/>
+        <references refid="class_matrix_1afba97a76536c7394e65d56b7032cbdc4" compoundref="matrix_8cpp" startline="561" endline="623">inv</references>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1a859f5cfddc6cd6e208f1c4ff189d258a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; Matrix::operator/</definition>
+        <argsstring>(double s)</argsstring>
+        <name>operator/</name>
+        <qualifiedname>Matrix::operator/</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>División escalar. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="58" column="12" bodyfile="src/matrix.cpp" bodystart="374" bodyend="389"/>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1ade03836bffb81664225dc544b5d5e6db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; Matrix::operator=</definition>
+        <argsstring>(Matrix &amp;m)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Matrix::operator=</qualifiedname>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Asignación. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Asignación por copia profunda. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="59" column="12" bodyfile="src/matrix.cpp" bodystart="259" bodyend="285"/>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1aa30b90656f5063a7eac84a8cc5607318" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Matrix::norm</definition>
+        <argsstring>()</argsstring>
+        <name>norm</name>
+        <qualifiedname>Matrix::norm</qualifiedname>
+        <briefdescription>
+<para>Norma euclídea. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calcula la norma euclídea. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="62" column="12" bodyfile="src/matrix.cpp" bodystart="398" bodyend="406"/>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+        <referencedby refid="_accel_harmonic_8hpp_1a97ea72b6a1426f18c34d295e50b8fc4b" compoundref="_accel_harmonic_8cpp" startline="37" endline="96">AccelHarmonic</referencedby>
+        <referencedby refid="_accel_point_mass_8hpp_1a72b636f377c135454d41655c935c0eb3" compoundref="_accel_point_mass_8cpp" startline="37" endline="58">AccelPointMass</referencedby>
+        <referencedby refid="angl_8hpp_1af206beb61be4f584306f6fefed44eb90" compoundref="angl_8cpp" startline="34" endline="61">angl</referencedby>
+        <referencedby refid="elements_8hpp_1a5dd6d5680c9b5aafae7e21082e0ab75a" compoundref="elements_8cpp" startline="42" endline="80">elements</referencedby>
+        <referencedby refid="_geodetic_8hpp_1aec255f50cde59091b28367216d934f98" compoundref="_geodetic_8cpp" startline="39" endline="84">Geodetic</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1ac5e00d2720d9e6431f8998cb52668368" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Matrix::dot</definition>
+        <argsstring>(Matrix &amp;m)</argsstring>
+        <name>dot</name>
+        <qualifiedname>Matrix::dot</qualifiedname>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Producto escalar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Producto escalar (dot product). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="63" column="12" bodyfile="src/matrix.cpp" bodystart="411" bodyend="424"/>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+        <referencedby refid="angl_8hpp_1af206beb61be4f584306f6fefed44eb90" compoundref="angl_8cpp" startline="34" endline="61">angl</referencedby>
+        <referencedby refid="_az_el_pa_8hpp_1ae89a6c135135b96ec7057c45dced4159" compoundref="_az_el_pa_8cpp" startline="40" endline="68">AzElPa</referencedby>
+        <referencedby refid="elements_8hpp_1a5dd6d5680c9b5aafae7e21082e0ab75a" compoundref="elements_8cpp" startline="42" endline="80">elements</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1a056b9a1c08027beffe6c408c8cfdb6e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; Matrix::extract_row</definition>
+        <argsstring>(int row)</argsstring>
+        <name>extract_row</name>
+        <qualifiedname>Matrix::extract_row</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+<para>Extrae una fila como vector fila. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Extrae una fila como matriz (1 x n). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="65" column="12" bodyfile="src/matrix.cpp" bodystart="444" bodyend="457"/>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+        <referencedby refid="_l_t_c_8hpp_1a27b89059a0c4bc52a9192df16ead3359" compoundref="_l_t_c_8cpp" startline="30" endline="45">LTC</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1abd244116a45deda4143900e05003ef7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; Matrix::extract_column</definition>
+        <argsstring>(int column)</argsstring>
+        <name>extract_column</name>
+        <qualifiedname>Matrix::extract_column</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+<para>Extrae una columna como vector columna. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Extrae una columna como matriz (n x 1). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="66" column="12" bodyfile="src/matrix.cpp" bodystart="462" bodyend="475"/>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+        <referencedby refid="_d_e_integ_8hpp_1ab72ed115eb278b92a2923e5699a54413" compoundref="_d_e_integ_8cpp" startline="55" endline="716">DEInteg</referencedby>
+        <referencedby refid="_i_e_r_s_8hpp_1a1613bc89717d0e37aef2c79cc1ecb646" compoundref="_i_e_r_s_8cpp" startline="50" endline="123">IERS</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1a403e2a20dcfc235843aebf3599b87356" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Matrix::assign_row</definition>
+        <argsstring>(int row, Matrix &amp;v)</argsstring>
+        <name>assign_row</name>
+        <qualifiedname>Matrix::assign_row</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Asigna una fila. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Asigna valores a una fila desde un vector. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="67" column="10" bodyfile="src/matrix.cpp" bodystart="480" bodyend="493"/>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+        <referencedby refid="_l_t_c_8hpp_1a27b89059a0c4bc52a9192df16ead3359" compoundref="_l_t_c_8cpp" startline="30" endline="45">LTC</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1a82f842045feaabec73cb00d8002a38d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Matrix::assign_column</definition>
+        <argsstring>(int column, Matrix &amp;v)</argsstring>
+        <name>assign_column</name>
+        <qualifiedname>Matrix::assign_column</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Asigna una columna. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Asigna valores a una columna desde un vector. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="68" column="10" bodyfile="src/matrix.cpp" bodystart="498" bodyend="511"/>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+        <referencedby refid="_g___accel_harmonic_8hpp_1a13bfb59270182548cee5eba7c52b2957" compoundref="_g___accel_harmonic_8cpp" startline="41" endline="60">G_AccelHarmonic</referencedby>
+        <referencedby refid="_var_eqn_8hpp_1ac635346ab8c33fade0f3287e9d9b8866" compoundref="_var_eqn_8cpp" startline="38" endline="100">varEqn</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1a837260f6358853bd4012a86107df466f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; Matrix::extract_vector</definition>
+        <argsstring>(int from, int to)</argsstring>
+        <name>extract_vector</name>
+        <qualifiedname>Matrix::extract_vector</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+<para>Extrae un subconjunto como vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Extrae un vector desde un valor hasta otro. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="70" column="12" bodyfile="src/matrix.cpp" bodystart="541" bodyend="556"/>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+        <referencedby refid="_accel_8hpp_1a052008f916a6d5da1ba6d8b23e13d933" compoundref="_accel_8cpp" startline="39" endline="94">accel</referencedby>
+        <referencedby refid="elements_8hpp_1a5dd6d5680c9b5aafae7e21082e0ab75a" compoundref="elements_8cpp" startline="42" endline="80">elements</referencedby>
+        <referencedby refid="_j_p_l___eph___d_e430_8hpp_1a5e6fedfbbbe0ca32aa62a9016e7d3293" compoundref="_j_p_l___eph___d_e430_8cpp" startline="58" endline="328">JPL_Eph_DE430</referencedby>
+        <referencedby refid="_var_eqn_8hpp_1ac635346ab8c33fade0f3287e9d9b8866" compoundref="_var_eqn_8cpp" startline="38" endline="100">varEqn</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_matrix_1afba97a76536c7394e65d56b7032cbdc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+        <definition>Matrix &amp; Matrix::inv</definition>
+        <argsstring>()</argsstring>
+        <name>inv</name>
+        <qualifiedname>Matrix::inv</qualifiedname>
+        <briefdescription>
+<para>Inversa de matriz (solo cuadradas) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calcula la inversa de una matriz. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="72" column="12" bodyfile="src/matrix.cpp" bodystart="561" bodyend="623"/>
+        <references refid="matrix_8hpp_1a6d5ff1bcc8ce1f0309a47210e1231c6c" compoundref="matrix_8cpp" startline="290" endline="309">eye</references>
+        <references refid="class_matrix_1afba97a76536c7394e65d56b7032cbdc4" compoundref="matrix_8cpp" startline="561" endline="623">inv</references>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+        <referencedby refid="class_matrix_1afba97a76536c7394e65d56b7032cbdc4" compoundref="matrix_8cpp" startline="561" endline="623">inv</referencedby>
+        <referencedby refid="class_matrix_1afa8805316703c98abf5fefd7788b92ef" compoundref="matrix_8cpp" startline="238" endline="254">operator/</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_matrix_1a6ce0bc529fe2ee6fb2d0eb8acbdc1e92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ostream &amp;</type>
+        <definition>ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;o, Matrix &amp;m)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>Matrix::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type><ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Sobrecarga de &lt;&lt; para imprimir matrices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flujo de salida </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matriz a imprimir </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Referencia al flujo de salida </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/matrix.hpp" line="75" column="12" bodyfile="src/matrix.cpp" bodystart="166" bodyend="174"/>
+        <references refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" compoundref="matrix_8cpp" startline="30" endline="34">Matrix</references>
+        <references refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" compoundref="matrix_8hpp" startline="40">n_column</references>
+        <references refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" compoundref="matrix_8hpp" startline="39">n_row</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Implementación básica de matrices dinámicas con operaciones elementales. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/matrix.hpp" line="34" column="1" bodyfile="include/matrix.hpp" bodystart="34" bodyend="76"/>
+    <listofallmembers>
+      <member refid="class_matrix_1a82f842045feaabec73cb00d8002a38d0" prot="public" virt="non-virtual"><scope>Matrix</scope><name>assign_column</name></member>
+      <member refid="class_matrix_1a403e2a20dcfc235843aebf3599b87356" prot="public" virt="non-virtual"><scope>Matrix</scope><name>assign_row</name></member>
+      <member refid="class_matrix_1a650e1452576e2c59a410eebd79331560" prot="private" virt="non-virtual"><scope>Matrix</scope><name>data</name></member>
+      <member refid="class_matrix_1ac5e00d2720d9e6431f8998cb52668368" prot="public" virt="non-virtual"><scope>Matrix</scope><name>dot</name></member>
+      <member refid="class_matrix_1abd244116a45deda4143900e05003ef7e" prot="public" virt="non-virtual"><scope>Matrix</scope><name>extract_column</name></member>
+      <member refid="class_matrix_1a056b9a1c08027beffe6c408c8cfdb6e1" prot="public" virt="non-virtual"><scope>Matrix</scope><name>extract_row</name></member>
+      <member refid="class_matrix_1a837260f6358853bd4012a86107df466f" prot="public" virt="non-virtual"><scope>Matrix</scope><name>extract_vector</name></member>
+      <member refid="class_matrix_1afba97a76536c7394e65d56b7032cbdc4" prot="public" virt="non-virtual"><scope>Matrix</scope><name>inv</name></member>
+      <member refid="class_matrix_1a2dba13c45127354c9f75ef576f49269b" prot="public" virt="non-virtual"><scope>Matrix</scope><name>Matrix</name></member>
+      <member refid="class_matrix_1abe71c89a7bd015e11337cf43a5c36091" prot="public" virt="non-virtual"><scope>Matrix</scope><name>Matrix</name></member>
+      <member refid="class_matrix_1a025f8b6a2384b2b54d6049e49351770c" prot="public" virt="non-virtual"><scope>Matrix</scope><name>Matrix</name></member>
+      <member refid="class_matrix_1a72848e6895f6a6b638410be60b25ed7a" prot="public" virt="non-virtual"><scope>Matrix</scope><name>n_column</name></member>
+      <member refid="class_matrix_1a25155ffcead67af4aaab4d78256af86f" prot="public" virt="non-virtual"><scope>Matrix</scope><name>n_row</name></member>
+      <member refid="class_matrix_1aa30b90656f5063a7eac84a8cc5607318" prot="public" virt="non-virtual"><scope>Matrix</scope><name>norm</name></member>
+      <member refid="class_matrix_1a074a3b36a65989b51afbfcb5b0e6f573" prot="public" virt="non-virtual"><scope>Matrix</scope><name>operator()</name></member>
+      <member refid="class_matrix_1a920e6bd524f318abe55a379190e2a25b" prot="public" virt="non-virtual"><scope>Matrix</scope><name>operator()</name></member>
+      <member refid="class_matrix_1ae1bc7e1fda06dab52353ac01b3196efd" prot="public" virt="non-virtual"><scope>Matrix</scope><name>operator*</name></member>
+      <member refid="class_matrix_1a04be68a75f92fef4175c6abf281530d8" prot="public" virt="non-virtual"><scope>Matrix</scope><name>operator*</name></member>
+      <member refid="class_matrix_1a7cc7127ce96c997c9d14f1f8874ed742" prot="public" virt="non-virtual"><scope>Matrix</scope><name>operator+</name></member>
+      <member refid="class_matrix_1a939695368e670812f344aaec5718c438" prot="public" virt="non-virtual"><scope>Matrix</scope><name>operator+</name></member>
+      <member refid="class_matrix_1ac13e11282bf8fb3e88eb4e743c6dc019" prot="public" virt="non-virtual"><scope>Matrix</scope><name>operator-</name></member>
+      <member refid="class_matrix_1a7e6bdc324aee325e3a02ea82a8e17ac7" prot="public" virt="non-virtual"><scope>Matrix</scope><name>operator-</name></member>
+      <member refid="class_matrix_1afa8805316703c98abf5fefd7788b92ef" prot="public" virt="non-virtual"><scope>Matrix</scope><name>operator/</name></member>
+      <member refid="class_matrix_1a859f5cfddc6cd6e208f1c4ff189d258a" prot="public" virt="non-virtual"><scope>Matrix</scope><name>operator/</name></member>
+      <member refid="class_matrix_1a6ce0bc529fe2ee6fb2d0eb8acbdc1e92" prot="public" virt="non-virtual"><scope>Matrix</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_matrix_1ade03836bffb81664225dc544b5d5e6db" prot="public" virt="non-virtual"><scope>Matrix</scope><name>operator=</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

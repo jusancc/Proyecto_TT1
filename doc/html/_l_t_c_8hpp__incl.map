@@ -1,0 +1,21 @@
+<map id="include/LTC.hpp" name="include/LTC.hpp">
+<area shape="rect" id="Node000001" title="Declaración de la función que genera la matriz de transformación del sistema geodésico local." alt="" coords="161,5,276,32"/>
+<area shape="rect" id="Node000002" href="$_r__y_8hpp.html" title="Declaración de la función R_y que genera una matriz de rotación sobre el eje Y." alt="" coords="278,80,347,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,30,286,68,283,73,233,35"/>
+<area shape="rect" id="Node000003" href="$matrix_8hpp.html" title="Declaración de la clase Matrix y sus operaciones auxiliares." alt="" coords="142,155,224,181"/>
+<area shape="poly" id="edge11_Node000001_Node000003" title=" " alt="" coords="207,34,189,55,175,81,171,111,176,140,171,141,166,111,170,79,185,52,203,31"/>
+<area shape="rect" id="Node000008" href="$_r__z_8hpp_source.html" title=" " alt="" coords="184,80,254,107"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="222,33,222,64,216,64,216,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="291,110,220,149,217,144,288,105"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="264,229,321,256"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="313,108,299,214,293,213,308,107"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,229,62,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="158,184,75,224,72,220,156,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="85,229,144,256"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="173,184,139,220,135,216,169,180"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="203,180,262,218,259,223,200,184"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="168,229,240,256"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="189,181,199,214,194,215,184,183"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="215,108,198,142,193,139,210,106"/>
+<area shape="poly" id="edge10_Node000008_Node000006" title=" " alt="" coords="227,106,282,214,277,217,223,108"/>
+</map>

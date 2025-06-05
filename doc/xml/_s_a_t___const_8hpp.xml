@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_s_a_t___const_8hpp" kind="file" language="C++">
+    <compoundname>SAT_Const.hpp</compoundname>
+    <includes local="no">cmath</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="_accel_8hpp" local="yes">include/Accel.hpp</includedby>
+    <includedby refid="_accel_harmonic_8hpp" local="yes">include/AccelHarmonic.hpp</includedby>
+    <includedby refid="_az_el_pa_8hpp" local="yes">include/AzElPa.hpp</includedby>
+    <includedby refid="_d_e_integ_8hpp" local="yes">include/DEInteg.hpp</includedby>
+    <includedby refid="_ecc_anom_8hpp" local="yes">include/EccAnom.hpp</includedby>
+    <includedby refid="_g_m_s_t_8hpp" local="yes">include/GMST.hpp</includedby>
+    <includedby refid="_geodetic_8hpp" local="yes">include/Geodetic.hpp</includedby>
+    <includedby refid="_i_e_r_s_8hpp" local="yes">include/IERS.hpp</includedby>
+    <includedby refid="_mean_obliquity_8hpp" local="yes">include/MeanObliquity.hpp</includedby>
+    <includedby refid="_nut_angles_8hpp" local="yes">include/NutAngles.hpp</includedby>
+    <includedby refid="_position_8hpp" local="yes">include/Position.hpp</includedby>
+    <includedby refid="_prec_matrix_8hpp" local="yes">include/PrecMatrix.hpp</includedby>
+    <includedby refid="_var_eqn_8hpp" local="yes">include/VarEqn.hpp</includedby>
+    <includedby refid="elements_8hpp" local="yes">include/elements.hpp</includedby>
+    <includedby refid="gast_8hpp" local="yes">include/gast.hpp</includedby>
+    <includedby refid="_s_a_t___const_8cpp" local="yes">src/SAT_Const.cpp</includedby>
+    <includedby refid="_e_k_f___g_e_o_s3_8cpp" local="yes">tests/EKF_GEOS3.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/SAT_Const.hpp</label>
+        <link refid="_s_a_t___const_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cmath</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/Accel.hpp</label>
+        <link refid="_accel_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/AccelHarmonic.hpp</label>
+        <link refid="_accel_harmonic_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>include/AzElPa.hpp</label>
+        <link refid="_az_el_pa_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>include/DEInteg.hpp</label>
+        <link refid="_d_e_integ_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>include/EccAnom.hpp</label>
+        <link refid="_ecc_anom_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>include/EqnEquinox.hpp</label>
+        <link refid="_eqn_equinox_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>include/GHAMatrix.hpp</label>
+        <link refid="_g_h_a_matrix_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>include/GMST.hpp</label>
+        <link refid="_g_m_s_t_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>include/G_AccelHarmonic.hpp</label>
+        <link refid="_g___accel_harmonic_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>include/Geodetic.hpp</label>
+        <link refid="_geodetic_8hpp"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>include/IERS.hpp</label>
+        <link refid="_i_e_r_s_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>include/MeanObliquity.hpp</label>
+        <link refid="_mean_obliquity_8hpp"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>include/NutAngles.hpp</label>
+        <link refid="_nut_angles_8hpp"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>include/NutMatrix.hpp</label>
+        <link refid="_nut_matrix_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>include/Position.hpp</label>
+        <link refid="_position_8hpp"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>include/PrecMatrix.hpp</label>
+        <link refid="_prec_matrix_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/SAT_Const.hpp</label>
+        <link refid="_s_a_t___const_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>include/VarEqn.hpp</label>
+        <link refid="_var_eqn_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>include/elements.hpp</label>
+        <link refid="elements_8hpp"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>include/gast.hpp</label>
+        <link refid="gast_8hpp"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/Accel.cpp</label>
+        <link refid="_accel_8cpp"/>
+      </node>
+      <node id="9">
+        <label>src/AccelHarmonic.cpp</label>
+        <link refid="_accel_harmonic_8cpp"/>
+      </node>
+      <node id="11">
+        <label>src/AzElPa.cpp</label>
+        <link refid="_az_el_pa_8cpp"/>
+      </node>
+      <node id="13">
+        <label>src/DEInteg.cpp</label>
+        <link refid="_d_e_integ_8cpp"/>
+      </node>
+      <node id="15">
+        <label>src/EccAnom.cpp</label>
+        <link refid="_ecc_anom_8cpp"/>
+      </node>
+      <node id="28">
+        <label>src/EqnEquinox.cpp</label>
+        <link refid="_eqn_equinox_8cpp"/>
+      </node>
+      <node id="19">
+        <label>src/GHAMatrix.cpp</label>
+        <link refid="_g_h_a_matrix_8cpp"/>
+      </node>
+      <node id="21">
+        <label>src/GMST.cpp</label>
+        <link refid="_g_m_s_t_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/G_AccelHarmonic.cpp</label>
+        <link refid="_g___accel_harmonic_8cpp"/>
+      </node>
+      <node id="23">
+        <label>src/Geodetic.cpp</label>
+        <link refid="_geodetic_8cpp"/>
+      </node>
+      <node id="25">
+        <label>src/IERS.cpp</label>
+        <link refid="_i_e_r_s_8cpp"/>
+      </node>
+      <node id="31">
+        <label>src/MeanObliquity.cpp</label>
+        <link refid="_mean_obliquity_8cpp"/>
+      </node>
+      <node id="33">
+        <label>src/NutAngles.cpp</label>
+        <link refid="_nut_angles_8cpp"/>
+      </node>
+      <node id="30">
+        <label>src/NutMatrix.cpp</label>
+        <link refid="_nut_matrix_8cpp"/>
+      </node>
+      <node id="35">
+        <label>src/Position.cpp</label>
+        <link refid="_position_8cpp"/>
+      </node>
+      <node id="37">
+        <label>src/PrecMatrix.cpp</label>
+        <link refid="_prec_matrix_8cpp"/>
+      </node>
+      <node id="40">
+        <label>src/SAT_Const.cpp</label>
+        <link refid="_s_a_t___const_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/VarEqn.cpp</label>
+        <link refid="_var_eqn_8cpp"/>
+      </node>
+      <node id="39">
+        <label>src/elements.cpp</label>
+        <link refid="elements_8cpp"/>
+      </node>
+      <node id="20">
+        <label>src/gast.cpp</label>
+        <link refid="gast_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_s_a_t___const" prot="public">SAT_Const</innerclass>
+    <briefdescription>
+<para>Definición de constantes astronómicas, físicas y matemáticas usadas en simulaciones orbitales. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Esta clase contiene un conjunto de constantes utilizadas en mecánica celeste, transformaciones de coordenadas y propagación orbital. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//$Header$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SAT_Const</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GMAT:<sp/>General<sp/>Mission<sp/>Analysis<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>**Legal**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Juan<sp/>Sánchez<sp/>de<sp/>Corta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_SAT_CONST_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SAT_CONST_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_s_a_t___const" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_a_t___const" kindref="compound">SAT_Const</ref><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constantes<sp/>matemáticas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_s_a_t___const_1a7322cb29af30ac8df9f46c9dde418381" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a7322cb29af30ac8df9f46c9dde418381" kindref="member">pi</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="class_s_a_t___const_1a89e036b4f6b1dd503242c44cd398d9b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a89e036b4f6b1dd503242c44cd398d9b1" kindref="member">pi2</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="class_s_a_t___const_1a8cd545a117a0d02fba3e18c843a8e112" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a8cd545a117a0d02fba3e18c843a8e112" kindref="member">Rad</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38" refid="class_s_a_t___const_1a46f0def10d9eb7d0493a8fbf586f4116" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a46f0def10d9eb7d0493a8fbf586f4116" kindref="member">Deg</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="class_s_a_t___const_1a7c2f8d8faddb10fda901e41c30d8f010" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a7c2f8d8faddb10fda901e41c30d8f010" kindref="member">Arcs</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="class_s_a_t___const_1a8e29051f337676262ad402b0c60ff808" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a8e29051f337676262ad402b0c60ff808" kindref="member">eps</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constantes<sp/>generales</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_s_a_t___const_1ab7ba8d3bdb9b06b52877b1e6c24b3d37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1ab7ba8d3bdb9b06b52877b1e6c24b3d37" kindref="member">MJD_J2000</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="class_s_a_t___const_1ac4762d2517541975d0d8b3ec769159ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1ac4762d2517541975d0d8b3ec769159ae" kindref="member">T_B1950</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="class_s_a_t___const_1a345960ccb16807824cb455f1ffacbf3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a345960ccb16807824cb455f1ffacbf3e" kindref="member">c_light</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="class_s_a_t___const_1a30755b97cd70f618bfeca6abe7f45b08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a30755b97cd70f618bfeca6abe7f45b08" kindref="member">AU</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Parámetros<sp/>físicos</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_s_a_t___const_1a8520a4aca82e0459f65ed4bb55c5d97f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a8520a4aca82e0459f65ed4bb55c5d97f" kindref="member">R_Earth</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="class_s_a_t___const_1a695e88747bb620787c6e9f8d952ccd17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a695e88747bb620787c6e9f8d952ccd17" kindref="member">f_Earth</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="class_s_a_t___const_1a7bed1960da63500f83498fefef9ff315" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a7bed1960da63500f83498fefef9ff315" kindref="member">R_Sun</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="class_s_a_t___const_1a9ec80315ce97ed4a4c2b90ada9c49d0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a9ec80315ce97ed4a4c2b90ada9c49d0e" kindref="member">R_Moon</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="class_s_a_t___const_1a34bed0ab80bb7cd372419a346b139678" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a34bed0ab80bb7cd372419a346b139678" kindref="member">omega_Earth</ref>;<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Coeficientes<sp/>gravitacionales<sp/>[km^3/s^2]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_s_a_t___const_1aa561286ef1a10f479fee20edb32faa16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1aa561286ef1a10f479fee20edb32faa16" kindref="member">GM_Earth</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63" refid="class_s_a_t___const_1aa2cf8c2fc4b178a2ddbc47ec94b756e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1aa2cf8c2fc4b178a2ddbc47ec94b756e8" kindref="member">GM_Sun</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="class_s_a_t___const_1aeb5c26a48ab670ef46de848a8a14da68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1aeb5c26a48ab670ef46de848a8a14da68" kindref="member">GM_Moon</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="class_s_a_t___const_1ae4b07e964995d768c891f2e54204e788" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1ae4b07e964995d768c891f2e54204e788" kindref="member">GM_Mercury</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="class_s_a_t___const_1a72e68505611ebd6ee5c30f8614f25b11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a72e68505611ebd6ee5c30f8614f25b11" kindref="member">GM_Venus</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67" refid="class_s_a_t___const_1a722cc664533818278459dcdf14765970" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a722cc664533818278459dcdf14765970" kindref="member">GM_Mars</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="class_s_a_t___const_1a6080247fc6db7327ec51d6ddea91cc68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a6080247fc6db7327ec51d6ddea91cc68" kindref="member">GM_Jupiter</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="class_s_a_t___const_1a9e96aee2b02c6387fbc0f525f4cb5d5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a9e96aee2b02c6387fbc0f525f4cb5d5c" kindref="member">GM_Saturn</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="class_s_a_t___const_1a6d53fbd66032be649f31df560d8893c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a6d53fbd66032be649f31df560d8893c4" kindref="member">GM_Uranus</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="class_s_a_t___const_1adb10f75e70cb3513eadf7aeef2c0e58c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1adb10f75e70cb3513eadf7aeef2c0e58c" kindref="member">GM_Neptune</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="class_s_a_t___const_1a9108d8a0b68e98dfaad65d2d28ca84b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a9108d8a0b68e98dfaad65d2d28ca84b5" kindref="member">GM_Pluto</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Radiación<sp/>solar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="class_s_a_t___const_1a3bbc5b26ba9eddf1f55cf24a5c04638c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_s_a_t___const_1a3bbc5b26ba9eddf1f55cf24a5c04638c" kindref="member">P_Sol</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>_SAT_CONST_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/SAT_Const.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,22 @@
+<map id="include/Legendre.hpp" name="include/Legendre.hpp">
+<area shape="rect" id="Node000001" title="Prototipo de la función que calcula los polinomios de Legendre y sus derivadas." alt="" coords="269,5,414,32"/>
+<area shape="rect" id="Node000002" href="$_accel_harmonic_8hpp.html" title="Declaración de la función que calcula la aceleración debida al campo gravitacional terrestre modelado..." alt="" coords="164,80,345,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="316,44,271,82,268,78,313,40"/>
+<area shape="rect" id="Node000010" href="$_legendre_8cpp.html" title="Implementación de los polinomios asociados de Legendre y sus derivadas." alt="" coords="369,80,490,107"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="370,40,416,78,412,82,367,44"/>
+<area shape="rect" id="Node000003" href="$_accel_8hpp.html" title="Declaración de la función que calcula la aceleración total sobre un cuerpo celeste,..." alt="" coords="14,155,138,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="211,115,108,157,106,152,209,110"/>
+<area shape="rect" id="Node000005" href="$_g___accel_harmonic_8hpp.html" title="Declaración de la función que calcula el gradiente de la aceleración producida por el campo gravitaci..." alt="" coords="224,155,421,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="279,116,313,152,309,156,275,120"/>
+<area shape="rect" id="Node000006" href="$_var_eqn_8hpp.html" title="Prototipo de la función de ecuaciones variacionales para propagación orbital." alt="" coords="131,229,264,256"/>
+<area shape="poly" id="edge8_Node000002_Node000006" title=" " alt="" coords="236,120,214,156,204,195,200,229,195,229,199,194,210,154,231,117"/>
+<area shape="rect" id="Node000009" href="$_accel_harmonic_8cpp.html" title="Implementación de la función que calcula la aceleración gravitacional perturbativa debida a los armón..." alt="" coords="445,155,603,181"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="317,109,477,151,476,157,315,114"/>
+<area shape="rect" id="Node000004" href="$_accel_8cpp.html" title="Implementación de la función que calcula la aceleración total que actúa sobre un satélite,..." alt="" coords="5,229,107,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="71,197,62,230,57,228,66,196"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="289,192,221,231,218,226,287,187"/>
+<area shape="rect" id="Node000008" href="$_g___accel_harmonic_8cpp.html" title="Implementación de la función que calcula el gradiente de la aceleración armónica respecto a la posici..." alt="" coords="288,229,462,256"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="343,193,368,227,364,230,338,196"/>
+<area shape="rect" id="Node000007" href="$_var_eqn_8cpp.html" title="Implementación de la función de ecuaciones variacionales para propagación orbital con perturbaciones ..." alt="" coords="142,304,252,331"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="200,272,200,304,195,304,195,272"/>
+</map>

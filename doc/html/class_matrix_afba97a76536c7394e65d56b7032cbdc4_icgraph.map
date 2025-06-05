@@ -1,0 +1,6 @@
+<map id="Matrix::inv" name="Matrix::inv">
+<area shape="rect" id="Node000001" title="Inversa de matriz (solo cuadradas)" alt="" coords="170,29,252,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="235,16,227,10,211,8,196,10,188,14,186,20,190,28,185,30,181,21,184,11,194,5,211,3,229,5,238,12"/>
+<area shape="rect" id="Node000002" href="$class_matrix.html#afa8805316703c98abf5fefd7788b92ef" title="División de matrices (elemento a elemento)" alt="" coords="5,29,122,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="154,45,122,45,122,40,154,40"/>
+</map>
