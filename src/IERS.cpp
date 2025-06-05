@@ -106,7 +106,7 @@ IERS(Matrix &eop, double Mjd_UTC, char interp) {
             exit(EXIT_FAILURE);
         }
 
-        Matrix col = eop.extract_column(i);
+        Matrix &col = eop.extract_column(i);
 
         x_pole   = col(5)  / SAT_Const::Arcs;
         y_pole   = col(6)  / SAT_Const::Arcs;
@@ -118,6 +118,8 @@ IERS(Matrix &eop, double Mjd_UTC, char interp) {
         dy_pole  = col(12) / SAT_Const::Arcs;
         TAI_UTC  = col(13);
     }
+    
+    cout << "x_pole: " << x_pole << ", y_pole: " << y_pole << ", TAI_UTC: " << TAI_UTC << endl;
 
     return tie(x_pole, y_pole, UT1_UTC, LOD, dpsi, deps, dx_pole, dy_pole, TAI_UTC);
 }
